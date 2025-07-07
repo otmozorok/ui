@@ -1,11 +1,11 @@
 <script lang="ts">
-import { WCTAG } from '../../../../shared';
+import { WCTAG } from '@wc/shared';
 import { AvatarComponent } from '@wc/components';
 
 customElements.define(WCTAG.Avatar, AvatarComponent);
 </script>
 <script setup lang="ts">
-import { COLOR } from '../../../../shared';
+import { COLOR } from '@wc/shared';
 import { defineProps, defineEmits } from 'vue';
 
 const props = defineProps<{

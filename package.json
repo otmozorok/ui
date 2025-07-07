@@ -25,6 +25,7 @@
   "workspaces": [
     "components",
     "packages/react",
-    "packages/vue"
+    "packages/vue",
+    "shared"
   ]
 }

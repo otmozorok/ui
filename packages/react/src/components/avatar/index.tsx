@@ -1,5 +1,5 @@
 import { AvatarComponent } from '@wc/components';
-import { COLOR, WCTAG } from '../../../../../shared';
+import { COLOR, WCTAG } from '@wc/shared';
 import React from 'react';
 
 customElements.define(WCTAG.Avatar, AvatarComponent);
