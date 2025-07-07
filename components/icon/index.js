@@ -7,15 +7,16 @@ export class IconComponent extends WebComponent {
     super();
 
     this.shadowRoot.innerHTML = /*html*/ `
-        <style>
-            :host {
-                display: inline-grid;
-            }
-        </style>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <use href="/components/icon/sprites.svg#" />
-        </svg>
-        `;
+    <style>
+        :host {
+            display: inline-grid;
+        }
+    </style>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <use href="/components/icon/sprites.svg?v0.3#" />
+    </svg>
+    `;
 
     this.$svg = this.shadowRoot.querySelector('svg');
     this.$use = this.shadowRoot.querySelector('use');
@@ -38,7 +39,10 @@ export class IconComponent extends WebComponent {
       case ICON.ChevronLeft:
       case ICON.ChevronRight:
       case ICON.ChevronUp:
-      case ICON.CircleHelp: {
+      case ICON.CircleHelp:
+      case ICON.HandMetal:
+      case ICON.Settings:
+      case ICON.Trash: {
         const href = this.$use.getAttribute('href');
         const arr = href.split('#');
         arr[1] = val;
@@ -55,6 +59,9 @@ export class IconComponent extends WebComponent {
         case ICON.ChevronRight:
         case ICON.ChevronUp:
         case ICON.CircleHelp:
+        case ICON.HandMetal:
+        case ICON.Settings:
+        case ICON.Trash:
           this.name = newValue;
           break;
       }

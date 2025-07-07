@@ -1,14 +1,12 @@
-import {
-    WebComponent
-} from '../../shared/index.js';
+import { WebComponent } from '../../shared/index.js';
 
 export class MenuItemComponent extends WebComponent {
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.shadowRoot.innerHTML = /*html*/ `
+    this.shadowRoot.innerHTML = /*html*/ `
         <style>
-            button {
+            div {
                 background: unset;
                 border: unset;
                 font-family: inherit;
@@ -18,7 +16,6 @@ export class MenuItemComponent extends WebComponent {
                 position: relative;
                 text-align: unset;
                 text-decoration: none;
-                color: var(--text-color);
                 min-height: 56px;
                 align-items: center;
                 box-sizing: border-box;
@@ -27,9 +24,11 @@ export class MenuItemComponent extends WebComponent {
             }
         
             .action {
+                color: var(--text-color);
                 display: flex;
                 flex-direction: column;
                 flex-grow: 1;
+                font-size: 1rem;
                 font-weight: 500;
                 line-height: 1;
                 min-width: 0;
@@ -52,23 +51,23 @@ export class MenuItemComponent extends WebComponent {
             }
         
             :host([arrow]) .arrow {
-                display: block;
+                display: grid;
             }
         
-            :host([compact]) button {
+            :host([compact]) div {
                 min-height: 48px;
                 padding: 4px 12px;
             }
         </style>
         
-        <button>
+        <div>
             <slot name="before"></slot>
             <span class="action">
                 <slot></slot>
             </span>
             <slot name="after"></slot>
             <wc-icon class="arrow" name="chevron-right" size="16"></wc-icon>
-        </button>
+        </div>
         `;
-    }
+  }
 }

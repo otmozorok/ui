@@ -21,8 +21,10 @@ export class AvatarComponent extends WebComponent {
             }
 
             .text {
+                font-size: 1rem;
                 line-height: 1;
                 user-select: none;
+                color: var(--text-color)
             }
         }
 
@@ -72,6 +74,7 @@ export class AvatarComponent extends WebComponent {
 
     this.size = 48;
     this.src = '';
+    this.color = COLOR.Green;
   }
 
   get src() {

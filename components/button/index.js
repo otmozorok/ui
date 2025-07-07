@@ -18,8 +18,10 @@ export class ButtonComponent extends WebComponent {
                 overflow: hidden;
                 position: relative;
                 text-decoration: none;
+                gap: 6px;
                 font-family: var(--font-family);
-                
+                line-height: 1;
+
                 &>wc-loader {
                     opacity: 0;
                     position: absolute;
@@ -45,7 +47,7 @@ export class ButtonComponent extends WebComponent {
                 border-radius: 10px;
                 height: 28px;
                 min-width: 28px;
-                font-size: 14px;
+                font-size: 0.875rem;
                 font-weight: 500;
             }
         
@@ -54,7 +56,7 @@ export class ButtonComponent extends WebComponent {
                 border-radius: 12px;
                 height: 40px;
                 min-width: 40px;
-                font-size: 16px;
+                font-size: 1rem;
                 font-weight: 500;
             }
         
@@ -63,7 +65,7 @@ export class ButtonComponent extends WebComponent {
                 border-radius: 16px;
                 height: 52px;
                 min-width: 52px;
-                font-size: 17px;
+                font-size: 1.0625rem;
                 font-weight: 600;
             }
         
@@ -103,6 +105,14 @@ export class ButtonComponent extends WebComponent {
                   background-color: hsla(var(--secondary-hsl), 0.04);
                 }
             }
+
+            :host([destructive]) button {
+              background-color: var(--negative);
+
+              &:hover {
+                background-color: var(--negative-hover);
+              }
+            }
         </style>
         
         <button>
@@ -110,6 +120,7 @@ export class ButtonComponent extends WebComponent {
             <span>
                 <slot></slot>
             </span>
+            <slot name="after"></slot>
         </button>
         `;
 
@@ -126,6 +137,12 @@ export class ButtonComponent extends WebComponent {
      * @type {SIZE}
      */
     this.size = SIZE.Medium;
+  }
+
+  connectedCallback() {
+    this.$button.addEventListener('click', () => {
+      this.dispatchEvent(new Event('click', { bubbles: false, composed: true }));
+    });
   }
 
   /**

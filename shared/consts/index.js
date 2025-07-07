@@ -54,6 +54,7 @@ export const WCTAG = Object.freeze({
   Accordion: 'wc-accordion',
   Avatar: 'wc-avatar',
   Button: 'wc-button',
+  Counter: 'wc-counter',
   Dropdown: 'wc-dropdown',
   Ellipsis: 'wc-ellipsis',
   Headline: 'wc-headline',
@@ -61,6 +62,7 @@ export const WCTAG = Object.freeze({
   Loader: 'wc-loader',
   Menu: 'wc-menu',
   MenuAction: 'wc-menu-action',
+  MenuHeader: 'wc-menu-header',
   MenuItem: 'wc-menu-item',
   Tooltip: 'wc-tooltip',
 });
@@ -71,4 +73,7 @@ export const ICON = Object.freeze({
   ChevronRight: 'chevron-right',
   ChevronUp: 'chevron-up',
   CircleHelp: 'circle-help',
+  HandMetal: 'hand-metal',
+  Settings: 'settings',
+  Trash: 'trash',
 });

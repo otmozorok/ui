@@ -1,7 +1,6 @@
 {
   "name": "web-components",
   "version": "1.0.0",
-  "main": "./components/index.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -22,5 +21,10 @@
     "eslint-plugin-import-x": "^4.16.1",
     "playwright-chromium": "^1.53.2",
     "prettier": "^3.6.2"
-  }
+  },
+  "workspaces": [
+    "components",
+    "packages/react",
+    "packages/vue"
+  ]
 }
