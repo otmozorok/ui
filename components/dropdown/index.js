@@ -8,9 +8,9 @@ export class DropdownComponent extends WebComponent {
 
     this.shadowRoot.innerHTML = /*html*/ `
         <style>
-            .trigger {
+            slot[name='trigger']::sloted(*) {
                 position: relative;
-                display: inline-flex;
+                display: flex;
                 anchor-name: --dropdown;
             }
         
@@ -34,15 +34,13 @@ export class DropdownComponent extends WebComponent {
             }
         </style>
         
-        <div class="trigger">
-            <slot name="trigger">⚠️</slot>
-        </div>
+        <slot name="trigger">⚠️</slot>
         <div class="dropdown">
             <slot></slot>
         </div>
         `;
 
-    this.$trigger = this.shadowRoot.querySelector('.trigger');
+    this.$trigger = this.shadowRoot.querySelector('slot[name="trigger"]');
     this.$dropdown = this.shadowRoot.querySelector('.dropdown');
   }
 

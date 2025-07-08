@@ -35,19 +35,19 @@ export class AvatarComponent extends WebComponent {
             &.red {
                 background-image: var(--gradient-red);
             }
-        
+
             &.green {
                 background-image: var(--gradient-green);
             }
-        
+
             &.orange {
                 background-image: var(--gradient-orange);
             }
-        
+
             &.blue {
                 background-image: var(--gradient-blue);
             }
-        
+
             &.purple {
                 background-image: var(--gradient-purple);
             }
@@ -57,7 +57,7 @@ export class AvatarComponent extends WebComponent {
           display: none;
         }
     </style>
-    
+
     <span class="wrapper">
         <img />
         <span class="bg">
@@ -132,10 +132,8 @@ export class AvatarComponent extends WebComponent {
       }
     }
 
-    if (name === 'size') {
-      if (newValue) {
-        this.size = newValue;
-      }
+    if (name === 'size' && newValue) {
+      this.size = newValue;
     }
 
     if (name === 'src') {

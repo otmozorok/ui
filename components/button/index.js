@@ -21,7 +21,7 @@ export class ButtonComponent extends WebComponent {
                 gap: 6px;
                 font-family: var(--font-family);
                 line-height: 1;
-
+        
                 &>wc-loader {
                     opacity: 0;
                     position: absolute;
@@ -33,12 +33,12 @@ export class ButtonComponent extends WebComponent {
             span {
                 line-height: 1;
             }
-
-            .loading>span {
+        
+            :host([loading]) span {
                 opacity: 0;
             }
         
-            .loading>wc-loader {
+            :host([loading]) wc-loader {
                 opacity: 1;
             }
         
@@ -73,45 +73,49 @@ export class ButtonComponent extends WebComponent {
                 background-color: transparent;
                 color: var(--primary);
                 padding: 0;
-
+        
                 &:hover {
-                  color: #479fff
+                    color: #479fff
                 }
             }
         
             .primary {
                 background-color: var(--primary);
                 color: var(--text-color);
-
+        
                 &:hover {
-                  background-color: var(--primary-hover);
+                    background-color: var(--primary-hover);
                 }
             }
-
+        
             .secondary {
                 background-color: var(--secondary);
                 color: var(--primary);
-
+        
                 &:hover {
-                  background-color: var(--secondary-hover);
+                    background-color: var(--secondary-hover);
                 }
             }
-
+        
             .tertiary {
                 background-color: transparent;
                 color: var(--primary);
-
+        
                 &:hover {
-                  background-color: hsla(var(--secondary-hsl), 0.04);
+                    background-color: hsla(var(--secondary-hsl), 0.04);
                 }
             }
-
+        
             :host([destructive]) button {
-              background-color: var(--negative);
-
-              &:hover {
-                background-color: var(--negative-hover);
-              }
+                background-color: var(--negative);
+        
+                &:hover {
+                    background-color: var(--negative-hover);
+                }
+            }
+        
+            :host([fullwidth]) button {
+                width: 100%;
             }
         </style>
         
@@ -141,7 +145,12 @@ export class ButtonComponent extends WebComponent {
 
   connectedCallback() {
     this.$button.addEventListener('click', () => {
-      this.dispatchEvent(new Event('click', { bubbles: false, composed: true }));
+      this.dispatchEvent(
+        new Event('click', {
+          bubbles: false,
+          composed: true,
+        })
+      );
     });
   }
 
@@ -185,10 +194,10 @@ export class ButtonComponent extends WebComponent {
   }
 
   set loading(val) {
-    if (val === 'true') {
-      this.$button.classList.add('loading');
+    if (val) {
+      this.setAttribute('loading', '');
     } else {
-      this.$button.classList.remove('loading');
+      this.removeAttribute('loading');
     }
   }
 
@@ -214,8 +223,8 @@ export class ButtonComponent extends WebComponent {
       }
     }
 
-    if (name === 'loading') {
-      this.loading = newValue;
+    if (name === 'loading' && oldValue !== newValue) {
+      this.loading = newValue === '' ? true : false;
     }
   }
 }

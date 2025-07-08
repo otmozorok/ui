@@ -1,4 +1,4 @@
-import { rounded, WebComponent } from '../../shared/index.js';
+import { rounded, WebComponent } from '@wc/shared';
 
 export class CounterComponent extends WebComponent {
   static observedAttributes = ['count', 'rounded'];
@@ -7,38 +7,42 @@ export class CounterComponent extends WebComponent {
     super();
 
     this.shadowRoot.innerHTML = /*html*/ `
-    <style>
-        span {
-            align-items: center;
-            border-radius: 12px;
-            box-sizing: border-box;
-            display: inline-flex;
-            font-weight: 500;
-            font-size: 0.875rem;
-            min-height: 20px;
-            min-width: 20px;
-            padding: 0 6px;
-        }
-        span {
-            background-color: var(--primary);
-            color: var(--text-color);
-        }
-        :host([inverse]) span {
-            background-color: var(--text-color);
-            color: var(--primary);
-        }
-        :host([destructive]) span {
-            background-color: var(--negative);
-            color: var(--text-color);
-        }
-        :host([inverse][destructive]) span {
-            background-color: var(--text-color);
-            color: var(--negative);
-        }
-    </style>
-
-    <span></span>
-    `;
+        <style>
+            span {
+                align-items: center;
+                border-radius: 12px;
+                box-sizing: border-box;
+                display: inline-flex;
+                font-weight: 500;
+                font-size: 0.875rem;
+                min-height: 20px;
+                min-width: 20px;
+                padding: 0 6px;
+            }
+        
+            span {
+                background-color: var(--primary);
+                color: var(--text-color);
+            }
+        
+            :host([inverse]) span {
+                background-color: var(--text-color);
+                color: var(--primary);
+            }
+        
+            :host([destructive]) span {
+                background-color: var(--negative);
+                color: var(--text-color);
+            }
+        
+            :host([inverse][destructive]) span {
+                background-color: var(--text-color);
+                color: var(--negative);
+            }
+        </style>
+        
+        <span></span>
+        `;
 
     this.$span = this.shadowRoot.querySelector('span');
   }
