@@ -1,8 +1,17 @@
 {
-  "name": "@wc/components",
+  "name": "@pappahapa/wc",
   "version": "0.0.1",
+  "author": "Boris Hasikov",
+  "description": "ui-kit из web components",
+  "license": "MIT",
   "main": "index.js",
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "module": "index.js",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "peerDependencies": {
+    "lit": "^3.3.0"
+  },
+  "private": false
 }

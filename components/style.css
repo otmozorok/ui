@@ -1,0 +1,63 @@
+:root {
+  /* MAIN */
+  --font-family: -apple-system, system-ui, 'Helvetica Neue', Roboto, sans-serif;
+  --font-size: 16px;
+
+  --z-tooltip: 10;
+
+  /* SHADOWS */
+  --shadow: 0 0 10px hsla(0, 0%, 0%, 0.2);
+
+  /* COLORS */
+
+  --bg-color: hsl(0, 0%, 0%);
+  --bg-secondary-color: hsl(233, 10%, 16%);
+
+  --text-color-hsl: 0, 0%, 100%;
+  --text-color: hsl(var(--text-color-hsl));
+  --text-color-inverse-hsl: 0, 0%, 0%;
+  --text-color-inverse: hsl(var(--text-color-inverse-hsl));
+  --text-negative: hsl(351, 59%, 53%);
+
+  --primary-hsl: 211, 100%, 50%;
+  --primary: hsl(var(--primary-hsl));
+  --primary-hover-hsl: 211, 100%, 64%;
+  --primary-hover: hsl(var(--primary-hover-hsl));
+  --secondary-hsl: 0, 0%, 100%;
+  --secondary: hsla(var(--secondary-hsl), 0.09);
+  --secondary-hover: hsla(var(--secondary-hsl), 0.15);
+  --negative-hsl: 351, 59%, 53%;
+  --negative: hsl(var(--negative-hsl));
+  --negative-hover-hsl: 351, 89%, 63%;
+  --negative-hover: hsl(var(--negative-hover-hsl));
+
+  /* GRADIENTS */
+  --gradient-red: linear-gradient(153deg, #ff48b6 0.77%, #ff8a35 93.03%);
+  --gradient-orange: linear-gradient(155deg, #ffc93d 6.6%, #ff832a 84.12%);
+  --gradient-green: linear-gradient(158deg, #14e1d5 6.15%, #03c722 85.68%);
+  --gradient-blue: linear-gradient(157deg, #08d7f3 6.38%, #5398ff 85%);
+  --gradient-purple: linear-gradient(155deg, #bf97ff 6.6%, #526eff 84.12%);
+
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+
+:root {
+  --text-contrast: #0c0d0e;
+  --text-contrast-static: #fff;
+  --text-negative: #ce4257;
+  --text-neutral-themed: #007aff;
+  --text-positive: #2bc644;
+  --text-primary: #ffffffcc;
+  --text-primary-static: #0c0d0e;
+  --text-secondary: #ffffff70;
+  --text-subhead: #ffffffbd;
+  --text-tertiary: #ffffff47;
+  --text-themed: #007aff;
+}
+
+:root.dark {
+  --text-color-hsl: 0, 0%, 0%;
+  --text-color-inverse-hsl: 0, 0%, 100%;
+  --primary-hsl: 0, 100%, 50%;
+}

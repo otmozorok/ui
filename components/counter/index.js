@@ -1,4 +1,4 @@
-import { rounded, WebComponent } from '@wc/shared';
+import { rounded, WebComponent } from '@pappahapa/shared';
 
 export class CounterComponent extends WebComponent {
   static observedAttributes = ['count', 'rounded'];
@@ -61,11 +61,11 @@ export class CounterComponent extends WebComponent {
   }
 
   get count() {
-    return parseInt(this.getAttribute('count') || '0');
+    return Number(this.getAttribute('count') || '0');
   }
 
   set count(value) {
-    if (value !== this.count) this.setAttribute('count', parseInt(value));
+    if (value !== this.count) this.setAttribute('count', Number(value));
     this.updateText(value);
   }
 
@@ -79,7 +79,7 @@ export class CounterComponent extends WebComponent {
 
   attributeChangedCallback(name, oldValue, newValue) {
     if (name === 'count') {
-      this.count = parseInt(newValue.replace(/[^0-9]/g, ''));
+      this.count = Number(newValue);
     }
     if (name === 'rounded' && newValue !== oldValue) {
       this.rounded = newValue === '' ? true : false;
