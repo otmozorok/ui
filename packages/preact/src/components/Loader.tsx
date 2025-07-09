@@ -1,5 +1,5 @@
-import { LoaderComponent } from '@wc/components';
-import { SIZE } from '@wc/shared';
+import { LoaderComponent } from '@pappahapa/wc';
+import { SIZE } from '@pappahapa/shared';
 import { useRef } from 'preact/compat';
 
 interface ILoaderProps {

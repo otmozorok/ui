@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { COLOR } from '@wc/shared';
+  import { COLOR } from '@pappahapa/shared';
 
   export let src: string | undefined = undefined;
   export let size: number | undefined = undefined;

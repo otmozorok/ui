@@ -1,4 +1,4 @@
-import { ButtonComponent, CounterComponent, LoaderComponent } from '@wc/components';
+import { ButtonComponent, CounterComponent, LoaderComponent } from '@pappahapa/wc';
 import { JSX } from 'preact';
 
 declare module 'preact' {

@@ -1,5 +1,5 @@
-import { AvatarComponent } from '@wc/components';
-import { WCTAG } from '@wc/shared';
+import { AvatarComponent } from '@pappahapa/wc';
+import { WCTAG } from '@pappahapa/shared';
 import App from './App.svelte';
 import '../../../demo/style.css';
 

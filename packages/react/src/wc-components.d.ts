@@ -1,4 +1,4 @@
-import type { AvatarComponent } from '@wc/components';
+import type { AvatarComponent } from '@pappahapa/wc';
 
 declare global {
   // Расширяем стандартные HTML-теги

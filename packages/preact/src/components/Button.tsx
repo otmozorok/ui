@@ -1,5 +1,5 @@
-import { ButtonComponent } from '@wc/components';
-import { MODE, SIZE } from '@wc/shared';
+import { ButtonComponent } from '@pappahapa/wc';
+import { MODE, SIZE } from '@pappahapa/shared';
 import { useRef, useEffect } from 'preact/hooks';
 
 interface IButtonProps {

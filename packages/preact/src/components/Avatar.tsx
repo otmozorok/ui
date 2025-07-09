@@ -1,4 +1,4 @@
-import { COLOR } from '@wc/shared';
+import { COLOR } from '@pappahapa/shared';
 
 interface IAvatarProps {
   src?: string;
