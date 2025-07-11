@@ -1,4 +1,4 @@
-import { MODE, MODES, SIZE, SIZES, WebComponent } from '../../shared/index.js';
+import { MODE, MODES, SIZE, SIZES, WebComponent } from '../.shared/index.js';
 
 export class ButtonComponent extends WebComponent {
   static observedAttributes = ['mode', 'size', 'loading'];

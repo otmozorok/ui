@@ -1,4 +1,4 @@
-import { WebComponent } from '../../shared/index.js';
+import { WebComponent } from '../.shared/index.js';
 
 export class MenuActionComponent extends WebComponent {
   constructor() {

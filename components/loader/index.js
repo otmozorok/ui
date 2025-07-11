@@ -1,16 +1,12 @@
-import {
-    SIZE,
-    SIZES,
-    WebComponent
-} from '../../shared/index.js';
+import { SIZE, SIZES, WebComponent } from '../.shared/index.js';
 
 export class LoaderComponent extends WebComponent {
-    static observedAttributes = ['size'];
+  static observedAttributes = ['size'];
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.shadowRoot.innerHTML = /*html*/ `
+    this.shadowRoot.innerHTML = /*html*/ `
         <style>
             loader {
                 display: inline-flex;
@@ -51,40 +47,40 @@ export class LoaderComponent extends WebComponent {
         <loader></loader>
         `;
 
-        this.$loader = this.shadowRoot.querySelector('loader');
-
-        /**
-         * @type {SIZE}
-         */
-        this.size = SIZE.Medium;
-    }
+    this.$loader = this.shadowRoot.querySelector('loader');
 
     /**
-     * @param {SIZE} val
+     * @type {SIZE}
      */
-    set size(val) {
-        switch (val) {
-            case SIZE.Small:
-            case SIZE.Medium:
-            case SIZE.Large:
-                this.$loader.classList.remove(...SIZES);
-                this.$loader.classList.add(val);
-                break;
+    this.size = SIZE.Medium;
+  }
 
-            default:
-                break;
-        }
-    }
+  /**
+   * @param {SIZE} val
+   */
+  set size(val) {
+    switch (val) {
+      case SIZE.Small:
+      case SIZE.Medium:
+      case SIZE.Large:
+        this.$loader.classList.remove(...SIZES);
+        this.$loader.classList.add(val);
+        break;
 
-    attributeChangedCallback(name, oldValue, newValue) {
-        if (name === 'size') {
-            switch (newValue) {
-                case SIZE.Small:
-                case SIZE.Medium:
-                case SIZE.Large:
-                    this.size = newValue;
-                    break;
-            }
-        }
+      default:
+        break;
     }
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (name === 'size') {
+      switch (newValue) {
+        case SIZE.Small:
+        case SIZE.Medium:
+        case SIZE.Large:
+          this.size = newValue;
+          break;
+      }
+    }
+  }
 }

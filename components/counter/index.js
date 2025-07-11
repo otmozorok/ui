@@ -1,4 +1,4 @@
-import { rounded, WebComponent } from '@pappahapa/shared';
+import { rounded, WebComponent } from '../.shared/index.js';
 
 export class CounterComponent extends WebComponent {
   static observedAttributes = ['count', 'rounded'];

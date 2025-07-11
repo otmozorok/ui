@@ -1,4 +1,4 @@
-import { COLOR, COLORS, WebComponent } from '../../shared/index.js';
+import { COLOR, COLORS, WebComponent } from '../.shared/index.js';
 
 export class AvatarComponent extends WebComponent {
   static observedAttributes = ['src', 'color', 'size'];

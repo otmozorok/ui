@@ -1,4 +1,4 @@
-import { SIZE, SIZES, WebComponent } from '../../shared/index.js';
+import { SIZE, SIZES, WebComponent } from '../.shared/index.js';
 
 export class HeadlineComponent extends WebComponent {
   static observedAttributes = ['size'];

@@ -1,12 +1,10 @@
-import {
-    WebComponent
-} from '../../shared/index.js';
+import { WebComponent } from '../.shared/index.js';
 
 export class ParagraphComponent extends WebComponent {
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.shadowRoot.innerHTML = /*html*/ `
+    this.shadowRoot.innerHTML = /*html*/ `
         <style>
             p {
                 margin: 0;
@@ -18,5 +16,5 @@ export class ParagraphComponent extends WebComponent {
             <slot></slot>
         </p>
         `;
-    }
+  }
 }

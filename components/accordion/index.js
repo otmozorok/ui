@@ -1,4 +1,4 @@
-import { WebComponent } from '../../shared/index.js';
+import { WebComponent } from '../.shared/index.js';
 
 /**
  * Компонент аккордеона, реализованный как пользовательский веб-компонент.

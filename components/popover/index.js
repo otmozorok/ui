@@ -1,16 +1,12 @@
-import {
-    POSITION,
-    POSITIONS,
-    WebComponent
-} from '../../shared/index.js';
+import { POSITION, POSITIONS, WebComponent } from '../.shared/index.js';
 
 export class PopoverComponent extends WebComponent {
-    static observedAttributes = ['position'];
+  static observedAttributes = ['position'];
 
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.shadowRoot.innerHTML = /*html*/ `
+    this.shadowRoot.innerHTML = /*html*/ `
         <style>
             .trigger {
                 position: relative;
@@ -70,42 +66,42 @@ export class PopoverComponent extends WebComponent {
         </div>
         `;
 
-        this.$popover = this.shadowRoot.querySelector('.popover');
-
-        /**
-         * @type {POSITION}
-         */
-        this.position = POSITION.Bottom;
-    }
+    this.$popover = this.shadowRoot.querySelector('.popover');
 
     /**
-     * @param {POSITION} val
+     * @type {POSITION}
      */
-    set position(val) {
-        switch (val) {
-            case POSITION.Bottom:
-            case POSITION.Left:
-            case POSITION.Right:
-            case POSITION.Top:
-                this.$popover.classList.remove(...POSITIONS);
-                this.$popover.classList.add(val);
-                break;
+    this.position = POSITION.Bottom;
+  }
 
-            default:
-                break;
-        }
-    }
+  /**
+   * @param {POSITION} val
+   */
+  set position(val) {
+    switch (val) {
+      case POSITION.Bottom:
+      case POSITION.Left:
+      case POSITION.Right:
+      case POSITION.Top:
+        this.$popover.classList.remove(...POSITIONS);
+        this.$popover.classList.add(val);
+        break;
 
-    attributeChangedCallback(name, oldValue, newValue) {
-        if (name === 'position') {
-            switch (newValue) {
-                case POSITION.Bottom:
-                case POSITION.Left:
-                case POSITION.Right:
-                case POSITION.Top:
-                    this.position = newValue;
-                    break;
-            }
-        }
+      default:
+        break;
     }
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (name === 'position') {
+      switch (newValue) {
+        case POSITION.Bottom:
+        case POSITION.Left:
+        case POSITION.Right:
+        case POSITION.Top:
+          this.position = newValue;
+          break;
+      }
+    }
+  }
 }

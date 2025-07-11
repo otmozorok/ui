@@ -1,4 +1,4 @@
-import { ICON, WebComponent } from '../../shared/index.js';
+import { ICON, WebComponent } from '../.shared/index.js';
 
 export class IconComponent extends WebComponent {
   static observedAttributes = ['name', 'size'];

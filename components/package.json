@@ -1,6 +1,6 @@
 {
   "name": "@pappahapa/wc",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components",
   "license": "MIT",
@@ -14,6 +14,5 @@
   },
   "peerDependencies": {
     "lit": "^3.3.0"
-  },
-  "private": false
+  }
 }
