@@ -81,7 +81,7 @@ export class ButtonComponent extends WebComponent {
         
             .primary {
                 background-color: var(--primary);
-                color: var(--text-color);
+                color: var(--text-button-color);
         
                 &:hover {
                     background-color: var(--primary-hover);

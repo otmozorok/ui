@@ -24,7 +24,7 @@ export class AvatarComponent extends WebComponent {
                 font-size: 1rem;
                 line-height: 1;
                 user-select: none;
-                color: var(--text-color)
+                color: var(--text-avatar-color)
             }
         }
 

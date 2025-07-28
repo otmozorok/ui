@@ -22,11 +22,11 @@ export class CounterComponent extends WebComponent {
         
             span {
                 background-color: var(--primary);
-                color: var(--text-color);
+                color: var(--text-counter-color);
             }
         
             :host([inverse]) span {
-                background-color: var(--text-color);
+                background-color: var(--text-counter-color);
                 color: var(--primary);
             }
         

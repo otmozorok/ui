@@ -13,11 +13,14 @@
   --bg-color: hsl(0, 0%, 0%);
   --bg-secondary-color: hsl(233, 10%, 16%);
 
-  --text-color-hsl: 0, 0%, 100%;
+  --text-color-hsl: 0, 0%, 0%;
   --text-color: hsl(var(--text-color-hsl));
-  --text-color-inverse-hsl: 0, 0%, 0%;
+  --text-color-inverse-hsl: 0, 0%, 100%;
   --text-color-inverse: hsl(var(--text-color-inverse-hsl));
   --text-negative: hsl(351, 59%, 53%);
+  --text-avatar-color: hsl(0, 0%, 100%);
+  --text-button-color: hsl(0, 0%, 100%);
+  --text-counter-color: hsl(0, 0%, 100%);
 
   --primary-hsl: 211, 100%, 50%;
   --primary: hsl(var(--primary-hsl));
@@ -57,7 +60,6 @@
 }
 
 :root.dark {
-  --text-color-hsl: 0, 0%, 0%;
-  --text-color-inverse-hsl: 0, 0%, 100%;
-  --primary-hsl: 0, 100%, 50%;
+  --text-color-hsl: 0, 0%, 100%;
+  --text-color-inverse-hsl: 0, 0%, 0%;
 }

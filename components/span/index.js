@@ -5,9 +5,9 @@ export class SpanComponent extends WebComponent {
     super();
 
     this.shadowRoot.innerHTML = /*html*/ `
-        <span>
-            <slot></slot>
-        </span>
-        `;
+    <span>
+        <slot></slot>
+    </span>
+    `;
   }
 }

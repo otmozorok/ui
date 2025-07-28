@@ -4,20 +4,22 @@ import {
   AvatarComponent,
   ButtonComponent,
   CounterComponent,
+  EllipsisComponent,
   HeadlineComponent,
-  LoaderComponent,
   IconComponent,
+  LoaderComponent,
 } from '@pappahapa/wc';
 import '../style.css';
 import './style.css';
 
-customElements.define(WCTAG.Icon, IconComponent);
-customElements.define(WCTAG.Loader, LoaderComponent);
+customElements.define(WCTAG.Accordion, AccordionComponent);
+customElements.define(WCTAG.Avatar, AvatarComponent);
 customElements.define(WCTAG.Button, ButtonComponent);
 customElements.define(WCTAG.Counter, CounterComponent);
-customElements.define(WCTAG.Avatar, AvatarComponent);
+customElements.define(WCTAG.Ellipsis, EllipsisComponent);
 customElements.define(WCTAG.Headline, HeadlineComponent);
-customElements.define(WCTAG.Accordion, AccordionComponent);
+customElements.define(WCTAG.Icon, IconComponent);
+customElements.define(WCTAG.Loader, LoaderComponent);
 
 /** @type { import('@storybook/web-components-vite').Preview } */
 const preview = {
@@ -28,10 +30,6 @@ const preview = {
       wrapper.classList.add('preview');
 
       wrapper.appendChild(story());
-
-      wrapper.style.width = '440px';
-      wrapper.style.padding = '20px';
-      wrapper.style.borderRadius = '1rem';
 
       document.documentElement.classList.remove(...['light', 'dark', 'ios', 'android']);
       document.documentElement.classList.add(globals.theme);

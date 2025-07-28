@@ -16,7 +16,7 @@ export class LoaderComponent extends WebComponent {
                     content: "";
                     position: absolute;
                     inset: 0;
-                    border-right: 1px solid hsla(var(--text-color-hsl), 0.9);
+                    border-right: 1px solid currentColor;
                     border-radius: 0 50% 50% 0;
                     animation: spin 1s linear infinite;
                 }
