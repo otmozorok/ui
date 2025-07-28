@@ -25,9 +25,8 @@ customElements.define(WCTAG.Loader, LoaderComponent);
 const preview = {
   decorators: [
     (story, { globals }) => {
-      document.documentElement.classList.remove(...['light', 'dark', 'ios', 'android']);
+      document.documentElement.classList.remove(...['light', 'dark']);
       document.documentElement.classList.add(globals.theme);
-      document.documentElement.classList.add(globals.platform);
 
       return story();
     },
@@ -44,8 +43,6 @@ const preview = {
   tags: ['autodocs'],
   initialGlobals: {
     theme: 'light',
-    platform: 'ios',
-    withMaxUiWrapper: true,
   },
   globalTypes: {
     theme: {
@@ -53,13 +50,6 @@ const preview = {
         dynamicTitle: true,
         icon: 'sun',
         items: ['light', 'dark'],
-      },
-    },
-    platform: {
-      toolbar: {
-        dynamicTitle: true,
-        icon: 'mobile',
-        items: ['ios', 'android'],
       },
     },
   },

@@ -117,6 +117,10 @@ export class ButtonComponent extends WebComponent {
             :host([fullwidth]) button {
                 width: 100%;
             }
+        
+            :host {
+                display: contents;
+            }
         </style>
         
         <button>
