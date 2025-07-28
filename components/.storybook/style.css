@@ -1,12 +1,12 @@
-.light .preview {
+.light .sb-story {
   background-color: #f5f5f5;
 }
 
-.dark .preview {
+.dark .sb-story {
   background-color: #282828;
 }
 
-.preview {
+.sb-story {
   width: 440px;
   border-radius: 1rem;
   padding: 1rem;

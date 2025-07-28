@@ -25,17 +25,11 @@ customElements.define(WCTAG.Loader, LoaderComponent);
 const preview = {
   decorators: [
     (story, { globals }) => {
-      const wrapper = document.createElement('main');
-
-      wrapper.classList.add('preview');
-
-      wrapper.appendChild(story());
-
       document.documentElement.classList.remove(...['light', 'dark', 'ios', 'android']);
       document.documentElement.classList.add(globals.theme);
       document.documentElement.classList.add(globals.platform);
 
-      return wrapper;
+      return story();
     },
   ],
   parameters: {
