@@ -120,16 +120,8 @@ export class AvatarComponent extends WebComponent {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'color') {
-      switch (newValue) {
-        case COLOR.Blue:
-        case COLOR.Green:
-        case COLOR.Orange:
-        case COLOR.Purple:
-        case COLOR.Red:
-          this.color = newValue;
-          break;
-      }
+    if (name === 'color' && COLORS.includes(newValue)) {
+      this.color = newValue;
     }
 
     if (name === 'size' && newValue) {

@@ -1,4 +1,4 @@
-import { MODE, MODES, SIZE, SIZES, WCTAG } from '@pappahapa/shared';
+import { MODE, MODES, SIZE, SIZES, WCTAG } from '../.shared';
 import { setAttr, toggleAttr } from '../.storybook/utils';
 
 /**

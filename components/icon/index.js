@@ -14,7 +14,7 @@ export class IconComponent extends WebComponent {
     </style>
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <use href="/components/icon/sprites.svg?v0.3#" />
+        <use href="${import.meta.resolve('/icon/sprites.svg?v0.4#')}" />
     </svg>
     `;
 

@@ -1,19 +1,23 @@
-import { WCTAG } from '@pappahapa/shared';
+import { WCTAG } from '../.shared';
 import {
+  AccordionComponent,
   AvatarComponent,
   ButtonComponent,
   CounterComponent,
   HeadlineComponent,
   LoaderComponent,
+  IconComponent,
 } from '@pappahapa/wc';
 import '../style.css';
 import './style.css';
 
+customElements.define(WCTAG.Icon, IconComponent);
 customElements.define(WCTAG.Loader, LoaderComponent);
 customElements.define(WCTAG.Button, ButtonComponent);
 customElements.define(WCTAG.Counter, CounterComponent);
 customElements.define(WCTAG.Avatar, AvatarComponent);
 customElements.define(WCTAG.Headline, HeadlineComponent);
+customElements.define(WCTAG.Accordion, AccordionComponent);
 
 /** @type { import('@storybook/web-components-vite').Preview } */
 const preview = {

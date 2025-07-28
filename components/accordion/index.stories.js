@@ -1,6 +1,5 @@
-import { COLOR, COLORS, WCTAG } from '@pappahapa/shared';
+import { WCTAG } from '../.shared';
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 export default {
   title: 'Компоненты/Accordion',
   tags: ['autodocs'],
@@ -11,6 +10,13 @@ export default {
       el.innerHTML = args.children;
     }
 
+    if (args.header) {
+      const header = document.createElement(WCTAG.Headline);
+      header.slot = 'header';
+      header.innerHTML = args.header;
+      el.appendChild(header);
+    }
+
     return el;
   },
   argTypes: {
@@ -18,36 +24,20 @@ export default {
       control: { type: 'text' },
       type: { name: 'string' },
     },
+    header: {
+      control: { type: 'text' },
+      type: { name: 'string' },
+    },
   },
   args: {
-    children: 'Lorem ipsun ',
-  },
-};
-
-export const WithImage = {
-  name: 'С изображением',
-  args: {
-    src: 'https://sun9-21.userapi.com/1N-rJz6-7hoTDW7MhpWe19e_R_TdGV6Wu5ZC0A/67o6-apnAks.jpg',
-    size: 48,
+    children: 'Lorem ipsun',
+    header: 'Header',
   },
 };
 
-export const WithOutImage = {
-  name: 'Без изображения',
+export const Primary = {
   args: {
-    src: '',
-    children: 'BH',
-    size: 48,
-    color: COLOR.Blue,
-  },
-};
-
-export const Big = {
-  name: 'Большой размер',
-  args: {
-    src: '',
-    children: 'BH',
-    size: 65,
-    color: COLOR.Blue,
+    children: 'Lorem ipsun',
+    header: 'Header',
   },
 };

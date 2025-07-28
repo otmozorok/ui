@@ -1,4 +1,4 @@
-import { MODE, MODES, SIZE, SIZES, WCTAG } from '@pappahapa/shared';
+import { WCTAG } from '../.shared';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 export default {

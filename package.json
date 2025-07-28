@@ -28,8 +28,7 @@
     "packages/preact",
     "packages/react",
     "packages/svelte",
-    "packages/vue",
-    "shared"
+    "packages/vue"
   ],
   "main": "components/index.js",
   "description": ""

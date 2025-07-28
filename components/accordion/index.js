@@ -1,20 +1,6 @@
 import { WebComponent } from '../.shared/index.js';
 
-/**
- * Компонент аккордеона, реализованный как пользовательский веб-компонент.
- * Использует теги <details> и <summary> для создания интерактивного блока с раскрывающимся содержимым.
- *
- * @extends WebComponent
- * @class
- */
 export class AccordionComponent extends WebComponent {
-  /**
-   * Конструктор компонента. Создаёт структуру аккордеона внутри Shadow DOM.
-   * Добавляет стили для кастомизации отображения и поведения.
-   *
-   * @constructor
-   * @memberof AccordionComponent
-   */
   constructor() {
     super();
 
