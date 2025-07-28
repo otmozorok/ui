@@ -29,6 +29,9 @@ export default {
     },
     size: {
       control: { type: 'number' },
+      table: {
+        defaultValue: { summary: 48 },
+      },
     },
     color: {
       control: { type: 'inline-radio' },
@@ -36,12 +39,15 @@ export default {
         name: 'enum',
       },
       options: COLORS,
+      table: {
+        defaultValue: { summary: COLOR.Green },
+      },
     },
   },
   args: {
     src: 'https://sun9-21.userapi.com/1N-rJz6-7hoTDW7MhpWe19e_R_TdGV6Wu5ZC0A/67o6-apnAks.jpg',
     size: 48,
-    color: COLOR.Blue,
+    color: COLOR.Green,
   },
 };
 
@@ -59,7 +65,7 @@ export const WithOutImage = {
     src: '',
     children: 'BH',
     size: 48,
-    color: COLOR.Blue,
+    color: COLOR.Green,
   },
 };
 
@@ -69,6 +75,6 @@ export const Big = {
     src: '',
     children: 'BH',
     size: 65,
-    color: COLOR.Blue,
+    color: COLOR.Green,
   },
 };

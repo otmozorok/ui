@@ -162,17 +162,9 @@ export class ButtonComponent extends WebComponent {
    * @param {MODE} val
    */
   set mode(val) {
-    switch (val) {
-      case MODE.Secondary:
-      case MODE.Primary:
-      case MODE.Link:
-      case MODE.Tertiary:
-        this.$button.classList.remove(...MODES);
-        this.$button.classList.add(val);
-        break;
-
-      default:
-        break;
+    if (MODES.includes(val)) {
+      this.$button.classList.remove(...MODES);
+      this.$button.classList.add(val);
     }
   }
 
@@ -180,16 +172,9 @@ export class ButtonComponent extends WebComponent {
    * @param {SIZE} val
    */
   set size(val) {
-    switch (val) {
-      case SIZE.Small:
-      case SIZE.Medium:
-      case SIZE.Large:
-        this.$button.classList.remove(...SIZES);
-        this.$button.classList.add(val);
-        break;
-
-      default:
-        break;
+    if (SIZES.includes(val)) {
+      this.$button.classList.remove(...SIZES);
+      this.$button.classList.add(val);
     }
   }
 
@@ -206,25 +191,12 @@ export class ButtonComponent extends WebComponent {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'mode') {
-      switch (newValue) {
-        case MODE.Secondary:
-        case MODE.Primary:
-        case MODE.Link:
-        case MODE.Tertiary:
-          this.mode = newValue;
-          break;
-      }
+    if (name === 'mode' && MODES.includes(newValue)) {
+      this.mode = newValue;
     }
 
-    if (name === 'size') {
-      switch (newValue) {
-        case SIZE.Small:
-        case SIZE.Medium:
-        case SIZE.Large:
-          this.size = newValue;
-          break;
-      }
+    if (name === 'size' && SIZES.includes(newValue)) {
+      this.size = newValue;
     }
 
     if (name === 'loading' && oldValue !== newValue) {

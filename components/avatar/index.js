@@ -96,18 +96,9 @@ export class AvatarComponent extends WebComponent {
    * @param {COLOR} val
    */
   set color(val) {
-    switch (val) {
-      case COLOR.Blue:
-      case COLOR.Green:
-      case COLOR.Orange:
-      case COLOR.Purple:
-      case COLOR.Red:
-        this.$bg.classList.remove(...COLORS);
-        this.$bg.classList.add(val);
-        break;
-
-      default:
-        break;
+    if (COLORS.includes(val)) {
+      this.$bg.classList.remove(...COLORS);
+      this.$bg.classList.add(val);
     }
   }
 
