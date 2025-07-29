@@ -1,7 +1,6 @@
-import { COLOR, COLORS, SIZE, SIZES, WCTAG } from '../.shared';
+import { SIZE, SIZES, WCTAG } from '../.shared';
 import { setAttr } from '../.storybook/utils';
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 export default {
   title: 'Типография/Headline',
   tags: ['autodocs'],
@@ -35,10 +34,9 @@ export default {
   },
 };
 
-export const Big = {
-  name: 'Большой размер',
+export const DefaultHeadline = {
   args: {
     children: 'Title text',
-    size: SIZE.Large,
+    size: SIZE.Medium,
   },
 };

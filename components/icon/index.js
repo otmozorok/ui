@@ -1,6 +1,6 @@
-import { ICON, WebComponent } from '../.shared/index.js';
+import { ICON, ICONS, WebComponent } from '../.shared/index.js';
 
-const SPRITE_PATH = new URL('./sprites.svg?v0.4#', import.meta.url).href;
+const SPRITE_PATH = new URL('./sprites.svg?v0.5#', import.meta.url).href;
 
 export class IconComponent extends WebComponent {
   static observedAttributes = ['name', 'size'];
@@ -9,16 +9,16 @@ export class IconComponent extends WebComponent {
     super();
 
     this.shadowRoot.innerHTML = /*html*/ `
-    <style>
-        :host {
-            display: inline-grid;
-        }
-    </style>
-
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <use href="${SPRITE_PATH}" />
-    </svg>
-    `;
+        <style>
+            :host {
+                display: inline-grid;
+            }
+        </style>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <use href="${SPRITE_PATH}" />
+        </svg>
+        `;
 
     this.$svg = this.shadowRoot.querySelector('svg');
     this.$use = this.shadowRoot.querySelector('use');
@@ -36,37 +36,17 @@ export class IconComponent extends WebComponent {
 
   /** @param {ICON} val*/
   set name(val) {
-    switch (val) {
-      case ICON.ChevronDown:
-      case ICON.ChevronLeft:
-      case ICON.ChevronRight:
-      case ICON.ChevronUp:
-      case ICON.CircleHelp:
-      case ICON.HandMetal:
-      case ICON.Settings:
-      case ICON.Trash: {
-        const href = this.$use.getAttribute('href');
-        const arr = href.split('#');
-        arr[1] = val;
-        this.$use.setAttribute('href', arr.join('#'));
-      }
+    if (ICONS.includes(val)) {
+      const href = this.$use.getAttribute('href');
+      const arr = href.split('#');
+      arr[1] = val;
+      this.$use.setAttribute('href', arr.join('#'));
     }
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'name') {
-      switch (newValue) {
-        case ICON.ChevronDown:
-        case ICON.ChevronLeft:
-        case ICON.ChevronRight:
-        case ICON.ChevronUp:
-        case ICON.CircleHelp:
-        case ICON.HandMetal:
-        case ICON.Settings:
-        case ICON.Trash:
-          this.name = newValue;
-          break;
-      }
+    if (name === 'name' && ICONS.includes(newValue)) {
+      this.name = newValue;
     }
 
     if (name === 'size') {

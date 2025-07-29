@@ -60,7 +60,7 @@ export default {
   },
 };
 
-export const PureButton = {
+export const DefaultButton = {
   render: (args) => {
     const el = document.createElement(WCTAG.Button);
 

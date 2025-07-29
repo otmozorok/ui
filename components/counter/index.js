@@ -52,11 +52,7 @@ export class CounterComponent extends WebComponent {
   }
 
   set rounded(value) {
-    if (value) {
-      this.setAttribute('rounded', '');
-    } else {
-      this.removeAttribute('rounded');
-    }
+    value ? this.setAttribute('rounded', '') : this.removeAttribute('rounded');
     this.updateText(this.count);
   }
 
@@ -70,11 +66,7 @@ export class CounterComponent extends WebComponent {
   }
 
   updateText(value) {
-    if (this.rounded) {
-      this.$span.innerText = rounded(value);
-    } else {
-      this.$span.innerText = value;
-    }
+    this.rounded ? (this.$span.innerText = rounded(value)) : (this.$span.innerText = value);
   }
 
   attributeChangedCallback(name, oldValue, newValue) {

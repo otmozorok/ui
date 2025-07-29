@@ -65,6 +65,8 @@ export const WCTAG = Object.freeze({
   MenuHeader: 'wc-menu-header',
   MenuItem: 'wc-menu-item',
   Tooltip: 'wc-tooltip',
+  Paragraph: 'wc-paragraph',
+  Span: 'wc-span',
 });
 
 export const ICON = Object.freeze({
@@ -76,4 +78,21 @@ export const ICON = Object.freeze({
   HandMetal: 'hand-metal',
   Settings: 'settings',
   Trash: 'trash',
+  UserRound: 'user-round',
 });
+
+/**
+ * @typedef {'chevron-down'| 'chevron-left' | 'chevron-right'| 'chevron-up' | 'circle-help'| 'hand-metal' | 'settings' | 'trash' | 'user-round'} ICON
+ * @type {ICON[]}
+ */
+export const ICONS = [
+  ICON.ChevronDown,
+  ICON.ChevronLeft,
+  ICON.ChevronRight,
+  ICON.ChevronUp,
+  ICON.CircleHelp,
+  ICON.HandMetal,
+  ICON.Settings,
+  ICON.Trash,
+  ICON.UserRound,
+];

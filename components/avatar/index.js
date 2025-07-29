@@ -62,7 +62,7 @@ export class AvatarComponent extends WebComponent {
         <img />
         <span class="bg">
             <span class="text">
-                <slot>😎</slot>
+                <slot><wc-icon name='user-round' size="21" ></wc-icon></slot>
             </span>
         </span>
     </span>

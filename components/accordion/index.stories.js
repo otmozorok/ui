@@ -35,7 +35,7 @@ export default {
   },
 };
 
-export const Primary = {
+export const DefaultAccordion = {
   args: {
     children: 'Lorem ipsun',
     header: 'Header',

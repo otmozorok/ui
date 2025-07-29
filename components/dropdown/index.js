@@ -34,7 +34,7 @@ export class DropdownComponent extends WebComponent {
             }
         </style>
         
-        <slot name="trigger">⚠️</slot>
+        <slot name="trigger"><wc-icon name="circle-help"></wc-icon></slot>
         <div class="dropdown">
             <slot></slot>
         </div>

@@ -51,8 +51,15 @@ export default {
   },
 };
 
+export const DefaultAvatar = {
+  args: {
+    src: '',
+    size: 48,
+    color: COLOR.Green,
+  },
+};
+
 export const WithImage = {
-  name: 'С изображением',
   args: {
     src: 'https://sun9-21.userapi.com/1N-rJz6-7hoTDW7MhpWe19e_R_TdGV6Wu5ZC0A/67o6-apnAks.jpg',
     size: 48,
@@ -60,7 +67,6 @@ export const WithImage = {
 };
 
 export const WithOutImage = {
-  name: 'Без изображения',
   args: {
     src: '',
     children: 'BH',
@@ -70,7 +76,6 @@ export const WithOutImage = {
 };
 
 export const Big = {
-  name: 'Большой размер',
   args: {
     src: '',
     children: 'BH',
