@@ -1,7 +1,7 @@
 import { WCTAG } from '../.shared';
 
 export default {
-  title: 'Компоненты/Counter',
+  title: 'Components/Counter',
   tags: ['autodocs'],
   render: (args) => {
     const el = document.createElement(WCTAG.Counter);

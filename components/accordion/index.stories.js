@@ -1,7 +1,7 @@
 import { WCTAG } from '../.shared';
 
 export default {
-  title: 'Компоненты/Accordion',
+  title: 'Components/Accordion',
   tags: ['autodocs'],
   render: (args) => {
     const el = document.createElement(WCTAG.Accordion);

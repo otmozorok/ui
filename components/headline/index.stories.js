@@ -2,7 +2,7 @@ import { SIZE, SIZES, WCTAG } from '../.shared';
 import { setAttr } from '../.storybook/utils';
 
 export default {
-  title: 'Типография/Headline',
+  title: 'Typography/Headline',
   tags: ['autodocs'],
   render: (args) => {
     const el = document.createElement(WCTAG.Headline);

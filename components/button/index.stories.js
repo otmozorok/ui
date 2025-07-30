@@ -5,7 +5,7 @@ import { setAttr, toggleAttr } from '../.storybook/utils';
  * Кнопка
  */
 export default {
-  title: 'Компоненты/Button',
+  title: 'Components/Button',
   tags: ['autodocs'],
   component: 'wc-button',
   argTypes: {

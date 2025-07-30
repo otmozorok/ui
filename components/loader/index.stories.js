@@ -1,7 +1,7 @@
 import { SIZE, SIZES, WCTAG } from '../.shared';
 
 export default {
-  title: 'Компоненты/Loader',
+  title: 'Components/Loader',
   tags: ['autodocs'],
   render: (args) => {
     const el = document.createElement(WCTAG.Loader);

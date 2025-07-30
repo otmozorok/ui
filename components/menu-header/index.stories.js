@@ -2,7 +2,7 @@ import { WCTAG } from '../.shared';
 import { toggleAttr } from '../.storybook/utils';
 
 export default {
-  title: 'Меню/Menu/MenuHeader',
+  title: 'Menu/Menu/MenuHeader',
   tags: ['autodocs'],
   render: (args) => {
     const el = document.createElement(WCTAG.MenuHeader);

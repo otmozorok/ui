@@ -2,7 +2,7 @@ import { WCTAG } from '../.shared/index.js';
 import { setAttr } from '../.storybook/utils.js';
 
 export default {
-  title: 'Типография/Paragraph',
+  title: 'Typography/Paragraph',
   tags: ['autodocs'],
   render: (args, context) => {
     const el = document.createElement(WCTAG.Paragraph);
