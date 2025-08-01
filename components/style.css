@@ -18,21 +18,25 @@
   --text-color-inverse-hsl: 0, 0%, 100%;
   --text-color-inverse: hsl(var(--text-color-inverse-hsl));
   --text-negative: hsl(351, 59%, 53%);
-  --text-avatar-color: hsl(0, 0%, 100%);
   --text-button-color: hsl(0, 0%, 100%);
-  --text-counter-color: hsl(0, 0%, 100%);
 
   --primary-hsl: 211, 100%, 50%;
-  --primary: hsl(var(--primary-hsl));
   --primary-hover-hsl: 211, 100%, 64%;
   --primary-hover: hsl(var(--primary-hover-hsl));
   --secondary-hsl: 0, 0%, 100%;
   --secondary: hsla(var(--secondary-hsl), 0.09);
   --secondary-hover: hsla(var(--secondary-hsl), 0.15);
   --negative-hsl: 351, 59%, 53%;
-  --negative: hsl(var(--negative-hsl));
   --negative-hover-hsl: 351, 89%, 63%;
   --negative-hover: hsl(var(--negative-hover-hsl));
+
+  --text-avatar-color: hsl(0, 0%, 100%);
+  --text-counter-color: hsl(0, 0%, 100%);
+  --text-counter-inverse-color: hsl(0, 0%, 0%);
+
+  --primary: hsl(211, 100%, 50%);
+  --negative: hsl(351, 59%, 53%);
+  --neutral: hsl(0, 0%, 100%);
 
   /* GRADIENTS */
   --gradient-red: linear-gradient(153deg, #ff48b6 0.77%, #ff8a35 93.03%);

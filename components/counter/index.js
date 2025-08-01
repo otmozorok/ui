@@ -1,80 +1,48 @@
-import { rounded, WebComponent } from '../.shared/index.js';
+import { APPEARANCES, rounded, WCATTR, WebComponent } from '../.shared/index.js';
+import template from './template.js';
 
 export class CounterComponent extends WebComponent {
-  static observedAttributes = ['count', 'rounded'];
+  static observedAttributes = [WCATTR.Value, WCATTR.Rounded, WCATTR.Appearance];
 
   constructor() {
-    super();
-
-    this.shadowRoot.innerHTML = /*html*/ `
-        <style>
-            span {
-                align-items: center;
-                border-radius: 12px;
-                box-sizing: border-box;
-                display: inline-flex;
-                font-weight: 500;
-                font-size: 0.875rem;
-                min-height: 20px;
-                min-width: 20px;
-                padding: 0 6px;
-            }
-        
-            span {
-                background-color: var(--primary);
-                color: var(--text-counter-color);
-            }
-        
-            :host([inverse]) span {
-                background-color: var(--text-counter-color);
-                color: var(--primary);
-            }
-        
-            :host([destructive]) span {
-                background-color: var(--negative);
-                color: var(--text-counter-color);
-            }
-        
-            :host([inverse][destructive]) span {
-                background-color: var(--text-counter-color);
-                color: var(--negative);
-            }
-        </style>
-        
-        <span></span>
-        `;
+    super(template);
 
     this.$span = this.shadowRoot.querySelector('span');
   }
 
   get rounded() {
-    return this.hasAttribute('rounded');
+    return this.hasAttribute(WCATTR.Rounded);
   }
 
-  set rounded(value) {
-    value ? this.setAttribute('rounded', '') : this.removeAttribute('rounded');
-    this.updateText(this.count);
+  set rounded(val) {
+    val ? this.setAttribute(WCATTR.Rounded, '') : this.removeAttribute(WCATTR.Rounded);
+    this.#updateText(this.value);
   }
 
-  get count() {
-    return Number(this.getAttribute('count') || '0');
+  get value() {
+    return Number(this.getAttribute(WCATTR.Value));
   }
 
-  set count(value) {
-    if (value !== this.count) this.setAttribute('count', Number(value));
-    this.updateText(value);
+  set value(val) {
+    this.setAttribute(WCATTR.Value, val);
+    this.#updateText(val);
   }
 
-  updateText(value) {
-    this.rounded ? (this.$span.innerText = rounded(value)) : (this.$span.innerText = value);
+  get appearance() {
+    return this.getAttribute(WCATTR.Appearance);
   }
 
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'count') {
-      this.count = Number(newValue);
+  set appearance(val) {
+    if (APPEARANCES.includes(val)) {
+      this.setAttribute(WCATTR.Appearance, val);
     }
-    if (name === 'rounded' && newValue !== oldValue) {
-      this.rounded = newValue === '' ? true : false;
-    }
+  }
+
+  #updateText(val) {
+    this.rounded ? (this.$span.innerText = rounded(val)) : (this.$span.innerText = val);
+  }
+
+  connectedCallback() {
+    this.value = this.value ?? '0';
   }
 }

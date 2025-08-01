@@ -1,4 +1,4 @@
-import { COLORS, SHAPES, MODES } from '../consts';
+import { COLORS, SHAPES, MODES, APPEARANCES, WCATTR } from '../consts';
 
 export class WebComponent extends HTMLElement {
   constructor(template) {
@@ -9,37 +9,58 @@ export class WebComponent extends HTMLElement {
     }
   }
 
+  connectedCallback() {
+    console.log(
+      '%c connected ',
+      'color: white; background-color: black; padding: 2px 4px; border-radius: 2px;',
+      this.tagName.toLowerCase()
+    );
+  }
+
+  disconnectedCallback() {
+    console.log(
+      '%c disconnected ',
+      'color: white; background-color: black; padding: 2px 4px; border-radius: 2px;',
+      this.tagName.toLowerCase()
+    );
+  }
+
   attributeChangedCallback(name, oldValue, newValue) {
     if (oldValue == newValue) return;
 
-    if (name === 'color' && COLORS.includes(newValue)) {
+    if (name === WCATTR.Color && COLORS.includes(newValue)) {
       this.color = newValue;
     }
 
-    if (name === 'shape' && SHAPES.includes(newValue)) {
+    if (name === WCATTR.Shape && SHAPES.includes(newValue)) {
       this.shape = newValue;
     }
 
-    if (name === 'mode' && MODES.includes(newValue)) {
+    if (name === WCATTR.Mode && MODES.includes(newValue)) {
       this.mode = newValue;
     }
 
-    if (name === 'count') {
-      this.count = Number(newValue);
+    if (name === WCATTR.Appearance && APPEARANCES.includes(newValue)) {
+      this.appearance = newValue;
     }
-    if (name === 'rounded' && newValue !== oldValue) {
+
+    if (name === WCATTR.Rounded) {
       this.rounded = newValue === '' ? true : false;
     }
 
-    if (name === 'loading' && oldValue !== newValue) {
+    if (name === WCATTR.Loading) {
       this.loading = newValue === '' ? true : false;
     }
 
-    if (name === 'size-number') {
-      this.sizeNumber = Number(newValue);
+    if (name === WCATTR.SizeNumber) {
+      this.sizeNumber = newValue;
     }
 
-    if (name === 'src') {
+    if (name === WCATTR.Value) {
+      this.value = newValue;
+    }
+
+    if (name === WCATTR.Src) {
       this.src = newValue;
     }
   }

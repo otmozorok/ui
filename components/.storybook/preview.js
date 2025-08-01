@@ -1,4 +1,3 @@
-import { WCTAG } from '../.shared';
 import {
   AccordionComponent,
   AvatarComponent,
@@ -14,7 +13,8 @@ import {
   MenuHeaderComponent,
   MenuItemComponent,
   ParagraphComponent,
-} from '@pappahapa/wc';
+} from '../';
+import { WCTAG } from '../.shared';
 import '../style.css';
 import './style.css';
 
