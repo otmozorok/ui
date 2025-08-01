@@ -1,84 +1,23 @@
-import { COLOR, COLORS, WebComponent } from '../.shared/index.js';
+import { COLOR, COLORS, SHAPE, SHAPES, WCATTR, WebComponent } from '../.shared/index.js';
+import template from './template.js';
 
+/**
+ * Avatar
+ * @docs https://otmozorok.github.io/ui/?path=/docs/components-avatar--docs
+ */
 export class AvatarComponent extends WebComponent {
-  static observedAttributes = ['src', 'color', 'size'];
+  static observedAttributes = [WCATTR.Src, WCATTR.Color, WCATTR.SizeNumber, WCATTR.Shape];
 
   constructor() {
-    super();
-
-    this.shadowRoot.innerHTML = /* html*/ `
-    <style>
-        .wrapper {
-            display: grid;
-            border-radius: 50%;
-            overflow: hidden;
-
-            img {
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
-                width: 100%;
-            }
-
-            .text {
-                font-size: 1rem;
-                line-height: 1;
-                user-select: none;
-                color: var(--text-avatar-color)
-            }
-        }
-
-        .bg {
-            display: grid;
-            place-content: center;
-
-            &.red {
-                background-image: var(--gradient-red);
-            }
-
-            &.green {
-                background-image: var(--gradient-green);
-            }
-
-            &.orange {
-                background-image: var(--gradient-orange);
-            }
-
-            &.blue {
-                background-image: var(--gradient-blue);
-            }
-
-            &.purple {
-                background-image: var(--gradient-purple);
-            }
-        }
-
-        .hide {
-          display: none;
-        }
-    </style>
-
-    <span class="wrapper">
-        <img />
-        <span class="bg">
-            <span class="text">
-                <slot><wc-icon name='user-round' size="21" ></wc-icon></slot>
-            </span>
-        </span>
-    </span>
-    `;
+    super(template);
 
     this.$wrapper = this.shadowRoot.querySelector('.wrapper');
     this.$img = this.shadowRoot.querySelector('img');
     this.$bg = this.shadowRoot.querySelector('.bg');
-
-    this.size = 48;
-    this.src = '';
-    this.color = COLOR.Green;
   }
 
   get src() {
-    return this.getAttribute('src');
+    return this.getAttribute(WCATTR.Src);
   }
 
   set src(val) {
@@ -92,35 +31,46 @@ export class AvatarComponent extends WebComponent {
     }
   }
 
+  get color() {
+    return this.getAttribute(WCATTR.Color);
+  }
+
   /**
    * @param {COLOR} val
    */
   set color(val) {
     if (COLORS.includes(val)) {
-      this.$bg.classList.remove(...COLORS);
-      this.$bg.classList.add(val);
+      this.setAttribute(WCATTR.Color, val);
     }
   }
 
+  get sizeNumber() {
+    return this.$wrapper.style.width || this.$wrapper.style.height;
+  }
+
   /** @param {number} val */
-  set size(val) {
+  set sizeNumber(val) {
     if (val) {
       this.$wrapper.style.width = `${val}px`;
       this.$wrapper.style.height = `${val}px`;
     }
   }
 
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'color' && COLORS.includes(newValue)) {
-      this.color = newValue;
-    }
+  get shape() {
+    return this.getAttribute(WCATTR.Shape);
+  }
 
-    if (name === 'size' && newValue) {
-      this.size = newValue;
+  /** @param {FORM} val */
+  set shape(val) {
+    if (SHAPES.includes(val)) {
+      this.setAttribute(WCATTR.Shape, val);
     }
+  }
 
-    if (name === 'src') {
-      this.src = newValue;
-    }
+  connectedCallback() {
+    this.sizeNumber = this.sizeNumber || 48;
+    this.src = this.src || '';
+    this.color = this.color || COLOR.Blue;
+    this.shape = this.shape || SHAPE.Circle;
   }
 }

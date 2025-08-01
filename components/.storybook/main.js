@@ -10,21 +10,26 @@ function getAbsolutePath(value) {
 
 /** @type { import('@storybook/web-components-vite').StorybookConfig } */
 const config = {
-  stories: ['../*.mdx', '../**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  stories: [
+    '../*.mdx',
+    '../**/*.stories.@(js|jsx|mjs|ts|tsx)',
+    '../**/stories.@(js|jsx|mjs|ts|tsx)',
+  ],
 
   addons: [
-    getAbsolutePath('@chromatic-com/storybook'),
     getAbsolutePath('@storybook/addon-docs'),
     getAbsolutePath('@storybook/addon-a11y'),
     getAbsolutePath('@storybook/addon-vitest'),
+    getAbsolutePath("@storybook/addon-designs")
   ],
 
   framework: {
-    name: getAbsolutePath('@storybook/web-components-vite'),
+    name: getAbsolutePath('@storybook/html'),
     options: {},
   },
 
   core: {
+    builder: getAbsolutePath('@storybook/builder-vite'),
     disableWhatsNewNotifications: true,
     disableTelemetry: true,
   },

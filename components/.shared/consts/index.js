@@ -1,14 +1,17 @@
+export const SHAPE = Object.freeze({
+  Circle: 'circle',
+  Squircle: 'squircle',
+});
+
+export const SHAPES = Object.values(SHAPE);
+
 export const SIZE = Object.freeze({
   Small: 'small',
   Medium: 'medium',
   Large: 'large',
 });
 
-/**
- * @typedef {"small" | "medium" | "large"} SIZE
- * @type {SIZE[]}
- */
-export const SIZES = [SIZE.Small, SIZE.Medium, SIZE.Large];
+export const SIZES = Object.values(SIZE);
 
 export const MODE = Object.freeze({
   Link: 'link',
@@ -17,11 +20,7 @@ export const MODE = Object.freeze({
   Tertiary: 'tertiary',
 });
 
-/**
- * @typedef {"link" | "primary" | "secondary" | "tertiary"} MODE
- * @type {MODE[]}
- */
-export const MODES = [MODE.Link, MODE.Primary, MODE.Secondary, MODE.Tertiary];
+export const MODES = Object.values(MODE);
 
 export const POSITION = Object.freeze({
   Top: 'top',
@@ -30,11 +29,7 @@ export const POSITION = Object.freeze({
   Right: 'right',
 });
 
-/**
- * @typedef {"top" | "bottom" | "left" | "right"} POSITION
- * @type {POSITION[]}
- */
-export const POSITIONS = [POSITION.Top, POSITION.Bottom, POSITION.Left, POSITION.Right];
+export const POSITIONS = Object.values(POSITION);
 
 export const COLOR = Object.freeze({
   Red: 'red',
@@ -44,11 +39,21 @@ export const COLOR = Object.freeze({
   Purple: 'purple',
 });
 
-/**
- * @typedef {"red" | "green" | "blue" | "orange" | "purple"} COLOR
- * @type {COLOR[]}
- */
-export const COLORS = [COLOR.Red, COLOR.Green, COLOR.Blue, COLOR.Orange, COLOR.Purple];
+export const COLORS = Object.values(COLOR);
+
+export const ICON = Object.freeze({
+  ChevronDown: 'chevron-down',
+  ChevronLeft: 'chevron-left',
+  ChevronRight: 'chevron-right',
+  ChevronUp: 'chevron-up',
+  CircleHelp: 'circle-help',
+  HandMetal: 'hand-metal',
+  Settings: 'settings',
+  Trash: 'trash',
+  UserRound: 'user-round',
+});
+
+export const ICONS = Object.values(ICON);
 
 export const WCTAG = Object.freeze({
   Accordion: 'wc-accordion',
@@ -69,30 +74,11 @@ export const WCTAG = Object.freeze({
   Span: 'wc-span',
 });
 
-export const ICON = Object.freeze({
-  ChevronDown: 'chevron-down',
-  ChevronLeft: 'chevron-left',
-  ChevronRight: 'chevron-right',
-  ChevronUp: 'chevron-up',
-  CircleHelp: 'circle-help',
-  HandMetal: 'hand-metal',
-  Settings: 'settings',
-  Trash: 'trash',
-  UserRound: 'user-round',
+export const WCATTR = Object.freeze({
+  Color: 'color',
+  Count: 'count',
+  Rounded: 'rounded',
+  Shape: 'shape',
+  SizeNumber: 'size-number',
+  Src: 'src',
 });
-
-/**
- * @typedef {'chevron-down'| 'chevron-left' | 'chevron-right'| 'chevron-up' | 'circle-help'| 'hand-metal' | 'settings' | 'trash' | 'user-round'} ICON
- * @type {ICON[]}
- */
-export const ICONS = [
-  ICON.ChevronDown,
-  ICON.ChevronLeft,
-  ICON.ChevronRight,
-  ICON.ChevronUp,
-  ICON.CircleHelp,
-  ICON.HandMetal,
-  ICON.Settings,
-  ICON.Trash,
-  ICON.UserRound,
-];
