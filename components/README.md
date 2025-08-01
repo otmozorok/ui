@@ -10,7 +10,7 @@ npm i @pappahapa/wc
 
 ```js
 import { AvatarComponent } from '@pappahapa/wc';
-import '@pappahapa/style.css';
+import '@pappahapa/wc/style.css';
 
 customElements.define('wc-avatar', AvatarComponent);
 
