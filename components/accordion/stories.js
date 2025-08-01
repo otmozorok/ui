@@ -33,6 +33,12 @@ export default {
     children: 'Lorem ipsun',
     header: 'Header',
   },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/txHhP4RIa7u0D9jsSAyjw3/UI?node-id=44-13&embed-host=share',
+    },
+  },
 };
 
 export const DefaultAccordion = {

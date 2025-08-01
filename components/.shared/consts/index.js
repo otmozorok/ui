@@ -32,6 +32,7 @@ export const WCATTR = Object.freeze({
   Loading: 'loading',
   Mode: 'mode',
   Negative: 'negative',
+  Open: 'open',
   Rounded: 'rounded',
   Shape: 'shape',
   SizeNumber: 'size-number',
