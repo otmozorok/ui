@@ -1,4 +1,4 @@
-import { COLORS, SHAPES, MODES, APPEARANCES, WCATTR } from '../consts';
+import { COLORS, SHAPES, MODES, APPEARANCES, WCATTR, SIZES } from '../consts';
 
 export class WebComponent extends HTMLElement {
   constructor(template) {
@@ -42,6 +42,10 @@ export class WebComponent extends HTMLElement {
 
     if (name === WCATTR.Appearance && APPEARANCES.includes(newValue)) {
       this.appearance = newValue;
+    }
+
+    if (name === WCATTR.Size && SIZES.includes(newValue)) {
+      this.size = newValue;
     }
 
     if (name === WCATTR.Rounded) {

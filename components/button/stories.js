@@ -1,9 +1,6 @@
-import { MODE, MODES, SIZE, SIZES, WCTAG } from '../.shared';
+import { APPEARANCE, APPEARANCES, MODE, MODES, SIZE, SIZES, WCATTR, WCTAG } from '../.shared';
 import { setAttr, toggleAttr } from '../.storybook/utils';
 
-/**
- * Кнопка
- */
 export default {
   title: 'Components/Button',
   tags: ['autodocs'],
@@ -24,9 +21,14 @@ export default {
         type: 'boolean',
       },
     },
-    destructive: {
-      control: {
-        type: 'boolean',
+    appearance: {
+      control: { type: 'inline-radio' },
+      type: {
+        name: 'enum',
+      },
+      options: APPEARANCES,
+      table: {
+        defaultValue: { summary: APPEARANCE.Themed },
       },
     },
     size: {
@@ -54,7 +56,7 @@ export default {
     children: 'Text button',
     loading: false,
     fullwidth: false,
-    destructive: false,
+    appearance: APPEARANCE.Themed,
     size: SIZE.Medium,
     mode: MODE.Primary,
   },
@@ -64,11 +66,11 @@ export const DefaultButton = {
   render: (args) => {
     const el = document.createElement(WCTAG.Button);
 
-    setAttr(args.size, 'size', el);
-    setAttr(args.mode, 'mode', el);
-    toggleAttr(args.loading, 'loading', el);
-    toggleAttr(args.fullwidth, 'fullwidth', el);
-    toggleAttr(args.destructive, 'destructive', el);
+    setAttr(args.size, WCATTR.Size, el);
+    setAttr(args.mode, WCATTR.Mode, el);
+    setAttr(args.appearance, WCATTR.Appearance, el);
+    toggleAttr(args.loading, WCATTR.Loading, el);
+    toggleAttr(args.fullwidth, WCATTR.FullWidth, el);
 
     el.innerText = args.children;
 
@@ -82,15 +84,9 @@ export const ButtonWithCounter = {
     const counter = document.createElement(WCTAG.Counter);
     counter.slot = 'after';
 
-    toggleAttr(true, 'inverse', counter);
-    toggleAttr(true, 'rounded', counter);
-    setAttr(1000, 'count', counter);
-
-    setAttr(args.size, 'size', el);
-    setAttr(args.mode, 'mode', el);
-    toggleAttr(args.loading, 'loading', el);
-    toggleAttr(args.fullwidth, 'fullwidth', el);
-    toggleAttr(args.destructive, 'destructive', el);
+    toggleAttr(true, WCATTR.Inverse, counter);
+    toggleAttr(true, WCATTR.Rounded, counter);
+    setAttr(1000, WCATTR.Value, counter);
 
     el.innerText = args.children;
 

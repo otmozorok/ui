@@ -1,153 +1,73 @@
-import { MODE, MODES, SIZE, SIZES, WebComponent } from '../.shared/index.js';
+import {
+  APPEARANCE,
+  APPEARANCES,
+  MODE,
+  MODES,
+  SIZE,
+  SIZES,
+  WCATTR,
+  WebComponent,
+} from '../.shared/index.js';
+import template from './template.js';
 
+/**
+ * Button
+ * @docs https://otmozorok.github.io/ui/?path=/docs/components-button--docs
+ */
 export class ButtonComponent extends WebComponent {
-  static observedAttributes = ['mode', 'size', 'loading'];
+  static observedAttributes = [WCATTR.Mode, WCATTR.Size, WCATTR.Loading];
 
   constructor() {
-    super();
-
-    this.shadowRoot.innerHTML = /*html*/ `
-        <style>
-            button {
-                align-items: center;
-                border: 0;
-                box-sizing: border-box;
-                cursor: pointer;
-                display: flex;
-                justify-content: center;
-                overflow: hidden;
-                position: relative;
-                text-decoration: none;
-                gap: 6px;
-                font-family: var(--font-family);
-                line-height: 1;
-        
-                &>wc-loader {
-                    opacity: 0;
-                    position: absolute;
-                    height: 20px;
-                    width: 20px;
-                }
-            }
-        
-            span {
-                line-height: 1;
-            }
-        
-            :host([loading]) span {
-                opacity: 0;
-            }
-        
-            :host([loading]) wc-loader {
-                opacity: 1;
-            }
-        
-            .small {
-                padding: 0 12px;
-                border-radius: 10px;
-                height: 28px;
-                min-width: 28px;
-                font-size: 0.875rem;
-                font-weight: 500;
-            }
-        
-            .medium {
-                padding: 0 12px;
-                border-radius: 12px;
-                height: 40px;
-                min-width: 40px;
-                font-size: 1rem;
-                font-weight: 500;
-            }
-        
-            .large {
-                padding: 0 20px;
-                border-radius: 16px;
-                height: 52px;
-                min-width: 52px;
-                font-size: 1.0625rem;
-                font-weight: 600;
-            }
-        
-            .link {
-                background-color: transparent;
-                color: var(--primary);
-                padding: 0;
-        
-                &:hover {
-                    color: #479fff
-                }
-            }
-        
-            .primary {
-                background-color: var(--primary);
-                color: var(--text-button-color);
-        
-                &:hover {
-                    background-color: var(--primary-hover);
-                }
-            }
-        
-            .secondary {
-                background-color: var(--secondary);
-                color: var(--primary);
-        
-                &:hover {
-                    background-color: var(--secondary-hover);
-                }
-            }
-        
-            .tertiary {
-                background-color: transparent;
-                color: var(--primary);
-        
-                &:hover {
-                    background-color: hsla(var(--secondary-hsl), 0.04);
-                }
-            }
-        
-            :host([destructive]) button {
-                background-color: var(--negative);
-        
-                &:hover {
-                    background-color: var(--negative-hover);
-                }
-            }
-        
-            :host([fullwidth]) button {
-                width: 100%;
-            }
-        
-            :host {
-                display: contents;
-            }
-        </style>
-        
-        <button>
-            <wc-loader></wc-loader>
-            <span>
-                <slot></slot>
-            </span>
-            <slot name="after"></slot>
-        </button>
-        `;
+    super(template);
 
     this.$button = this.shadowRoot.querySelector('button');
     this.$loader = this.shadowRoot.querySelector('wc-loader');
     this.$span = this.shadowRoot.querySelector('span');
+  }
 
-    /**
-     * @type {MODE}
-     */
-    this.mode = MODE.Primary;
+  get mode() {
+    return this.getAttribute(WCATTR.Mode);
+  }
 
-    /**
-     * @type {SIZE}
-     */
-    this.size = SIZE.Medium;
+  set mode(val) {
+    if (MODES.includes(val)) {
+      this.setAttribute(WCATTR.Mode, val);
+    }
+  }
+
+  get size() {
+    return this.getAttribute(WCATTR.Size);
+  }
+
+  set size(val) {
+    if (SIZES.includes(val)) {
+      this.setAttribute(WCATTR.Size, val);
+    }
+  }
+
+  get appearance() {
+    return this.getAttribute(WCATTR.Appearance);
+  }
+
+  set appearance(val) {
+    if (APPEARANCES.includes(val)) {
+      this.setAttribute(WCATTR.Appearance, val);
+    }
+  }
+
+  get loading() {
+    return this.hasAttribute(WCATTR.Loading);
+  }
+
+  set loading(val) {
+    val ? this.setAttribute(WCATTR.Loading, '') : this.removeAttribute(WCATTR.Loading);
   }
 
   connectedCallback() {
+    this.mode = this.mode || MODE.Primary;
+    this.appearance = this.appearance || APPEARANCE.Themed;
+    this.size = this.size || SIZE.Medium;
+
     this.$button.addEventListener('click', () => {
       this.dispatchEvent(
         new Event('click', {
@@ -156,51 +76,5 @@ export class ButtonComponent extends WebComponent {
         })
       );
     });
-  }
-
-  /**
-   * @param {MODE} val
-   */
-  set mode(val) {
-    if (MODES.includes(val)) {
-      this.$button.classList.remove(...MODES);
-      this.$button.classList.add(val);
-    }
-  }
-
-  /**
-   * @param {SIZE} val
-   */
-  set size(val) {
-    if (SIZES.includes(val)) {
-      this.$button.classList.remove(...SIZES);
-      this.$button.classList.add(val);
-    }
-  }
-
-  get loading() {
-    return this.hasAttribute('loading');
-  }
-
-  set loading(val) {
-    if (val) {
-      this.setAttribute('loading', '');
-    } else {
-      this.removeAttribute('loading');
-    }
-  }
-
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'mode' && MODES.includes(newValue)) {
-      this.mode = newValue;
-    }
-
-    if (name === 'size' && SIZES.includes(newValue)) {
-      this.size = newValue;
-    }
-
-    if (name === 'loading' && oldValue !== newValue) {
-      this.loading = newValue === '' ? true : false;
-    }
   }
 }

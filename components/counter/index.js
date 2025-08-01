@@ -1,6 +1,10 @@
 import { APPEARANCES, rounded, WCATTR, WebComponent } from '../.shared/index.js';
 import template from './template.js';
 
+/**
+ * Counter
+ * @link https://otmozorok.github.io/ui/?path=/docs/components-counter--docs
+ */
 export class CounterComponent extends WebComponent {
   static observedAttributes = [WCATTR.Value, WCATTR.Rounded, WCATTR.Appearance];
 
