@@ -1,86 +1,26 @@
-import { SIZE, SIZES, WebComponent } from '../.shared/index.js';
+import { SIZES, WCATTR, WebComponent } from '../.shared/index.js';
+import template from './template.js';
 
+/**
+ * Loader
+ * @docs https://otmozorok.github.io/ui/?path=/docs/components-loader--docs
+ */
 export class LoaderComponent extends WebComponent {
-  static observedAttributes = ['size'];
+  static observedAttributes = [WCATTR.Size];
 
   constructor() {
-    super();
-
-    this.shadowRoot.innerHTML = /*html*/ `
-        <style>
-            loader {
-                display: inline-flex;
-                position: relative;
-        
-                &::after {
-                    content: "";
-                    position: absolute;
-                    inset: 0;
-                    border-right: 1px solid currentColor;
-                    border-radius: 0 50% 50% 0;
-                    animation: spin 1s linear infinite;
-                }
-            }
-        
-            .small {
-                width: 15px;
-                height: 15px;
-            }
-        
-            .medium {
-                width: 20px;
-                height: 20px;
-            }
-        
-            .large {
-                width: 25px;
-                height: 25px;
-            }
-        
-            @keyframes spin {
-                to {
-                    transform: rotate(360deg);
-                }
-            }
-        </style>
-        
-        <loader></loader>
-        `;
+    super(template);
 
     this.$loader = this.shadowRoot.querySelector('loader');
-
-    /**
-     * @type {SIZE}
-     */
-    this.size = SIZE.Medium;
   }
 
-  /**
-   * @param {SIZE} val
-   */
+  get size() {
+    return this.getAttribute(WCATTR.Size);
+  }
+
   set size(val) {
-    switch (val) {
-      case SIZE.Small:
-      case SIZE.Medium:
-      case SIZE.Large:
-        this.$loader.classList.remove(...SIZES);
-        this.$loader.classList.add(val);
-        break;
-
-      default:
-        break;
-    }
-  }
-
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'size') {
-      switch (newValue) {
-        case SIZE.Small:
-        case SIZE.Medium:
-        case SIZE.Large:
-          this.size = newValue;
-          break;
-      }
+    if (SIZES.includes(val)) {
+      this.setAttribute(WCATTR.Size, val);
     }
   }
 }
