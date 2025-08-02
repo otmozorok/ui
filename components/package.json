@@ -1,6 +1,6 @@
 {
   "name": "@pappahapa/wc",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components",
   "license": "MIT",
@@ -13,7 +13,7 @@
     "url": "https://github.com/otmozorok/ui.git"
   },
   "scripts": {
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6006 --no-open",
     "build-storybook": "storybook build",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },

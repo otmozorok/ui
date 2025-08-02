@@ -1,5 +1,5 @@
-import { SIZE, SIZES, WCTAG } from '../.shared';
-import { setAttr } from '../.storybook/utils';
+import { SIZE, SIZES, WCATTR, WCTAG } from '../.shared/index.js';
+import { setAttr } from '../.storybook/utils.js';
 
 export default {
   title: 'Typography/Headline',
@@ -7,7 +7,7 @@ export default {
   render: (args) => {
     const el = document.createElement(WCTAG.Headline);
 
-    setAttr(args.size, 'size', el);
+    setAttr(args.size, WCATTR.Size, el);
 
     if (args.children) {
       el.innerText = args.children;
@@ -26,11 +26,20 @@ export default {
         name: 'enum',
       },
       options: SIZES,
+      table: {
+        defaultValue: { summary: SIZE.Medium },
+      },
     },
   },
   args: {
     children: 'Title text',
     size: SIZE.Medium,
+  },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://embed.figma.com/design/txHhP4RIa7u0D9jsSAyjw3/UI?node-id=51-16&embed-host=share',
+    },
   },
 };
 

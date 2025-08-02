@@ -1,71 +1,30 @@
-import { SIZE, SIZES, WebComponent } from '../.shared/index.js';
+import { SIZE, SIZES, WCATTR, WebComponent } from '../.shared/index.js';
+import template from './template.js';
 
+/**
+ * Headline
+ * @docs https://otmozorok.github.io/ui/?path=/docs/typography-headline--docs
+ */
 export class HeadlineComponent extends WebComponent {
-  static observedAttributes = ['size'];
+  static observedAttributes = [WCATTR.Size];
 
   constructor() {
-    super();
-
-    this.shadowRoot.innerHTML = /*html*/ `
-        <style>
-            h1 {
-                margin: 0;
-                padding: 0;
-                font-weight: 600;
-            }
-        
-            .large {
-                font-size: 32px;
-            }
-        
-            .medium {
-                font-size: 25px;
-            }
-        
-            .small {
-                font-size: 18px;
-            }
-        </style>
-        
-        <h1>
-            <slot></slot>
-        </h1>
-        `;
+    super(template);
 
     this.$h = this.shadowRoot.querySelector('h1');
-
-    /**
-     * @type {SIZE}
-     */
-    this.size = SIZE.Medium;
   }
 
-  /**
-   * @param {SIZE} val
-   */
+  get size() {
+    return this.getAttribute(WCATTR.Size);
+  }
+
   set size(val) {
-    switch (val) {
-      case SIZE.Small:
-      case SIZE.Medium:
-      case SIZE.Large:
-        this.$h.classList.remove(...SIZES);
-        this.$h.classList.add(val);
-        break;
-
-      default:
-        break;
+    if (SIZES.includes(val)) {
+      this.setAttribute(WCATTR.Size, val);
     }
   }
 
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'size') {
-      switch (newValue) {
-        case SIZE.Small:
-        case SIZE.Medium:
-        case SIZE.Large:
-          this.size = newValue;
-          break;
-      }
-    }
+  connectedCallback() {
+    this.size = this.size || SIZE.Medium;
   }
 }
