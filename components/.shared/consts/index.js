@@ -37,6 +37,7 @@ export const WCATTR = Object.freeze({
   Island: 'island',
   Loading: 'loading',
   Mode: 'mode',
+  Name: 'name',
   Negative: 'negative',
   Open: 'open',
   Rounded: 'rounded',
