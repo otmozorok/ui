@@ -54,7 +54,7 @@ const preview = {
   },
   tags: ['autodocs'],
   initialGlobals: {
-    theme: 'light',
+    theme: 'dark',
   },
   globalTypes: {
     theme: {
