@@ -1,47 +1,39 @@
-import { WebComponent } from '../.shared/index.js';
+import { WCATTR, WebComponent } from '../.shared/index.js';
+import template from './template.js';
 
+/**
+ * Dropdown
+ * @docs https://otmozorok.github.io/ui/?path=/docs/components-dropdown--docs
+ */
 export class DropdownComponent extends WebComponent {
-  static observedAttributes = ['open'];
+  static observedAttributes = [WCATTR.Open];
 
   constructor() {
-    super();
-
-    this.shadowRoot.innerHTML = /*html*/ `
-        <style>
-            slot[name='trigger']::sloted(*) {
-                position: relative;
-                display: flex;
-                anchor-name: --dropdown;
-            }
-        
-            .dropdown {
-                display: none;
-                position: absolute;
-                border-radius: 16px;
-                font-weight: 500;
-                view-transition-name: --dropdown;
-                position-anchor: --dropdown;
-                box-shadow: var(--shadow);
-                z-index: var(--z-tooltip);
-                width: 250px;
-                overflow: hidden;
-            }
-        
-            :host([open]) .dropdown {
-                display: block;
-                position-area: bottom span-right;
-                margin-top: 5px;
-            }
-        </style>
-        
-        <slot name="trigger"><wc-icon name="circle-help"></wc-icon></slot>
-        <div class="dropdown">
-            <slot></slot>
-        </div>
-        `;
+    super(template);
 
     this.$trigger = this.shadowRoot.querySelector('slot[name="trigger"]');
     this.$dropdown = this.shadowRoot.querySelector('.dropdown');
+  }
+
+  get open() {
+    return this.hasAttribute(WCATTR.Open);
+  }
+
+  set open(val) {
+    val ? this.setAttribute(WCATTR.Open, '') : this.removeAttribute(WCATTR.Open);
+    this.dispatchEvent(
+      new CustomEvent('open-change', {
+        detail: val,
+      })
+    );
+  }
+
+  toggle() {
+    this.open = !this.open;
+  }
+
+  close() {
+    this.open = false;
   }
 
   connectedCallback() {
@@ -54,26 +46,5 @@ export class DropdownComponent extends WebComponent {
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') this.close();
     });
-  }
-
-  toggle() {
-    this.open = !this.open;
-  }
-
-  close() {
-    this.open = false;
-  }
-
-  get open() {
-    return this.hasAttribute('open');
-  }
-
-  set open(val) {
-    val ? this.setAttribute('open', '') : this.removeAttribute('open');
-    this.dispatchEvent(
-      new CustomEvent('open-change', {
-        detail: val,
-      })
-    );
   }
 }

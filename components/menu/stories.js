@@ -14,7 +14,7 @@ export default {
     if (args.header) {
       const header = document.createElement(WCTAG.MenuHeader);
 
-      toggleAttr('true', WCATTR.Caps, header);
+      toggleAttr(true, WCATTR.Caps, header);
 
       header.textContent = args.header;
 
@@ -23,11 +23,8 @@ export default {
 
     ['One action', 'Two action', 'Three action'].forEach((actionText, index) => {
       const clone = action.cloneNode(true);
-
       clone.textContent = actionText;
-
-      setAttr('true', WCATTR.Arrow, clone);
-
+      setAttr(true, WCATTR.Arrow, clone);
       el.appendChild(clone);
     });
 
