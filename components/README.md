@@ -3,14 +3,14 @@
 # Установка
 
 ```shell
-npm i @pappahapa/wc
+npm i @otmozorok/wc
 ```
 
 ## Как использовать
 
 ```js
-import { AvatarComponent } from '@pappahapa/wc';
-import '@pappahapa/wc/style.css';
+import { AvatarComponent } from '@otmozorok/wc';
+import '@otmozorok/wc/style.css';
 
 customElements.define('wc-avatar', AvatarComponent);
 
