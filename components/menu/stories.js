@@ -1,5 +1,5 @@
-import { WCTAG } from '../.shared';
-import { setAttr, toggleAttr } from '../.storybook/utils';
+import { WCATTR, WCTAG } from '../.shared/index.js';
+import { setAttr, toggleAttr } from '../.storybook/utils.js';
 
 export default {
   title: 'Menu/Menu',
@@ -8,13 +8,13 @@ export default {
     const el = document.createElement(WCTAG.Menu);
     const action = document.createElement(WCTAG.MenuAction);
 
-    toggleAttr(args.island, 'island', el);
-    toggleAttr(args.filled, 'filled', el);
+    toggleAttr(args.island, WCATTR.Island, el);
+    toggleAttr(args.filled, WCATTR.Filled, el);
 
     if (args.header) {
       const header = document.createElement(WCTAG.MenuHeader);
 
-      toggleAttr('true', 'caps', header);
+      toggleAttr('true', WCATTR.Caps, header);
 
       header.textContent = args.header;
 
@@ -26,7 +26,7 @@ export default {
 
       clone.textContent = actionText;
 
-      setAttr('true', 'arrow', clone);
+      setAttr('true', WCATTR.Arrow, clone);
 
       el.appendChild(clone);
     });

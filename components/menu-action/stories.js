@@ -1,5 +1,5 @@
-import { WCTAG } from '../.shared';
-import { toggleAttr } from '../.storybook/utils';
+import { WCATTR, WCTAG } from '../.shared/index.js';
+import { toggleAttr } from '../.storybook/utils.js';
 
 export default {
   title: 'Menu/Menu/MenuAction',
@@ -7,9 +7,9 @@ export default {
   render: (args) => {
     const el = document.createElement(WCTAG.MenuAction);
 
-    toggleAttr(args.destructive, 'destructive', el);
-    toggleAttr(args.compact, 'compact', el);
-    toggleAttr(args.arrow, 'arrow', el);
+    toggleAttr(args.negative, WCATTR.Negative, el);
+    toggleAttr(args.compact, WCATTR.Compact, el);
+    toggleAttr(args.arrow, WCATTR.Arrow, el);
 
     if (args.children) {
       el.innerText = args.children;
@@ -21,7 +21,7 @@ export default {
       control: { type: 'text' },
       type: { name: 'string' },
     },
-    destructive: {
+    negative: {
       control: {
         type: 'boolean',
       },
@@ -42,7 +42,7 @@ export default {
 export const DefaultMenuAction = {
   args: {
     children: 'Menu action',
-    destructive: false,
+    negative: false,
     compact: false,
     arrow: false,
   },

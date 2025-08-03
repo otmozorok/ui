@@ -1,5 +1,5 @@
-import { WCTAG } from '../.shared';
-import { toggleAttr } from '../.storybook/utils';
+import { WCATTR, WCTAG } from '../.shared/index.js';
+import { toggleAttr } from '../.storybook/utils.js';
 
 export default {
   title: 'Menu/Menu/MenuItem',
@@ -7,8 +7,8 @@ export default {
   render: (args) => {
     const el = document.createElement(WCTAG.MenuItem);
 
-    toggleAttr(args.compact, 'compact', el);
-    toggleAttr(args.arrow, 'arrow', el);
+    toggleAttr(args.compact, WCATTR.Compact, el);
+    toggleAttr(args.arrow, WCATTR.Arrow, el);
 
     if (args.children) {
       el.innerText = args.children;

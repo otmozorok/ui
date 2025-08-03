@@ -27,9 +27,14 @@ export const WCTAG = Object.freeze({
 
 export const WCATTR = Object.freeze({
   Appearance: 'appearance',
+  Arrow: 'arrow',
+  Caps: 'caps',
   Color: 'color',
+  Compact: 'compact',
+  Filled: 'filled',
   FullWidth: 'fullwidth',
   Inverse: 'inverse',
+  Island: 'island',
   Loading: 'loading',
   Mode: 'mode',
   Negative: 'negative',
