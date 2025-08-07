@@ -4,7 +4,7 @@ import { setAttr } from '../.storybook/utils.js';
 export default {
   title: 'Components/Dropdown',
   tags: ['autodocs'],
-  render: (args) => {
+  render: () => {
     const el = document.createElement(WCTAG.Dropdown);
     const menu = document.createElement(WCTAG.Menu);
     const menuAction = document.createElement(WCTAG.MenuAction);

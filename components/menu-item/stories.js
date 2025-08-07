@@ -7,8 +7,8 @@ export default {
   render: (args) => {
     const el = document.createElement(WCTAG.MenuItem);
 
-    toggleAttr(args.compact, WCATTR.Compact, el);
-    toggleAttr(args.arrow, WCATTR.Arrow, el);
+    toggleAttr(args[WCATTR.Compact], WCATTR.Compact, el);
+    toggleAttr(args[WCATTR.Arrow], WCATTR.Arrow, el);
 
     if (args.children) {
       el.innerText = args.children;
@@ -20,12 +20,12 @@ export default {
       control: { type: 'text' },
       type: { name: 'string' },
     },
-    compact: {
+    [WCATTR.Compact]: {
       control: {
         type: 'boolean',
       },
     },
-    arrow: {
+    [WCATTR.Arrow]: {
       control: {
         type: 'boolean',
       },
@@ -36,7 +36,7 @@ export default {
 export const DefaultMenuItem = {
   args: {
     children: 'Menu item',
-    compact: false,
-    arrow: false,
+    [WCATTR.Compact]: false,
+    [WCATTR.Arrow]: false,
   },
 };

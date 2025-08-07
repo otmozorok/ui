@@ -8,8 +8,8 @@ export default {
     const el = document.createElement(WCTAG.Menu);
     const action = document.createElement(WCTAG.MenuAction);
 
-    toggleAttr(args.island, WCATTR.Island, el);
-    toggleAttr(args.filled, WCATTR.Filled, el);
+    toggleAttr(args[WCATTR.Island], WCATTR.Island, el);
+    toggleAttr(args[WCATTR.Filled], WCATTR.Filled, el);
 
     if (args.header) {
       const header = document.createElement(WCTAG.MenuHeader);
@@ -31,12 +31,12 @@ export default {
     return el;
   },
   argTypes: {
-    island: {
+    [WCATTR.Island]: {
       control: {
         type: 'boolean',
       },
     },
-    filled: {
+    [WCATTR.Filled]: {
       control: {
         type: 'boolean',
       },
@@ -50,7 +50,7 @@ export default {
 
 export const DefaultMenu = {
   args: {
-    island: false,
-    filled: false,
+    [WCATTR.Island]: false,
+    [WCATTR.Filled]: false,
   },
 };

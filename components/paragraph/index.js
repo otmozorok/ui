@@ -1,20 +1,12 @@
 import { WebComponent } from '../.shared/index.js';
+import template from './template.js';
 
+/**
+ * Paragraph
+ * @docs https://otmozorok.github.io/ui/?path=/docs/typography-paragraph--docs
+ */
 export class ParagraphComponent extends WebComponent {
   constructor() {
-    super();
-
-    this.shadowRoot.innerHTML = /*html*/ `
-        <style>
-            p {
-                margin: 0;
-                padding: 0;
-            }
-        </style>
-        
-        <p>
-            <slot></slot>
-        </p>
-        `;
+    super(template);
   }
 }

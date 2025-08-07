@@ -1,4 +1,4 @@
-import { WCTAG } from '../.shared';
+import { WCTAG } from '../.shared/index.js';
 
 export default {
   title: 'Components/Accordion',

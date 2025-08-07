@@ -7,12 +7,12 @@ export default {
   render: (args) => {
     const el = document.createElement(WCTAG.Loader);
 
-    setAttr(args.size, WCATTR.Size, el);
+    setAttr(args[WCATTR.Size], WCATTR.Size, el);
 
     return el;
   },
   argTypes: {
-    size: {
+    [WCATTR.Size]: {
       control: { type: 'inline-radio' },
       type: {
         name: 'enum',
@@ -33,6 +33,6 @@ export default {
 
 export const DefaultLoader = {
   args: {
-    size: SIZE.Medium,
+    [WCATTR.Size]: SIZE.Medium,
   },
 };

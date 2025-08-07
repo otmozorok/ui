@@ -1,4 +1,4 @@
-import { html, WCATTR } from '../.shared';
+import { html, WCATTR } from '../.shared/index.js';
 
 export default html`
   <template>

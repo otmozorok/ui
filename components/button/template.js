@@ -1,4 +1,4 @@
-import { APPEARANCE, html, MODE, SIZE, WCATTR } from '../.shared';
+import { APPEARANCE, html, MODE, SIZE, WCATTR } from '../.shared/index.js';
 
 export default html`
   <template>

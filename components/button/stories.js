@@ -1,5 +1,14 @@
-import { APPEARANCE, APPEARANCES, MODE, MODES, SIZE, SIZES, WCATTR, WCTAG } from '../.shared';
-import { setAttr, toggleAttr } from '../.storybook/utils';
+import {
+  APPEARANCE,
+  APPEARANCES,
+  MODE,
+  MODES,
+  SIZE,
+  SIZES,
+  WCATTR,
+  WCTAG,
+} from '../.shared/index.js';
+import { setAttr, toggleAttr } from '../.storybook/utils.js';
 
 export default {
   title: 'Components/Button',
@@ -11,17 +20,17 @@ export default {
       type: { name: 'string' },
       description: `Текст кнопки`,
     },
-    loading: {
+    [WCATTR.Loading]: {
       control: {
         type: 'boolean',
       },
     },
-    fullwidth: {
+    [WCATTR.FullWidth]: {
       control: {
         type: 'boolean',
       },
     },
-    appearance: {
+    [WCATTR.Appearance]: {
       control: { type: 'inline-radio' },
       type: {
         name: 'enum',
@@ -31,7 +40,7 @@ export default {
         defaultValue: { summary: APPEARANCE.Themed },
       },
     },
-    size: {
+    [WCATTR.Size]: {
       control: { type: 'inline-radio' },
       type: {
         name: 'enum',
@@ -41,7 +50,7 @@ export default {
         defaultValue: { summary: SIZE.Medium },
       },
     },
-    mode: {
+    [WCATTR.Mode]: {
       control: { type: 'inline-radio' },
       type: {
         name: 'enum',
@@ -54,11 +63,11 @@ export default {
   },
   args: {
     children: 'Text button',
-    loading: false,
-    fullwidth: false,
-    appearance: APPEARANCE.Themed,
-    size: SIZE.Medium,
-    mode: MODE.Primary,
+    [WCATTR.Loading]: false,
+    [WCATTR.FullWidth]: false,
+    [WCATTR.Appearance]: APPEARANCE.Themed,
+    [WCATTR.Size]: SIZE.Medium,
+    [WCATTR.Mode]: MODE.Primary,
   },
 };
 
@@ -66,11 +75,11 @@ export const DefaultButton = {
   render: (args) => {
     const el = document.createElement(WCTAG.Button);
 
-    setAttr(args.size, WCATTR.Size, el);
-    setAttr(args.mode, WCATTR.Mode, el);
-    setAttr(args.appearance, WCATTR.Appearance, el);
-    toggleAttr(args.loading, WCATTR.Loading, el);
-    toggleAttr(args.fullwidth, WCATTR.FullWidth, el);
+    setAttr(args[WCATTR.Size], WCATTR.Size, el);
+    setAttr(args[WCATTR.Mode], WCATTR.Mode, el);
+    setAttr(args[WCATTR.Appearance], WCATTR.Appearance, el);
+    toggleAttr(args[WCATTR.Loading], WCATTR.Loading, el);
+    toggleAttr(args[WCATTR.FullWidth], WCATTR.FullWidth, el);
 
     el.innerText = args.children;
 
@@ -82,14 +91,14 @@ export const ButtonWithCounter = {
   render: (args) => {
     const el = document.createElement(WCTAG.Button);
     const counter = document.createElement(WCTAG.Counter);
+
     counter.slot = 'after';
 
     toggleAttr(true, WCATTR.Inverse, counter);
     toggleAttr(true, WCATTR.Rounded, counter);
-    setAttr(1000, WCATTR.Value, counter);
+    setAttr(1200, WCATTR.Value, counter);
 
     el.innerText = args.children;
-
     el.appendChild(counter);
 
     return el;

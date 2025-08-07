@@ -7,8 +7,8 @@ export default {
   render: (args) => {
     const el = document.createElement(WCTAG.MenuHeader);
 
-    toggleAttr(args.caps, WCATTR.Caps, el);
-    toggleAttr(args.fullwidth, WCATTR.FullWidth, el);
+    toggleAttr(args[WCATTR.Caps], WCATTR.Caps, el);
+    toggleAttr(args[WCATTR.FullWidth], WCATTR.FullWidth, el);
 
     if (args.children) {
       el.innerText = args.children;
@@ -20,12 +20,12 @@ export default {
       control: { type: 'text' },
       type: { name: 'string' },
     },
-    caps: {
+    [WCATTR.Caps]: {
       control: {
         type: 'boolean',
       },
     },
-    fullwidth: {
+    [WCATTR.FullWidth]: {
       control: {
         type: 'boolean',
       },
@@ -36,7 +36,7 @@ export default {
 export const DefaultMenuHeader = {
   args: {
     children: 'Menu header',
-    caps: false,
-    fullwidth: false,
+    [WCATTR.Caps]: false,
+    [WCATTR.FullWidth]: false,
   },
 };

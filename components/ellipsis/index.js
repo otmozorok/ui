@@ -1,44 +1,12 @@
 import { WebComponent } from '../.shared/index.js';
+import template from './template.js';
 
+/**
+ * Ellipsis
+ * @docs https://otmozorok.github.io/ui/?path=/docs/typography-ellipsis--docs
+ */
 export class EllipsisComponent extends WebComponent {
   constructor() {
-    super();
-
-    this.shadowRoot.innerHTML = /*html*/ `
-        <style>
-            :host([max-lines="1"]) {
-                span {
-                    display: -webkit-box;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    -webkit-line-clamp: 1;
-                    -webkit-box-orient: vertical;
-                }
-            }
-        
-            :host([max-lines="2"]) {
-                span {
-                    display: -webkit-box;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    -webkit-line-clamp: 2;
-                    -webkit-box-orient: vertical;
-                }
-            }
-        
-            :host([max-lines="3"]) {
-                span {
-                    display: -webkit-box;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    -webkit-line-clamp: 3;
-                    -webkit-box-orient: vertical;
-                }
-            }
-        </style>
-        <span>
-            <slot></slot>
-        </span>
-        `;
+    super(template);
   }
 }

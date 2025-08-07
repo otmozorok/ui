@@ -1,4 +1,4 @@
-import { setProjectAnnotations } from '@storybook/web-components-vite';
+import { setProjectAnnotations } from '@storybook/builder-vite';
 import * as projectAnnotations from './preview';
 
 // This is an important step to apply the right configuration when testing your stories.

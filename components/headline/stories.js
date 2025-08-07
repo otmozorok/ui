@@ -7,7 +7,7 @@ export default {
   render: (args) => {
     const el = document.createElement(WCTAG.Headline);
 
-    setAttr(args.size, WCATTR.Size, el);
+    setAttr(args[WCATTR.Size], WCATTR.Size, el);
 
     if (args.children) {
       el.innerText = args.children;
@@ -20,7 +20,7 @@ export default {
       control: { type: 'text' },
       type: { name: 'string' },
     },
-    size: {
+    [WCATTR.Size]: {
       control: { type: 'inline-radio' },
       type: {
         name: 'enum',
@@ -33,7 +33,7 @@ export default {
   },
   args: {
     children: 'Title text',
-    size: SIZE.Medium,
+    [WCATTR.Size]: SIZE.Medium,
   },
   parameters: {
     design: {
@@ -46,6 +46,6 @@ export default {
 export const DefaultHeadline = {
   args: {
     children: 'Title text',
-    size: SIZE.Medium,
+    [WCATTR.Size]: SIZE.Medium,
   },
 };

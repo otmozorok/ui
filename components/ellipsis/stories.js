@@ -1,13 +1,13 @@
-import { WCTAG } from '../.shared/index.js';
+import { WCATTR, WCTAG } from '../.shared/index.js';
 import { setAttr } from '../.storybook/utils.js';
 
 export default {
   title: 'Typography/Ellipsis',
   tags: ['autodocs'],
-  render: (args, context) => {
+  render: (args) => {
     const el = document.createElement(WCTAG.Ellipsis);
 
-    setAttr(args.maxLines, 'max-lines', el);
+    setAttr(args[WCATTR.MaxLines], WCATTR.MaxLines, el);
 
     if (args.children) {
       el.innerText = args.children;
@@ -20,7 +20,7 @@ export default {
       control: { type: 'text' },
       type: { name: 'string' },
     },
-    maxLines: {
+    [WCATTR.MaxLines]: {
       control: {
         type: 'number',
         min: 1,
@@ -34,6 +34,6 @@ export const DefaultEllipsis = {
   args: {
     children:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    maxLines: 1,
+    [WCATTR.MaxLines]: 1,
   },
 };

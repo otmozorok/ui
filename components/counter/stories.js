@@ -1,5 +1,5 @@
-import { APPEARANCE, APPEARANCES, WCATTR, WCTAG } from '../.shared';
-import { setAttr, toggleAttr } from '../.storybook/utils';
+import { APPEARANCE, APPEARANCES, WCATTR, WCTAG } from '../.shared/index.js';
+import { setAttr, toggleAttr } from '../.storybook/utils.js';
 
 export default {
   title: 'Components/Counter',
@@ -7,29 +7,29 @@ export default {
   render: (args) => {
     const el = document.createElement(WCTAG.Counter);
 
-    setAttr(args.value, WCATTR.Value, el);
-    setAttr(args.appearance, WCATTR.Appearance, el);
-    toggleAttr(args.rounded, WCATTR.Rounded, el);
-    toggleAttr(args.inverse, WCATTR.Inverse, el);
+    setAttr(args[WCATTR.Value], WCATTR.Value, el);
+    setAttr(args[WCATTR.Appearance], WCATTR.Appearance, el);
+    toggleAttr(args[WCATTR.Rounded], WCATTR.Rounded, el);
+    toggleAttr(args[WCATTR.Inverse], WCATTR.Inverse, el);
 
     return el;
   },
   argTypes: {
-    value: {
+    [WCATTR.Value]: {
       control: { type: 'number' },
       type: { name: 'number' },
     },
-    rounded: {
+    [WCATTR.Rounded]: {
       control: {
         type: 'boolean',
       },
     },
-    inverse: {
+    [WCATTR.Inverse]: {
       control: {
         type: 'boolean',
       },
     },
-    appearance: {
+    [WCATTR.Appearance]: {
       control: { type: 'inline-radio' },
       type: {
         name: 'enum',
@@ -50,9 +50,9 @@ export default {
 
 export const DefaultCounter = {
   args: {
-    value: 10000,
-    rounded: false,
-    inverse: false,
-    appearance: APPEARANCE.Themed,
+    [WCATTR.Value]: 10000,
+    [WCATTR.Rounded]: false,
+    [WCATTR.Inverse]: false,
+    [WCATTR.Appearance]: APPEARANCE.Themed,
   },
 };

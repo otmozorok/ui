@@ -1,5 +1,5 @@
-import { COLOR, COLORS, SHAPE, SHAPES, WCATTR, WCTAG } from '../.shared';
-import { setAttr } from '../.storybook/utils';
+import { COLOR, COLORS, SHAPE, SHAPES, WCATTR, WCTAG } from '../.shared/index.js';
+import { setAttr } from '../.storybook/utils.js';
 
 export default {
   title: 'Components/Avatar',
@@ -7,10 +7,10 @@ export default {
   render: (args) => {
     const el = document.createElement(WCTAG.Avatar);
 
-    setAttr(args.src, WCATTR.Src, el);
-    setAttr(args.size, WCATTR.SizeNumber, el);
-    setAttr(args.color, WCATTR.Color, el);
-    setAttr(args.shape, WCATTR.Shape, el);
+    setAttr(args[WCATTR.Src], WCATTR.Src, el);
+    setAttr(args[WCATTR.SizeNumber], WCATTR.SizeNumber, el);
+    setAttr(args[WCATTR.Color], WCATTR.Color, el);
+    setAttr(args[WCATTR.Shape], WCATTR.Shape, el);
 
     if (args.text) {
       el.innerText = args.text;
@@ -23,17 +23,17 @@ export default {
       control: { type: 'text' },
       type: { name: 'string' },
     },
-    src: {
+    [WCATTR.Src]: {
       control: { type: 'text' },
       type: { name: 'string' },
     },
-    size: {
+    [WCATTR.SizeNumber]: {
       control: { type: 'number' },
       table: {
         defaultValue: { summary: 48 },
       },
     },
-    color: {
+    [WCATTR.Color]: {
       control: { type: 'inline-radio' },
       type: {
         name: 'enum',
@@ -43,7 +43,7 @@ export default {
         defaultValue: { summary: COLOR.Green },
       },
     },
-    shape: {
+    [WCATTR.Shape]: {
       control: { type: 'inline-radio' },
       type: {
         name: 'enum',
@@ -55,11 +55,12 @@ export default {
     },
   },
   args: {
-    src: 'https://sun9-21.userapi.com/1N-rJz6-7hoTDW7MhpWe19e_R_TdGV6Wu5ZC0A/67o6-apnAks.jpg',
     text: '',
-    size: 48,
-    color: COLOR.Green,
-    shape: SHAPE.Circle,
+    [WCATTR.Src]:
+      'https://sun9-21.userapi.com/1N-rJz6-7hoTDW7MhpWe19e_R_TdGV6Wu5ZC0A/67o6-apnAks.jpg',
+    [WCATTR.SizeNumber]: 48,
+    [WCATTR.Color]: COLOR.Green,
+    [WCATTR.Shape]: SHAPE.Circle,
   },
   parameters: {
     design: {
@@ -71,35 +72,36 @@ export default {
 
 export const DefaultAvatar = {
   args: {
-    src: '',
-    size: 48,
-    color: COLOR.Green,
-    shape: SHAPE.Circle,
+    [WCATTR.Src]: '',
+    [WCATTR.SizeNumber]: 48,
+    [WCATTR.Color]: COLOR.Green,
+    [WCATTR.Shape]: SHAPE.Circle,
   },
 };
 
 export const WithImage = {
   args: {
-    src: 'https://sun9-21.userapi.com/1N-rJz6-7hoTDW7MhpWe19e_R_TdGV6Wu5ZC0A/67o6-apnAks.jpg',
-    size: 48,
+    [WCATTR.Src]:
+      'https://sun9-21.userapi.com/1N-rJz6-7hoTDW7MhpWe19e_R_TdGV6Wu5ZC0A/67o6-apnAks.jpg',
+    [WCATTR.SizeNumber]: 48,
   },
 };
 
 export const WithOutImage = {
   args: {
-    src: '',
     text: 'BH',
-    size: 48,
-    color: COLOR.Green,
+    [WCATTR.Src]: '',
+    [WCATTR.SizeNumber]: 48,
+    [WCATTR.Color]: COLOR.Green,
   },
 };
 
 export const Big = {
   args: {
-    src: '',
     text: 'BH',
-    size: 65,
-    color: COLOR.Green,
-    shape: SHAPE.Squircle,
+    [WCATTR.Src]: '',
+    [WCATTR.SizeNumber]: 65,
+    [WCATTR.Color]: COLOR.Green,
+    [WCATTR.Shape]: SHAPE.Squircle,
   },
 };
