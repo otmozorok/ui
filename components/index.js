@@ -2,6 +2,7 @@ export * from './accordion/index.js';
 export * from './avatar/index.js';
 export * from './button/index.js';
 export * from './counter/index.js';
+export * from './dot/index.js';
 export * from './dropdown/index.js';
 export * from './ellipsis/index.js';
 export * from './headline/index.js';

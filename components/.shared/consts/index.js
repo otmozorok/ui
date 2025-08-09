@@ -11,6 +11,7 @@ export const WCTAG = Object.freeze({
   Avatar: 'wc-avatar',
   Button: 'wc-button',
   Counter: 'wc-counter',
+  Dot: 'wc-dot',
   Dropdown: 'wc-dropdown',
   Ellipsis: 'wc-ellipsis',
   Headline: 'wc-headline',
