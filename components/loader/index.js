@@ -1,4 +1,4 @@
-import { SIZES, WCATTR, WebComponent } from '../.shared/index.js';
+import { SIZE, SIZES, WCATTR, WebComponent } from '../.shared/index.js';
 import template from './template.js';
 
 /**
@@ -11,7 +11,7 @@ export class LoaderComponent extends WebComponent {
   constructor() {
     super(template);
 
-    this.$loader = this.shadowRoot.querySelector('loader');
+    this.$loader = this.$('loader');
   }
 
   get size() {
@@ -22,5 +22,9 @@ export class LoaderComponent extends WebComponent {
     if (SIZES.includes(val)) {
       this.setAttribute(WCATTR.Size, val);
     }
+  }
+
+  connectedCallback() {
+    this.size = this.size || SIZE.Medium;
   }
 }

@@ -11,9 +11,9 @@ export class AvatarComponent extends WebComponent {
   constructor() {
     super(template);
 
-    this.$wrapper = this.shadowRoot.querySelector('.wrapper');
-    this.$img = this.shadowRoot.querySelector('img');
-    this.$bg = this.shadowRoot.querySelector('.bg');
+    this.$wrapper = this.$('.wrapper');
+    this.$img = this.$('img');
+    this.$bg = this.$('.bg');
   }
 
   get src() {
@@ -36,7 +36,7 @@ export class AvatarComponent extends WebComponent {
   }
 
   /**
-   * @param {COLOR} val
+   * @param {typeof COLOR[keyof typeof COLOR]} val
    */
   set color(val) {
     if (COLORS.includes(val)) {
@@ -60,7 +60,7 @@ export class AvatarComponent extends WebComponent {
     return this.getAttribute(WCATTR.Shape);
   }
 
-  /** @param {FORM} val */
+  /** @param {typeof SHAPE[keyof typeof SHAPE]} val */
   set shape(val) {
     if (SHAPES.includes(val)) {
       this.setAttribute(WCATTR.Shape, val);

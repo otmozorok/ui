@@ -20,9 +20,9 @@ export class ButtonComponent extends WebComponent {
   constructor() {
     super(template);
 
-    this.$button = this.shadowRoot.querySelector('button');
-    this.$loader = this.shadowRoot.querySelector('wc-loader');
-    this.$span = this.shadowRoot.querySelector('span');
+    this.$button = this.$('button');
+    this.$loader = this.$('wc-loader');
+    this.$span = this.$('span');
   }
 
   get mode() {

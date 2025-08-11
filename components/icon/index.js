@@ -7,8 +7,8 @@ export class IconComponent extends WebComponent {
   constructor() {
     super(template);
 
-    this.$svg = this.shadowRoot.querySelector('svg');
-    this.$use = this.shadowRoot.querySelector('use');
+    this.$svg = this.$('svg');
+    this.$use = this.$('use');
   }
 
   set sizeNumber(val) {

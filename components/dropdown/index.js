@@ -11,8 +11,8 @@ export class DropdownComponent extends WebComponent {
   constructor() {
     super(template);
 
-    this.$trigger = this.shadowRoot.querySelector('slot[name="trigger"]');
-    this.$dropdown = this.shadowRoot.querySelector('.dropdown');
+    this.$trigger = this.$('slot[name="trigger"]');
+    this.$dropdown = this.$('.dropdown');
   }
 
   get open() {

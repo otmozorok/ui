@@ -1,13 +1,15 @@
 # Need development
 
+## Components
 - [x] Accordion
 - [x] Avatar
+- [ ] Banner
 - [x] Button
+- [ ] Calendar
 - [x] Counter
+- [ ] DatePicker
 - [x] Dot
 - [x] Dropdown
-- [x] Ellipsis
-- [x] Headline
 - [x] Icon
 - [ ] Input
 - [x] Loader
@@ -15,7 +17,16 @@
 - [x] MenuHeader
 - [x] MenuAction
 - [x] MenuItem
-- [ ] Paragraph
 - [ ] Popover
-- [ ] Span
 - [ ] Tooltip
+
+## Typography
+- [x] Ellipsis
+- [x] Headline
+- [ ] Paragraph
+- [ ] Span
+
+## Layouts
+- [ ] Article
+- [ ] Flex
+- [ ] Grid

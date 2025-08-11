@@ -1,14 +1,33 @@
-import { COLORS, SHAPES, MODES, APPEARANCES, WCATTR, SIZES, ICONS } from '../consts';
+import {
+  COLORS,
+  SHAPES,
+  MODES,
+  APPEARANCES,
+  WCATTR,
+  SIZES,
+  ICONS,
+  COLS,
+  ROWS,
+} from '../consts/index.js';
 
+/**
+ * Базовый класс для создания пользовательских веб-компонентов с использованием Shadow DOM.
+ * Реализует жизненный цикл компонента и обработку атрибутов.
+ */
 export class WebComponent extends HTMLElement {
+  /**
+   * Конструктор компонента
+   * @param {DocumentFragment} template - Шаблон DOM-структуры компонента
+   */
   constructor(template) {
     super();
     this.attachShadow({ mode: 'open' });
-    if (template) {
-      this.shadowRoot.appendChild(template.cloneNode(true));
-    }
+    this.shadowRoot.appendChild(template.cloneNode(true));
   }
 
+  /**
+   * Вызывается при добавлении компонента в DOM
+   */
   connectedCallback() {
     console.log(
       '%c connected ',
@@ -17,6 +36,9 @@ export class WebComponent extends HTMLElement {
     );
   }
 
+  /**
+   * Вызывается при удалении компонента из DOM
+   */
   disconnectedCallback() {
     console.log(
       '%c disconnected ',
@@ -25,51 +47,64 @@ export class WebComponent extends HTMLElement {
     );
   }
 
+  /**
+   * Обработчик изменений атрибутов компонента
+   * @param {typeof WCATTR[keyof typeof WCATTR]} name - Название измененного атрибута
+   * @param {unknown} oldValue - Старое значение атрибута
+   * @param {unknown} newValue - Новое значение атрибута
+   */
   attributeChangedCallback(name, oldValue, newValue) {
-    if (oldValue == newValue) return;
+    if (oldValue === newValue) return;
 
-    if (name === WCATTR.Color && COLORS.includes(newValue)) {
-      this.color = newValue;
+    const attributeMap = {
+      [WCATTR.Appearance]: { prop: WCATTR.Appearance, values: APPEARANCES },
+      [WCATTR.Color]: { prop: WCATTR.Color, values: COLORS },
+      [WCATTR.Cols]: { prop: WCATTR.Cols, values: COLS },
+      [WCATTR.Mode]: { prop: WCATTR.Mode, values: MODES },
+      [WCATTR.Name]: { prop: WCATTR.Name, values: ICONS },
+      [WCATTR.Rows]: { prop: WCATTR.Rows, values: ROWS },
+      [WCATTR.Shape]: { prop: WCATTR.Shape, values: SHAPES },
+      [WCATTR.Size]: { prop: WCATTR.Size, values: SIZES },
+    };
+
+    // Обработка атрибутов с валидацией значений
+    if (attributeMap[name]) {
+      const { prop, values } = attributeMap[name];
+      if (values.includes(newValue)) {
+        this[prop] = newValue;
+      }
+      return;
     }
 
-    if (name === WCATTR.Shape && SHAPES.includes(newValue)) {
-      this.shape = newValue;
+    // Обработка булевых атрибутов
+    if ([WCATTR.Loading, WCATTR.Rounded].includes(name)) {
+      this[name] = newValue === '';
+      return;
     }
 
-    if (name === WCATTR.Mode && MODES.includes(newValue)) {
-      this.mode = newValue;
+    // Прямое присвоение без валидации
+    switch (name) {
+      case WCATTR.Gap:
+        this.gap = newValue;
+        break;
+      case WCATTR.SizeNumber:
+        this.sizeNumber = newValue;
+        break;
+      case WCATTR.Value:
+        this.value = newValue;
+        break;
+      case WCATTR.Src:
+        this.src = newValue;
+        break;
     }
+  }
 
-    if (name === WCATTR.Appearance && APPEARANCES.includes(newValue)) {
-      this.appearance = newValue;
-    }
-
-    if (name === WCATTR.Name && ICONS.includes(newValue)) {
-      this.name = newValue;
-    }
-
-    if (name === WCATTR.Size && SIZES.includes(newValue)) {
-      this.size = newValue;
-    }
-
-    if (name === WCATTR.Rounded) {
-      this.rounded = newValue === '' ? true : false;
-    }
-
-    if (name === WCATTR.Loading) {
-      this.loading = newValue === '' ? true : false;
-    }
-
-    if (name === WCATTR.SizeNumber) {
-      this.sizeNumber = newValue;
-    }
-
-    if (name === WCATTR.Value) {
-      this.value = newValue;
-    }
-
-    if (name === WCATTR.Src) {
-      this.src = newValue;
-    }
+  /**
+   * Поиск элемента в Shadow DOM компонента
+   * @param {string} name - CSS-селектор для поиска элемента
+   * @returns {Element|null} Найденный элемент или null
+   */
+  $(name) {
+    return this.shadowRoot.querySelector(name);
   }
 }

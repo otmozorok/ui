@@ -11,7 +11,7 @@ export class HeadlineComponent extends WebComponent {
   constructor() {
     super(template);
 
-    this.$h = this.shadowRoot.querySelector('h1');
+    this.$h = this.$('h1');
   }
 
   get size() {

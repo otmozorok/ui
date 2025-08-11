@@ -11,7 +11,7 @@ export class CounterComponent extends WebComponent {
   constructor() {
     super(template);
 
-    this.$span = this.shadowRoot.querySelector('span');
+    this.$span = this.$('span');
   }
 
   get rounded() {
@@ -20,7 +20,7 @@ export class CounterComponent extends WebComponent {
 
   set rounded(val) {
     val ? this.setAttribute(WCATTR.Rounded, '') : this.removeAttribute(WCATTR.Rounded);
-    this.#updateText(this.value);
+    this.#updateText();
   }
 
   get value() {
@@ -42,8 +42,10 @@ export class CounterComponent extends WebComponent {
     }
   }
 
-  #updateText(val) {
-    this.rounded ? (this.$span.innerText = rounded(val)) : (this.$span.innerText = val);
+  #updateText() {
+    this.rounded
+      ? (this.$span.innerText = rounded(this.value))
+      : (this.$span.innerText = this.value);
   }
 
   connectedCallback() {
