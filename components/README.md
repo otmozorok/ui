@@ -18,3 +18,4 @@ document.querySelector('#app').innerHTML = `
     <wc-avatar>BH</wc-avatar>
 `;
 ```
+<p align="center" ><img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExb28xdXlobTBpajd5NTZ3cXRmeW16NzFhZHphZGpnZWhoZ3hjMG9yMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/o45usSYnuh0grujKKj/giphy.gif" /></p>
