@@ -8,7 +8,7 @@ function getAbsolutePath(value) {
   return dirname(require.resolve(join(value, 'package.json')));
 }
 
-/** @type { import('@storybook/web-components-vite').StorybookConfig } */
+/** @type { import('@storybook/html').StorybookConfig } */
 const config = {
   stories: [
     '../*.mdx',
@@ -20,7 +20,7 @@ const config = {
     getAbsolutePath('@storybook/addon-docs'),
     getAbsolutePath('@storybook/addon-a11y'),
     getAbsolutePath('@storybook/addon-vitest'),
-    getAbsolutePath("@storybook/addon-designs")
+    getAbsolutePath('@storybook/addon-designs'),
   ],
 
   framework: {
