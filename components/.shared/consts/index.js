@@ -1,6 +1,7 @@
 export * from './appearance/index.js';
 export * from './color/index.js';
 export * from './cols/index.js';
+export * from './direction/index.js';
 export * from './icon/index.js';
 export * from './mode/index.js';
 export * from './position/index.js';
@@ -37,6 +38,7 @@ export const WCATTR = Object.freeze({
   Caps: 'caps',
   Color: 'color',
   Cols: 'cols',
+  Direction: 'direction',
   Compact: 'compact',
   Filled: 'filled',
   FullWidth: 'full-width',
