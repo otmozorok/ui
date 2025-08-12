@@ -40,12 +40,6 @@ export default {
   args: {
     [WCATTR.Cols]: 2,
   },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://embed.figma.com/design/txHhP4RIa7u0D9jsSAyjw3/UI?node-id=10-69&embed-host=share',
-    },
-  },
 };
 
 export const DefaultGrid = {
