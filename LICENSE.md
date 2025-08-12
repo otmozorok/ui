@@ -1,4 +1,4 @@
-Copyright (c) 2025 Otmozorok.
+MIT © 2025 Otmozorok.
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
