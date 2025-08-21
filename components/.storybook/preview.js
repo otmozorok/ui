@@ -17,8 +17,8 @@ import {
   MenuHeaderComponent,
   MenuItemComponent,
   ParagraphComponent,
-} from '../';
-import { WCTAG } from '../.shared';
+} from '../index.js';
+import { WCTAG } from '../consts/index.js';
 import '../style.css';
 import './style.css';
 
