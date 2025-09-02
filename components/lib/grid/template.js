@@ -7,7 +7,6 @@ export default html`
       :host {
         --cols: 0;
         --rows: 0;
-        --gap: attr(${WCATTR.Gap} rem);
       }
 
       :host([${WCATTR.Cols}='${COL.One}']) {

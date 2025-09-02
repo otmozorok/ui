@@ -36,7 +36,24 @@ export const sizeNumberProp = {
     /** @param {number} val */
     set(val) {
       if (val) {
-        this.style?.setProperty('--size', val.toString().replace(/\D/g, '') + 'px');
+        const size = val.toString().match(/\d+\.?\d*/g)[0];
+        this.style?.setProperty('--size', size + 'px');
+      }
+    },
+  },
+};
+
+export const gapProp = {
+  gap: {
+    /** @returns {number} */
+    get() {
+      return this.style?.getPropertyValue('--gap');
+    },
+    /** @param {number} val */
+    set(val) {
+      if (val) {
+        const gap = val.toString().match(/\d+\.?\d*/g)[0];
+        if (gap) this.style?.setProperty('--gap', gap + 'rem');
       }
     },
   },
