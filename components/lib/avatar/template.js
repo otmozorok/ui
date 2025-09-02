@@ -4,10 +4,6 @@ import { html } from '../../utils/index.js';
 export default html`
   <template>
     <style>
-      :host {
-        --size: attr(${WCATTR.SizeNumber} px);
-      }
-
       ::slotted(img) {
         width: var(--size);
         height: var(--size);

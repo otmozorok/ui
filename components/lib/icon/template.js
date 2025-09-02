@@ -7,8 +7,6 @@ export default html`
   <template>
     <style>
       :host {
-        --size: attr(${WCATTR.SizeNumber} px);
-
         display: inline-grid;
 
         svg {

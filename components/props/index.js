@@ -31,12 +31,12 @@ export const sizeNumberProp = {
   sizeNumber: {
     /** @returns {number} */
     get() {
-      return this.getAttribute(WCATTR.SizeNumber);
+      return this.style?.getPropertyValue('--size');
     },
     /** @param {number} val */
     set(val) {
       if (val) {
-        this.setAttribute(WCATTR.SizeNumber, val);
+        this.style?.setProperty('--size', val.toString().replace(/\D/g, '') + 'px');
       }
     },
   },

@@ -22,6 +22,6 @@ export class IconComponent extends WebComponent {
   }
 
   connectedCallback() {
-    this.sizeNumber = this.sizeNumber ?? 24;
+    this.sizeNumber = this.sizeNumber || 24;
   }
 }
