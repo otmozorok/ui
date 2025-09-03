@@ -1,4 +1,4 @@
-import { DIRECTION, WCATTR } from '../../consts/index.js';
+import { ALIGNITEM, DIRECTION, WCATTR } from '../../consts/index.js';
 import { html } from '../../utils/index.js';
 
 export default html`
@@ -13,6 +13,24 @@ export default html`
       :host([${WCATTR.Direction}='${DIRECTION.Vertical}']) {
         div {
           flex-direction: column;
+        }
+      }
+
+      :host([${WCATTR.AlignItems}='${ALIGNITEM.Start}']) {
+        div {
+          align-items: start;
+        }
+      }
+
+      :host([${WCATTR.AlignItems}='${ALIGNITEM.End}']) {
+        div {
+          align-items: end;
+        }
+      }
+
+      :host([${WCATTR.AlignItems}='${ALIGNITEM.Center}']) {
+        div {
+          align-items: center;
         }
       }
 

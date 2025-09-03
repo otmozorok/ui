@@ -1,3 +1,4 @@
+export * from './align-items/index.js';
 export * from './appearance/index.js';
 export * from './color/index.js';
 export * from './cols/index.js';
@@ -33,13 +34,14 @@ export const WCTAG = Object.freeze({
 });
 
 export const WCATTR = Object.freeze({
+  AlignItems: 'align-items',
   Appearance: 'appearance',
   Arrow: 'arrow',
   Caps: 'caps',
   Color: 'color',
   Cols: 'cols',
-  Direction: 'direction',
   Compact: 'compact',
+  Direction: 'direction',
   Filled: 'filled',
   FullWidth: 'full-width',
   Gap: 'gap',
