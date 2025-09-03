@@ -1,11 +1,12 @@
 {
   "name": "@otmozorok/wc",
-  "version": "0.13.3",
+  "version": "0.13.4",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components",
   "license": "MIT",
   "main": "index.js",
   "module": "index.js",
+  "types": "types/index.d.ts",
   "type": "module",
   "homepage": "https://otmozorok.github.io/ui/",
   "repository": {
@@ -15,6 +16,7 @@
   "scripts": {
     "storybook": "storybook dev -p 6006 --no-open",
     "build-storybook": "storybook build",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "declarations": "tsc index.js --allowJs -d --declarationDir types"
   }
 }
