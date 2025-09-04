@@ -29,7 +29,7 @@ customElements.define(WCTAG.Article, ArticleComponent);
 customElements.define(WCTAG.Avatar, AvatarComponent);
 customElements.define(WCTAG.Button, ButtonComponent);
 customElements.define(WCTAG.Counter, CounterComponent);
-customElements.define(WCTAG.Container, ContainerComponent);
+// customElements.define(WCTAG.Container, ContainerComponent);
 customElements.define(WCTAG.Dot, DotComponent);
 customElements.define(WCTAG.Dropdown, DropdownComponent);
 customElements.define(WCTAG.Ellipsis, EllipsisComponent);
