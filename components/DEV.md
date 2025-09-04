@@ -24,9 +24,10 @@
 - [x] Ellipsis
 - [x] Headline
 - [ ] Paragraph
-- [ ] Span
+- [x] Span
 
 ## Layouts
 - [ ] Article
+- [x] Container
 - [ ] Flex
 - [ ] Grid

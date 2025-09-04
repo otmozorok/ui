@@ -1,5 +1,5 @@
-import { SIZE, SIZES, WCATTR, WCTAG } from '../../consts/index.js';
-import { setAttr } from '../../utils/index.js';
+import { APPEARANCE, APPEARANCES, SIZE, SIZES, WCATTR, WCTAG } from '../../consts/index.js';
+import { setAttr, toggleAttr } from '../../utils/index.js';
 
 export default {
   title: 'Typography/Headline',
@@ -7,7 +7,9 @@ export default {
   render: (args) => {
     const el = document.createElement(WCTAG.Headline);
 
+    toggleAttr(args[WCATTR.Caps], WCATTR.Caps, el);
     setAttr(args[WCATTR.Size], WCATTR.Size, el);
+    setAttr(args[WCATTR.Appearance], WCATTR.Appearance, el);
 
     if (args.children) {
       el.innerText = args.children;
@@ -20,6 +22,16 @@ export default {
       control: { type: 'text' },
       type: { name: 'string' },
     },
+    [WCATTR.Appearance]: {
+      control: { type: 'inline-radio' },
+      type: {
+        name: 'enum',
+      },
+      options: APPEARANCES,
+      table: {
+        defaultValue: { summary: APPEARANCE.Themed },
+      },
+    },
     [WCATTR.Size]: {
       control: { type: 'inline-radio' },
       type: {
@@ -28,6 +40,11 @@ export default {
       options: SIZES,
       table: {
         defaultValue: { summary: SIZE.Medium },
+      },
+    },
+    [WCATTR.Caps]: {
+      control: {
+        type: 'boolean',
       },
     },
   },

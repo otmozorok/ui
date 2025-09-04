@@ -1,3 +1,4 @@
+import { appearanceProp } from '../../props/index.js';
 import { WebComponent } from '../../web-component/index.js';
 import template from './template.js';
 
@@ -7,6 +8,6 @@ import template from './template.js';
  */
 export class SpanComponent extends WebComponent {
   constructor() {
-    super(template);
+    super(template, { ...appearanceProp });
   }
 }

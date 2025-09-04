@@ -1,4 +1,4 @@
-import { SIZE, WCATTR } from '../../consts/index.js';
+import { APPEARANCE, SIZE, WCATTR } from '../../consts/index.js';
 import { html } from '../../utils/index.js';
 
 export default html`
@@ -20,6 +20,18 @@ export default html`
 
       :host([${WCATTR.Size}='${SIZE.Small}']) h1 {
         font-size: 1.125rem;
+      }
+
+      :host([${WCATTR.Caps}]) h1 {
+        text-transform: uppercase;
+      }
+
+      :host([${WCATTR.Appearance}='${APPEARANCE.Negative}']) h1 {
+        color: var(--negative);
+      }
+
+      :host([${WCATTR.Appearance}='${APPEARANCE.Neutral}']) h1 {
+        color: hsl(from var(--neutral) h s 50%);
       }
     </style>
 

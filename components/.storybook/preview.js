@@ -3,6 +3,7 @@ import {
   ArticleComponent,
   AvatarComponent,
   ButtonComponent,
+  ContainerComponent,
   CounterComponent,
   DotComponent,
   DropdownComponent,
@@ -17,6 +18,7 @@ import {
   MenuHeaderComponent,
   MenuItemComponent,
   ParagraphComponent,
+  SpanComponent,
 } from '../index.js';
 import { WCTAG } from '../consts/index.js';
 import '../style.css';
@@ -27,6 +29,7 @@ customElements.define(WCTAG.Article, ArticleComponent);
 customElements.define(WCTAG.Avatar, AvatarComponent);
 customElements.define(WCTAG.Button, ButtonComponent);
 customElements.define(WCTAG.Counter, CounterComponent);
+customElements.define(WCTAG.Container, ContainerComponent);
 customElements.define(WCTAG.Dot, DotComponent);
 customElements.define(WCTAG.Dropdown, DropdownComponent);
 customElements.define(WCTAG.Ellipsis, EllipsisComponent);
@@ -40,6 +43,7 @@ customElements.define(WCTAG.MenuAction, MenuActionComponent);
 customElements.define(WCTAG.MenuHeader, MenuHeaderComponent);
 customElements.define(WCTAG.MenuItem, MenuItemComponent);
 customElements.define(WCTAG.Paragraph, ParagraphComponent);
+customElements.define(WCTAG.Span, SpanComponent);
 
 const items = ['light', 'dark'];
 
