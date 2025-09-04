@@ -1,8 +1,8 @@
-<p align="right">
-  <a href="https://www.npmjs.com/package/@otmozorok/wc">
+<p align="right" >
+  <a href="https://www.npmjs.com/package/@otmozorok/wc" style="text-decoration: none;">
     <img src="https://img.shields.io/npm/v/@otmozorok/wc.svg?style=flat" />
   </a>
-  <a href="https://github.com/otmozorok/ui/blob/main/LICENSE.md">
+  <a href="https://github.com/otmozorok/ui/blob/main/LICENSE.md" style="text-decoration: none;">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" />
   </a>
 </p>
