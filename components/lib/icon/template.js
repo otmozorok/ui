@@ -1,7 +1,7 @@
 import { WCATTR } from '../../consts/index.js';
 import { html } from '../../utils/index.js';
 
-const SPRITE_PATH = new URL('./sprites.svg?v0.5#', import.meta.url).href;
+const SPRITE_PATH = new URL('./sprites.svg?v0.6#', import.meta.url).href;
 
 export default html`
   <template>
@@ -10,8 +10,8 @@ export default html`
         display: inline-grid;
 
         svg {
-          width: var(--size);
-          height: var(--size);
+          width: var(--${WCATTR.SizeNumber});
+          height: var(--${WCATTR.SizeNumber});
         }
       }
     </style>

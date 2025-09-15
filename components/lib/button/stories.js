@@ -13,7 +13,6 @@ import { setAttr, toggleAttr } from '../../utils/index.js';
 export default {
   title: 'Components/Button',
   tags: ['autodocs'],
-  component: 'wc-button',
   argTypes: {
     children: {
       control: { type: 'text' },

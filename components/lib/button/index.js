@@ -1,6 +1,6 @@
 import { APPEARANCE, MODE, SIZE, WCATTR } from '../../consts/index.js';
-import { appearanceProp, loadingProp, modeProp, sizeProp } from '../../props/index.js';
 import { WebComponent } from '../../web-component/index.js';
+import props from './props.js';
 import template from './template.js';
 
 /**
@@ -11,11 +11,12 @@ export class ButtonComponent extends WebComponent {
   static observedAttributes = [WCATTR.Mode, WCATTR.Size, WCATTR.Loading];
 
   constructor() {
-    super(template, { ...appearanceProp, ...sizeProp, ...modeProp, ...loadingProp });
+    super(template, props);
     this.$button = this.$('button');
   }
 
   connectedCallback() {
+    super.connectedCallback();
     this.mode = this.mode || MODE.Primary;
     this.appearance = this.appearance || APPEARANCE.Themed;
     this.size = this.size || SIZE.Medium;

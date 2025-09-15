@@ -5,16 +5,16 @@ export default html`
   <template>
     <style>
       ::slotted(img) {
-        width: var(--size);
-        height: var(--size);
+        width: var(--${WCATTR.SizeNumber});
+        height: var(--${WCATTR.SizeNumber});
         object-fit: cover;
         object-position: center;
       }
 
       .wrapper {
         display: grid;
-        width: var(--size);
-        height: var(--size);
+        width: var(--${WCATTR.SizeNumber});
+        height: var(--${WCATTR.SizeNumber});
 
         .text {
           font-size: 1rem;

@@ -24,14 +24,15 @@ export const WCTAG = Object.freeze({
   Grid: 'wc-grid',
   Headline: 'wc-headline',
   Icon: 'wc-icon',
+  Input: 'wc-input',
   Loader: 'wc-loader',
   Menu: 'wc-menu',
   MenuAction: 'wc-menu-action',
   MenuHeader: 'wc-menu-header',
   MenuItem: 'wc-menu-item',
-  Tooltip: 'wc-tooltip',
   Paragraph: 'wc-paragraph',
   Span: 'wc-span',
+  Tooltip: 'wc-tooltip',
 });
 
 export const WCATTR = Object.freeze({

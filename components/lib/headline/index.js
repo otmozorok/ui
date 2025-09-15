@@ -1,6 +1,6 @@
 import { SIZE, WCATTR } from '../../consts/index.js';
-import { sizeProp } from '../../props/index.js';
 import { WebComponent } from '../../web-component/index.js';
+import props from './props.js';
 import template from './template.js';
 
 /**
@@ -11,7 +11,7 @@ export class HeadlineComponent extends WebComponent {
   static observedAttributes = [WCATTR.Size];
 
   constructor() {
-    super(template, { ...sizeProp });
+    super(template, props);
   }
 
   connectedCallback() {

@@ -1,6 +1,6 @@
 import { WCATTR } from '../../consts/index.js';
-import { appearanceProp } from '../../props/index.js';
 import { WebComponent } from '../../web-component/index.js';
+import props from './props.js';
 import template from './template.js';
 
 /**
@@ -8,9 +8,9 @@ import template from './template.js';
  * @link https://otmozorok.github.io/ui/?path=/docs/components-dot--docs
  */
 export class DotComponent extends WebComponent {
-  static observedAttributes = [WCATTR.Value, WCATTR.Rounded, WCATTR.Appearance];
+  static observedAttributes = [WCATTR.Appearance];
 
   constructor() {
-    super(template, { ...appearanceProp });
+    super(template, props);
   }
 }

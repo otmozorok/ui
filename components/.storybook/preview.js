@@ -12,6 +12,7 @@ import {
   GridComponent,
   HeadlineComponent,
   IconComponent,
+  InputComponent,
   LoaderComponent,
   MenuActionComponent,
   MenuComponent,
@@ -28,7 +29,7 @@ customElements.define(WCTAG.Accordion, AccordionComponent);
 customElements.define(WCTAG.Article, ArticleComponent);
 customElements.define(WCTAG.Avatar, AvatarComponent);
 customElements.define(WCTAG.Button, ButtonComponent);
-// customElements.define(WCTAG.Container, ContainerComponent);
+customElements.define(WCTAG.Container, ContainerComponent);
 customElements.define(WCTAG.Counter, CounterComponent);
 customElements.define(WCTAG.Dot, DotComponent);
 customElements.define(WCTAG.Dropdown, DropdownComponent);
@@ -37,6 +38,7 @@ customElements.define(WCTAG.Flex, FlexComponent);
 customElements.define(WCTAG.Grid, GridComponent);
 customElements.define(WCTAG.Headline, HeadlineComponent);
 customElements.define(WCTAG.Icon, IconComponent);
+customElements.define(WCTAG.Input, InputComponent);
 customElements.define(WCTAG.Loader, LoaderComponent);
 customElements.define(WCTAG.Menu, MenuComponent);
 customElements.define(WCTAG.MenuAction, MenuActionComponent);

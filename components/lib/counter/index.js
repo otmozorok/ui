@@ -1,7 +1,7 @@
 import { APPEARANCE, WCATTR } from '../../consts/index.js';
-import { appearanceProp } from '../../props/index.js';
 import { rounded } from '../../utils/index.js';
 import { WebComponent } from '../../web-component/index.js';
+import props from './props.js';
 import template from './template.js';
 
 /**
@@ -9,30 +9,12 @@ import template from './template.js';
  * @link https://otmozorok.github.io/ui/?path=/docs/components-counter--docs
  */
 export class CounterComponent extends WebComponent {
-  static observedAttributes = [WCATTR.Value, WCATTR.Rounded, WCATTR.Appearance];
+  static observedAttributes = [WCATTR.Value, WCATTR.Rounded, WCATTR.Appearance, WCATTR.Inverse];
 
   constructor() {
-    super(template, { ...appearanceProp });
+    super(template, props);
 
     this.$span = this.$('span');
-  }
-
-  get rounded() {
-    return this.hasAttribute(WCATTR.Rounded);
-  }
-
-  set rounded(val) {
-    val ? this.setAttribute(WCATTR.Rounded, '') : this.removeAttribute(WCATTR.Rounded);
-    this.#updateText();
-  }
-
-  get value() {
-    return Number(this.getAttribute(WCATTR.Value));
-  }
-
-  set value(val) {
-    this.setAttribute(WCATTR.Value, val);
-    this.#updateText(val);
   }
 
   #updateText() {
@@ -42,7 +24,13 @@ export class CounterComponent extends WebComponent {
   }
 
   connectedCallback() {
-    this.value = this.value ?? '0';
+    super.connectedCallback();
+    this.value = this.value || 0;
     this.appearance = this.appearance || APPEARANCE.Themed;
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    super.attributeChangedCallback(name, oldValue, newValue);
+    this.#updateText(this.value);
   }
 }

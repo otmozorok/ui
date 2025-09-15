@@ -8,6 +8,7 @@ export const ICON = Object.freeze({
   Settings: 'settings',
   Trash: 'trash',
   UserRound: 'user-round',
+  X: 'x',
 });
 
 export const ICONS = Object.values(ICON);

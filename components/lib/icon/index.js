@@ -1,13 +1,13 @@
 import { ICONS, WCATTR } from '../../consts/index.js';
-import { sizeNumberProp } from '../../props/index.js';
 import { WebComponent } from '../../web-component/index.js';
+import props from './props.js';
 import template from './template.js';
 
 export class IconComponent extends WebComponent {
   static observedAttributes = [WCATTR.Name, WCATTR.SizeNumber];
 
   constructor() {
-    super(template, { ...sizeNumberProp });
+    super(template, props);
 
     this.$use = this.$('use');
   }
@@ -22,6 +22,7 @@ export class IconComponent extends WebComponent {
   }
 
   connectedCallback() {
+    super.connectedCallback();
     this.sizeNumber = this.sizeNumber || 24;
   }
 }

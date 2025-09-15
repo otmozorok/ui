@@ -9,6 +9,7 @@ export default html`
         align-items: end;
         gap: 5px;
         cursor: pointer;
+        line-height: 1;
 
         &::-webkit-details-marker {
           display: none;

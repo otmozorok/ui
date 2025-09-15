@@ -8,7 +8,7 @@ function getAbsolutePath(value) {
   return dirname(require.resolve(join(value, 'package.json')));
 }
 
-/** @type { import('@storybook/html').StorybookConfig } */
+/** @type {import('storybook/internal/types').StorybookConfig} */
 const config = {
   stories: [
     '../*.mdx',
@@ -34,4 +34,5 @@ const config = {
     disableTelemetry: true,
   },
 };
+
 export default config;
