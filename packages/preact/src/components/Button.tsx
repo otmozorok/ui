@@ -1,10 +1,10 @@
-import { ButtonComponent } from '@pappahapa/wc';
-import { MODE, SIZE } from '@pappahapa/shared';
+import { ButtonComponent } from '@otmozorok/wc';
+import { MODE, SIZE } from '@otmozorok/wc/.shared';
 import { useRef, useEffect } from 'preact/hooks';
 
 interface IButtonProps {
-  mode?: MODE;
-  size?: SIZE;
+  mode?: (typeof MODE)[keyof typeof MODE];
+  size?: (typeof SIZE)[keyof typeof SIZE];
   loading?: boolean;
   fullwidth?: boolean;
   onClick?: () => void;

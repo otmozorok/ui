@@ -1,8 +1,8 @@
 import { render } from 'preact';
 import { App } from './app.tsx';
-import '../../../demo/style.css';
-import { WCTAG } from '@pappahapa/shared';
-import { AvatarComponent, ButtonComponent, CounterComponent, LoaderComponent } from '@pappahapa/wc';
+import { AvatarComponent, ButtonComponent, CounterComponent, LoaderComponent } from '@otmozorok/wc';
+import { WCTAG } from '@otmozorok/wc/.shared';
+import '@otmozorok/wc/style.css';
 
 customElements.define(WCTAG.Avatar, AvatarComponent);
 customElements.define(WCTAG.Button, ButtonComponent);

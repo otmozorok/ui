@@ -1,8 +1,8 @@
-import { COLOR } from '@pappahapa/shared';
+import { COLOR } from '@otmozorok/wc/.shared';
 
 interface IAvatarProps {
   src?: string;
-  color?: COLOR;
+  color?: (typeof COLOR)[keyof typeof COLOR];
   size?: number;
   children?: any;
 }

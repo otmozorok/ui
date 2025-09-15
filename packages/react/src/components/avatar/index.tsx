@@ -1,27 +1,33 @@
-import { AvatarComponent } from '@pappahapa/wc';
-import { COLOR, WCTAG } from '@pappahapa/shared';
+import { AvatarComponent, IconComponent } from '@otmozorok/wc';
+import { COLOR, SHAPE, WCTAG } from '@otmozorok/wc/.shared';
 import React from 'react';
 
-customElements.define(WCTAG.Avatar, AvatarComponent);
+if (!customElements.get(WCTAG.Avatar)) {
+  customElements.define(WCTAG.Avatar, AvatarComponent);
+}
 
-interface IAvatarProps {
-  color?: COLOR;
-  size?: number;
+if (!customElements.get(WCTAG.Icon)) {
+  customElements.define(WCTAG.Icon, IconComponent);
+}
+
+interface IAvatarProps extends React.ComponentPropsWithoutRef<'div'> {
+  color?: (typeof COLOR)[keyof typeof COLOR];
+  shape?: (typeof SHAPE)[keyof typeof SHAPE];
+  sizeNumber?: number;
+  src?: string;
 }
 
 export const Avatar: React.FC<React.PropsWithChildren<IAvatarProps>> = ({
   children,
   color,
-  size,
+  shape,
+  sizeNumber,
+  src,
+  ...props
 }) => {
-  const ref = React.useRef<AvatarComponent>(null);
-
-  React.useEffect(() => {
-    if (!ref.current) return;
-
-    if (color) ref.current.color = color;
-    if (size) ref.current.size = size;
-  }, [color, ref.current]);
-
-  return <wc-avatar ref={ref}>{children}</wc-avatar>;
+  return (
+    <wc-avatar src={src} color={color} shape={shape} size-number={sizeNumber} {...props}>
+      {children}
+    </wc-avatar>
+  );
 };

@@ -1,4 +1,4 @@
-import { CounterComponent } from '@pappahapa/wc';
+import { CounterComponent } from '@otmozorok/wc';
 import { useRef } from 'preact/compat';
 
 interface ICounterProps {
