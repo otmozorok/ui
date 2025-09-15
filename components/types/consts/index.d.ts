@@ -1,3 +1,4 @@
+export * from "./align-items/index.js";
 export * from "./appearance/index.js";
 export * from "./color/index.js";
 export * from "./cols/index.js";
@@ -13,6 +14,7 @@ export const WCTAG: Readonly<{
     Article: "wc-acticle";
     Avatar: "wc-avatar";
     Button: "wc-button";
+    Container: "wc-container";
     Counter: "wc-counter";
     Dot: "wc-dot";
     Dropdown: "wc-dropdown";
@@ -21,23 +23,25 @@ export const WCTAG: Readonly<{
     Grid: "wc-grid";
     Headline: "wc-headline";
     Icon: "wc-icon";
+    Input: "wc-input";
     Loader: "wc-loader";
     Menu: "wc-menu";
     MenuAction: "wc-menu-action";
     MenuHeader: "wc-menu-header";
     MenuItem: "wc-menu-item";
-    Tooltip: "wc-tooltip";
     Paragraph: "wc-paragraph";
     Span: "wc-span";
+    Tooltip: "wc-tooltip";
 }>;
 export const WCATTR: Readonly<{
+    AlignItems: "align-items";
     Appearance: "appearance";
     Arrow: "arrow";
     Caps: "caps";
     Color: "color";
     Cols: "cols";
-    Direction: "direction";
     Compact: "compact";
+    Direction: "direction";
     Filled: "filled";
     FullWidth: "full-width";
     Gap: "gap";

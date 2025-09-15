@@ -8,5 +8,6 @@ export const ICON: Readonly<{
     Settings: "settings";
     Trash: "trash";
     UserRound: "user-round";
+    X: "x";
 }>;
-export const ICONS: ("chevron-down" | "chevron-left" | "chevron-right" | "chevron-up" | "circle-help" | "hand-metal" | "settings" | "trash" | "user-round")[];
+export const ICONS: ("x" | "chevron-down" | "chevron-left" | "chevron-right" | "chevron-up" | "circle-help" | "hand-metal" | "settings" | "trash" | "user-round")[];

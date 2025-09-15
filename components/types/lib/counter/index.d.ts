@@ -3,14 +3,11 @@
  * @link https://otmozorok.github.io/ui/?path=/docs/components-counter--docs
  */
 export class CounterComponent extends WebComponent {
-    static observedAttributes: ("appearance" | "value" | "rounded")[];
+    static observedAttributes: ("inverse" | "appearance" | "value" | "rounded")[];
     constructor();
     $span: Element;
-    set rounded(val: boolean);
-    get rounded(): boolean;
-    set value(val: number);
-    get value(): number;
     appearance: any;
+    attributeChangedCallback(name: any, oldValue: any, newValue: any): void;
     #private;
 }
 import { WebComponent } from '../../web-component/index.js';
