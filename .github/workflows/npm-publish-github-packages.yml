@@ -25,3 +25,6 @@ jobs:
       - run: npm publish -w packages/react
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - run: npm publish -w packages/preact
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
