@@ -19,3 +19,6 @@ jobs:
       - run: npm publish -w components
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - run: npm publish -w packages/react
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
