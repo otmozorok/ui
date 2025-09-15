@@ -1,6 +1,6 @@
 {
   "name": "@otmozorok/preact",
-  "version": "0.0.1",
+  "version": "0.14.11",
   "type": "module",
   "scripts": {
     "storybook": "storybook dev -p 6007 --no-open",
