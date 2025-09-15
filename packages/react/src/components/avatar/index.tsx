@@ -1,5 +1,5 @@
 import { AvatarComponent, IconComponent } from '@otmozorok/wc';
-import { COLOR, SHAPE, WCTAG } from '@otmozorok/wc/.shared';
+import { COLOR, SHAPE, WCTAG } from '@otmozorok/wc/consts';
 import React from 'react';
 
 if (!customElements.get(WCTAG.Avatar)) {

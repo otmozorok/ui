@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { SIZE, SIZES } from '@otmozorok/wc/.shared';
+import { SIZE, SIZES } from '@otmozorok/wc/consts';
 import { Headline } from '.';
 
 const meta = {

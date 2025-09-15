@@ -1,5 +1,5 @@
 import { HeadlineComponent } from '@otmozorok/wc';
-import { SIZE, WCTAG } from '@otmozorok/wc/.shared';
+import { SIZE, WCTAG } from '@otmozorok/wc/consts';
 
 if (!customElements.get(WCTAG.Headline)) {
   customElements.define(WCTAG.Headline, HeadlineComponent);

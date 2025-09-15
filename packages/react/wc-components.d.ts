@@ -4,7 +4,7 @@ import type {
   HeadlineComponent,
   IconComponent,
 } from '@otmozorok/wc';
-import { COLOR, ICON, SHAPE, SIZE, WCATTR, WCTAG } from '@otmozorok/wc/.shared';
+import { COLOR, ICON, SHAPE, SIZE, WCATTR, WCTAG } from '@otmozorok/wc/consts';
 
 declare global {
   // Расширяем стандартные HTML-теги
