@@ -1,8 +1,12 @@
 import { ButtonComponent } from '@otmozorok/wc';
-import { MODE, SIZE } from '@otmozorok/wc/.shared';
+import { MODE, SIZE, WCTAG } from '@otmozorok/wc/consts';
 import { useRef, useEffect } from 'preact/hooks';
 
-interface IButtonProps {
+if (!customElements.get(WCTAG.Button)) {
+  customElements.define(WCTAG.Button, ButtonComponent);
+}
+
+export interface IButtonProps {
   mode?: (typeof MODE)[keyof typeof MODE];
   size?: (typeof SIZE)[keyof typeof SIZE];
   loading?: boolean;
@@ -44,7 +48,7 @@ export function Button({
       mode={mode}
       size={size}
       loading={loading ? true : undefined}
-      fullwidth={fullwidth ? true : undefined}
+      full-width={fullwidth ? true : undefined}
     >
       {children}
     </wc-button>

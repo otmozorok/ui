@@ -1,4 +1,4 @@
-import { COLOR } from '@otmozorok/wc/.shared';
+import { COLOR } from '@otmozorok/wc/consts';
 
 interface IAvatarProps {
   src?: string;

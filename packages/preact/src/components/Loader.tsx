@@ -1,9 +1,9 @@
 import { LoaderComponent } from '@otmozorok/wc';
-import { SIZE } from '@otmozorok/shared';
+import { SIZE } from '@otmozorok/wc/consts';
 import { useRef } from 'preact/compat';
 
 interface ILoaderProps {
-  size?: SIZE;
+  size?: (typeof SIZE)[keyof typeof SIZE];
 }
 
 export function Loader({ size }: ILoaderProps) {
