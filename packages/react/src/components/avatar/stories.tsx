@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { COLOR, COLORS, SHAPE, SHAPES } from '@otmozorok/wc/consts';
-import { Avatar } from '.';
+import { Avatar, type IAvatarProps } from '.';
 
 const meta = {
   title: 'Components/Avatar',
@@ -24,7 +24,7 @@ const meta = {
     src: { control: 'text' },
     children: { control: 'text' },
   },
-} satisfies Meta<typeof Avatar>;
+} satisfies Meta<IAvatarProps>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

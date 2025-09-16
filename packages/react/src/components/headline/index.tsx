@@ -5,7 +5,7 @@ if (!customElements.get(WCTAG.Headline)) {
   customElements.define(WCTAG.Headline, HeadlineComponent);
 }
 
-interface IHeadlineProps extends React.ComponentPropsWithoutRef<'div'> {
+export interface IHeadlineProps extends React.ComponentPropsWithoutRef<'div'> {
   size?: (typeof SIZE)[keyof typeof SIZE];
 }
 

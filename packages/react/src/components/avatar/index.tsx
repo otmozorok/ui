@@ -5,7 +5,7 @@ import React from 'react';
 customElements.get(WCTAG.Avatar) || customElements.define(WCTAG.Avatar, AvatarComponent);
 customElements.get(WCTAG.Icon) || customElements.define(WCTAG.Icon, IconComponent);
 
-interface IAvatarProps extends React.ComponentPropsWithoutRef<'div'> {
+export interface IAvatarProps extends React.ComponentPropsWithoutRef<'div'> {
   color?: (typeof COLOR)[keyof typeof COLOR];
   shape?: (typeof SHAPE)[keyof typeof SHAPE];
   sizeNumber?: number;

@@ -8,18 +8,21 @@ export default defineConfig({
   build: {
     lib: {
       entry: 'src/index.ts',
-      formats: ['es'],
-      fileName: '[name]',
+      name: '@otmozorok/react',
+      formats: ['es', 'cjs'],
+      fileName: (format, name) => `${format}/${name}.js`,
     },
     rollupOptions: {
-      external: ['react', 'react/*'],
+      external: ['react', 'react-dom', 'react/jsx-runtime'],
       output: {
-        format: 'esm',
         dir: 'dist',
         preserveModules: true,
         preserveModulesRoot: 'src',
         assetFileNames: 'assets/style.[ext]',
-        exports: 'named',
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+        },
       },
     },
   },

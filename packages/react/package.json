@@ -1,22 +1,29 @@
 {
   "name": "@otmozorok/react",
-  "version": "0.16.9",
+  "version": "0.16.10",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components обернутый в react",
   "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "src/index.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/es/index.js",
+  "types": "./dist/types/index.d.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/es/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
   "scripts": {
     "storybook": "storybook dev -p 6008 --no-open",
     "build-storybook": "storybook build",
     "build": "tsc -b && vite build -c vite.build.config.ts",
     "lint": "eslint ."
   },
-  "dependencies": {
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
@@ -30,5 +37,8 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "typescript": "^5.2.2",
     "vite": "^7.1.5"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }

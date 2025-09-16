@@ -9,7 +9,7 @@ if (!customElements.get(WCTAG.Icon)) {
   customElements.define(WCTAG.Icon, IconComponent);
 }
 
-interface IAccordionProps extends React.ComponentPropsWithoutRef<'div'> {}
+export interface IAccordionProps extends React.ComponentPropsWithoutRef<'div'> {}
 
 export const Accordion: React.FC<React.PropsWithChildren<IAccordionProps>> = ({
   children,

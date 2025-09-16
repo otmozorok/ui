@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { SIZE, SIZES } from '@otmozorok/wc/consts';
-import { Headline } from '.';
+import { Headline, type IHeadlineProps } from '.';
 
 const meta = {
   title: 'Typography/Headline',
@@ -17,7 +17,7 @@ const meta = {
     },
     children: { control: 'text' },
   },
-} satisfies Meta<typeof Headline>;
+} satisfies Meta<IHeadlineProps>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

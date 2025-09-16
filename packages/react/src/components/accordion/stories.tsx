@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Accordion } from '.';
+import { Accordion, type IAccordionProps } from '.';
 import { Headline } from '../headline';
 
 const meta = {
@@ -12,7 +12,7 @@ const meta = {
   argTypes: {
     children: { control: 'text' },
   },
-} satisfies Meta<typeof Accordion>;
+} satisfies Meta<IAccordionProps>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
