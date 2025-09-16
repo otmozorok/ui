@@ -1,6 +1,6 @@
 {
   "name": "@otmozorok/vue",
-  "version": "0.16.11",
+  "version": "0.16.12",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -1,6 +1,6 @@
 {
   "name": "@otmozorok/react",
-  "version": "0.16.11",
+  "version": "0.16.12",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components обернутый в react",
   "license": "MIT",
@@ -14,7 +14,8 @@
       "import": "./dist/es/index.js",
       "require": "./dist/cjs/index.js",
       "types": "./dist/types/index.d.ts"
-    }
+    },
+    "./*": "./*"
   },
   "sideEffects": [
     "*.css"
