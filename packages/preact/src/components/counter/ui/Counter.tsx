@@ -1,13 +1,10 @@
 import { CounterComponent } from '@otmozorok/wc';
 import { useRef } from 'preact/compat';
+import { ICounterProps } from '../model';
+import { WCTAG } from '@otmozorok/wc/consts';
 
-interface ICounterProps {
-  count: number;
-  rounded?: boolean;
-  inverse?: boolean;
-  destructive?: boolean;
-
-  [key: string]: any;
+if (!customElements.get(WCTAG.Counter)) {
+  customElements.define(WCTAG.Counter, CounterComponent);
 }
 
 export function Counter({ count, rounded, inverse, destructive, ...props }: ICounterProps) {

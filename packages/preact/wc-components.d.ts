@@ -5,7 +5,13 @@ declare module 'preact' {
   namespace JSX {
     interface IntrinsicElements {
       'wc-avatar': Preact.DetailedHTMLProps<
-        Preact.HTMLAttributes<AvatarComponent>,
+        Preact.HTMLAttributes<{
+          [WCATTR.Color]?: (typeof COLOR)[keyof typeof COLOR];
+          [WCATTR.Shape]?: (typeof SHAPE)[keyof typeof SHAPE];
+          [WCATTR.SizeNumber]?: number;
+          [WCATTR.Src]?: string;
+          children?: React.ReactNode;
+        }>,
         AvatarComponent
       >;
       'wc-button': Preact.DetailedHTMLProps<

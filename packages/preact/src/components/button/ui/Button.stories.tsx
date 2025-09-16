@@ -1,6 +1,7 @@
 import { MODE, MODES, SIZE, SIZES } from '@otmozorok/wc/consts';
-import { Button, type IButtonProps } from './Button';
+import { Button } from './Button';
 import type { Meta, StoryObj } from '@storybook/preact-vite';
+import { IButtonProps } from '../model';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {

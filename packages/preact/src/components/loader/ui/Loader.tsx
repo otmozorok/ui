@@ -1,9 +1,10 @@
 import { LoaderComponent } from '@otmozorok/wc';
-import { SIZE } from '@otmozorok/wc/consts';
 import { useRef } from 'preact/compat';
+import { ILoaderProps } from '../model';
+import { WCTAG } from '@otmozorok/wc/consts';
 
-interface ILoaderProps {
-  size?: (typeof SIZE)[keyof typeof SIZE];
+if (!customElements.get(WCTAG.Loader)) {
+  customElements.define(WCTAG.Loader, LoaderComponent);
 }
 
 export function Loader({ size }: ILoaderProps) {
