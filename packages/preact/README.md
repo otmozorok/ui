@@ -11,7 +11,6 @@ npm i @otmozorok/preact
 ```js
 import { h, render } from 'preact';
 import { Avatar } from '@otmozorok/preact';
-import '@otmozorok/wc/style.css';
 
 render(
 	<Avatar>BH</Avatar>,

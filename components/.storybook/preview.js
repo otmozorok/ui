@@ -1,3 +1,4 @@
+import { WCTAG } from '../consts/index.js';
 import {
   AccordionComponent,
   ArticleComponent,
@@ -21,7 +22,6 @@ import {
   ParagraphComponent,
   SpanComponent,
 } from '../index.js';
-import { WCTAG } from '../consts/index.js';
 import '../style.css';
 import './style.css';
 
@@ -66,7 +66,6 @@ const preview = {
         date: /Date$/i,
       },
     },
-    layout: 'centered',
   },
   tags: ['autodocs'],
   initialGlobals: {

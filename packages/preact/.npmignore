@@ -1,0 +1,8 @@
+**/*.stories.js
+**/stories.js
+**/spec.js
+**/*.stories.ts
+**/stories.ts
+**/spec.ts
+.storybook
+vitest.config.ts

@@ -11,7 +11,6 @@ npm i @otmozorok/react
 ```js
 import { createRoot } from 'react-dom/client';
 import { Avatar } from '@otmozorok/react';
-import '@otmozorok/wc/style.css';
 
 const root = createRoot(document.querySelector('body'));
 root.render(<Avatar>BH</Avatar>);

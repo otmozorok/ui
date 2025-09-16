@@ -26,7 +26,7 @@ const config = {
 
   core: {
     builder: getAbsolutePath('@storybook/builder-vite'),
-    disableWhatsNewNotifications: true,
+    disableWhatsNewNotifications: false,
     disableTelemetry: true,
   },
 };

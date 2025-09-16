@@ -1,5 +1,6 @@
 import { importX } from 'eslint-plugin-import-x';
 
+/** @type {import('eslint').Linter.Config} */
 export default [
   importX.flatConfigs.recommended,
   {

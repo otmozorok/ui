@@ -4,6 +4,7 @@
   "type": "module",
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.1",
+    "@rollup/plugin-typescript": "^12.1.4",
     "@storybook/addon-a11y": "^9.1.6",
     "@storybook/addon-designs": "^10.0.2",
     "@storybook/addon-docs": "^9.0.16",
