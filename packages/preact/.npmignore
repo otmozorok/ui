@@ -6,3 +6,4 @@
 **/spec.ts
 .storybook
 vitest.config.ts
+!dist/node_modules
