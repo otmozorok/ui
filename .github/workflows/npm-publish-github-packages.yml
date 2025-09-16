@@ -23,6 +23,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm publish -w components
       - run: npm i
+      - run: npm run build -w packages/react
       - run: npm publish -w packages/react
       - run: npm run build -w packages/preact
       - run: npm publish -w packages/preact
