@@ -1,6 +1,6 @@
 {
   "name": "@otmozorok/react",
-  "version": "0.16.5",
+  "version": "0.16.7",
   "type": "module",
   "scripts": {
     "storybook": "storybook dev -p 6008 --no-open",
