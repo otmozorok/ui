@@ -3,9 +3,7 @@ import { useRef } from 'preact/compat';
 import { ICounterProps } from '../model';
 import { WCTAG } from '@otmozorok/wc/consts';
 
-if (!customElements.get(WCTAG.Counter)) {
-  customElements.define(WCTAG.Counter, CounterComponent);
-}
+customElements.get(WCTAG.Counter) || customElements.define(WCTAG.Counter, CounterComponent);
 
 export function Counter({ count, rounded, inverse, destructive, ...props }: ICounterProps) {
   const ref = useRef<CounterComponent>(null);

@@ -3,9 +3,7 @@ import { useRef } from 'preact/compat';
 import { ILoaderProps } from '../model';
 import { WCTAG } from '@otmozorok/wc/consts';
 
-if (!customElements.get(WCTAG.Loader)) {
-  customElements.define(WCTAG.Loader, LoaderComponent);
-}
+customElements.get(WCTAG.Loader) || customElements.define(WCTAG.Loader, LoaderComponent);
 
 export function Loader({ size }: ILoaderProps) {
   const ref = useRef<LoaderComponent>(null);

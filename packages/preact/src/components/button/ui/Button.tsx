@@ -3,9 +3,7 @@ import { MODE, SIZE, WCTAG } from '@otmozorok/wc/consts';
 import { useRef, useEffect } from 'preact/hooks';
 import { IButtonProps } from '../model';
 
-if (!customElements.get(WCTAG.Button)) {
-  customElements.define(WCTAG.Button, ButtonComponent);
-}
+customElements.get(WCTAG.Button) || customElements.define(WCTAG.Button, ButtonComponent);
 
 export function Button({
   mode = MODE.Primary,
