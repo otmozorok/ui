@@ -1,13 +1,25 @@
 {
   "name": "@otmozorok/preact",
-  "version": "0.16.12",
+  "version": "0.16.13",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components обернутый в preact",
   "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "src/index.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/es/index.js",
+  "types": "./dist/types/index.d.ts",
+  "source": "./src/index.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/es/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./*": "./*"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
   "scripts": {
     "storybook": "storybook dev -p 6007 --no-open",
     "dev": "vite",
@@ -15,11 +27,15 @@
     "preview": "vite preview"
   },
   "peerDependencies": {
-    "preact": "^10.19.6"
+    "preact": ">=10"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.8.2",
     "typescript": "^5.2.2",
     "vite": "^7.1.4"
-  }
+  },
+  "files": [
+    "dist",
+    "src"
+  ]
 }

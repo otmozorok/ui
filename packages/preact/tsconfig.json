@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
     "target": "esnext",
     "useDefineForClassFields": true,
     "module": "ESNext",
@@ -10,6 +9,8 @@
       "react": ["./node_modules/preact/compat/"],
       "react-dom": ["./node_modules/preact/compat/"]
     },
+    "outDir": "dist/types",
+    "declaration": true,
 
     /* Bundler mode */
     "moduleResolution": "node",

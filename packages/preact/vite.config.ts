@@ -8,18 +8,24 @@ export default defineConfig({
   build: {
     lib: {
       entry: 'src/index.ts',
-      formats: ['es'],
-      fileName: '[name]',
+      name: '@otmozorok/preact',
+      formats: ['es', 'cjs'],
+      fileName: (format, name) => `${format}/${name}.js`,
     },
     rollupOptions: {
-      external: ['preact', 'preact/*'],
+      external: ['preact', 'preact/hooks', 'preact/compat', 'preact/jsx-runtime'],
       output: {
-        format: 'esm',
         dir: 'dist',
         preserveModules: true,
         preserveModulesRoot: 'src',
         assetFileNames: 'assets/style.[ext]',
         exports: 'named',
+        globals: {
+          preact: 'preact',
+          'preact/hooks': 'preactHooks',
+          'preact/compat': 'preactCompat',
+          'preact/jsx-runtime': 'preactJsxRuntime',
+        },
       },
     },
   },

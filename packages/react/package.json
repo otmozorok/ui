@@ -1,6 +1,6 @@
 {
   "name": "@otmozorok/react",
-  "version": "0.16.12",
+  "version": "0.16.13",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components обернутый в react",
   "license": "MIT",
