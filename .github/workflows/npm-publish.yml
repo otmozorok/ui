@@ -19,6 +19,7 @@ jobs:
           node-version: 20
           registry-url: https://registry.npmjs.org/
       - run: npm publish -w components
+      - run: npm i
       - run: npm publish -w packages/react
       - run: npm run build -w packages/preact
       - run: npm publish -w packages/preact
