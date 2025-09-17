@@ -1,10 +1,15 @@
 import type {
   AccordionComponent,
   AvatarComponent,
+  COLOR,
   HeadlineComponent,
+  ICON,
   IconComponent,
+  SHAPE,
+  SIZE,
+  WCATTR,
+  WCTAG,
 } from '@otmozorok/wc';
-import { COLOR, ICON, SHAPE, SIZE, WCATTR, WCTAG } from '@otmozorok/wc/consts';
 
 declare global {
   // Расширяем стандартные HTML-теги

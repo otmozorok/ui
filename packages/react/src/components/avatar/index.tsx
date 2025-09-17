@@ -1,5 +1,4 @@
-import { AvatarComponent, IconComponent } from '@otmozorok/wc';
-import { COLOR, SHAPE, WCTAG } from '@otmozorok/wc/consts';
+import { AvatarComponent, COLOR, IconComponent, SHAPE, WCTAG } from '@otmozorok/wc';
 import React from 'react';
 
 customElements.get(WCTAG.Avatar) || customElements.define(WCTAG.Avatar, AvatarComponent);

@@ -1,5 +1,4 @@
-import { AccordionComponent, IconComponent } from '@otmozorok/wc';
-import { WCTAG } from '@otmozorok/wc/consts';
+import { AccordionComponent, IconComponent, WCTAG } from '@otmozorok/wc';
 
 if (!customElements.get(WCTAG.Accordion)) {
   customElements.define(WCTAG.Accordion, AccordionComponent);

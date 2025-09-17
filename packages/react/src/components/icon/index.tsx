@@ -1,5 +1,4 @@
-import { IconComponent } from '@otmozorok/wc';
-import { ICON, WCTAG } from '@otmozorok/wc/consts';
+import { ICON, IconComponent, WCTAG } from '@otmozorok/wc';
 
 if (!customElements.get(WCTAG.Icon)) {
   customElements.define(WCTAG.Icon, IconComponent);

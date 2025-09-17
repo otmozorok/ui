@@ -1,5 +1,4 @@
-import { ButtonComponent } from '@otmozorok/wc';
-import { MODE, SIZE, WCTAG } from '@otmozorok/wc/consts';
+import { ButtonComponent, MODE, SIZE, WCTAG } from '@otmozorok/wc';
 import { useRef, useEffect } from 'preact/hooks';
 import { IButtonProps } from '../model';
 
