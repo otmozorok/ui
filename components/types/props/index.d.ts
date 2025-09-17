@@ -1,16 +1,20 @@
-/** @type {Record<string, import('../utils/index.js').Props>} */
-export const colorProp: Record<string, import("../utils/index.js").Props>;
-/** @type {Record<string, import('../utils/index.js').Props>} */
-export const sizeNumberProp: Record<string, import("../utils/index.js").Props>;
-/** @type {Record<string, import('../utils/index.js').Props>} */
-export const gapProp: Record<string, import("../utils/index.js").Props>;
-/** @type {Record<string, import('../utils/index.js').Props>} */
-export const sizeProp: Record<string, import("../utils/index.js").Props>;
-/** @type {Record<string, import('../utils/index.js').Props>} */
-export const shapeProp: Record<string, import("../utils/index.js").Props>;
-/** @type {Record<string, import('../utils/index.js').Props>} */
-export const appearanceProp: Record<string, import("../utils/index.js").Props>;
-/** @type {Record<string, import('../utils/index.js').Props>} */
-export const modeProp: Record<string, import("../utils/index.js").Props>;
-/** @type {Record<string, import('../utils/index.js').Props>} */
-export const loadingProp: Record<string, import("../utils/index.js").Props>;
+/**
+ * @typedef {Record<string, import('../utils/index.js').Props>} Prop
+ */
+/** @type {Prop} */
+export const colorProp: Prop;
+/** @type {Prop} */
+export const sizeNumberProp: Prop;
+/** @type {Prop} */
+export const gapProp: Prop;
+/** @type {Prop} */
+export const sizeProp: Prop;
+/** @type {Prop} */
+export const shapeProp: Prop;
+/** @type {Prop} */
+export const appearanceProp: Prop;
+/** @type {Prop} */
+export const modeProp: Prop;
+/** @type {Prop} */
+export const loadingProp: Prop;
+export type Prop = Record<string, import("../utils/index.js").Props>;

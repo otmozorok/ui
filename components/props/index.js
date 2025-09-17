@@ -1,6 +1,10 @@
 import { WCATTR } from '../consts/index.js';
 
-/** @type {Record<string, import('../utils/index.js').Props>} */
+/**
+ * @typedef {Record<string, import('../utils/index.js').Props>} Prop
+ */
+
+/** @type {Prop} */
 export const colorProp = {
   color: {
     type: 'string',
@@ -9,7 +13,7 @@ export const colorProp = {
   },
 };
 
-/** @type {Record<string, import('../utils/index.js').Props>} */
+/** @type {Prop} */
 export const sizeNumberProp = {
   sizeNumber: {
     type: 'number-px',
@@ -18,7 +22,7 @@ export const sizeNumberProp = {
   },
 };
 
-/** @type {Record<string, import('../utils/index.js').Props>} */
+/** @type {Prop} */
 export const gapProp = {
   gap: {
     type: 'number-rem',
@@ -27,7 +31,7 @@ export const gapProp = {
   },
 };
 
-/** @type {Record<string, import('../utils/index.js').Props>} */
+/** @type {Prop} */
 export const sizeProp = {
   size: {
     type: 'string',
@@ -36,7 +40,7 @@ export const sizeProp = {
   },
 };
 
-/** @type {Record<string, import('../utils/index.js').Props>} */
+/** @type {Prop} */
 export const shapeProp = {
   shape: {
     type: 'string',
@@ -45,7 +49,7 @@ export const shapeProp = {
   },
 };
 
-/** @type {Record<string, import('../utils/index.js').Props>} */
+/** @type {Prop} */
 export const appearanceProp = {
   appearance: {
     type: 'string',
@@ -54,7 +58,7 @@ export const appearanceProp = {
   },
 };
 
-/** @type {Record<string, import('../utils/index.js').Props>} */
+/** @type {Prop} */
 export const modeProp = {
   mode: {
     type: 'string',
@@ -63,7 +67,7 @@ export const modeProp = {
   },
 };
 
-/** @type {Record<string, import('../utils/index.js').Props>} */
+/** @type {Prop} */
 export const loadingProp = {
   loading: {
     type: 'boolean',

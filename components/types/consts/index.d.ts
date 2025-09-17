@@ -13,6 +13,7 @@ export const WCTAG: Readonly<{
     Accordion: "wc-accordion";
     Article: "wc-acticle";
     Avatar: "wc-avatar";
+    Banner: "wc-banner";
     Button: "wc-button";
     Container: "wc-container";
     Counter: "wc-counter";
