@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { SIZE, SIZES } from '@otmozorok/wc/consts';
 import { Headline, type IHeadlineProps } from '.';
+import { SIZE, SIZES } from '@otmozorok/wc';
 
 const meta = {
   title: 'Typography/Headline',

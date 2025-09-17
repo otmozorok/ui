@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { COLOR, COLORS, SHAPE, SHAPES } from '@otmozorok/wc/consts';
+import { COLOR, COLORS, SHAPE, SHAPES } from '@otmozorok/wc';
 import { Avatar, type IAvatarProps } from '.';
 
 const meta = {

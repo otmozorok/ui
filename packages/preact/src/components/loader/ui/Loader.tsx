@@ -1,7 +1,6 @@
-import { LoaderComponent } from '@otmozorok/wc';
+import { LoaderComponent, WCTAG } from '@otmozorok/wc';
 import { useRef } from 'preact/compat';
 import { ILoaderProps } from '../model';
-import { WCTAG } from '@otmozorok/wc/consts';
 
 customElements.get(WCTAG.Loader) || customElements.define(WCTAG.Loader, LoaderComponent);
 

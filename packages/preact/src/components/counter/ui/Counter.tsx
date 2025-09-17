@@ -1,7 +1,6 @@
-import { CounterComponent } from '@otmozorok/wc';
+import { CounterComponent, WCTAG } from '@otmozorok/wc';
 import { useRef } from 'preact/compat';
 import { ICounterProps } from '../model';
-import { WCTAG } from '@otmozorok/wc/consts';
 
 customElements.get(WCTAG.Counter) || customElements.define(WCTAG.Counter, CounterComponent);
 

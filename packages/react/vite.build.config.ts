@@ -6,6 +6,7 @@ import typescript from '@rollup/plugin-typescript';
 export default defineConfig({
   plugins: [react(), typescript({ tsconfig: './tsconfig.app.json' })],
   build: {
+    minify: false,
     lib: {
       entry: 'src/index.ts',
       name: '@otmozorok/react',

@@ -1,5 +1,4 @@
-import { AvatarComponent } from '@otmozorok/wc';
-import { COLOR, WCTAG } from '@otmozorok/wc/consts';
+import { AvatarComponent, COLOR, WCTAG } from '@otmozorok/wc';
 import { IAvatarProps } from '../model';
 
 customElements.get(WCTAG.Avatar) || customElements.define(WCTAG.Avatar, AvatarComponent);
