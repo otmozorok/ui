@@ -1,6 +1,6 @@
 {
   "name": "@otmozorok/react",
-  "version": "0.16.13",
+  "version": "0.16.14",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components обернутый в react",
   "license": "MIT",
@@ -52,7 +52,6 @@
     "vite": "^7.1.5"
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ]
 }

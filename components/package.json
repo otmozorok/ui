@@ -1,13 +1,22 @@
 {
   "name": "@otmozorok/wc",
-  "version": "0.16.13",
+  "version": "0.16.14",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components",
   "license": "MIT",
-  "main": "index.js",
-  "module": "index.js",
-  "types": "types/index.d.ts",
+  "module": "./index.js",
+  "types": "./types/index.d.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "types": "./types/index.d.ts"
+    },
+    "./*": "./*"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
   "homepage": "https://otmozorok.github.io/ui/",
   "repository": {
     "type": "git",
@@ -19,5 +28,15 @@
     "lint": "eslint . --ext .js",
     "declarations": "tsc index.js --allowJs -d --declarationDir types",
     "test": "vitest run -c vitest.dev.config.js"
-  }
+  },
+  "files": [
+    "consts",
+    "lib",
+    "props",
+    "types",
+    "utils",
+    "web-component",
+    "style.css",
+    "index.js"
+  ]
 }
