@@ -79,7 +79,7 @@ export const WithImage = {
     const el = document.createElement(WCTAG.Avatar);
     const img = document.createElement('img');
 
-    img.src = 'https://sun9-21.userapi.com/1N-rJz6-7hoTDW7MhpWe19e_R_TdGV6Wu5ZC0A/67o6-apnAks.jpg';
+    img.src = 'https://avatars.githubusercontent.com/u/15306476?v=4';
 
     setAttr(args[WCATTR.SizeNumber], WCATTR.SizeNumber, el);
     setAttr(args[WCATTR.Color], WCATTR.Color, el);
