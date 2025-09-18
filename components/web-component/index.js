@@ -82,7 +82,7 @@ export class WebComponent extends HTMLElement {
     }
 
     // Обработка булевых атрибутов
-    if ([WCATTR.Loading, WCATTR.Rounded].includes(name)) {
+    if ([WCATTR.Loading, WCATTR.Rounded, WCATTR.Closable].includes(name)) {
       this[name] = newValue === '';
       return;
     }

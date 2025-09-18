@@ -6,17 +6,15 @@
   --z-tooltip: 10;
 
   /* SHADOWS */
-  --shadow: 0 0 10px hsla(0, 0%, 0%, 0.2);
+  --shadow: 0 0 10px light-dark(hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 100%, 0.2));
 
   /* COLORS */
 
-  --bg-color: hsl(0, 0%, 0%);
-  --bg-secondary-color: hsl(233, 10%, 16%);
+  --bg-color: light-dark(hsl(0, 0%, 90%), hsl(0, 0%, 0%));
+  --bg-secondary-color: light-dark(hsl(0, 0%, 100%), hsl(233, 10%, 15%));
 
-  --text-color-hsl: 0, 0%, 0%;
-  --text-color: hsl(var(--text-color-hsl));
-  --text-color-inverse-hsl: 0, 0%, 100%;
-  --text-color-inverse: hsl(var(--text-color-inverse-hsl));
+  --text-color: light-dark(hsl(0, 0%, 0%), hsl(0, 0%, 100%));
+  --text-color-inverse: light-dark(hsl(0, 0%, 100%), hsl(0, 0%, 0%));
   --text-negative: hsl(351, 59%, 53%);
 
   --primary-hsl: 211, 100%, 50%;
@@ -63,9 +61,4 @@
   --text-subhead: #ffffffbd;
   --text-tertiary: #ffffff47;
   --text-themed: #007aff;
-}
-
-:root.dark {
-  --text-color-hsl: 0, 0%, 100%;
-  --text-color-inverse-hsl: 0, 0%, 0%;
 }

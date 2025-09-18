@@ -17,7 +17,7 @@
 .sb-bar,
 .docblock-argstable-body,
 .docblock-code-toggle {
-  background-color: light-dark(#eeeeee, #131313) !important;
+  background-color: light-dark(hsl(0, 0%, 90%), hsl(0, 0%, 0%)) !important;
 }
 
 .docblock-code-toggle {

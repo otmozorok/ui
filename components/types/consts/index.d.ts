@@ -39,6 +39,7 @@ export const WCATTR: Readonly<{
     Appearance: "appearance";
     Arrow: "arrow";
     Caps: "caps";
+    Closable: "closable";
     Color: "color";
     Cols: "cols";
     Compact: "compact";

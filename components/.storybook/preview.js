@@ -3,6 +3,7 @@ import {
   AccordionComponent,
   ArticleComponent,
   AvatarComponent,
+  BannerComponent,
   ButtonComponent,
   ContainerComponent,
   CounterComponent,
@@ -28,6 +29,7 @@ import './style.css';
 customElements.define(WCTAG.Accordion, AccordionComponent);
 customElements.define(WCTAG.Article, ArticleComponent);
 customElements.define(WCTAG.Avatar, AvatarComponent);
+customElements.define(WCTAG.Banner, BannerComponent);
 customElements.define(WCTAG.Button, ButtonComponent);
 customElements.define(WCTAG.Container, ContainerComponent);
 customElements.define(WCTAG.Counter, CounterComponent);
@@ -60,6 +62,25 @@ const preview = {
     },
   ],
   parameters: {
+    viewport: {
+      viewports: {
+        mobile1: {
+          name: 'Mobile Small',
+          styles: {
+            width: '320px',
+            height: '568px',
+          },
+        },
+        mobile2: {
+          name: 'Mobile Medium',
+          styles: {
+            width: '375px',
+            height: '667px',
+          },
+        },
+      },
+      defaultViewport: 'mobile1',
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
