@@ -3,7 +3,7 @@
 ## Components
 - [x] Accordion
 - [x] Avatar
-- [ ] Banner
+- [x] Banner
 - [x] Button
 - [ ] Calendar
 - [x] Counter
@@ -29,5 +29,5 @@
 ## Layouts
 - [ ] Article
 - [x] Container
-- [ ] Flex
-- [ ] Grid
+- [x] Flex
+- [x] Grid

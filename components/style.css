@@ -17,25 +17,20 @@
   --text-color-inverse: light-dark(hsl(0, 0%, 100%), hsl(0, 0%, 0%));
   --text-negative: hsl(351, 59%, 53%);
 
-  --primary-hsl: 211, 100%, 50%;
-  --primary-hover-hsl: 211, 100%, 64%;
-  --primary-hover: hsl(var(--primary-hover-hsl));
-  --secondary-hsl: 0, 0%, 100%;
-  --secondary-hover: hsla(var(--secondary-hsl), 0.15);
-  --negative-hsl: 351, 59%, 53%;
-  --negative-hover-hsl: 351, 89%, 63%;
-  --negative-hover: hsl(var(--negative-hover-hsl));
-
   --text-avatar-color: hsl(0, 0%, 100%);
   --text-button-color: hsl(0, 0%, 100%);
-  --text-button-inverse-color: hsl(0, 0%, 0%);
+  --text-button-inverse-color: light-dark(hsl(0, 0%, 100%), hsl(0, 0%, 0%));
   --text-counter-color: hsl(0, 0%, 100%);
-  --text-counter-inverse-color: hsl(0, 0%, 0%);
+  --text-counter-inverse-color: light-dark(hsl(0, 0%, 100%), hsl(0, 0%, 0%));
 
   --primary: hsl(211, 100%, 50%);
   --secondary: hsla(0, 0%, 100%, 0.09);
   --negative: hsl(351, 59%, 53%);
-  --neutral: hsl(0, 0%, 100%);
+  --neutral: light-dark(hsl(0, 0%, 0%), hsl(0, 0%, 100%));
+
+  --primary-hover: hsl(211, 100%, 64%);
+  --secondary-hover: hsla(0, 0%, 100%, 0.15);
+  --negative-hover: hsl(351, 89%, 63%);
 
   /* GRADIENTS */
   --gradient-red: linear-gradient(153deg, #ff48b6 0.77%, #ff8a35 93.03%);

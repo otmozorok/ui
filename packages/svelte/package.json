@@ -1,8 +1,8 @@
 {
-  "name": "@otmozorok/preact",
+  "name": "@otmozorok/svelte",
   "version": "0.18.0",
   "author": "Boris Hasikov",
-  "description": "ui-kit из web components обернутый в preact",
+  "description": "ui-kit из web components обернутый в svelte",
   "license": "MIT",
   "main": "./dist/cjs/index.js",
   "module": "./dist/es/index.js",
@@ -13,6 +13,7 @@
     ".": {
       "types": "./dist/types/index.d.ts",
       "import": "./dist/es/index.js",
+      "svelte": "./dist/es/index.js",
       "require": "./dist/cjs/index.js"
     },
     "./*": "./*"
@@ -21,18 +22,19 @@
     "*.css"
   ],
   "scripts": {
-    "storybook": "storybook dev -p 6007 --no-open",
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "storybook": "storybook dev -p 6009 --no-open",
+    "build": "tsc && vite build -c vite.build.config.ts",
+    "check": "svelte-check --tsconfig ./tsconfig.build.json"
   },
   "peerDependencies": {
-    "preact": ">=10"
+    "svelte": ">=5"
   },
   "devDependencies": {
-    "@preact/preset-vite": "^2.8.2",
-    "typescript": "^5.2.2",
-    "vite": "^7.1.4"
+    "@sveltejs/vite-plugin-svelte": "^6.2.0",
+    "@tsconfig/svelte": "^5.0.2",
+    "svelte-check": "^4.3.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
   },
   "files": [
     "dist"
