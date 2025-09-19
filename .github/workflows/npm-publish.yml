@@ -26,3 +26,5 @@ jobs:
       - run: npm publish -w packages/preact
       - run: npm run build -w packages/svelte
       - run: npm publish -w packages/svelte
+      - run: npm run build -w packages/vue
+      - run: npm publish -w packages/vue
