@@ -1,6 +1,6 @@
 {
   "name": "@otmozorok/preact",
-  "version": "0.20.0",
+  "version": "0.20.1",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components обернутый в preact",
   "license": "MIT",
