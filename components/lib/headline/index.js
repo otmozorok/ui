@@ -8,7 +8,7 @@ import template from './template.js';
  * @docs https://otmozorok.github.io/ui/?path=/docs/typography-headline--docs
  */
 export class HeadlineComponent extends WebComponent {
-  static observedAttributes = [WCATTR.Size];
+  static observedAttributes = [WCATTR.Size, WCATTR.Appearance];
 
   constructor() {
     super(template, props);

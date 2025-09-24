@@ -1,7 +1,6 @@
 {
   "name": "@otmozorok/ui",
-  "version": "",
-  "type": "module",
+  "private": true,
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.1",
     "@rollup/plugin-typescript": "^12.1.4",
@@ -36,9 +35,5 @@
     "packages/react",
     "packages/vue",
     "packages/svelte"
-  ],
-  "scripts": {
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
-  }
+  ]
 }

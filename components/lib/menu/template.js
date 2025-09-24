@@ -6,11 +6,11 @@ export default html`
     <style>
       :host([${WCATTR.Island}]) {
         .menu {
-          padding: 0 12px;
+          padding: 0 1rem;
         }
 
         .content {
-          border-radius: 16px;
+          border-radius: 1rem;
           overflow: hidden;
         }
       }

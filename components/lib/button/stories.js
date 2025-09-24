@@ -93,6 +93,12 @@ export const ButtonWithCounter = {
 
     counter.slot = 'after';
 
+    setAttr(args[WCATTR.Size], WCATTR.Size, el);
+    setAttr(args[WCATTR.Mode], WCATTR.Mode, el);
+    setAttr(args[WCATTR.Appearance], WCATTR.Appearance, el);
+    toggleAttr(args[WCATTR.Loading], WCATTR.Loading, el);
+    toggleAttr(args[WCATTR.FullWidth], WCATTR.FullWidth, el);
+
     toggleAttr(true, WCATTR.Inverse, counter);
     toggleAttr(true, WCATTR.Rounded, counter);
     setAttr(1200, WCATTR.Value, counter);

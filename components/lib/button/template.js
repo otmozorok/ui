@@ -81,7 +81,10 @@ export default html`
         color: var(--text-button-color);
 
         &:hover {
-          background-color: hsl(from var(--negative) h calc(s + 30) calc(l + 10));
+          background-color: light-dark(
+            hsl(from var(--negative) h calc(s + 30) calc(l + 10)),
+            hsl(from var(--negative) h calc(s + 30) calc(l - 10))
+          );
         }
       }
 
@@ -91,7 +94,10 @@ export default html`
         color: var(--text-button-inverse-color);
 
         &:hover {
-          background-color: hsl(from var(--neutral) h s calc(l - 11));
+          background-color: light-dark(
+            hsl(from var(--neutral) h s calc(l + 11)),
+            hsl(from var(--neutral) h s calc(l - 11))
+          );
         }
       }
 
@@ -121,7 +127,10 @@ export default html`
         padding: 0;
 
         &:hover {
-          color: hsl(from var(--neutral) h s calc(l - 27));
+          color: light-dark(
+            hsl(from var(--neutral) h s calc(l + 27)),
+            hsl(from var(--neutral) h s calc(l - 27))
+          );
         }
       }
 

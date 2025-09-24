@@ -13,17 +13,14 @@ export default html`
 
       span {
         background-color: var(--primary);
-        color: var(--text-counter-color);
       }
 
       :host([${WCATTR.Appearance}='${APPEARANCE.Negative}']) span {
         background-color: var(--negative);
-        color: var(--text-counter-color);
       }
 
       :host([${WCATTR.Appearance}='${APPEARANCE.Neutral}']) span {
-        background-color: var(--neutral);
-        color: var(--text-counter-inverse-color);
+        background-color: var(--text-counter-inverse-color);
       }
     </style>
 
