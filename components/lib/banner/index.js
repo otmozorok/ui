@@ -19,10 +19,10 @@ export class BannerComponent extends WebComponent {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    super.attributeChangedCallback(name, oldValue, newValue);
-
     if (name === WCATTR.Src && newValue) {
       this.$wrapper.style.backgroundImage = `url(${newValue})`;
     }
+
+    super.attributeChangedCallback(name, oldValue, newValue);
   }
 }

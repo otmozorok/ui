@@ -11,6 +11,8 @@ import {
 } from '../consts/index.js';
 import { generatePropertyParams } from '../utils/index.js';
 
+const IS_DEV = import.meta.env.MODE === 'development';
+
 /**
  * Базовый класс для создания пользовательских веб-компонентов с использованием Shadow DOM.
  * Реализует жизненный цикл компонента и обработку атрибутов.
@@ -25,6 +27,7 @@ export class WebComponent extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.cloneNode(true));
+
     if (props) {
       Object.defineProperties(this, generatePropertyParams(props));
     }
@@ -34,22 +37,24 @@ export class WebComponent extends HTMLElement {
    * Вызывается при добавлении компонента в DOM
    */
   connectedCallback() {
-    console.log(
-      '%c connected ',
-      'color: white; background-color: black; padding: 2px 4px; border-radius: 2px;',
-      this.tagName.toLowerCase()
-    );
+    IS_DEV &&
+      console.log(
+        '%c connected ',
+        'color: white; background-color: black; padding: 2px 4px; border-radius: 2px;',
+        this.tagName.toLowerCase()
+      );
   }
 
   /**
    * Вызывается при удалении компонента из DOM
    */
   disconnectedCallback() {
-    console.log(
-      '%c disconnected ',
-      'color: white; background-color: black; padding: 2px 4px; border-radius: 2px;',
-      this.tagName.toLowerCase()
-    );
+    IS_DEV &&
+      console.log(
+        '%c disconnected ',
+        'color: white; background-color: black; padding: 2px 4px; border-radius: 2px;',
+        this.tagName.toLowerCase()
+      );
   }
 
   /**
