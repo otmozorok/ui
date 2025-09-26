@@ -26,7 +26,7 @@
     "html-minifier-next": "^2.1.4",
     "jsdom": "^27.0.0",
     "playwright": "^1.55.1",
-    "playwright-chromium": "^1.53.2",
+    "playwright-chromium": "^1.55.1",
     "prettier": "^3.6.2",
     "storybook": "^9.1.5",
     "vitest": "^3.2.4"
