@@ -7,4 +7,4 @@
   <a href="https://github.com/otmozorok/ui/blob/main/LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-blue.svg" /></a>
 </p>
 
-<img align="right" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWRqajk1NWV5YWoyamJjcDVkOW1reDVmN3RsMzRrMmRhMDZpN242dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/XAxylRMCdpbEWUAvr8/giphy.gif" />
+<img align="right" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHozYWFyMGZ4bW91N2R1aHFobm40OXNyNmtvejE4b3N2ZThocjdkayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/aaGXi38lbZcxlt3NsB/giphy.gif" />

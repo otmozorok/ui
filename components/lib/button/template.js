@@ -14,7 +14,7 @@ export default html`
         overflow: hidden;
         position: relative;
         text-decoration: none;
-        gap: 6px;
+        gap: 0.375rem;
         font-family: var(--font-family);
         line-height: 1;
 
@@ -39,7 +39,7 @@ export default html`
       }
 
       :host([${WCATTR.Size}='${SIZE.Small}']) button {
-        padding: 0 12px;
+        padding: 0 0.75rem;
         border-radius: 10px;
         height: 28px;
         min-width: 28px;
@@ -48,8 +48,8 @@ export default html`
       }
 
       :host([${WCATTR.Size}='${SIZE.Medium}']) button {
-        padding: 0 12px;
-        border-radius: 12px;
+        padding: 0 0.75rem;
+        border-radius: 0.75rem;
         height: 40px;
         min-width: 40px;
         font-size: 1rem;
@@ -57,8 +57,8 @@ export default html`
       }
 
       :host([${WCATTR.Size}='${SIZE.Large}']) button {
-        padding: 0 20px;
-        border-radius: 16px;
+        padding: 0 1.25rem;
+        border-radius: 1rem;
         height: 52px;
         min-width: 52px;
         font-size: 1.0625rem;

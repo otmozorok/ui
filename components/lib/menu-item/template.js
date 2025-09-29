@@ -10,7 +10,7 @@ export default html`
         font-family: inherit;
         line-height: unset;
         overflow: hidden;
-        padding: 8px 12px;
+        padding: 0.5rem 1rem;
         position: relative;
         text-align: unset;
         text-decoration: none;
@@ -36,7 +36,7 @@ export default html`
         align-items: center;
         display: flex;
         justify-content: center;
-        margin-right: 12px;
+        margin-right: 0.75rem;
         min-height: 40px;
         min-width: 40px;
         line-height: 1;
@@ -45,7 +45,7 @@ export default html`
       .arrow {
         display: none;
         color: hsla(var(--text-color-hsl), 0.3);
-        margin-left: 6px;
+        margin-left: 0.375rem;
       }
 
       :host([${WCATTR.Arrow}]) .arrow {
@@ -54,7 +54,7 @@ export default html`
 
       :host([${WCATTR.Compact}]) div {
         min-height: 48px;
-        padding: 4px 12px;
+        padding: 0.25rem 0.75rem;
       }
     </style>
 
