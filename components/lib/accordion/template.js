@@ -7,7 +7,7 @@ export default html`
       summary {
         display: flex;
         align-items: end;
-        gap: 5px;
+        gap: 0.375rem;
         cursor: pointer;
         line-height: 1;
 
@@ -23,7 +23,7 @@ export default html`
 
     <details>
       <summary>
-        <slot name="header"><wc-headline>Accordion Header</wc-headline></slot>
+        <slot name="header"></slot>
         <wc-icon class="arrow" name="chevron-right"></wc-icon>
       </summary>
       <slot></slot>

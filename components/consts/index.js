@@ -66,3 +66,5 @@ export const WCATTR = Object.freeze({
   TextAlign: 'text-align',
   Value: 'value',
 });
+
+export const IS_DEV = process.env.NODE_ENV === 'development';

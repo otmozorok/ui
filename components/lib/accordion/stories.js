@@ -1,24 +1,26 @@
 import { WCTAG } from '../../consts/index.js';
 
+function renderDefault(args) {
+  const el = document.createElement(WCTAG.Accordion);
+
+  if (args.children) {
+    el.innerHTML = args.children;
+  }
+
+  if (args.header) {
+    const header = document.createElement(WCTAG.Headline);
+    header.slot = 'header';
+    header.innerHTML = args.header;
+    el.appendChild(header);
+  }
+
+  return el;
+}
+
 export default {
   title: 'Components/Accordion',
   tags: ['autodocs'],
-  render: (args) => {
-    const el = document.createElement(WCTAG.Accordion);
-
-    if (args.children) {
-      el.innerHTML = args.children;
-    }
-
-    if (args.header) {
-      const header = document.createElement(WCTAG.Headline);
-      header.slot = 'header';
-      header.innerHTML = args.header;
-      el.appendChild(header);
-    }
-
-    return el;
-  },
+  render: renderDefault,
   argTypes: {
     children: {
       control: { type: 'text' },

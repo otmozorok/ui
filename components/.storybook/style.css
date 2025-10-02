@@ -1,3 +1,7 @@
+.docblock-argstable {
+  color-scheme: light;
+}
+
 .skeleton {
   background-color: green;
   min-width: 50px;
@@ -10,16 +14,4 @@
 
 .dark {
   color-scheme: dark;
-}
-
-.sbdocs-wrapper,
-.sbdocs-preview,
-.sb-bar,
-.docblock-argstable-body,
-.docblock-code-toggle {
-  background-color: light-dark(hsl(0, 0%, 90%), hsl(0, 0%, 0%)) !important;
-}
-
-.docblock-code-toggle {
-  border-radius: 0 !important;
 }

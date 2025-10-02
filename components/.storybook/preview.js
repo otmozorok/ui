@@ -58,29 +58,12 @@ const preview = {
       document.documentElement.classList.remove(...items);
       document.documentElement.classList.add(globals.theme);
 
+      globals.backgrounds.value = globals.theme;
+
       return story();
     },
   ],
   parameters: {
-    viewport: {
-      viewports: {
-        mobile1: {
-          name: 'Mobile Small',
-          styles: {
-            width: '320px',
-            height: '568px',
-          },
-        },
-        mobile2: {
-          name: 'Mobile Medium',
-          styles: {
-            width: '375px',
-            height: '667px',
-          },
-        },
-      },
-      defaultViewport: 'mobile1',
-    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -91,6 +74,9 @@ const preview = {
   tags: ['autodocs'],
   initialGlobals: {
     theme: items[1],
+    backgrounds: {
+      value: items[1],
+    },
   },
   globalTypes: {
     theme: {

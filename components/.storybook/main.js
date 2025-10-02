@@ -1,4 +1,5 @@
 import { join, dirname } from 'path';
+import { IS_DEV } from '../consts/index.js';
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -24,10 +25,37 @@ const config = {
     options: {},
   },
 
+  docs: {
+    defaultName: 'Описание',
+  },
+
   core: {
     builder: getAbsolutePath('@storybook/builder-vite'),
     disableWhatsNewNotifications: false,
     disableTelemetry: true,
+  },
+
+  refs: {
+    ...(IS_DEV
+      ? {
+          preact: {
+            title: 'Preact Components',
+            url: 'http://localhost:6007',
+          },
+          react: {
+            title: 'React Components',
+            url: 'http://localhost:6008',
+          },
+          svelte: {
+            title: 'Svelte Components',
+            url: 'http://localhost:6009',
+          },
+          vue: {
+            title: 'Vue Components',
+            url: 'http://localhost:6010',
+          },
+        }
+      : {}),
   },
 };
 

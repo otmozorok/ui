@@ -8,10 +8,9 @@ import {
   ICONS,
   COLS,
   ROWS,
+  IS_DEV,
 } from '../consts/index.js';
 import { generatePropertyParams } from '../utils/index.js';
-
-const IS_DEV = import.meta.env.MODE === 'development';
 
 /**
  * Базовый класс для создания пользовательских веб-компонентов с использованием Shadow DOM.
