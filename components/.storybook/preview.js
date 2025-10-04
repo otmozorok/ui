@@ -1,4 +1,4 @@
-import { WCTAG } from '../consts/index.js';
+import { previewMain, WCTAG } from '../consts/index.js';
 import {
   AccordionComponent,
   ArticleComponent,
@@ -49,44 +49,9 @@ customElements.define(WCTAG.MenuItem, MenuItemComponent);
 customElements.define(WCTAG.Paragraph, ParagraphComponent);
 customElements.define(WCTAG.Span, SpanComponent);
 
-const items = ['light', 'dark'];
-
 /** @type { import('@storybook/html').Preview } */
 const preview = {
-  decorators: [
-    (story, { globals }) => {
-      document.documentElement.classList.remove(...items);
-      document.documentElement.classList.add(globals.theme);
-
-      globals.backgrounds.value = globals.theme;
-
-      return story();
-    },
-  ],
-  parameters: {
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
-      },
-    },
-  },
-  tags: ['autodocs'],
-  initialGlobals: {
-    theme: items[1],
-    backgrounds: {
-      value: items[1],
-    },
-  },
-  globalTypes: {
-    theme: {
-      toolbar: {
-        dynamicTitle: true,
-        icon: 'sun',
-        items,
-      },
-    },
-  },
+  ...previewMain,
 };
 
 export default preview;

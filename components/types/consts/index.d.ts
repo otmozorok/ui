@@ -6,6 +6,7 @@ export * from "./direction/index.js";
 export * from "./icon/index.js";
 export * from "./mode/index.js";
 export * from "./position/index.js";
+export * from "./preview/index.js";
 export * from "./rows/index.js";
 export * from "./shape/index.js";
 export * from "./size/index.js";
@@ -64,3 +65,4 @@ export const WCATTR: Readonly<{
     TextAlign: "text-align";
     Value: "value";
 }>;
+export const IS_DEV: boolean;

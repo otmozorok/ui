@@ -1,15 +1,10 @@
 import type { Preview } from '@storybook/svelte-vite';
+import { previewMain } from '@otmozorok/wc/consts';
 import '@otmozorok/wc/style.css';
+import '@otmozorok/wc/.storybook/style.css';
 
 const preview: Preview = {
-  parameters: {
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
-      },
-    },
-  },
+  ...previewMain,
 };
 
 export default preview;
