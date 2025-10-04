@@ -62,15 +62,16 @@ export default html`
 
       :host([${WCATTR.Appearance}='${APPEARANCE.Neutral}']) {
         div {
-          background-color: var(--bg-color);
-          box-shadow: var(--shadow);
+          background-color: var(--neutral);
+          color: var(--text-button-inverse-color);
         }
 
         button {
+          color: var(--text-button-inverse-color);
           &:hover {
             background: light-dark(
-              hsl(from var(--bg-color) h s calc(l - 15)),
-              hsl(from var(--bg-color) h s calc(l + 15))
+              hsl(from var(--neutral) h s calc(l + 15)),
+              hsl(from var(--neutral) h s calc(l - 15))
             );
           }
         }
