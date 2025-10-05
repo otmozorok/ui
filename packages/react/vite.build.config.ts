@@ -23,7 +23,7 @@ async function asyncReplace(
 export default defineConfig({
   plugins: [
     react(),
-    typescript({ tsconfig: './tsconfig.app.json' }),
+    typescript({ tsconfig: './tsconfig.build.json' }),
     {
       name: 'minify-html-css-strings',
       async transform(code, id) {

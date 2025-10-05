@@ -13,7 +13,7 @@
     "outDir": "dist/types",
     "sourceMap": false,
 
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "noEmit": true,
@@ -27,6 +27,6 @@
     "checkJs": true,
     "isolatedModules": true
   },
-  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
+  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte", "wc-components.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

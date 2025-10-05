@@ -1,72 +1,43 @@
+/// <reference types="vitest/config" />
 import { defineConfig } from 'vite';
 import preact from '@preact/preset-vite';
-import typescript from '@rollup/plugin-typescript';
-import htmlMinifier from 'html-minifier-next';
 
-async function asyncReplace(
-  str: string,
-  pattern: RegExp,
-  replacer: (match: string, ...groups: string[]) => Promise<string>
-): Promise<string> {
-  const matches = Array.from(str.matchAll(pattern));
-  let result = str;
+// https://vite.dev/config/
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
+const dirname =
+  typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url));
 
-  for (const match of matches) {
-    const replacement = await replacer(match[0], ...match.slice(1));
-    result = result.replace(match[0], replacement);
-  }
-
-  return result;
-}
-
-// https://vitejs.dev/config/
+// More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
-  plugins: [
-    preact(),
-    typescript({ tsconfig: './tsconfig.build.json' }),
-    {
-      name: 'minify-html-css-strings',
-      async transform(code, id) {
-        if (!id.endsWith('.js') && !id.endsWith('.ts')) return;
-
-        // Минификация HTML строк
-        code = await asyncReplace(code, /html`([\s\S]*?)`/g, async (_match, htmlContent) => {
-          const minified = await htmlMinifier.minify(htmlContent, {
-            collapseWhitespace: true,
-            removeComments: true,
-            minifyCSS: true,
-            minifyJS: true,
-          });
-          return `html\`${minified}\``;
-        });
-
-        return code;
-      },
-    },
-  ],
-  build: {
-    minify: false,
-    lib: {
-      entry: 'src/index.ts',
-      name: '@otmozorok/preact',
-      formats: ['es', 'cjs'],
-      fileName: (format, name) => `${format}/${name}.js`,
-    },
-    rollupOptions: {
-      external: ['preact', 'preact/hooks', 'preact/compat', 'preact/jsx-runtime'],
-      output: {
-        dir: 'dist',
-        preserveModules: true,
-        preserveModulesRoot: 'src',
-        assetFileNames: 'assets/style.[ext]',
-        exports: 'named',
-        globals: {
-          preact: 'preact',
-          'preact/hooks': 'preactHooks',
-          'preact/compat': 'preactCompat',
-          'preact/jsx-runtime': 'preactJsxRuntime',
+  plugins: [preact()],
+  test: {
+    projects: [
+      {
+        extends: true,
+        plugins: [
+          // The plugin will run tests for the stories defined in your Storybook config
+          // See options at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon#storybooktest
+          storybookTest({
+            configDir: path.join(dirname, '.storybook'),
+          }),
+        ],
+        test: {
+          name: 'storybook',
+          browser: {
+            enabled: true,
+            headless: true,
+            provider: 'playwright',
+            instances: [
+              {
+                browser: 'chromium',
+              },
+            ],
+          },
+          setupFiles: ['.storybook/vitest.setup.ts'],
         },
       },
-    },
+    ],
   },
 });

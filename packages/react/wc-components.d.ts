@@ -1,15 +1,11 @@
 import type {
   AccordionComponent,
   AvatarComponent,
-  COLOR,
+  APPEARANCE,
   HeadlineComponent,
-  ICON,
   IconComponent,
-  SHAPE,
-  SIZE,
-  WCATTR,
-  WCTAG,
 } from '@otmozorok/wc';
+import type { COLOR, ICON, SHAPE, SIZE, WCATTR, WCTAG } from '@otmozorok/wc/consts';
 
 declare global {
   // Расширяем стандартные HTML-теги
@@ -40,6 +36,8 @@ declare global {
       [WCTAG.Headline]: React.DetailedHTMLProps<
         {
           [WCATTR.Size]?: (typeof SIZE)[keyof typeof SIZE];
+          [WCATTR.Appearance]?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
+          [WCATTR.Caps]?: boolean;
           children?: React.ReactNode;
         } & React.ComponentPropsWithoutRef<'div'>,
         HeadlineComponent

@@ -1,30 +1,39 @@
-import { ButtonComponent, CounterComponent, LoaderComponent } from '@otmozorok/wc';
+import {
+  AccordionComponent,
+  ButtonComponent,
+  CounterComponent,
+  HeadlineComponent,
+  LoaderComponent,
+} from '@otmozorok/wc';
+import { WCTAG } from '@otmozorok/wc/consts';
 import { JSX } from 'preact';
 
 declare module 'preact' {
   namespace JSX {
     interface IntrinsicElements {
-      'wc-avatar': Preact.DetailedHTMLProps<
-        Preact.HTMLAttributes<{
-          [WCATTR.Color]?: (typeof COLOR)[keyof typeof COLOR];
-          [WCATTR.Shape]?: (typeof SHAPE)[keyof typeof SHAPE];
-          [WCATTR.SizeNumber]?: number;
-          [WCATTR.Src]?: string;
-          children?: React.ReactNode;
-        }>,
+      [WCTAG.Accordion]: Preact.DetailedHTMLProps<
+        Preact.HTMLAttributes<AccordionComponent>,
+        AccordionComponent
+      >;
+      [WCTAG.Avatar]: Preact.DetailedHTMLProps<
+        Preact.HTMLAttributes<AvatarComponent>,
         AvatarComponent
       >;
-      'wc-button': Preact.DetailedHTMLProps<
+      [WCTAG.Button]: Preact.DetailedHTMLProps<
         Preact.HTMLAttributes<ButtonComponent>,
         ButtonComponent
       >;
-      'wc-counter': Preact.DetailedHTMLProps<
+      [WCTAG.Counter]: Preact.DetailedHTMLProps<
         Preact.HTMLAttributes<CounterComponent>,
         CounterComponent
       >;
-      'wc-loader': Preact.DetailedHTMLProps<
+      [WCTAG.Loader]: Preact.DetailedHTMLProps<
         Preact.HTMLAttributes<LoaderComponent>,
         LoaderComponent
+      >;
+      [WCTAG.Headline]: Preact.DetailedHTMLProps<
+        Preact.HTMLAttributes<HeadlineComponent>,
+        HeadlineComponent
       >;
     }
   }
