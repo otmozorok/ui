@@ -1,6 +1,6 @@
 {
   "name": "@otmozorok/preact",
-  "version": "0.20.6",
+  "version": "0.21.1",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components обернутый в preact",
   "license": "MIT",
@@ -21,7 +21,7 @@
     "*.css"
   ],
   "scripts": {
-    "storybook": "storybook dev -p 6007 --no-open",
+    "storybook": "storybook dev -p 6002 --no-open",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"

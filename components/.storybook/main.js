@@ -1,10 +1,6 @@
 import { join, dirname } from 'path';
 import { IS_DEV } from '../consts/index.js';
 
-/**
- * This function is used to resolve the absolute path of a package.
- * It is needed in projects that use Yarn PnP or are set up within a monorepo.
- */
 function getAbsolutePath(value) {
   return dirname(require.resolve(join(value, 'package.json')));
 }
@@ -40,19 +36,19 @@ const config = {
       ? {
           preact: {
             title: 'Preact Components',
-            url: 'http://localhost:6007',
+            url: 'http://localhost:6002',
           },
           react: {
             title: 'React Components',
-            url: 'http://localhost:6008',
+            url: 'http://localhost:6003',
           },
           svelte: {
             title: 'Svelte Components',
-            url: 'http://localhost:6009',
+            url: 'http://localhost:6004',
           },
           vue: {
             title: 'Vue Components',
-            url: 'http://localhost:6010',
+            url: 'http://localhost:6005',
           },
         }
       : {}),

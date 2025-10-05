@@ -3,7 +3,7 @@
  * @docs https://otmozorok.github.io/ui/?path=/docs/typography-headline--docs
  */
 export class HeadlineComponent extends WebComponent {
-    static observedAttributes: ("appearance" | "size")[];
+    static observedAttributes: ("appearance" | "size" | "caps")[];
     constructor();
     size: any;
 }
