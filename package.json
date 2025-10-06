@@ -10,7 +10,7 @@
     "@storybook/addon-svelte-csf": "^5.0.10",
     "@storybook/addon-vitest": "^9.1.8",
     "@storybook/builder-vite": "^9.1.8",
-    "@storybook/html": "^9.1.7",
+    "@storybook/html": "^9.1.10",
     "@storybook/preact-vite": "^9.1.8",
     "@storybook/react-vite": "^9.1.10",
     "@storybook/svelte-vite": "^9.1.7",
