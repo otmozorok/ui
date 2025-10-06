@@ -1,14 +1,9 @@
-import { AvatarComponent, COLOR, IconComponent, SHAPE, WCTAG } from '@otmozorok/wc';
+import { AvatarComponent, IconComponent } from '@otmozorok/wc';
+import { COLOR, SHAPE, WCTAG } from '@otmozorok/wc/consts';
+import type { IAvatarProps } from '../model';
 
 customElements.get(WCTAG.Avatar) || customElements.define(WCTAG.Avatar, AvatarComponent);
 customElements.get(WCTAG.Icon) || customElements.define(WCTAG.Icon, IconComponent);
-
-export interface IAvatarProps extends React.ComponentPropsWithoutRef<'div'> {
-  color?: (typeof COLOR)[keyof typeof COLOR];
-  shape?: (typeof SHAPE)[keyof typeof SHAPE];
-  sizeNumber?: number;
-  src?: string;
-}
 
 export const Avatar: React.FC<React.PropsWithChildren<IAvatarProps>> = ({
   children,

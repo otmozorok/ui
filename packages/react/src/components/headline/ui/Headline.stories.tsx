@@ -1,21 +1,27 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Headline, type IHeadlineProps } from '.';
-import { SIZE, SIZES } from '@otmozorok/wc';
+import { Headline } from './Headline';
+import { APPEARANCE, APPEARANCES, SIZE, SIZES } from '@otmozorok/wc/consts';
+import type { IHeadlineProps } from '../model';
 
 const meta = {
   title: 'Typography/Headline',
   component: Headline,
-  parameters: {
-    layout: 'centered',
-  },
   tags: ['autodocs'],
   argTypes: {
+    children: { control: 'text' },
+    appearance: {
+      control: 'inline-radio',
+      options: APPEARANCES,
+      table: { defaultValue: { summary: APPEARANCE.Themed } },
+    },
     size: {
       control: 'inline-radio',
       options: SIZES,
       table: { defaultValue: { summary: SIZE.Medium } },
     },
-    children: { control: 'text' },
+    caps: {
+      control: 'boolean',
+    },
   },
 } satisfies Meta<IHeadlineProps>;
 
@@ -24,8 +30,9 @@ type Story = StoryObj<typeof meta>;
 
 export const DefaultHeadline: Story = {
   args: {
-    size: SIZE.Medium,
     children: 'Заголовок',
+    appearance: APPEARANCE.Themed,
+    size: SIZE.Medium,
   },
   render: ({ ...props }) => {
     return <Headline {...props} />;

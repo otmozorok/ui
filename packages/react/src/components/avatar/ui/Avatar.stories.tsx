@@ -1,13 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { COLOR, COLORS, SHAPE, SHAPES } from '@otmozorok/wc';
-import { Avatar, type IAvatarProps } from '.';
+import { COLOR, COLORS, SHAPE, SHAPES } from '@otmozorok/wc/consts';
+import { Avatar } from './Avatar';
+import type { IAvatarProps } from '../model';
 
 const meta = {
   title: 'Components/Avatar',
   component: Avatar,
-  parameters: {
-    layout: 'centered',
-  },
   tags: ['autodocs'],
   argTypes: {
     sizeNumber: { control: 'number', table: { defaultValue: { summary: '48' } } },
