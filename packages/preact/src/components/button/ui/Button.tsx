@@ -1,4 +1,5 @@
-import { ButtonComponent, MODE, SIZE, WCTAG } from '@otmozorok/wc';
+import { ButtonComponent } from '@otmozorok/wc';
+import { MODE, SIZE, WCTAG } from '@otmozorok/wc/consts';
 import { useRef, useEffect } from 'preact/hooks';
 import { IButtonProps } from '../model';
 
@@ -33,11 +34,11 @@ export function Button({
   return (
     <wc-button
       ref={ref}
-      {...props}
       mode={mode}
       size={size}
       loading={loading ? true : undefined}
       full-width={fullwidth ? true : undefined}
+      {...props}
     >
       {children}
     </wc-button>

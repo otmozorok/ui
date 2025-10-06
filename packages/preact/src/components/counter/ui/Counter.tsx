@@ -1,4 +1,5 @@
-import { CounterComponent, WCTAG } from '@otmozorok/wc';
+import { CounterComponent } from '@otmozorok/wc';
+import { WCTAG } from '@otmozorok/wc/consts';
 import { useRef } from 'preact/compat';
 import { ICounterProps } from '../model';
 

@@ -20,16 +20,13 @@ export class WebComponent extends HTMLElement {
   /**
    * Конструктор компонента
    * @param {DocumentFragment} template - Шаблон DOM-структуры компонента
-   * @param {Record<string, import('../utils/index.js').Props>} props - Описание свойств компонента
+   * @param {Record<string, import('../utils/index.js').Props> | undefined} props - Описание свойств компонента
    */
   constructor(template, props) {
     super();
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.cloneNode(true));
-
-    if (props) {
-      Object.defineProperties(this, generatePropertyParams(props));
-    }
+    props && Object.defineProperties(this, generatePropertyParams(props));
   }
 
   /**

@@ -1,8 +1,9 @@
-import { COLOR } from '@otmozorok/wc/consts';
+import { COLOR, SHAPE } from '@otmozorok/wc/consts';
 
 export interface IAvatarProps {
   src?: string;
   color?: (typeof COLOR)[keyof typeof COLOR];
-  size?: number;
+  shape?: (typeof SHAPE)[keyof typeof SHAPE];
+  sizeNumber?: number;
   children?: any;
 }

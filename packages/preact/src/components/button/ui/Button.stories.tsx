@@ -22,6 +22,9 @@ const meta = {
     fullwidth: true,
     size: SIZE.Medium,
   },
+  render: ({ ...props }) => {
+    return <Button {...props} />;
+  },
 } satisfies Meta<IButtonProps>;
 
 type Story = StoryObj<IButtonProps>;
@@ -33,6 +36,9 @@ export const Primary: Story = {
     children: 'Button',
     fullwidth: false,
     size: SIZE.Medium,
+  },
+  render: ({ ...props }) => {
+    return <Button {...props} />;
   },
 };
 

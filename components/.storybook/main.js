@@ -7,7 +7,11 @@ function getAbsolutePath(value) {
 
 /** @type {import('storybook/internal/types').StorybookConfig} */
 const config = {
-  stories: ['../*.mdx', '../**/stories.@(js|jsx|mjs|ts|tsx)'],
+  stories: [
+    '../*.mdx',
+    '../**/stories.@(js|jsx|mjs|ts|tsx)',
+    '../**/*.stories.@(js|jsx|mjs|ts|tsx)',
+  ],
 
   addons: [
     getAbsolutePath('@storybook/addon-docs'),

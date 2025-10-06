@@ -1,4 +1,5 @@
-import { WCTAG } from '../../consts/index.js';
+import { WCTAG } from '../../../consts/index.js';
+import { AccordionComponent } from './accordion.js';
 
 function renderDefault(args) {
   const el = document.createElement(WCTAG.Accordion);
@@ -20,6 +21,7 @@ function renderDefault(args) {
 export default {
   title: 'Components/Accordion',
   tags: ['autodocs'],
+  component: AccordionComponent,
   render: renderDefault,
   argTypes: {
     children: {
@@ -32,8 +34,8 @@ export default {
     },
   },
   args: {
-    children: 'Lorem ipsun',
-    header: 'Header',
+    children: 'Съешь ещё этих мягких французских булок, да выпей чаю',
+    header: 'Заголовок',
   },
   parameters: {
     design: {
@@ -45,7 +47,7 @@ export default {
 
 export const DefaultAccordion = {
   args: {
-    children: 'Lorem ipsun',
-    header: 'Header',
+    children: 'Съешь ещё этих мягких французских булок, да выпей чаю',
+    header: 'Заголовок',
   },
 };

@@ -1,5 +1,5 @@
-import { COLOR, COLORS, SHAPE, SHAPES, WCATTR, WCTAG } from '../../consts/index.js';
-import { setAttr } from '../../utils/index.js';
+import { COLOR, COLORS, SHAPE, SHAPES, WCATTR, WCTAG } from '../../../consts/index.js';
+import { setAttr } from '../../../utils/index.js';
 
 export default {
   title: 'Components/Avatar',
@@ -91,7 +91,7 @@ export const WithImage = {
   },
 };
 
-export const WithOutImage = {
+export const WithText = {
   args: {
     text: 'BH',
     [WCATTR.SizeNumber]: 48,
@@ -99,7 +99,7 @@ export const WithOutImage = {
   },
 };
 
-export const Big = {
+export const BigAndSquircle = {
   args: {
     text: 'BH',
     [WCATTR.SizeNumber]: 65,

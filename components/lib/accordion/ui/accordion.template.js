@@ -1,7 +1,7 @@
-import { WCATTR } from '../../consts/index.js';
-import { html } from '../../utils/index.js';
+import { WCATTR } from '../../../consts/index.js';
+import { html } from '../../../utils/index.js';
 
-export default html`
+export const template = html`
   <template>
     <style>
       summary {

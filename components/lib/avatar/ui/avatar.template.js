@@ -1,7 +1,7 @@
-import { COLOR, SHAPE, WCATTR } from '../../consts/index.js';
-import { html } from '../../utils/index.js';
+import { COLOR, SHAPE, WCATTR } from '../../../consts/index.js';
+import { html } from '../../../utils/index.js';
 
-export default html`
+export const template = html`
   <template>
     <style>
       :host {
@@ -13,7 +13,6 @@ export default html`
         height: calc(var(--${WCATTR.SizeNumber}) + 2px);
         object-fit: cover;
         object-position: center;
-        border-radius: 50%;
         position: absolute;
         inset: -1px;
       }
@@ -58,6 +57,10 @@ export default html`
       }
 
       :host([${WCATTR.Shape}='${SHAPE.Circle}']) .bg {
+        border-radius: 50%;
+      }
+
+      :host([${WCATTR.Shape}='${SHAPE.Circle}']) ::slotted(img) {
         border-radius: 50%;
       }
 

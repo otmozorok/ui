@@ -1,5 +1,5 @@
-import { APPEARANCE, APPEARANCES, SIZE, SIZES, WCATTR, WCTAG } from '../../consts/index.js';
-import { setAttr, toggleAttr } from '../../utils/index.js';
+import { APPEARANCE, APPEARANCES, SIZE, SIZES, WCATTR, WCTAG } from '../../../consts/index.js';
+import { setAttr, toggleAttr } from '../../../utils/index.js';
 
 export default {
   title: 'Typography/Headline',
@@ -49,7 +49,7 @@ export default {
     },
   },
   args: {
-    children: 'Title text',
+    children: 'Съешь ещё этих мягких французских булок, да выпей чаю',
     [WCATTR.Size]: SIZE.Medium,
   },
   parameters: {
@@ -62,7 +62,7 @@ export default {
 
 export const DefaultHeadline = {
   args: {
-    children: 'Title text',
+    children: 'Съешь ещё этих мягких французских булок, да выпей чаю',
     [WCATTR.Size]: SIZE.Medium,
   },
 };
