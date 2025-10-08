@@ -10,11 +10,10 @@ export const Avatar: React.FC<React.PropsWithChildren<IAvatarProps>> = ({
   color,
   shape,
   sizeNumber,
-  src,
   ...props
 }) => {
   return (
-    <wc-avatar src={src} color={color} shape={shape} size-number={sizeNumber} {...props}>
+    <wc-avatar color={color} shape={shape} size-number={sizeNumber} {...props}>
       {children}
     </wc-avatar>
   );

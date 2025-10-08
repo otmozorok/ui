@@ -1,7 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { COLOR, COLORS, SHAPE, SHAPES } from '@otmozorok/wc/consts';
+import { COLOR, COLORS, SHAPE, SHAPES, WCATTR } from '@otmozorok/wc/consts';
 import { Avatar } from './Avatar';
 import type { IAvatarProps } from '../model';
+
+type IMeta = IAvatarProps & { src?: string; text?: string };
 
 const meta = {
   title: 'Components/Avatar',
@@ -20,20 +22,58 @@ const meta = {
       table: { defaultValue: { summary: SHAPE.Circle } },
     },
     src: { control: 'text' },
-    children: { control: 'text' },
+    text: { control: 'text' },
   },
-} satisfies Meta<IAvatarProps>;
+} satisfies Meta<IMeta>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<IMeta>;
 
 export const DefaultAvatar: Story = {
   args: {
     sizeNumber: 48,
-    color: COLOR.Green,
-    shape: SHAPE.Circle,
+    [WCATTR.Color]: COLOR.Green,
+    [WCATTR.Shape]: SHAPE.Circle,
   },
-  render: ({ ...props }) => {
-    return <Avatar {...props} />;
+  render: ({ text, src, ...props }) => {
+    const children = src ? <img src={src} /> : text ? text : undefined;
+    return <Avatar {...props}>{children}</Avatar>;
+  },
+};
+
+export const WithImage: Story = {
+  args: {
+    sizeNumber: 48,
+    [WCATTR.Src]: 'https://avatars.githubusercontent.com/u/15306476?v=4',
+  },
+  render: ({ src, ...props }) => {
+    return (
+      <Avatar {...props}>
+        <img src={src} />
+      </Avatar>
+    );
+  },
+};
+
+export const WithText: Story = {
+  args: {
+    text: 'BH',
+    sizeNumber: 48,
+    [WCATTR.Color]: COLOR.Green,
+  },
+  render: ({ text, ...props }) => {
+    return <Avatar {...props}>{text}</Avatar>;
+  },
+};
+
+export const BigAndSquircle: Story = {
+  args: {
+    text: 'BH',
+    sizeNumber: 65,
+    [WCATTR.Color]: COLOR.Green,
+    [WCATTR.Shape]: SHAPE.Squircle,
+  },
+  render: ({ text, ...props }) => {
+    return <Avatar {...props}>{text}</Avatar>;
   },
 };
