@@ -3,12 +3,14 @@ import { Headline } from './Headline';
 import { APPEARANCE, APPEARANCES, SIZE, SIZES } from '@otmozorok/wc/consts';
 import type { IHeadlineProps } from '../model';
 
+type IMeta = IHeadlineProps & { text?: string };
+
 const meta = {
   title: 'Typography/Headline',
   component: Headline,
   tags: ['autodocs'],
   argTypes: {
-    children: { control: 'text' },
+    text: { control: 'text' },
     appearance: {
       control: 'inline-radio',
       options: APPEARANCES,
@@ -23,18 +25,18 @@ const meta = {
       control: 'boolean',
     },
   },
-} satisfies Meta<IHeadlineProps>;
+} satisfies Meta<IMeta>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<IMeta>;
 
 export const DefaultHeadline: Story = {
   args: {
-    children: 'Заголовок',
+    text: 'Съешь ещё этих мягких французских булок, да выпей чаю',
     appearance: APPEARANCE.Themed,
     size: SIZE.Medium,
   },
-  render: ({ ...props }) => {
-    return <Headline {...props} />;
+  render: ({ text, ...props }) => {
+    return <Headline {...props}>{text}</Headline>;
   },
 };

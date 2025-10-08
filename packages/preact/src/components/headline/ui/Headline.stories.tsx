@@ -3,6 +3,8 @@ import { APPEARANCE, APPEARANCES, SIZE, SIZES, WCATTR } from '@otmozorok/wc/cons
 import { IHeadlineProps } from '../model';
 import { Headline } from './Headline';
 
+type IMeta = IHeadlineProps & { text?: string };
+
 const meta = {
   title: 'Typography/Headline',
   component: Headline,
@@ -18,20 +20,20 @@ const meta = {
   args: {
     [WCATTR.Appearance]: APPEARANCE.Themed,
     [WCATTR.Size]: SIZE.Medium,
-    children: 'Съешь ещё этих мягких французских булок, да выпей чаю',
+    text: 'Съешь ещё этих мягких французских булок, да выпей чаю',
   },
-} satisfies Meta<IHeadlineProps>;
+} satisfies Meta<IMeta>;
 
-type Story = StoryObj<IHeadlineProps>;
+type Story = StoryObj<IMeta>;
 
 export const Primary: Story = {
   args: {
     [WCATTR.Appearance]: APPEARANCE.Themed,
     [WCATTR.Size]: SIZE.Medium,
-    children: 'Съешь ещё этих мягких французских булок, да выпей чаю',
+    text: 'Съешь ещё этих мягких французских булок, да выпей чаю',
   },
-  render: ({ children, ...props }) => {
-    return <Headline {...props}>{children}</Headline>;
+  render: ({ text, ...props }) => {
+    return <Headline {...props}>{text}</Headline>;
   },
 };
 
