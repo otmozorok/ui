@@ -1,5 +1,4 @@
 import { APPEARANCE, MODE, SIZE } from '@otmozorok/wc/consts';
-import { JSX } from 'preact/jsx-runtime';
 
 export interface IButtonProps {
   mode?: (typeof MODE)[keyof typeof MODE];
@@ -8,5 +7,5 @@ export interface IButtonProps {
   loading?: boolean;
   fullWidth?: boolean;
   onClick?: () => void;
-  children?: JSX.Element;
+  children?: any;
 }

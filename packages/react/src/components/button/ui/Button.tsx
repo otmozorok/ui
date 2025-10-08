@@ -1,7 +1,7 @@
 import { ButtonComponent, LoaderComponent } from '@otmozorok/wc';
 import { APPEARANCE, MODE, SIZE, WCTAG } from '@otmozorok/wc/consts';
-import { useRef, useEffect } from 'preact/hooks';
-import { IButtonProps } from '../model';
+import { useRef, useEffect } from 'react';
+import type { IButtonProps } from '../model';
 
 customElements.get(WCTAG.Button) || customElements.define(WCTAG.Button, ButtonComponent);
 customElements.get(WCTAG.Loader) || customElements.define(WCTAG.Loader, LoaderComponent);

@@ -7,8 +7,8 @@ import {
   SIZES,
   WCATTR,
   WCTAG,
-} from '../../consts/index.js';
-import { setAttr, toggleAttr } from '../../utils/index.js';
+} from '../../../consts/index.js';
+import { setAttr, toggleAttr } from '../../../utils/index.js';
 
 export default {
   title: 'Components/Button',

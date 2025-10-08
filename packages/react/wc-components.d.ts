@@ -4,8 +4,9 @@ import type {
   APPEARANCE,
   HeadlineComponent,
   IconComponent,
+  ButtonComponent,
 } from '@otmozorok/wc';
-import type { COLOR, ICON, SHAPE, SIZE, WCATTR, WCTAG } from '@otmozorok/wc/consts';
+import type { COLOR, ICON, MODE, SHAPE, SIZE, WCATTR, WCTAG } from '@otmozorok/wc/consts';
 
 declare global {
   // Расширяем стандартные HTML-теги
@@ -26,6 +27,17 @@ declare global {
           children?: React.ReactNode;
         } & React.ComponentPropsWithoutRef<'div'>,
         AvatarComponent
+      >;
+      [WCTAG.Button]: React.DetailedHTMLProps<
+        {
+          [WCATTR.Appearance]?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
+          [WCATTR.Size]?: (typeof SIZE)[keyof typeof SIZE];
+          [WCATTR.Mode]?: (typeof MODE)[keyof typeof MODE];
+          [WCATTR.Loading]?: boolean;
+          [WCATTR.FullWidth]?: boolean;
+          children?: React.ReactNode;
+        } & React.ComponentPropsWithoutRef<'div'>,
+        ButtonComponent
       >;
       [WCTAG.Icon]: React.DetailedHTMLProps<
         {
