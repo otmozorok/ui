@@ -21,10 +21,18 @@ jobs:
       - run: npm publish -w components
       - run: npm i
       - run: npm run build -w packages/react
+        continue-on-error: true
       - run: npm publish -w packages/react
+        continue-on-error: true
       - run: npm run build -w packages/preact
+        continue-on-error: true
       - run: npm publish -w packages/preact
+        continue-on-error: true
       - run: npm run build -w packages/svelte
+        continue-on-error: true
       - run: npm publish -w packages/svelte
+        continue-on-error: true
       - run: npm run build -w packages/vue
+        continue-on-error: true
       - run: npm publish -w packages/vue
+        continue-on-error: true
