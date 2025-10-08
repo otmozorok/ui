@@ -2,21 +2,23 @@ import type { Meta, StoryObj } from '@storybook/preact-vite';
 import { IAccordionProps } from '../model';
 import { Accordion } from './Accordion';
 
+type IMeta = IAccordionProps & { text?: string };
+
 const meta = {
   title: 'Components/Accordion',
   component: Accordion,
   tags: ['autodocs'],
-} satisfies Meta<IAccordionProps>;
+} satisfies Meta<IMeta>;
 
-type Story = StoryObj<IAccordionProps>;
+type Story = StoryObj<IMeta>;
 
 export const DefaultAccordion: Story = {
   args: {
     title: 'Заголовок',
-    children: 'Съешь ещё этих мягких французских булок, да выпей чаю',
+    text: 'Съешь ещё этих мягких французских булок, да выпей чаю',
   },
-  render: ({ children, ...props }) => {
-    return <Accordion {...props}>{children}</Accordion>;
+  render: ({ text, ...props }) => {
+    return <Accordion {...props}>{text}</Accordion>;
   },
 };
 

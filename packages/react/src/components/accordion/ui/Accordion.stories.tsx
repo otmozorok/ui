@@ -2,25 +2,26 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Accordion } from './Accordion';
 import type { IAccordionProps } from '../model';
 
+type IMeta = IAccordionProps & { text?: string };
+
 const meta = {
   title: 'Components/Accordion',
   component: Accordion,
   tags: ['autodocs'],
   argTypes: {
-    children: { control: 'text' },
+    text: { control: 'text' },
   },
-} satisfies Meta<IAccordionProps>;
+} satisfies Meta<IMeta>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<IMeta>;
 
 export const DefaultAccordion: Story = {
   args: {
     title: 'Заголовок',
-    children:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    text: 'Съешь ещё этих мягких французских булок, да выпей чаю',
   },
-  render: ({ children, ...props }) => {
-    return <Accordion {...props}>{children}</Accordion>;
+  render: ({ text, ...props }) => {
+    return <Accordion {...props}>{text}</Accordion>;
   },
 };

@@ -7,7 +7,6 @@ export const template = html`
       summary {
         display: flex;
         align-items: end;
-        gap: 0.375rem;
         cursor: pointer;
         line-height: 1;
 
@@ -16,8 +15,12 @@ export const template = html`
         }
       }
 
+      details .arrow {
+        transition: transform 0.2s ease-in-out;
+      }
+
       details[${WCATTR.Open}] .arrow {
-        transform: rotate(90deg);
+        transform: rotate(90deg) scale(0.75);
       }
     </style>
 
