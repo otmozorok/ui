@@ -16,7 +16,7 @@ export class AvatarComponent extends WebComponent {
 
   connectedCallback() {
     super.connectedCallback();
-    this.sizeNumber = this.sizeNumber || 48;
+    this.sizeNumber = this.sizeNumber || 3;
     this.color = this.color || COLOR.Blue;
     this.shape = this.shape || SHAPE.Circle;
   }

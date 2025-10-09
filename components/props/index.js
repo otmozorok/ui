@@ -16,7 +16,7 @@ export const colorProp = {
 /** @type {Prop} */
 export const sizeNumberProp = {
   sizeNumber: {
-    type: 'number-px',
+    type: 'number-rem',
     reflect: true,
     attribute: WCATTR.SizeNumber,
   },

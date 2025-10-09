@@ -6,9 +6,9 @@ export class WebComponent extends HTMLElement {
     /**
      * Конструктор компонента
      * @param {DocumentFragment} template - Шаблон DOM-структуры компонента
-     * @param {Record<string, import('../utils/index.js').Props>} props - Описание свойств компонента
+     * @param {Record<string, import('../utils/index.js').Props> | undefined} props - Описание свойств компонента
      */
-    constructor(template: DocumentFragment, props: Record<string, import("../utils/index.js").Props>);
+    constructor(template: DocumentFragment, props: Record<string, import("../utils/index.js").Props> | undefined);
     /**
      * Вызывается при добавлении компонента в DOM
      */

@@ -20,19 +20,15 @@ export default {
   argTypes: {
     text: {
       control: { type: 'text' },
-      type: { name: 'string' },
     },
     [WCATTR.SizeNumber]: {
       control: { type: 'number' },
       table: {
-        defaultValue: { summary: 48 },
+        defaultValue: { summary: 3 },
       },
     },
     [WCATTR.Color]: {
       control: { type: 'inline-radio' },
-      type: {
-        name: 'enum',
-      },
       options: COLORS,
       table: {
         defaultValue: { summary: COLOR.Green },
@@ -40,9 +36,6 @@ export default {
     },
     [WCATTR.Shape]: {
       control: { type: 'inline-radio' },
-      type: {
-        name: 'enum',
-      },
       options: SHAPES,
       table: {
         defaultValue: { summary: SHAPE.Circle },
@@ -51,7 +44,7 @@ export default {
   },
   args: {
     text: '',
-    [WCATTR.SizeNumber]: 48,
+    [WCATTR.SizeNumber]: 3,
     [WCATTR.Color]: COLOR.Green,
     [WCATTR.Shape]: SHAPE.Circle,
   },
@@ -65,7 +58,7 @@ export default {
 
 export const DefaultAvatar = {
   args: {
-    [WCATTR.SizeNumber]: 48,
+    [WCATTR.SizeNumber]: 3,
     [WCATTR.Color]: COLOR.Green,
     [WCATTR.Shape]: SHAPE.Circle,
   },
@@ -73,7 +66,7 @@ export const DefaultAvatar = {
 
 export const WithImage = {
   args: {
-    [WCATTR.SizeNumber]: 48,
+    [WCATTR.SizeNumber]: 3,
   },
   render: (args) => {
     const el = document.createElement(WCTAG.Avatar);
@@ -94,7 +87,7 @@ export const WithImage = {
 export const WithText = {
   args: {
     text: 'BH',
-    [WCATTR.SizeNumber]: 48,
+    [WCATTR.SizeNumber]: 3,
     [WCATTR.Color]: COLOR.Green,
   },
 };
@@ -102,7 +95,7 @@ export const WithText = {
 export const BigAndSquircle = {
   args: {
     text: 'BH',
-    [WCATTR.SizeNumber]: 65,
+    [WCATTR.SizeNumber]: 5,
     [WCATTR.Color]: COLOR.Green,
     [WCATTR.Shape]: SHAPE.Squircle,
   },

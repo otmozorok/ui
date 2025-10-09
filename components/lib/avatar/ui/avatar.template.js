@@ -22,9 +22,10 @@ export const template = html`
         display: grid;
         width: var(--${WCATTR.SizeNumber});
         height: var(--${WCATTR.SizeNumber});
+        font-size: var(--${WCATTR.SizeNumber});
 
         .text {
-          font-size: 1rem;
+          font-size: 0.35em;
           line-height: 1;
           user-select: none;
           color: var(--text-avatar-color);
