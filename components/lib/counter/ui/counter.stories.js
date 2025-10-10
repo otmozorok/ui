@@ -1,5 +1,5 @@
-import { APPEARANCE, APPEARANCES, WCATTR, WCTAG } from '../../consts/index.js';
-import { setAttr, toggleAttr } from '../../utils/index.js';
+import { APPEARANCE, APPEARANCES, WCATTR, WCTAG } from '../../../consts/index.js';
+import { setAttr, toggleAttr } from '../../../utils/index.js';
 
 export default {
   title: 'Components/Counter',
@@ -17,7 +17,6 @@ export default {
   argTypes: {
     [WCATTR.Value]: {
       control: { type: 'number' },
-      type: { name: 'number' },
     },
     [WCATTR.Rounded]: {
       control: {
@@ -31,9 +30,6 @@ export default {
     },
     [WCATTR.Appearance]: {
       control: { type: 'inline-radio' },
-      type: {
-        name: 'enum',
-      },
       options: APPEARANCES,
       table: {
         defaultValue: { summary: APPEARANCE.Themed },

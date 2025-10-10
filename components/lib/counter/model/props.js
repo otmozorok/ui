@@ -1,10 +1,10 @@
-import { WCATTR } from '../../consts/index.js';
-import { appearanceProp } from '../../props/index.js';
+import { WCATTR } from '../../../consts/index.js';
+import { appearanceProp } from '../../../props/index.js';
 
 /**
- * @type {Record<string, import("../../utils").Props>}
+ * @type {Record<string, import("../../../utils/index.js").Props>}
  */
-const props = {
+export const props = {
   ...appearanceProp,
   rounded: {
     type: 'boolean',
@@ -22,5 +22,3 @@ const props = {
     attribute: WCATTR.Value,
   },
 };
-
-export default props;
