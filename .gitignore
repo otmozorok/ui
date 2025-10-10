@@ -1,6 +1,7 @@
 node_modules
 /coverage
 /demo
+/components/types/
 
 *storybook.log
 storybook-static
