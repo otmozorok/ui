@@ -13,9 +13,9 @@ export function Counter({ count, rounded, inverse, destructive, ...props }: ICou
       ref={ref}
       {...props}
       count={count}
-      rounded={rounded ? true : undefined}
-      inverse={inverse ? true : undefined}
-      destructive={destructive ? true : undefined}
+      rounded={rounded || undefined}
+      inverse={inverse || undefined}
+      destructive={destructive || undefined}
     />
   );
 }
