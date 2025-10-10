@@ -3,6 +3,8 @@ import { Button } from './Button';
 import type { Meta, StoryObj } from '@storybook/preact-vite';
 import { IButtonProps } from '../model';
 
+type IMeta = IButtonProps & { text?: string };
+
 const meta = {
   title: 'Components/Button',
   component: Button,
@@ -20,19 +22,19 @@ const meta = {
   render: ({ ...props }) => {
     return <Button {...props} />;
   },
-} satisfies Meta<IButtonProps>;
+} satisfies Meta<IMeta>;
 
-type Story = StoryObj<IButtonProps>;
+type Story = StoryObj<IMeta>;
 
 export const Primary: Story = {
   args: {
     mode: MODE.Primary,
     size: SIZE.Medium,
     fullWidth: true,
-    children: 'Button',
+    text: 'Button',
   },
-  render: ({ ...props }) => {
-    return <Button {...props} />;
+  render: ({ text, ...props }) => {
+    return <Button {...props}>{text}</Button>;
   },
 };
 
