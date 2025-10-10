@@ -23,8 +23,8 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm i
       - run: npm run decl -w components
-      - run: npm publish -w components
         continue-on-error: true
+      - run: npm publish -w components
       - run: npm run build -w packages/react
         continue-on-error: true
       - run: npm publish -w packages/react
