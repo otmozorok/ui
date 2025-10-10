@@ -1,6 +1,6 @@
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { APPEARANCES, MODE, MODES, SIZE, SIZES } from '@otmozorok/wc/consts';
 import { Button } from './Button';
-import type { Meta, StoryObj } from '@storybook/react-vite';
 import type { IButtonProps } from '../model';
 
 const meta = {

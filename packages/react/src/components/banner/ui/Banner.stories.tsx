@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/preact-vite';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { APPEARANCE, APPEARANCES, WCATTR } from '@otmozorok/wc/consts';
 import type { IBannerProps } from '../model';
 import { Banner } from './Banner';
