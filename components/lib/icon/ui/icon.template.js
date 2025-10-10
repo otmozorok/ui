@@ -1,9 +1,9 @@
-import { WCATTR } from '../../consts/index.js';
-import { html } from '../../utils/index.js';
+import { WCATTR } from '../../../consts/index.js';
+import { html } from '../../../utils/index.js';
 
 const SPRITE_PATH = new URL('./sprites.svg?v0.6#', import.meta.url).href;
 
-export default html`
+export const template = html`
   <template>
     <style>
       :host {

@@ -3,6 +3,7 @@ import {
   ButtonComponent,
   CounterComponent,
   HeadlineComponent,
+  IconComponent,
   LoaderComponent,
 } from '@otmozorok/wc';
 import { WCTAG } from '@otmozorok/wc/consts';
@@ -35,6 +36,7 @@ declare module 'preact' {
         Preact.HTMLAttributes<HeadlineComponent>,
         HeadlineComponent
       >;
+      [WCTAG.Icon]: Preact.DetailedHTMLProps<Preact.HTMLAttributes<IconComponent>, IconComponent>;
     }
   }
 }
