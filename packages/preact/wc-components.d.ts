@@ -5,6 +5,7 @@ import {
   HeadlineComponent,
   IconComponent,
   LoaderComponent,
+  ParagraphComponent,
 } from '@otmozorok/wc';
 import { WCTAG } from '@otmozorok/wc/consts';
 import { JSX } from 'preact';
@@ -37,6 +38,10 @@ declare module 'preact' {
         HeadlineComponent
       >;
       [WCTAG.Icon]: Preact.DetailedHTMLProps<Preact.HTMLAttributes<IconComponent>, IconComponent>;
+      [WCTAG.Paragraph]: Preact.DetailedHTMLProps<
+        Preact.HTMLAttributes<ParagraphComponent>,
+        ParagraphComponent
+      >;
       [WCTAG.Banner]: Preact.DetailedHTMLProps<
         Preact.HTMLAttributes<BannerComponent>,
         BannerComponent

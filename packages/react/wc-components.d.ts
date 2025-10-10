@@ -6,6 +6,7 @@ import type {
   IconComponent,
   ButtonComponent,
   BannerComponent,
+  ParagraphComponent,
 } from '@otmozorok/wc';
 import type { COLOR, ICON, MODE, SHAPE, SIZE, WCATTR, WCTAG } from '@otmozorok/wc/consts';
 
@@ -62,6 +63,14 @@ declare global {
           [WCATTR.Src]?: string;
         },
         BannerComponent
+      >;
+      [WCTAG.Paragraph]: React.DetailedHTMLProps<
+        {
+          [WCATTR.Appearance]?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
+          [WCATTR.Caps]?: boolean;
+          children?: React.ReactNode;
+        } & React.ComponentPropsWithoutRef<'p'>,
+        ParagraphComponent
       >;
     }
   }
