@@ -84,3 +84,12 @@ export const closableProp = {
     attribute: WCATTR.Closable,
   },
 };
+
+/** @type {Prop} */
+export const capsProp = {
+  caps: {
+    type: 'boolean',
+    reflect: true,
+    attribute: WCATTR.Caps,
+  },
+};
