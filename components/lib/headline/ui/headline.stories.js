@@ -24,9 +24,6 @@ export default {
     },
     [WCATTR.Appearance]: {
       control: { type: 'inline-radio' },
-      type: {
-        name: 'enum',
-      },
       options: APPEARANCES,
       table: {
         defaultValue: { summary: APPEARANCE.Themed },
@@ -34,9 +31,6 @@ export default {
     },
     [WCATTR.Size]: {
       control: { type: 'inline-radio' },
-      type: {
-        name: 'enum',
-      },
       options: SIZES,
       table: {
         defaultValue: { summary: SIZE.Medium },
@@ -47,10 +41,6 @@ export default {
         type: 'boolean',
       },
     },
-  },
-  args: {
-    children: 'Съешь ещё этих мягких французских булок, да выпей чаю',
-    [WCATTR.Size]: SIZE.Medium,
   },
   parameters: {
     design: {

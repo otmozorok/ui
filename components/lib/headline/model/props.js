@@ -1,4 +1,4 @@
-import { appearanceProp, sizeProp } from '../../../props/index.js';
+import { appearanceProp, sizeProp, capsProp } from '../../../props/index.js';
 
 /**
  * @type {Record<string, import("../../../utils/index.js").Props>}
@@ -6,4 +6,5 @@ import { appearanceProp, sizeProp } from '../../../props/index.js';
 export const props = {
   ...appearanceProp,
   ...sizeProp,
+  ...capsProp,
 };
