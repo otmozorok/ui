@@ -1,6 +1,6 @@
 {
   "name": "@otmozorok/react",
-  "version": "0.25.3",
+  "version": "0.26.0",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components обернутый в react",
   "license": "MIT",
@@ -21,8 +21,8 @@
     "*.css"
   ],
   "scripts": {
-    "storybook": "storybook dev -p 6003 --no-open",
-    "build-storybook": "storybook build",
+    "docs": "storybook dev -p 6003 --no-open",
+    "build-docs": "storybook build",
     "build": "tsc -b && vite build -c vite.build.config.ts",
     "lint": "eslint ."
   },

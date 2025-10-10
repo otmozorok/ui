@@ -37,6 +37,10 @@ declare module 'preact' {
         HeadlineComponent
       >;
       [WCTAG.Icon]: Preact.DetailedHTMLProps<Preact.HTMLAttributes<IconComponent>, IconComponent>;
+      [WCTAG.Banner]: Preact.DetailedHTMLProps<
+        Preact.HTMLAttributes<BannerComponent>,
+        BannerComponent
+      >;
     }
   }
 }

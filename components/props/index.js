@@ -75,3 +75,12 @@ export const loadingProp = {
     attribute: WCATTR.Loading,
   },
 };
+
+/** @type {Prop} */
+export const closableProp = {
+  closable: {
+    type: 'boolean',
+    reflect: true,
+    attribute: WCATTR.Closable,
+  },
+};

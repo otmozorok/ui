@@ -1,5 +1,5 @@
-import { APPEARANCE, APPEARANCES, MODE, SIZE, WCATTR, WCTAG } from '../../consts/index.js';
-import { setAttr, toggleAttr } from '../../utils/index.js';
+import { APPEARANCE, APPEARANCES, SIZE, WCATTR, WCTAG } from '../../../consts/index.js';
+import { setAttr, toggleAttr } from '../../../utils/index.js';
 
 export default {
   title: 'Components/Banner',
@@ -16,9 +16,8 @@ export default {
     setAttr(args[WCATTR.Appearance], WCATTR.Appearance, el);
     toggleAttr(args[WCATTR.Closable], WCATTR.Closable, el);
 
-    h.innerText = 'This is a banner';
-    p.innerText =
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
+    h.innerText = 'Заголовок банера';
+    p.innerText = 'Съешь ещё этих мягких французских булок, да выпей чаю';
 
     div.appendChild(h);
     div.appendChild(p);
@@ -44,12 +43,13 @@ export default {
       },
     },
   },
+};
+
+export const DefaultBanner = {
   args: {
     [WCATTR.Appearance]: APPEARANCE.Themed,
   },
 };
-
-export const DefaultBanner = {};
 
 export const BannerWithImage = {
   render: (args) => {
@@ -69,9 +69,8 @@ export const BannerWithImage = {
     setAttr(args[WCATTR.Appearance], WCATTR.Appearance, el);
     toggleAttr(args[WCATTR.Closable], WCATTR.Closable, el);
 
-    h.innerText = 'This is a banner';
-    p.innerText =
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
+    h.innerText = 'Заголовок банера';
+    p.innerText = 'Съешь ещё этих мягких французских булок, да выпей чаю';
 
     div.appendChild(h);
     div.appendChild(p);
