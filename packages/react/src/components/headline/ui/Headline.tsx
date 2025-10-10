@@ -12,7 +12,7 @@ export const Headline: React.FC<React.PropsWithChildren<IHeadlineProps>> = ({
   ...props
 }) => {
   return (
-    <wc-headline size={size} appearance={appearance} caps={caps} {...props}>
+    <wc-headline size={size} appearance={appearance} caps={caps || undefined} {...props}>
       {children}
     </wc-headline>
   );

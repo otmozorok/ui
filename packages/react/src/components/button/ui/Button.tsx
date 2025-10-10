@@ -39,8 +39,8 @@ export function Button({
       appearance={appearance}
       mode={mode}
       size={size}
-      loading={loading ? true : undefined}
-      full-width={fullWidth ? true : undefined}
+      loading={loading || undefined}
+      full-width={fullWidth || undefined}
       {...props}
     >
       {children}
