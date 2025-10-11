@@ -1,7 +1,6 @@
 import { APPEARANCE } from '@otmozorok/wc/consts';
-import { ComponentPropsWithoutRef } from 'preact/compat';
 
-export interface ICounterProps extends ComponentPropsWithoutRef<'div'> {
+export interface ICounterProps extends React.ComponentPropsWithoutRef<'div'> {
   value: number;
   appearance?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
   rounded?: boolean;

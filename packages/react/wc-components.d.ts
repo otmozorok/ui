@@ -53,7 +53,7 @@ declare global {
           [WCATTR.Appearance]?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
           [WCATTR.Caps]?: boolean;
           children?: React.ReactNode;
-        } & React.ComponentPropsWithoutRef<'div'>,
+        } & React.ComponentPropsWithoutRef<'h1'>,
         HeadlineComponent
       >;
       [WCTAG.Banner]: React.DetailedHTMLProps<
@@ -71,6 +71,16 @@ declare global {
           children?: React.ReactNode;
         } & React.ComponentPropsWithoutRef<'p'>,
         ParagraphComponent
+      >;
+      [WCTAG.Counter]: React.DetailedHTMLProps<
+        {
+          [WCATTR.Appearance]?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
+          [WCATTR.Rounded]?: boolean;
+          [WCATTR.Inverse]?: boolean;
+          [WCATTR.Value]: string;
+          children?: React.ReactNode;
+        } & React.ComponentPropsWithoutRef<'div'>,
+        CounterComponent
       >;
     }
   }
