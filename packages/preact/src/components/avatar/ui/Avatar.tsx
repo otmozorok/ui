@@ -7,7 +7,7 @@ customElements.get(WCTAG.Icon) || customElements.define(WCTAG.Icon, IconComponen
 
 export function Avatar({
   color = COLOR.Green,
-  sizeNumber = 48,
+  sizeNumber = 3,
   shape = SHAPE.Circle,
   children,
 }: IAvatarProps) {

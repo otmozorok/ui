@@ -10,7 +10,7 @@ const meta = {
   component: Avatar,
   tags: ['autodocs'],
   argTypes: {
-    sizeNumber: { control: 'number', table: { defaultValue: { summary: '48' } } },
+    sizeNumber: { control: 'number', table: { defaultValue: { summary: '3' } } },
     color: {
       control: 'inline-radio',
       options: COLORS,
@@ -31,7 +31,7 @@ type Story = StoryObj<IMeta>;
 
 export const DefaultAvatar: Story = {
   args: {
-    sizeNumber: 48,
+    sizeNumber: 3,
     [WCATTR.Color]: COLOR.Green,
     [WCATTR.Shape]: SHAPE.Circle,
   },
@@ -43,7 +43,7 @@ export const DefaultAvatar: Story = {
 
 export const WithImage: Story = {
   args: {
-    sizeNumber: 48,
+    sizeNumber: 3,
     [WCATTR.Src]: 'https://avatars.githubusercontent.com/u/15306476?v=4',
   },
   render: ({ src, ...props }) => {
@@ -58,7 +58,7 @@ export const WithImage: Story = {
 export const WithText: Story = {
   args: {
     text: 'BH',
-    sizeNumber: 48,
+    sizeNumber: 3,
     [WCATTR.Color]: COLOR.Green,
   },
   render: ({ text, ...props }) => {
@@ -69,7 +69,7 @@ export const WithText: Story = {
 export const BigAndSquircle: Story = {
   args: {
     text: 'BH',
-    sizeNumber: 65,
+    sizeNumber: 5,
     [WCATTR.Color]: COLOR.Green,
     [WCATTR.Shape]: SHAPE.Squircle,
   },
