@@ -7,6 +7,7 @@ import type {
   ButtonComponent,
   BannerComponent,
   ParagraphComponent,
+  DotComponent,
 } from '@otmozorok/wc';
 import type { COLOR, ICON, MODE, SHAPE, SIZE, WCATTR, WCTAG } from '@otmozorok/wc/consts';
 
@@ -81,6 +82,12 @@ declare global {
           children?: React.ReactNode;
         } & React.ComponentPropsWithoutRef<'div'>,
         CounterComponent
+      >;
+      [WCTAG.Dot]: React.DetailedHTMLProps<
+        {
+          [WCATTR.Appearance]?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
+        } & React.ComponentPropsWithoutRef<'div'>,
+        DotComponent
       >;
     }
   }

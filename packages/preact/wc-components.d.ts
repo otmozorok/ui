@@ -46,6 +46,7 @@ declare module 'preact' {
         Preact.HTMLAttributes<BannerComponent>,
         BannerComponent
       >;
+      [WCTAG.Dot]: Preact.DetailedHTMLProps<Preact.HTMLAttributes<DotComponent>, DotComponent>;
     }
   }
 }

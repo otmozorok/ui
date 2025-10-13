@@ -1,5 +1,5 @@
-import { APPEARANCE, APPEARANCES, WCATTR, WCTAG } from '../../consts/index.js';
-import { setAttr } from '../../utils/index.js';
+import { APPEARANCE, APPEARANCES, WCATTR, WCTAG } from '../../../consts/index.js';
+import { setAttr } from '../../../utils/index.js';
 
 export default {
   title: 'Components/Dot',
@@ -14,9 +14,6 @@ export default {
   argTypes: {
     [WCATTR.Appearance]: {
       control: { type: 'inline-radio' },
-      type: {
-        name: 'enum',
-      },
       options: APPEARANCES,
       table: {
         defaultValue: { summary: APPEARANCE.Themed },
