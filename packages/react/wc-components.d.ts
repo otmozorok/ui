@@ -8,6 +8,7 @@ import type {
   BannerComponent,
   ParagraphComponent,
   DotComponent,
+  EllipsisComponent,
 } from '@otmozorok/wc';
 import type { COLOR, ICON, MODE, SHAPE, SIZE, WCATTR, WCTAG } from '@otmozorok/wc/consts';
 
@@ -88,6 +89,12 @@ declare global {
           [WCATTR.Appearance]?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
         } & React.ComponentPropsWithoutRef<'div'>,
         DotComponent
+      >;
+      [WCTAG.Ellipsis]: React.DetailedHTMLProps<
+        {
+          [WCATTR.MaxLines]?: number;
+        } & React.ComponentPropsWithoutRef<'div'>,
+        EllipsisComponent
       >;
     }
   }

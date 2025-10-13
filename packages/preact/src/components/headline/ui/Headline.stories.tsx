@@ -17,11 +17,6 @@ const meta = {
       options: SIZES,
     },
   },
-  args: {
-    [WCATTR.Appearance]: APPEARANCE.Themed,
-    [WCATTR.Size]: SIZE.Medium,
-    text: 'Съешь ещё этих мягких французских булок, да выпей чаю',
-  },
 } satisfies Meta<IMeta>;
 
 type Story = StoryObj<IMeta>;

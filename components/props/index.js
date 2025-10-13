@@ -93,3 +93,12 @@ export const capsProp = {
     attribute: WCATTR.Caps,
   },
 };
+
+/** @type {Prop} */
+export const maxLinesProp = {
+  maxLines: {
+    type: 'number',
+    reflect: true,
+    attribute: WCATTR.MaxLines,
+  },
+};

@@ -2,6 +2,7 @@ import {
   AccordionComponent,
   ButtonComponent,
   CounterComponent,
+  EllipsisComponent,
   HeadlineComponent,
   IconComponent,
   LoaderComponent,
@@ -47,6 +48,10 @@ declare module 'preact' {
         BannerComponent
       >;
       [WCTAG.Dot]: Preact.DetailedHTMLProps<Preact.HTMLAttributes<DotComponent>, DotComponent>;
+      [WCTAG.Ellipsis]: Preact.DetailedHTMLProps<
+        Preact.HTMLAttributes<EllipsisComponent>,
+        EllipsisComponent
+      >;
     }
   }
 }
