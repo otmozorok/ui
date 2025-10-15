@@ -2,6 +2,7 @@ export * from './accordion';
 export * from './avatar';
 export * from './banner';
 export * from './button';
+export * from './container';
 export * from './counter';
 export * from './dot';
 export * from './ellipsis';

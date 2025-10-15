@@ -102,3 +102,66 @@ export const maxLinesProp = {
     attribute: WCATTR.MaxLines,
   },
 };
+
+/** @type {Prop} */
+export const alignItemsProp = {
+  alignItems: {
+    type: 'string',
+    reflect: true,
+    attribute: WCATTR.AlignItems,
+  },
+};
+
+/** @type {Prop} */
+export const directionProp = {
+  direction: {
+    type: 'string',
+    reflect: true,
+    attribute: WCATTR.Direction,
+  },
+};
+
+/** @type {Prop} */
+export const rowsProp = {
+  rows: {
+    type: 'string',
+    reflect: true,
+    attribute: WCATTR.Rows,
+  },
+};
+
+/** @type {Prop} */
+export const colsProp = {
+  cols: {
+    type: 'string',
+    reflect: true,
+    attribute: WCATTR.Cols,
+  },
+};
+
+/** @type {Prop} */
+export const islandProp = {
+  island: {
+    type: 'boolean',
+    reflect: true,
+    attribute: WCATTR.Island,
+  },
+};
+
+/** @type {Prop} */
+export const filledProp = {
+  filled: {
+    type: 'boolean',
+    reflect: true,
+    attribute: WCATTR.Filled,
+  },
+};
+
+/** @type {Prop} */
+export const fullWidthProp = {
+  fullWidth: {
+    type: 'boolean',
+    reflect: true,
+    attribute: WCATTR.FullWidth,
+  },
+};

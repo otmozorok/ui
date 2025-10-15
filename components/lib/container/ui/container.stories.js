@@ -1,5 +1,5 @@
-import { WCATTR, WCTAG } from '../../consts/index.js';
-import { toggleAttr } from '../../utils/index.js';
+import { APPEARANCE, SIZE, WCATTR, WCTAG } from '../../../consts/index.js';
+import { setAttr, toggleAttr } from '../../../utils/index.js';
 
 export default {
   title: 'Layouts/Container',
@@ -15,19 +15,23 @@ export default {
 
     skeleton.classList.add('skeleton');
 
-    [1, 2, 3].forEach(() => {
-      el.appendChild(skeleton.cloneNode(true));
-    });
-
     if (args.header) {
-      const header = document.createElement(WCTAG.MenuHeader);
+      const header = document.createElement(WCTAG.Headline);
+
+      header.slot = 'header';
 
       toggleAttr(true, WCATTR.Caps, header);
+      setAttr(SIZE.Small, WCATTR.Size, header);
+      setAttr(APPEARANCE.Neutral, WCATTR.Appearance, header);
 
       header.textContent = args.header;
 
       el.appendChild(header);
     }
+
+    [1, 2, 3].forEach(() => {
+      el.appendChild(skeleton.cloneNode(true));
+    });
 
     return el;
   },
@@ -49,7 +53,6 @@ export default {
     },
     header: {
       control: { type: 'text' },
-      type: { name: 'string' },
     },
   },
 };
@@ -58,5 +61,13 @@ export const DefaultContainer = {
   args: {
     [WCATTR.Island]: false,
     [WCATTR.Filled]: false,
+  },
+};
+
+export const ContainerWithHeader = {
+  args: {
+    [WCATTR.Island]: false,
+    [WCATTR.Filled]: false,
+    header: 'Съешь ещё этих мягких французских булок, да выпей чаю',
   },
 };

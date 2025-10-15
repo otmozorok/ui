@@ -33,7 +33,6 @@ export function generatePropertyParams(props) {
           case 'number':
             return value !== null ? parseFloat(value) : null;
 
-          case 'number-px':
           case 'number-rem':
             return parseFloat(this.style?.getPropertyValue(`--${attrName}`));
 
@@ -47,10 +46,6 @@ export function generatePropertyParams(props) {
           switch (type) {
             case 'boolean':
               value ? this.setAttribute(attrName, '') : this.removeAttribute(attrName);
-              break;
-
-            case 'number-px':
-              this.style?.setProperty(`--${attrName}`, value + 'px');
               break;
 
             case 'number-rem':

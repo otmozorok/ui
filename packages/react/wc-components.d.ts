@@ -9,6 +9,7 @@ import type {
   ParagraphComponent,
   DotComponent,
   EllipsisComponent,
+  ContainerComponent,
 } from '@otmozorok/wc';
 import type { COLOR, ICON, MODE, SHAPE, SIZE, WCATTR, WCTAG } from '@otmozorok/wc/consts';
 
@@ -40,7 +41,7 @@ declare global {
           [WCATTR.Loading]?: boolean;
           [WCATTR.FullWidth]?: boolean;
           children?: React.ReactNode;
-        } & React.ComponentPropsWithoutRef<'div'>,
+        } & React.ComponentPropsWithoutRef<'button'>,
         ButtonComponent
       >;
       [WCTAG.Icon]: React.DetailedHTMLProps<
@@ -95,6 +96,14 @@ declare global {
           [WCATTR.MaxLines]?: number;
         } & React.ComponentPropsWithoutRef<'div'>,
         EllipsisComponent
+      >;
+      [WCTAG.Container]: React.DetailedHTMLProps<
+        {
+          [WCATTR.FullWidth]?: boolean;
+          [WCATTR.Island]?: boolean;
+          [WCATTR.Filled]?: boolean;
+        } & React.ComponentPropsWithoutRef<'div'>,
+        ContainerComponent
       >;
     }
   }

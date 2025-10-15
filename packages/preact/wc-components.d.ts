@@ -1,6 +1,7 @@
 import {
   AccordionComponent,
   ButtonComponent,
+  ContainerComponent,
   CounterComponent,
   EllipsisComponent,
   HeadlineComponent,
@@ -51,6 +52,10 @@ declare module 'preact' {
       [WCTAG.Ellipsis]: Preact.DetailedHTMLProps<
         Preact.HTMLAttributes<EllipsisComponent>,
         EllipsisComponent
+      >;
+      [WCTAG.Container]: Preact.DetailedHTMLProps<
+        Preact.HTMLAttributes<ContainerComponent>,
+        ContainerComponent
       >;
     }
   }
