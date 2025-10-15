@@ -4,6 +4,7 @@ import {
   ContainerComponent,
   CounterComponent,
   EllipsisComponent,
+  FlexComponent,
   HeadlineComponent,
   IconComponent,
   LoaderComponent,
@@ -57,6 +58,7 @@ declare module 'preact' {
         Preact.HTMLAttributes<ContainerComponent>,
         ContainerComponent
       >;
+      [WCTAG.Flex]: Preact.DetailedHTMLProps<Preact.HTMLAttributes<FlexComponent>, FlexComponent>;
     }
   }
 }

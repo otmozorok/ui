@@ -1,5 +1,5 @@
-import { ALIGNITEMS, DIRECTION, DIRECTIONS, WCATTR, WCTAG } from '../../consts/index.js';
-import { setAttr } from '../../utils/index.js';
+import { ALIGNITEMS, DIRECTION, DIRECTIONS, WCATTR, WCTAG } from '../../../consts/index.js';
+import { setAttr } from '../../../utils/index.js';
 
 /** @type {import('@storybook/html').Meta} */
 export default {

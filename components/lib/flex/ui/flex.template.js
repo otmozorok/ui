@@ -1,7 +1,7 @@
-import { ALIGNITEM, DIRECTION, WCATTR } from '../../consts/index.js';
-import { html } from '../../utils/index.js';
+import { ALIGNITEM, DIRECTION, WCATTR } from '../../../consts/index.js';
+import { html } from '../../../utils/index.js';
 
-export default html`
+export const template = html`
   <template>
     <style>
       :host([${WCATTR.Direction}='${DIRECTION.Horizontal}']) {

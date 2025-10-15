@@ -10,8 +10,19 @@ import type {
   DotComponent,
   EllipsisComponent,
   ContainerComponent,
+  FlexComponent,
 } from '@otmozorok/wc';
-import type { COLOR, ICON, MODE, SHAPE, SIZE, WCATTR, WCTAG } from '@otmozorok/wc/consts';
+import type {
+  ALIGNITEM,
+  COLOR,
+  DIRECTION,
+  ICON,
+  MODE,
+  SHAPE,
+  SIZE,
+  WCATTR,
+  WCTAG,
+} from '@otmozorok/wc/consts';
 
 declare global {
   // Расширяем стандартные HTML-теги
@@ -104,6 +115,14 @@ declare global {
           [WCATTR.Filled]?: boolean;
         } & React.ComponentPropsWithoutRef<'div'>,
         ContainerComponent
+      >;
+      [WCTAG.Flex]: React.DetailedHTMLProps<
+        {
+          [WCATTR.AlignItems]?: (typeof ALIGNITEM)[keyof typeof ALIGNITEM];
+          [WCATTR.Direction]?: (typeof DIRECTION)[keyof typeof DIRECTION];
+          [WCATTR.Gap]?: number;
+        } & React.ComponentPropsWithoutRef<'div'>,
+        FlexComponent
       >;
     }
   }
