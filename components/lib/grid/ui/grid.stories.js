@@ -1,7 +1,6 @@
-import { COLS, ROWS, WCATTR, WCTAG } from '../../consts/index.js';
-import { setAttr } from '../../utils/index.js';
+import { COLS, ROWS, WCATTR, WCTAG } from '../../../consts/index.js';
+import { setAttr } from '../../../utils/index.js';
 
-/** @type {import('@storybook/html').Meta} */
 export default {
   title: 'Layouts/Grid',
   tags: ['autodocs'],
@@ -36,9 +35,6 @@ export default {
     [WCATTR.Gap]: {
       control: { type: 'text' },
     },
-  },
-  args: {
-    [WCATTR.Cols]: 2,
   },
 };
 

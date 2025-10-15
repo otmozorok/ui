@@ -7,6 +7,7 @@ export * from './counter';
 export * from './dot';
 export * from './ellipsis';
 export * from './flex';
+export * from './grid';
 export * from './headline';
 export * from './icon';
 export * from './loader';

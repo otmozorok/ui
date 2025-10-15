@@ -11,13 +11,16 @@ import type {
   EllipsisComponent,
   ContainerComponent,
   FlexComponent,
+  GridComponent,
 } from '@otmozorok/wc';
 import type {
   ALIGNITEM,
+  COL,
   COLOR,
   DIRECTION,
   ICON,
   MODE,
+  ROW,
   SHAPE,
   SIZE,
   WCATTR,
@@ -123,6 +126,14 @@ declare global {
           [WCATTR.Gap]?: number;
         } & React.ComponentPropsWithoutRef<'div'>,
         FlexComponent
+      >;
+      [WCTAG.Grid]: React.DetailedHTMLProps<
+        {
+          [WCATTR.Rows]?: (typeof ROW)[keyof typeof ROW];
+          [WCATTR.Cols]?: (typeof COL)[keyof typeof COL];
+          [WCATTR.Gap]?: number;
+        } & React.ComponentPropsWithoutRef<'div'>,
+        GridComponent
       >;
     }
   }
