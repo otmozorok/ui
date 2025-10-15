@@ -1,7 +1,6 @@
 import { ALIGNITEMS, DIRECTION, DIRECTIONS, WCATTR, WCTAG } from '../../../consts/index.js';
 import { setAttr } from '../../../utils/index.js';
 
-/** @type {import('@storybook/html').Meta} */
 export default {
   title: 'Layouts/Flex',
   tags: ['autodocs'],
@@ -45,7 +44,6 @@ export default {
   },
 };
 
-/** @type {import('@storybook/html').StoryObj} */
 export const DefaultFlex = {
   args: {
     [WCATTR.Direction]: DIRECTION.Horizontal,
