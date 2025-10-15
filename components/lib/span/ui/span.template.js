@@ -1,7 +1,7 @@
-import { APPEARANCE, WCATTR } from '../../consts/index.js';
-import { html } from '../../utils/index.js';
+import { APPEARANCE, WCATTR } from '../../../consts/index.js';
+import { html } from '../../../utils/index.js';
 
-export default html`
+export const template = html`
   <template>
     <style>
       :host([${WCATTR.Appearance}='${APPEARANCE.Negative}']) span {

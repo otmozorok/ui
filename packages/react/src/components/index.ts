@@ -11,3 +11,4 @@ export * from './grid';
 export * from './headline';
 export * from './icon';
 export * from './paragraph';
+export * from './span';

@@ -1,7 +1,6 @@
 import type {
   AccordionComponent,
   AvatarComponent,
-  APPEARANCE,
   HeadlineComponent,
   IconComponent,
   ButtonComponent,
@@ -12,8 +11,10 @@ import type {
   ContainerComponent,
   FlexComponent,
   GridComponent,
+  SpanComponent,
 } from '@otmozorok/wc';
 import type {
+  APPEARANCE,
   ALIGNITEM,
   COL,
   COLOR,
@@ -134,6 +135,14 @@ declare global {
           [WCATTR.Gap]?: number;
         } & React.ComponentPropsWithoutRef<'div'>,
         GridComponent
+      >;
+      [WCTAG.Span]: React.DetailedHTMLProps<
+        {
+          [WCATTR.Appearance]?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
+          [WCATTR.Caps]?: boolean;
+          children?: React.ReactNode;
+        } & React.ComponentPropsWithoutRef<'span'>,
+        SpanComponent
       >;
     }
   }

@@ -10,6 +10,7 @@ import {
   IconComponent,
   LoaderComponent,
   ParagraphComponent,
+  SpanComponent,
 } from '@otmozorok/wc';
 import { WCTAG } from '@otmozorok/wc/consts';
 import { JSX } from 'preact';
@@ -61,6 +62,7 @@ declare module 'preact' {
       >;
       [WCTAG.Flex]: Preact.DetailedHTMLProps<Preact.HTMLAttributes<FlexComponent>, FlexComponent>;
       [WCTAG.Grid]: Preact.DetailedHTMLProps<Preact.HTMLAttributes<GridComponent>, GridComponent>;
+      [WCTAG.Span]: Preact.DetailedHTMLProps<Preact.HTMLAttributes<SpanComponent>, SpanComponent>;
     }
   }
 }

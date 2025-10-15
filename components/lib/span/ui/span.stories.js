@@ -1,5 +1,5 @@
-import { APPEARANCE, APPEARANCES, WCATTR, WCTAG } from '../../consts/index.js';
-import { setAttr, toggleAttr } from '../../utils/index.js';
+import { APPEARANCE, APPEARANCES, WCATTR, WCTAG } from '../../../consts/index.js';
+import { setAttr, toggleAttr } from '../../../utils/index.js';
 
 export default {
   title: 'Typography/Span',
@@ -19,9 +19,6 @@ export default {
   argTypes: {
     [WCATTR.Appearance]: {
       control: { type: 'inline-radio' },
-      type: {
-        name: 'enum',
-      },
       options: APPEARANCES,
       table: {
         defaultValue: { summary: APPEARANCE.Themed },
@@ -34,14 +31,12 @@ export default {
     },
     children: {
       control: { type: 'text' },
-      type: { name: 'string' },
     },
   },
 };
 
 export const DefaultSpan = {
   args: {
-    children:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    children: 'Съешь ещё этих мягких французских булок, да выпей чаю',
   },
 };
