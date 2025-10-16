@@ -10,5 +10,6 @@ export * from './flex';
 export * from './grid';
 export * from './headline';
 export * from './icon';
+export * from './loader';
 export * from './paragraph';
 export * from './span';

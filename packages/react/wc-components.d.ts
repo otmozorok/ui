@@ -12,6 +12,7 @@ import type {
   FlexComponent,
   GridComponent,
   SpanComponent,
+  LoaderComponent,
 } from '@otmozorok/wc';
 import type {
   APPEARANCE,
@@ -33,9 +34,7 @@ declare global {
   namespace JSX {
     interface IntrinsicElements {
       [WCTAG.Accordion]: React.DetailedHTMLProps<
-        {
-          children?: React.ReactNode;
-        } & React.ComponentPropsWithoutRef<'div'>,
+        React.ComponentPropsWithoutRef<'details'>,
         AccordionComponent
       >;
       [WCTAG.Avatar]: React.DetailedHTMLProps<
@@ -44,7 +43,6 @@ declare global {
           [WCATTR.Shape]?: (typeof SHAPE)[keyof typeof SHAPE];
           [WCATTR.SizeNumber]?: number;
           [WCATTR.Src]?: string;
-          children?: React.ReactNode;
         } & React.ComponentPropsWithoutRef<'div'>,
         AvatarComponent
       >;
@@ -55,7 +53,6 @@ declare global {
           [WCATTR.Mode]?: (typeof MODE)[keyof typeof MODE];
           [WCATTR.Loading]?: boolean;
           [WCATTR.FullWidth]?: boolean;
-          children?: React.ReactNode;
         } & React.ComponentPropsWithoutRef<'button'>,
         ButtonComponent
       >;
@@ -70,7 +67,6 @@ declare global {
           [WCATTR.Size]?: (typeof SIZE)[keyof typeof SIZE];
           [WCATTR.Appearance]?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
           [WCATTR.Caps]?: boolean;
-          children?: React.ReactNode;
         } & React.ComponentPropsWithoutRef<'h1'>,
         HeadlineComponent
       >;
@@ -86,7 +82,6 @@ declare global {
         {
           [WCATTR.Appearance]?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
           [WCATTR.Caps]?: boolean;
-          children?: React.ReactNode;
         } & React.ComponentPropsWithoutRef<'p'>,
         ParagraphComponent
       >;
@@ -96,7 +91,6 @@ declare global {
           [WCATTR.Rounded]?: boolean;
           [WCATTR.Inverse]?: boolean;
           [WCATTR.Value]: string;
-          children?: React.ReactNode;
         } & React.ComponentPropsWithoutRef<'div'>,
         CounterComponent
       >;
@@ -140,9 +134,14 @@ declare global {
         {
           [WCATTR.Appearance]?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
           [WCATTR.Caps]?: boolean;
-          children?: React.ReactNode;
         } & React.ComponentPropsWithoutRef<'span'>,
         SpanComponent
+      >;
+      [WCTAG.Loader]: React.DetailedHTMLProps<
+        {
+          [WCATTR.Size]?: (typeof SIZE)[keyof typeof SIZE];
+        } & React.ComponentPropsWithoutRef<'div'>,
+        LoaderComponent
       >;
     }
   }

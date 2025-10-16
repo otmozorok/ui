@@ -1,7 +1,7 @@
-import { SIZE, WCATTR } from '../../consts/index.js';
-import { html } from '../../utils/index.js';
+import { SIZE, WCATTR } from '../../../consts/index.js';
+import { html } from '../../../utils/index.js';
 
-export default html`
+export const template = html`
   <template>
     <style>
       loader {
@@ -19,18 +19,18 @@ export default html`
       }
 
       :host([${WCATTR.Size}='${SIZE.Large}']) loader {
-        width: 25px;
-        height: 25px;
+        width: 1.5625rem;
+        height: 1.5625rem;
       }
 
       :host([${WCATTR.Size}='${SIZE.Medium}']) loader {
-        width: 20px;
-        height: 20px;
+        width: 1.25rem;
+        height: 1.25rem;
       }
 
       :host([${WCATTR.Size}='${SIZE.Small}']) loader {
-        width: 15px;
-        height: 15px;
+        width: 0.9375rem;
+        height: 0.9375rem;
       }
 
       @keyframes spin {
