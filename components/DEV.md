@@ -19,6 +19,7 @@
 - [x] MenuItem
 - [ ] Popover
 - [ ] Tooltip
+- [ ] Skeleton
 
 ## Typography
 - [x] Ellipsis
