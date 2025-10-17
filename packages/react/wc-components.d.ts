@@ -34,7 +34,7 @@ declare global {
   namespace JSX {
     interface IntrinsicElements {
       [WCTAG.Accordion]: React.DetailedHTMLProps<
-        React.ComponentPropsWithoutRef<'details'>,
+        React.ComponentPropsWithoutRef<'div'>,
         AccordionComponent
       >;
       [WCTAG.Avatar]: React.DetailedHTMLProps<
