@@ -8,10 +8,12 @@ export const template = html`
         padding: 1rem;
       }
 
-      :host([${WCATTR.Island}]) {
-        .container {
-          padding: 0 1rem;
-        }
+      :host([${WCATTR.Island}]) section {
+        padding: 0 1rem;
+      }
+
+      :host([${WCATTR.FullWidth}]) section {
+        padding: 0;
       }
 
       :host([${WCATTR.Filled}][${WCATTR.Island}]) .content {
@@ -23,22 +25,18 @@ export const template = html`
         background-color: var(--bg-secondary-color);
       }
 
-      :host([${WCATTR.FullWidth}]) .container {
-        padding: 0;
-      }
-
       header {
         padding: 0 1rem;
       }
     </style>
 
-    <div class="container">
+    <section>
       <header>
         <slot name="header"></slot>
       </header>
       <div class="content">
         <slot></slot>
       </div>
-    </div>
+    </section>
   </template>
 `;
