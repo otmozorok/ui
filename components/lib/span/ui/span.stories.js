@@ -40,3 +40,29 @@ export const DefaultSpan = {
     children: 'Съешь ещё этих мягких французских булок, да выпей чаю',
   },
 };
+
+export const ParagraphWithSpan = {
+  args: {
+    children: 'Съешь ещё этих мягких французских булок, да выпей чаю',
+    [WCATTR.Appearance]: APPEARANCE.Negative,
+  },
+  render: (args) => {
+    const p = document.createElement(WCTAG.Paragraph);
+
+    if (args.children) {
+      if (args.children.includes('французских')) {
+        p.innerHTML = `
+        Съешь ещё этих мягких <wc-span appearance="negative">французских</wc-span> булок, да выпей чаю
+      `;
+        const span = p.querySelector(WCTAG.Span);
+
+        toggleAttr(args[WCATTR.Caps], WCATTR.Caps, span);
+        setAttr(args[WCATTR.Appearance], WCATTR.Appearance, span);
+      } else {
+        p.innerHTML = args.children;
+      }
+    }
+
+    return p;
+  },
+};

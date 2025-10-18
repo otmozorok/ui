@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { APPEARANCE, APPEARANCES, WCATTR } from '@otmozorok/wc/consts';
 import type { ISpanProps } from '../model';
 import { Span } from './Span';
+import { Paragraph } from '../../paragraph';
 
 type IMeta = ISpanProps & { text?: string };
 
@@ -24,6 +25,23 @@ export const DefaultSpan: Story = {
   },
   render: ({ text, ...props }) => {
     return <Span {...props}>{text}</Span>;
+  },
+};
+
+export const ParagraphWithSpan: Story = {
+  args: {
+    [WCATTR.Appearance]: APPEARANCE.Negative,
+    text: 'Съешь ещё этих мягких французских булок, да выпей чаю',
+  },
+  render: ({ text, ...props }) => {
+    const [left, right] = text?.split('французских') || [];
+    return (
+      <Paragraph>
+        {left}
+        <Span {...props}>французских</Span>
+        {right}
+      </Paragraph>
+    );
   },
 };
 
