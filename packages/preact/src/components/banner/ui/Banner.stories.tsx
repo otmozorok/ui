@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/preact-vite';
 import { APPEARANCE, APPEARANCES, WCATTR } from '@otmozorok/wc/consts';
+import { fn } from 'storybook/test';
 import { IBannerProps } from '../model';
 import { Banner } from './Banner';
 import { Headline } from '../../headline';
@@ -36,6 +37,9 @@ const meta = {
         type: 'text',
       },
     },
+  },
+  args: {
+    onClose: fn(),
   },
 } satisfies Meta<IBannerProps & { text: string; src: string }>;
 

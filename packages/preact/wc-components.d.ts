@@ -1,5 +1,6 @@
 import {
   AccordionComponent,
+  BannerComponent,
   ButtonComponent,
   ContainerComponent,
   CounterComponent,

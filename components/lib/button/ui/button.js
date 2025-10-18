@@ -8,7 +8,13 @@ import { template } from './button.template.js';
  * @docs https://otmozorok.github.io/ui/?path=/docs/components-button--docs
  */
 export class ButtonComponent extends WebComponent {
-  static observedAttributes = [WCATTR.Mode, WCATTR.Size, WCATTR.Loading];
+  static observedAttributes = [
+    WCATTR.Mode,
+    WCATTR.Size,
+    WCATTR.Appearance,
+    WCATTR.Loading,
+    WCATTR.FullWidth,
+  ];
 
   constructor() {
     super(template, props);
@@ -17,13 +23,17 @@ export class ButtonComponent extends WebComponent {
 
   connectedCallback() {
     super.connectedCallback();
+
     this.mode = this.mode || MODE.Primary;
     this.appearance = this.appearance || APPEARANCE.Themed;
     this.size = this.size || SIZE.Medium;
 
-    this.$button.addEventListener('click', () => {
+    this.$button.addEventListener('click', (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+
       this.dispatchEvent(
-        new Event('click', {
+        new CustomEvent('click', {
           bubbles: false,
           composed: true,
         })

@@ -1,6 +1,7 @@
 import { APPEARANCES, MODE, MODES, SIZE, SIZES } from '@otmozorok/wc/consts';
-import { Button } from './Button';
+import { fn } from 'storybook/test';
 import type { Meta, StoryObj } from '@storybook/preact-vite';
+import { Button } from './Button';
 import { IButtonProps } from '../model';
 
 type IMeta = IButtonProps & { text?: string };
@@ -19,14 +20,14 @@ const meta = {
     fullWidth: { control: 'boolean' },
     loading: { control: 'boolean' },
   },
-  render: ({ ...props }) => {
-    return <Button {...props} />;
+  args: {
+    onClick: fn(),
   },
 } satisfies Meta<IMeta>;
 
 type Story = StoryObj<IMeta>;
 
-export const Primary: Story = {
+export const DefaultButton: Story = {
   args: {
     mode: MODE.Primary,
     size: SIZE.Medium,

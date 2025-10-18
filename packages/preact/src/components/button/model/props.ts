@@ -7,5 +7,4 @@ export interface IButtonProps extends ComponentPropsWithoutRef<'button'> {
   appearance?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
   loading?: boolean;
   fullWidth?: boolean;
-  onClick?: () => void;
 }

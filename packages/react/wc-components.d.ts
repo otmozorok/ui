@@ -75,7 +75,7 @@ declare global {
           [WCATTR.Appearance]?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
           [WCATTR.Closable]?: boolean;
           [WCATTR.Src]?: string;
-        },
+        } & React.ComponentPropsWithoutRef<'div'>,
         BannerComponent
       >;
       [WCTAG.Paragraph]: React.DetailedHTMLProps<

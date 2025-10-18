@@ -17,6 +17,26 @@ export class BannerComponent extends WebComponent {
      * @type {HTMLDivElement}
      */
     this.$wrapper = this.$('div');
+    /**
+     * @type {HTMLButtonElement}
+     */
+    this.$button = this.$('button');
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+
+    this.$button.addEventListener('click', (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+
+      this.dispatchEvent(
+        new CustomEvent('close', {
+          bubbles: false,
+          composed: true,
+        })
+      );
+    });
   }
 
   attributeChangedCallback(name, oldValue, newValue) {

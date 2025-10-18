@@ -16,26 +16,26 @@ export function Button({
   onClick,
   ...props
 }: IButtonProps) {
-  const ref = useRef<ButtonComponent>(null);
+  const button = useRef<ButtonComponent>(null);
 
   useEffect(() => {
-    if (!ref.current) return;
+    if (!button.current) return;
 
     function handleClick(e: Event) {
       e.stopPropagation();
       onClick?.();
     }
 
-    ref.current.addEventListener('click', handleClick);
+    button.current.addEventListener('click', handleClick);
 
     return () => {
-      ref.current?.removeEventListener('click', handleClick);
+      button.current?.removeEventListener('click', handleClick);
     };
   }, [onClick]);
 
   return (
     <wc-button
-      ref={ref}
+      ref={button}
       appearance={appearance}
       mode={mode}
       size={size}

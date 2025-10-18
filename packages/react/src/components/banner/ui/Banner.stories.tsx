@@ -1,8 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { APPEARANCE, APPEARANCES, WCATTR } from '@otmozorok/wc/consts';
+import { fn } from 'storybook/test';
 import type { IBannerProps } from '../model';
 import { Banner } from './Banner';
 import { Headline } from '../../headline';
+
+type IMetaWithText = IBannerProps & {
+  text: string;
+  src: string;
+};
 
 const meta = {
   title: 'Components/Banner',
@@ -37,9 +43,12 @@ const meta = {
       },
     },
   },
-} satisfies Meta<IBannerProps & { text: string; src: string }>;
+  args: {
+    onClose: fn(),
+  },
+} satisfies Meta<IMetaWithText>;
 
-type Story = StoryObj<IBannerProps & { text: string; src: string }>;
+type Story = StoryObj<IMetaWithText>;
 
 export const DefaultBanner: Story = {
   args: {

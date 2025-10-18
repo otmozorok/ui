@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { APPEARANCES, MODE, MODES, SIZE, SIZES } from '@otmozorok/wc/consts';
+import { fn } from 'storybook/test';
 import { Button } from './Button';
 import type { IButtonProps } from '../model';
 
@@ -22,8 +23,8 @@ const meta = {
       },
     },
   },
-  render: ({ ...props }) => {
-    return <Button {...props} />;
+  args: {
+    onClick: fn(),
   },
 } satisfies Meta<IButtonProps>;
 
