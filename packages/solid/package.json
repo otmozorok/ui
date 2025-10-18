@@ -1,0 +1,39 @@
+{
+  "name": "@otmozorok/solid",
+  "version": "0.35.1",
+  "author": "Boris Hasikov",
+  "description": "ui-kit из web components обернутый в solid",
+  "license": "MIT",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/es/index.js",
+  "types": "./dist/types/index.d.ts",
+  "source": "./src/index.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/es/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./*": "./*"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "scripts": {
+    "docs": "storybook dev -p 6006 --no-open",
+    "build-docs": "storybook build",
+    "build": "tsc -b && vite build -c vite.build.config.ts",
+    "lint": "eslint ."
+  },
+  "peerDependencies": {
+    "solid-js": ">=1"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^7.1.4"
+  },
+  "files": [
+    "dist"
+  ]
+}

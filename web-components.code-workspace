@@ -1,16 +1,19 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "components"
-		},
-		{
-			"path": "packages/preact"
-		},
-		{
-			"path": "packages/react"
-		}
-	]
+  "folders": [
+    {
+      "path": ".",
+    },
+    {
+      "path": "components",
+    },
+    {
+      "path": "packages/preact",
+    },
+    {
+      "path": "packages/react",
+    },
+    {
+      "path": "packages/solid",
+    },
+  ],
 }

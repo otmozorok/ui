@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src/**/*.ts*", "wc-components.d.ts"],
+  "exclude": ["src/**/*.stories.ts*"]
+}

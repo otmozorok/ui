@@ -30,6 +30,10 @@ jobs:
         continue-on-error: true
       - run: npm publish -w packages/preact
         continue-on-error: true
+      - run: npm run build -w packages/solid
+        continue-on-error: true
+      - run: npm publish -w packages/solid
+        continue-on-error: true
       - run: npm run build -w packages/svelte
         continue-on-error: true
       - run: npm publish -w packages/svelte
