@@ -41,7 +41,7 @@ jobs:
       - run: npm run decl -w components
 
       - name: Build ${{ matrix.package.name }}
-        if: matrix.package.build
+        if: ${{ matrix.package.build }}
         run: npm run build -w ${{ matrix.package.name }}
 
       - name: Publish ${{ matrix.package.name }}
