@@ -44,6 +44,8 @@ jobs:
       - name: Build ${{ matrix.package.name }}
         if: ${{ matrix.package.build }}
         run: npm run build -w ${{ matrix.package.name }}
+        continue-on-error: true
 
       - name: Publish ${{ matrix.package.name }}
         run: npm publish -w ${{ matrix.package.name }}
+        continue-on-error: true
