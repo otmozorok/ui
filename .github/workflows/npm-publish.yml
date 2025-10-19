@@ -37,9 +37,8 @@ jobs:
           node-version: 20
           registry-url: ${{ matrix.registry }}
 
-      - run: |
-          npm i
-          npm run decl -w components
+      - run: npm i
+      - run: npm run decl -w components
 
       - name: Build ${{ matrix.package.name }}
         if: matrix.package.build
