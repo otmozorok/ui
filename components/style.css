@@ -10,8 +10,8 @@
 
   /* COLORS */
 
-  --bg-color: light-dark(hsl(0, 0%, 90%), hsl(0, 0%, 0%));
-  --bg-secondary-color: light-dark(hsl(0, 0%, 100%), hsl(233, 10%, 15%));
+  --bg-color: light-dark(hsl(0, 0%, 90%), lch(5% 5.01 286.37));
+  --bg-secondary-color: light-dark(hsl(0, 0%, 100%), lch(13.88% 5.01 286.37));
 
   --text-color: light-dark(hsl(0, 0%, 0%), hsl(0, 0%, 100%));
   --text-color-inverse: light-dark(hsl(0, 0%, 100%), hsl(0, 0%, 0%));
@@ -56,4 +56,8 @@
   --text-subhead: #ffffffbd;
   --text-tertiary: #ffffff47;
   --text-themed: #007aff;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
 }

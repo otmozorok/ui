@@ -1,5 +1,4 @@
-name: Node.js Package (NPM)
-
+name: Node.js Package
 on:
   release:
     types: [created]
@@ -12,33 +11,29 @@ jobs:
       packages: write
     env:
       NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+    strategy:
+      matrix:
+        registry:
+          - https://registry.npmjs.org/
+          - https://npm.pkg.github.com/
+        package:
+          - components
+          - packages/react
+          - packages/preact
+          - packages/solid
+          - packages/svelte
+          - packages/vue
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          registry-url: https://registry.npmjs.org/
+          registry-url: ${{ matrix.registry }}
+
       - run: npm i
-      - run: npm run decl -w components
-        continue-on-error: true
-      - run: npm publish -w components
-      - run: npm run build -w packages/react
-        continue-on-error: true
-      - run: npm publish -w packages/react
-        continue-on-error: true
-      - run: npm run build -w packages/preact
-        continue-on-error: true
-      - run: npm publish -w packages/preact
-        continue-on-error: true
-      - run: npm run build -w packages/solid
-        continue-on-error: true
-      - run: npm publish -w packages/solid
-        continue-on-error: true
-      - run: npm run build -w packages/svelte
-        continue-on-error: true
-      - run: npm publish -w packages/svelte
-        continue-on-error: true
-      - run: npm run build -w packages/vue
-        continue-on-error: true
-      - run: npm publish -w packages/vue
-        continue-on-error: true
+
+      - name: Publish Packages
+        run: |
+          npm run build -w ${{ matrix.package }} || true
+          npm publish -w ${{ matrix.package }} || true
