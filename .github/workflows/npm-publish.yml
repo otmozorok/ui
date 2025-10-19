@@ -17,12 +17,18 @@ jobs:
           - https://registry.npmjs.org/
           - https://npm.pkg.github.com/
         package:
-          - components
-          - packages/react
-          - packages/preact
-          - packages/solid
-          - packages/svelte
-          - packages/vue
+          - name: 'components'
+            build: false
+          - name: 'packages/react'
+            build: true
+          - name: 'packages/preact'
+            build: true
+          - name: 'packages/solid'
+            build: true
+          - name: 'packages/svelte'
+            build: true
+          - name: 'packages/vue'
+            build: true
     steps:
       - uses: actions/checkout@v4
 
@@ -31,9 +37,13 @@ jobs:
           node-version: 20
           registry-url: ${{ matrix.registry }}
 
-      - run: npm i
+      - run: |
+          npm i
+          npm run decl -w components
 
-      - name: Publish Packages
-        run: |
-          npm run build -w ${{ matrix.package }} || true
-          npm publish -w ${{ matrix.package }} || true
+      - name: Build ${{ matrix.package.name }}
+        if: matrix.package.build
+        run: npm run build -w ${{ matrix.package.name }}
+
+      - name: Publish ${{ matrix.package.name }}
+        run: npm publish -w ${{ matrix.package.name }}
