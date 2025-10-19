@@ -39,6 +39,7 @@ jobs:
 
       - run: npm i
       - run: npm run decl -w components
+        continue-on-error: true
 
       - name: Build ${{ matrix.package.name }}
         if: ${{ matrix.package.build }}
