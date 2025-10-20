@@ -6,10 +6,12 @@
 
 <script lang="ts" setup>
 import { HeadlineComponent } from '@otmozorok/wc';
-import { WCTAG } from '@otmozorok/wc/consts';
+import { SIZE, WCATTR, WCTAG } from '@otmozorok/wc/consts';
 import { IHeadlineProps } from '../model';
 
 customElements.get(WCTAG.Headline) || customElements.define(WCTAG.Headline, HeadlineComponent);
 
-defineProps<IHeadlineProps>();
+withDefaults(defineProps<IHeadlineProps>(), {
+  [WCATTR.Size]: SIZE.Medium,
+});
 </script>
