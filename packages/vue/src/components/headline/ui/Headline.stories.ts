@@ -7,7 +7,6 @@ const meta = {
   component: Headline,
   tags: ['autodocs'],
   argTypes: {
-    default: { control: 'text' },
     [WCATTR.Appearance]: {
       control: 'inline-radio',
       options: APPEARANCES,
@@ -21,6 +20,7 @@ const meta = {
     [WCATTR.Caps]: {
       control: 'boolean',
     },
+    default: { control: 'text' },
   },
 } satisfies Meta<typeof Headline>;
 
@@ -28,7 +28,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const DefaultHeadline: Story = {
   args: {
     [WCATTR.Size]: SIZE.Medium,
     [WCATTR.Appearance]: APPEARANCE.Themed,

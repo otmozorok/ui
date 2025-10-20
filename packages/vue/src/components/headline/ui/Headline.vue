@@ -11,8 +11,5 @@ import { IHeadlineProps } from '../model';
 
 customElements.get(WCTAG.Headline) || customElements.define(WCTAG.Headline, HeadlineComponent);
 
-defineOptions({
-  inheritAttrs: false,
-});
 defineProps<IHeadlineProps>();
 </script>
