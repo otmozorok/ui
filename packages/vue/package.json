@@ -1,6 +1,6 @@
 {
   "name": "@otmozorok/vue",
-  "version": "0.38.4",
+  "version": "0.39.0",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components обернутый в vue",
   "license": "MIT",
