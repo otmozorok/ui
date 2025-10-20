@@ -14,7 +14,7 @@ import type {
   SpanComponent,
   LoaderComponent,
 } from '@otmozorok/wc';
-import type {
+import {
   APPEARANCE,
   ALIGNITEM,
   COL,
@@ -29,7 +29,7 @@ import type {
   WCTAG,
 } from '@otmozorok/wc/consts';
 
-declare global {
+declare module 'react' {
   // Расширяем стандартные HTML-теги
   namespace JSX {
     interface IntrinsicElements {
