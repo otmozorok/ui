@@ -1,6 +1,6 @@
 {
   "name": "@otmozorok/vue",
-  "version": "0.21.1",
+  "version": "0.38.0",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components обернутый в vue",
   "license": "MIT",
@@ -22,10 +22,8 @@
     "*.css"
   ],
   "scripts": {
-    "storybook": "storybook dev -p 6005 --no-open",
-    "dev": "vite",
-    "build": "vue-tsc && vite build  -c vite.build.config.ts",
-    "preview": "vite preview"
+    "docs": "storybook dev -p 6005 --no-open",
+    "build": "vue-tsc && vite build  -c vite.build.config.ts"
   },
   "peerDependencies": {
     "vue": ">=3"
