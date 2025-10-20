@@ -1,6 +1,6 @@
 {
   "name": "@otmozorok/svelte",
-  "version": "0.21.1",
+  "version": "0.37.0",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components обернутый в svelte",
   "license": "MIT",
@@ -22,7 +22,7 @@
     "*.css"
   ],
   "scripts": {
-    "storybook": "storybook dev -p 6004 --no-open",
+    "docs": "storybook dev -p 6004 --no-open",
     "build": "tsc && vite build -c vite.build.config.ts",
     "check": "svelte-check --tsconfig ./tsconfig.build.json"
   },

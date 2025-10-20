@@ -1,0 +1,13 @@
+<script lang="ts">
+  import { HeadlineComponent } from '@otmozorok/wc';
+  import { WCTAG } from '@otmozorok/wc/consts';
+  import type { IHeadlineProps } from '../model';
+
+  customElements.get(WCTAG.Headline) || customElements.define(WCTAG.Headline, HeadlineComponent);
+
+  const { children, ...props }: IHeadlineProps = $props();
+</script>
+
+<wc-headline {...props}>
+  {@render children?.()}
+</wc-headline>

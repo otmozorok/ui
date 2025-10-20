@@ -1,13 +1,12 @@
 <script module>
-  // @ts-nocheck
   import { defineMeta } from '@storybook/addon-svelte-csf';
-  import Button from './Button.svelte';
+  import { Button } from '.';
   import { fn } from 'storybook/test';
-  import { SIZES } from '@otmozorok/wc';
+  import { SIZES } from '@otmozorok/wc/consts';
 
   // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
   const { Story } = defineMeta({
-    title: 'Example/Button',
+    title: 'Components/Button',
     component: Button,
     tags: ['autodocs'],
     argTypes: {
@@ -23,7 +22,6 @@
   });
 </script>
 
-<!-- More on writing stories with args: https://storybook.js.org/docs/writing-stories/args -->
 <Story name="Primary" args={{ primary: true }}>Button</Story>
 
 <Story name="Secondary" args={{}}>Button</Story>

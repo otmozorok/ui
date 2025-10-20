@@ -15,5 +15,11 @@
     {
       "path": "packages/solid",
     },
+    {
+      "path": "packages/svelte",
+    },
+    {
+      "path": "packages/vue",
+    },
   ],
 }

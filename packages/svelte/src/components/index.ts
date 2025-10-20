@@ -1,1 +1,4 @@
-export { default as Button } from './button/';
+export * from './accordion';
+export * from './avatar';
+export * from './button';
+export * from './headline';
