@@ -54,6 +54,10 @@ const config = {
             title: 'Vue Components',
             url: 'http://localhost:6005',
           },
+          solid: {
+            title: 'Solid Components',
+            url: 'http://localhost:6006',
+          },
         }
       : {}),
   },
