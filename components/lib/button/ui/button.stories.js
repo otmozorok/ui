@@ -16,8 +16,7 @@ export default {
   argTypes: {
     children: {
       control: { type: 'text' },
-      type: { name: 'string' },
-      description: `Текст кнопки`,
+      description: 'Текст кнопки',
     },
     [WCATTR.Loading]: {
       control: {
@@ -31,9 +30,6 @@ export default {
     },
     [WCATTR.Appearance]: {
       control: { type: 'inline-radio' },
-      type: {
-        name: 'enum',
-      },
       options: APPEARANCES,
       table: {
         defaultValue: { summary: APPEARANCE.Themed },
@@ -41,9 +37,6 @@ export default {
     },
     [WCATTR.Size]: {
       control: { type: 'inline-radio' },
-      type: {
-        name: 'enum',
-      },
       options: SIZES,
       table: {
         defaultValue: { summary: SIZE.Medium },
@@ -51,22 +44,11 @@ export default {
     },
     [WCATTR.Mode]: {
       control: { type: 'inline-radio' },
-      type: {
-        name: 'enum',
-      },
       options: MODES,
       table: {
         defaultValue: { summary: MODE.Primary },
       },
     },
-  },
-  args: {
-    children: 'Text button',
-    [WCATTR.Loading]: false,
-    [WCATTR.FullWidth]: false,
-    [WCATTR.Appearance]: APPEARANCE.Themed,
-    [WCATTR.Size]: SIZE.Medium,
-    [WCATTR.Mode]: MODE.Primary,
   },
 };
 
@@ -83,6 +65,12 @@ export const DefaultButton = {
     el.innerText = args.children;
 
     return el;
+  },
+  args: {
+    children: 'Нажимать на меня',
+    [WCATTR.Appearance]: APPEARANCE.Themed,
+    [WCATTR.Size]: SIZE.Medium,
+    [WCATTR.Mode]: MODE.Primary,
   },
 };
 
@@ -107,5 +95,11 @@ export const ButtonWithCounter = {
     el.appendChild(counter);
 
     return el;
+  },
+  args: {
+    children: 'Нажимать на меня',
+    [WCATTR.Appearance]: APPEARANCE.Themed,
+    [WCATTR.Size]: SIZE.Medium,
+    [WCATTR.Mode]: MODE.Primary,
   },
 };
