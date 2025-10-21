@@ -1,3 +1,1 @@
-export interface IAccordionProps extends React.ComponentPropsWithoutRef<'div'> {
-  title: string;
-}
+export interface IAccordionProps extends React.ComponentPropsWithoutRef<'div'> {}

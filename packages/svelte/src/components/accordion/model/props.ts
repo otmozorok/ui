@@ -1,5 +1,3 @@
-import type { HTMLBaseAttributes } from 'svelte/elements';
+import type { HTMLAttributes } from 'svelte/elements';
 
-export interface IAccordionProps extends HTMLBaseAttributes {
-  title: string;
-}
+export interface IAccordionProps extends HTMLAttributes<HTMLDetailsElement> {}

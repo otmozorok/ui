@@ -2,6 +2,7 @@
   import { defineMeta } from '@storybook/addon-svelte-csf';
   import { Accordion } from '.';
   import { type IAccordionProps } from '../model';
+  import { Headline } from '../../headline';
 
   const { Story } = defineMeta({
     title: 'Components/Accordion',
@@ -19,8 +20,11 @@
   });
 </script>
 
-{#snippet template({ children, ...args }: IAccordionProps)}
-  <Accordion {...args}>{children}</Accordion>
+{#snippet template({ children, title, ...args }: IAccordionProps)}
+  <Accordion {...args}>
+    <Headline slot="header">{title}</Headline>
+    {children}
+  </Accordion>
 {/snippet}
 
 <Story
@@ -28,7 +32,6 @@
   args={{
     title: 'Заголовок',
     // @ts-ignore
-    children:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    children: 'Съешь ещё этих мягких французских булок, да выпей чаю',
   }}
 ></Story>

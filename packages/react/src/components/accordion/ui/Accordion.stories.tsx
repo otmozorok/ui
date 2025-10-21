@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Accordion } from './Accordion';
 import type { IAccordionProps } from '../model';
+import { Headline } from '../../headline';
 
 type IMeta = IAccordionProps & { text?: string };
 
@@ -21,7 +22,12 @@ export const DefaultAccordion: Story = {
     title: 'Заголовок',
     text: 'Съешь ещё этих мягких французских булок, да выпей чаю',
   },
-  render: ({ text, ...props }) => {
-    return <Accordion {...props}>{text}</Accordion>;
+  render: ({ text, title, ...props }) => {
+    return (
+      <Accordion {...props}>
+        <Headline slot="header">{title}</Headline>
+        {text}
+      </Accordion>
+    );
   },
 };

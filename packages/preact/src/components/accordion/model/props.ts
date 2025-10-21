@@ -1,5 +1,3 @@
 import { ComponentPropsWithoutRef } from 'preact/compat';
 
-export interface IAccordionProps extends ComponentPropsWithoutRef<'div'> {
-  title: string;
-}
+export interface IAccordionProps extends ComponentPropsWithoutRef<'div'> {}
