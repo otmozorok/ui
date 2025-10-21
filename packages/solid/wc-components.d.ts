@@ -34,6 +34,13 @@ import type { JSX, ParentProps } from 'solid-js';
 declare module 'solid-js' {
   namespace JSX {
     interface IntrinsicElements {
+      [WCTAG.Avatar]: ParentProps<
+        {
+          [WCATTR.Color]?: (typeof COLOR)[keyof typeof COLOR];
+          [WCATTR.Shape]?: (typeof SHAPE)[keyof typeof SHAPE];
+          [WCATTR.SizeNumber]?: number;
+        } & JSX.HTMLAttributes<HTMLDivElement>
+      >;
       [WCTAG.Button]: ParentProps<{
         [WCATTR.Appearance]?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
         [WCATTR.Size]?: (typeof SIZE)[keyof typeof SIZE];

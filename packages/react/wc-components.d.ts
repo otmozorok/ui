@@ -42,7 +42,6 @@ declare module 'react' {
           [WCATTR.Color]?: (typeof COLOR)[keyof typeof COLOR];
           [WCATTR.Shape]?: (typeof SHAPE)[keyof typeof SHAPE];
           [WCATTR.SizeNumber]?: number;
-          [WCATTR.Src]?: string;
         } & React.ComponentPropsWithoutRef<'div'>,
         AvatarComponent
       >;
