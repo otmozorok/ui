@@ -1,6 +1,6 @@
 {
   "name": "@otmozorok/solid",
-  "version": "0.40.0",
+  "version": "0.40.1",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components обернутый в solid",
   "license": "MIT",

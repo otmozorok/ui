@@ -38,7 +38,7 @@ export default {
       },
     },
     [WCATTR.Loading]: { control: 'boolean' },
-    [WCATTR.FullWidth]: { control: 'boolean' },
+    fullWidth: { control: 'boolean' },
   },
   args: { 'on:click': fn() },
 } satisfies Meta<ParentComponent<IButtonProps>>;
