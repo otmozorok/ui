@@ -32,7 +32,7 @@ type Story = StoryObj<IMeta>;
 export const DefaultAvatar: Story = {
   args: {
     sizeNumber: 3,
-    [WCATTR.Color]: COLOR.Green,
+    [WCATTR.Color]: COLOR.Blue,
     [WCATTR.Shape]: SHAPE.Circle,
   },
   render: ({ text, src, ...props }) => {

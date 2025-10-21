@@ -3,6 +3,8 @@ import { COLOR, COLORS, SHAPE, SHAPES, WCATTR } from '@otmozorok/wc/consts';
 import { Avatar } from './Avatar';
 import { IAvatarProps } from '../model';
 
+type IMeta = IAvatarProps & { text: string; src: string };
+
 const meta = {
   title: 'Components/Avatar',
   component: Avatar,
@@ -39,14 +41,14 @@ const meta = {
       },
     },
   },
-} satisfies Meta<IAvatarProps & { text: string; src: string }>;
+} satisfies Meta<IMeta>;
 
-type Story = StoryObj<IAvatarProps & { text: string; src: string }>;
+type Story = StoryObj<IMeta>;
 
 export const DefaultAvatar: Story = {
   args: {
     sizeNumber: 3,
-    [WCATTR.Color]: COLOR.Green,
+    [WCATTR.Color]: COLOR.Blue,
     [WCATTR.Shape]: SHAPE.Circle,
   },
   render: ({ text, src, ...props }) => {

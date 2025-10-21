@@ -5,9 +5,9 @@
 
   customElements.get(WCTAG.Avatar) || customElements.define(WCTAG.Avatar, AvatarComponent);
 
-  const { children, ...props }: IAvatarProps = $props();
+  const { children, sizeNumber, color, shape, ...props }: IAvatarProps = $props();
 </script>
 
-<wc-avatar {...props}>
+<wc-avatar size-number={sizeNumber} {color} {shape} {...props}>
   {@render children?.()}
 </wc-avatar>

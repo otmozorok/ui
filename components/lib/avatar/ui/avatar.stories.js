@@ -59,7 +59,7 @@ export default {
 export const DefaultAvatar = {
   args: {
     [WCATTR.SizeNumber]: 3,
-    [WCATTR.Color]: COLOR.Green,
+    [WCATTR.Color]: COLOR.Blue,
     [WCATTR.Shape]: SHAPE.Circle,
   },
 };

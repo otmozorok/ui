@@ -1,9 +1,8 @@
-import { COLOR } from '@otmozorok/wc/consts';
-import type { Snippet } from 'svelte';
+import { COLOR, SHAPE } from '@otmozorok/wc/consts';
+import type { HTMLAttributes } from 'svelte/elements';
 
-export interface IAvatarProps {
-  src?: string;
+export interface IAvatarProps extends HTMLAttributes<HTMLDivElement> {
   color?: (typeof COLOR)[keyof typeof COLOR];
-  size?: number;
-  children?: Snippet;
+  shape?: (typeof SHAPE)[keyof typeof SHAPE];
+  sizeNumber?: number;
 }
