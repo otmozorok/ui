@@ -1,10 +1,10 @@
-import { APPEARANCE, MODE, SIZE, WCATTR } from '@otmozorok/wc/consts';
+import { APPEARANCE, MODE, SIZE } from '@otmozorok/wc/consts';
 
 export interface IButtonProps {
-  [WCATTR.Mode]?: (typeof MODE)[keyof typeof MODE];
-  [WCATTR.Size]?: (typeof SIZE)[keyof typeof SIZE];
-  [WCATTR.Appearance]?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
-  [WCATTR.Loading]?: boolean;
-  [WCATTR.FullWidth]?: boolean;
+  mode?: (typeof MODE)[keyof typeof MODE];
+  size?: (typeof SIZE)[keyof typeof SIZE];
+  appearance?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
+  loading?: boolean;
+  fullWidth?: boolean;
   'on:click'?: () => void;
 }

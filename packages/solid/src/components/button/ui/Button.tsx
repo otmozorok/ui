@@ -1,6 +1,6 @@
 import { mergeProps, ParentProps, splitProps } from 'solid-js';
 import { ButtonComponent, LoaderComponent } from '@otmozorok/wc';
-import { APPEARANCE, MODE, SIZE, WCATTR, WCTAG } from '@otmozorok/wc/consts';
+import { APPEARANCE, MODE, SIZE, WCTAG } from '@otmozorok/wc/consts';
 import { IButtonProps } from '../model';
 
 customElements.get(WCTAG.Button) || customElements.define(WCTAG.Button, ButtonComponent);
@@ -8,19 +8,19 @@ customElements.get(WCTAG.Loader) || customElements.define(WCTAG.Loader, LoaderCo
 
 export function Button(p: ParentProps<IButtonProps>) {
   const [enums, bools, rest, props] = splitProps(
-    mergeProps({ [WCATTR.Appearance]: APPEARANCE.Themed }, p),
-    [WCATTR.Mode, WCATTR.Size, WCATTR.Appearance],
-    [WCATTR.Loading, WCATTR.FullWidth],
+    mergeProps({ appearance: APPEARANCE.Themed }, p),
+    ['mode', 'size', 'appearance'],
+    ['loading', 'fullWidth'],
     ['children']
   );
 
   return (
     <wc-button
-      appearance={enums[WCATTR.Appearance]}
-      size={enums[WCATTR.Size]}
-      mode={enums[WCATTR.Mode]}
-      full-width={bools[WCATTR.FullWidth] || undefined}
-      loading={bools[WCATTR.Loading] || undefined}
+      appearance={enums.appearance}
+      size={enums.size}
+      mode={enums.mode}
+      full-width={bools.fullWidth || undefined}
+      loading={bools.loading || undefined}
       {...props}
     >
       {rest.children}
