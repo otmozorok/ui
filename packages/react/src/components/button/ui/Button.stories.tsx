@@ -35,7 +35,7 @@ export const Primary: Story = {
     mode: MODE.Primary,
     size: SIZE.Medium,
     fullWidth: true,
-    children: 'Button',
+    children: 'Нажимать на меня',
   },
   render: ({ children, ...props }) => {
     return <Button {...props}>{children}</Button>;

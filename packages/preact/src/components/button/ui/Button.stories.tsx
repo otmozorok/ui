@@ -32,10 +32,10 @@ export const DefaultButton: Story = {
     mode: MODE.Primary,
     size: SIZE.Medium,
     fullWidth: true,
-    text: 'Button',
+    children: 'Нажимать на меня',
   },
-  render: ({ text, ...props }) => {
-    return <Button {...props}>{text}</Button>;
+  render: ({ children, ...props }) => {
+    return <Button {...props}>{children}</Button>;
   },
 };
 
