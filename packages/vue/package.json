@@ -1,6 +1,6 @@
 {
   "name": "@otmozorok/vue",
-  "version": "0.40.1",
+  "version": "0.40.2",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components обернутый в vue",
   "license": "MIT",
@@ -30,8 +30,6 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",
-    "typescript": "^5.2.2",
-    "vite": "^7.1.4",
     "vue-tsc": "^3.1.1"
   },
   "files": [

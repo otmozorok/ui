@@ -1,6 +1,6 @@
 {
   "name": "@otmozorok/react",
-  "version": "0.40.1",
+  "version": "0.40.2",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components обернутый в react",
   "license": "MIT",
@@ -47,9 +47,7 @@
     "@vitejs/plugin-react-swc": "^4.1.0",
     "eslint-plugin-react-hooks": "^7.0.0",
     "eslint-plugin-react-refresh": "^0.4.23",
-    "typescript": "^5.2.2",
-    "typescript-eslint": "^8.46.1",
-    "vite": "^7.1.5"
+    "typescript-eslint": "^8.46.1"
   },
   "files": [
     "dist"

@@ -1,6 +1,6 @@
 {
   "name": "@otmozorok/preact",
-  "version": "0.40.1",
+  "version": "0.40.2",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components обернутый в preact",
   "license": "MIT",
@@ -30,9 +30,7 @@
     "preact": ">=10"
   },
   "devDependencies": {
-    "@preact/preset-vite": "^2.8.2",
-    "typescript": "^5.2.2",
-    "vite": "^7.1.4"
+    "@preact/preset-vite": "^2.8.2"
   },
   "files": [
     "dist"

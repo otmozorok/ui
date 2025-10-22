@@ -1,6 +1,6 @@
 {
   "name": "@otmozorok/solid",
-  "version": "0.40.1",
+  "version": "0.40.2",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components обернутый в solid",
   "license": "MIT",
@@ -28,10 +28,6 @@
   },
   "peerDependencies": {
     "solid-js": ">=1"
-  },
-  "devDependencies": {
-    "typescript": "^5.2.2",
-    "vite": "^7.1.4"
   },
   "files": [
     "dist"
