@@ -8,7 +8,6 @@ import {
   ICONS,
   COLS,
   ROWS,
-  IS_DEV,
 } from '../consts/index.js';
 import { generatePropertyParams } from '../utils/index.js';
 
@@ -33,24 +32,22 @@ export class WebComponent extends HTMLElement {
    * Вызывается при добавлении компонента в DOM
    */
   connectedCallback() {
-    IS_DEV &&
-      console.log(
-        '%c connected ',
-        'color: white; background-color: black; padding: 2px 4px; border-radius: 2px;',
-        this.tagName.toLowerCase()
-      );
+    console.log(
+      '%c connected ',
+      'color: white; background-color: black; padding: 2px 4px; border-radius: 2px;',
+      this.tagName.toLowerCase()
+    );
   }
 
   /**
    * Вызывается при удалении компонента из DOM
    */
   disconnectedCallback() {
-    IS_DEV &&
-      console.log(
-        '%c disconnected ',
-        'color: white; background-color: black; padding: 2px 4px; border-radius: 2px;',
-        this.tagName.toLowerCase()
-      );
+    console.log(
+      '%c disconnected ',
+      'color: white; background-color: black; padding: 2px 4px; border-radius: 2px;',
+      this.tagName.toLowerCase()
+    );
   }
 
   /**
