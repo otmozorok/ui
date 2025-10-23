@@ -1,11 +1,11 @@
 # Need development
 
 ## Components
-- [ ] Accordion
+- [x] Accordion
   - [x] wc
   - [x] react
   - [x] preact
-  - [ ] solid
+  - [x] solid
   - [x] svelte
   - [x] vue
 - [x] Avatar
@@ -143,18 +143,18 @@
   - [ ] solid
   - [ ] svelte
   - [ ] vue
-- [ ] Headline
+- [x] Headline
   - [x] wc
   - [x] react
   - [x] preact
-  - [ ] solid
+  - [x] solid
   - [x] svelte
   - [x] vue
 - [ ] Paragraph
   - [x] wc
   - [x] react
   - [x] preact
-  - [ ] solid
+  - [x] solid
   - [ ] svelte
   - [ ] vue
 - [ ] Span

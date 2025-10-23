@@ -8,5 +8,6 @@ customElements.get(WCTAG.Icon) || customElements.define(WCTAG.Icon, IconComponen
 
 export function Accordion(p: ParentProps<IAccordionProps>) {
   const [rest, props] = splitProps(p, ['children']);
+
   return <wc-accordion {...props}>{rest.children}</wc-accordion>;
 }

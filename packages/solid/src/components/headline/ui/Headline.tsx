@@ -12,6 +12,7 @@ export function Headline(p: ParentProps<IHeadlineProps>) {
     ['caps'],
     ['children']
   );
+
   return (
     <wc-headline
       {...props}
