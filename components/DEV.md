@@ -1,34 +1,196 @@
 # Need development
 
 ## Components
-- [x] Accordion
+- [ ] Accordion
+  - [x] wc
+  - [x] react
+  - [x] preact
+  - [ ] solid
+  - [x] svelte
+  - [x] vue
 - [x] Avatar
-- [x] Banner
+  - [x] wc
+  - [x] react
+  - [x] preact
+  - [x] solid
+  - [x] svelte
+  - [x] vue
+- [ ] Banner
+  - [x] wc
+  - [x] react
+  - [x] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
 - [x] Button
+  - [x] wc
+  - [x] react
+  - [x] preact
+  - [x] solid
+  - [x] svelte
+  - [x] vue
 - [ ] Calendar
-- [x] Counter
+  - [ ] wc
+  - [ ] react
+  - [ ] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
+- [ ] Counter
+  - [x] wc
+  - [x] react
+  - [x] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
 - [ ] DatePicker
-- [x] Dot
-- [x] Dropdown
-- [x] Icon
+  - [ ] wc
+  - [ ] react
+  - [ ] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
+- [ ] Dot
+  - [x] wc
+  - [x] react
+  - [x] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
+- [ ] Dropdown
+  - [x] wc
+  - [ ] react
+  - [ ] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
+- [ ] Icon
+  - [x] wc
+  - [x] react
+  - [x] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
 - [ ] Input
-- [x] Loader
-- [x] Menu
-- [x] MenuHeader
-- [x] MenuAction
-- [x] MenuItem
+  - [ ] wc
+  - [ ] react
+  - [ ] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
+- [ ] Loader
+  - [x] wc
+  - [x] react
+  - [x] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
+- [ ] Menu
+  - [x] wc
+  - [ ] react
+  - [ ] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
+- [ ] MenuHeader
+  - [x] wc
+  - [ ] react
+  - [ ] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
+- [ ] MenuAction
+  - [x] wc
+  - [ ] react
+  - [ ] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
+- [ ] MenuItem
+  - [x] wc
+  - [ ] react
+  - [ ] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
 - [ ] Popover
+  - [ ] wc
+  - [ ] react
+  - [ ] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
 - [ ] Tooltip
+  - [ ] wc
+  - [ ] react
+  - [ ] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
 - [ ] Skeleton
+  - [ ] wc
+  - [ ] react
+  - [ ] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
 
 ## Typography
-- [x] Ellipsis
-- [x] Headline
+- [ ] Ellipsis
+  - [x] wc
+  - [x] react
+  - [x] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
+- [ ] Headline
+  - [x] wc
+  - [x] react
+  - [x] preact
+  - [ ] solid
+  - [x] svelte
+  - [x] vue
 - [ ] Paragraph
-- [x] Span
+  - [x] wc
+  - [x] react
+  - [x] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
+- [ ] Span
+  - [x] wc
+  - [x] react
+  - [x] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
 
 ## Layouts
 - [ ] Article
-- [x] Container
-- [x] Flex
-- [x] Grid
+  - [ ] wc
+  - [ ] react
+  - [ ] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
+- [ ] Container
+  - [x] wc
+  - [x] react
+  - [x] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
+- [ ] Flex
+  - [x] wc
+  - [x] react
+  - [x] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
+- [ ] Grid
+  - [x] wc
+  - [x] react
+  - [x] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
