@@ -58,6 +58,12 @@ declare module 'solid-js' {
           [WCATTR.Caps]?: boolean;
         } & JSX.HTMLAttributes<HTMLHeadingElement>
       >;
+      [WCTAG.Paragraph]: ParentProps<
+        {
+          [WCATTR.Appearance]?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
+          [WCATTR.Caps]?: boolean;
+        } & JSX.HTMLAttributes<HTMLParagraphElement>
+      >;
       [WCTAG.Counter]: {
         [WCATTR.Appearance]?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
         [WCATTR.Rounded]?: boolean;
