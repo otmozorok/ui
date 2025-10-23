@@ -11,7 +11,7 @@ export default {
 
     setAttr(true, WCATTR.Filled, menu);
 
-    ['One action', 'Two action', 'Three action'].forEach((actionText, index) => {
+    ['One action', 'Two action', 'Three action'].forEach((actionText) => {
       const clone = menuAction.cloneNode(true);
       clone.textContent = actionText;
       menu.appendChild(clone);
