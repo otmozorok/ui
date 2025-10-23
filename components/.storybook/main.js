@@ -1,5 +1,4 @@
 import { join, dirname } from 'path';
-import { IS_DEV } from '../consts/index.js';
 
 function getAbsolutePath(value) {
   return dirname(require.resolve(join(value, 'package.json')));
@@ -36,7 +35,7 @@ const config = {
   },
 
   refs: {
-    ...(IS_DEV
+    ...(process.env.NODE_ENV === 'development'
       ? {
           preact: {
             title: 'Preact Components',
