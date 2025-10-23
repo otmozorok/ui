@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef } from 'preact/compat';
+import { type ComponentPropsWithoutRef } from 'preact/compat';
 
 export interface IContainerProps extends ComponentPropsWithoutRef<'section'> {
   island?: boolean;

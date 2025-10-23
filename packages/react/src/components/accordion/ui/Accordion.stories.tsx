@@ -1,11 +1,12 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import { Headline } from '../../headline';
+import { Paragraph } from '../../paragraph';
 import { Accordion } from './Accordion';
 import type { IAccordionProps } from '../model';
-import { Headline } from '../../headline';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 type IMeta = IAccordionProps & { text?: string };
 
-const meta = {
+export default {
   title: 'Components/Accordion',
   component: Accordion,
   tags: ['autodocs'],
@@ -14,7 +15,6 @@ const meta = {
   },
 } satisfies Meta<IMeta>;
 
-export default meta;
 type Story = StoryObj<IMeta>;
 
 export const DefaultAccordion: Story = {
@@ -26,7 +26,7 @@ export const DefaultAccordion: Story = {
     return (
       <Accordion {...props}>
         <Headline slot="header">{title}</Headline>
-        {text}
+        <Paragraph>{text}</Paragraph>
       </Accordion>
     );
   },

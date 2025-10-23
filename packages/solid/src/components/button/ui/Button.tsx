@@ -1,6 +1,6 @@
-import { mergeProps, ParentProps, splitProps } from 'solid-js';
 import { ButtonComponent, LoaderComponent } from '@otmozorok/wc';
 import { APPEARANCE, MODE, SIZE, WCTAG } from '@otmozorok/wc/consts';
+import { mergeProps, type ParentProps, splitProps } from 'solid-js';
 import { IButtonProps } from '../model';
 
 customElements.get(WCTAG.Button) || customElements.define(WCTAG.Button, ButtonComponent);

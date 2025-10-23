@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
 import { APPEARANCE, APPEARANCES, WCATTR } from '@otmozorok/wc/consts';
-import type { IParagraphProps } from '../model';
 import { Paragraph } from './Paragraph';
+import type { IParagraphProps } from '../model';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 type IMeta = IParagraphProps & { text?: string };
 

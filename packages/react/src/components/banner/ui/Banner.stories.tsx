@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
 import { APPEARANCE, APPEARANCES, WCATTR } from '@otmozorok/wc/consts';
 import { fn } from 'storybook/test';
-import type { IBannerProps } from '../model';
-import { Banner } from './Banner';
 import { Headline } from '../../headline';
+import { Banner } from './Banner';
+import type { IBannerProps } from '../model';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 type IMetaWithText = IBannerProps & {
   text: string;

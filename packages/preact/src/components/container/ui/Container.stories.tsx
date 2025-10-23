@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/preact-vite';
-import { Container } from './Container';
-import { IContainerProps } from '../model';
-import { Headline } from '../../headline';
 import { Ellipsis } from '../../ellipsis';
+import { Headline } from '../../headline';
+import { IContainerProps } from '../model';
+import { Container } from './Container';
+import type { Meta, StoryObj } from '@storybook/preact-vite';
 
 type IMeta = IContainerProps & { header?: string };
 

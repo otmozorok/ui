@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
 import { APPEARANCE, APPEARANCES, WCATTR } from '@otmozorok/wc/consts';
-import type { ISpanProps } from '../model';
-import { Span } from './Span';
 import { Paragraph } from '../../paragraph';
+import { Span } from './Span';
+import type { ISpanProps } from '../model';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 type IMeta = ISpanProps & { text?: string };
 

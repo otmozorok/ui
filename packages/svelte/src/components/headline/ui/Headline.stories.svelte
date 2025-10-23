@@ -1,7 +1,7 @@
 <script module lang="ts">
   import { defineMeta } from '@storybook/addon-svelte-csf';
   import { Headline } from '.';
-  import { type IHeadlineProps } from '../model';
+  import type { IHeadlineProps } from '../model';
 
   const { Story } = defineMeta({
     title: 'Typography/Headline',
@@ -27,6 +27,6 @@
   name="Primary"
   args={{
     // @ts-ignore
-    children: 'Заголовок',
+    children: 'Съешь ещё этих мягких французских булок, да выпей чаю',
   }}
 ></Story>

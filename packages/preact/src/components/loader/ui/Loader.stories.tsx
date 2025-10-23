@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/preact-vite';
 import { SIZE, SIZES, WCATTR } from '@otmozorok/wc/consts';
+import { Flex } from '../../flex';
 import { ILoaderProps } from '../model';
 import { Loader } from './Loader';
-import { Flex } from '../../flex';
+import type { Meta, StoryObj } from '@storybook/preact-vite';
 
 type IMeta = ILoaderProps & { text?: string };
 

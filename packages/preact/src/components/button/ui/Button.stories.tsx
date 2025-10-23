@@ -1,8 +1,8 @@
 import { APPEARANCES, MODE, MODES, SIZE, SIZES } from '@otmozorok/wc/consts';
 import { fn } from 'storybook/test';
-import type { Meta, StoryObj } from '@storybook/preact-vite';
-import { Button } from './Button';
 import { IButtonProps } from '../model';
+import { Button } from './Button';
+import type { Meta, StoryObj } from '@storybook/preact-vite';
 
 type IMeta = IButtonProps & { text?: string };
 

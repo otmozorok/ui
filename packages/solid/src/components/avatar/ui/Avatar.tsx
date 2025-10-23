@@ -1,6 +1,6 @@
-import { mergeProps, ParentProps, splitProps } from 'solid-js';
 import { AvatarComponent, IconComponent } from '@otmozorok/wc';
 import { COLOR, SHAPE, WCTAG } from '@otmozorok/wc/consts';
+import { mergeProps, type ParentProps, splitProps } from 'solid-js';
 import { IAvatarProps } from '../model';
 
 customElements.get(WCTAG.Avatar) || customElements.define(WCTAG.Avatar, AvatarComponent);

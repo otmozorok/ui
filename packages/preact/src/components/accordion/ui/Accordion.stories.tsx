@@ -1,7 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/preact-vite';
+import { Headline } from '../../headline';
+import { Paragraph } from '../../paragraph';
 import { IAccordionProps } from '../model';
 import { Accordion } from './Accordion';
-import { Headline } from '../../headline';
+import type { Meta, StoryObj } from '@storybook/preact-vite';
 
 type IMeta = IAccordionProps & { text?: string };
 
@@ -22,7 +23,7 @@ export const DefaultAccordion: Story = {
     return (
       <Accordion {...props}>
         <Headline slot="header">{title}</Headline>
-        {text}
+        <Paragraph>{text}</Paragraph>
       </Accordion>
     );
   },

@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/preact-vite';
-import { Flex } from './Flex';
-import { IFlexProps } from '../model';
 import { ALIGNITEMS, DIRECTION, DIRECTIONS, WCATTR } from '@otmozorok/wc/consts';
 import { Button } from '../../button';
+import { IFlexProps } from '../model';
+import { Flex } from './Flex';
+import type { Meta, StoryObj } from '@storybook/preact-vite';
 
 type IMeta = IFlexProps;
 

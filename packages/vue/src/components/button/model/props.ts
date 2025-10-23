@@ -1,5 +1,5 @@
 import { APPEARANCE, MODE, SIZE } from '@otmozorok/wc/consts';
-import { HTMLAttributes } from 'vue';
+import type { HTMLAttributes } from 'vue';
 
 export interface IButtonProps extends /* @vue-ignore */ HTMLAttributes {
   size?: (typeof SIZE)[keyof typeof SIZE];

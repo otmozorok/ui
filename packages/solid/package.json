@@ -1,6 +1,6 @@
 {
   "name": "@otmozorok/solid",
-  "version": "0.43.0",
+  "version": "0.44.0",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components обернутый в solid",
   "license": "MIT",
@@ -24,7 +24,7 @@
     "docs": "storybook dev -p 6006 --no-open",
     "build-docs": "storybook build",
     "build": "tsc -b && vite build -c vite.build.config.ts",
-    "lint": "eslint ."
+    "lint": "eslint"
   },
   "peerDependencies": {
     "solid-js": ">=1"

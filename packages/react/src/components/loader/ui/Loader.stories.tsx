@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
 import { SIZE, SIZES, WCATTR } from '@otmozorok/wc/consts';
-import type { ILoaderProps } from '../model';
-import { Loader } from './Loader';
 import { Flex } from '../../flex';
+import { Loader } from './Loader';
+import type { ILoaderProps } from '../model';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 type IMeta = ILoaderProps & { text?: string };
 

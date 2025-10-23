@@ -1,7 +1,7 @@
 import { HeadlineComponent } from '@otmozorok/wc';
 import { APPEARANCE, SIZE, WCTAG } from '@otmozorok/wc/consts';
+import { mergeProps, type ParentProps, splitProps } from 'solid-js';
 import type { IHeadlineProps } from '../model';
-import { mergeProps, ParentProps, splitProps } from 'solid-js';
 
 customElements.get(WCTAG.Headline) || customElements.define(WCTAG.Headline, HeadlineComponent);
 

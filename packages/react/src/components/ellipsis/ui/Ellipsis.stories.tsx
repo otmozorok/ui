@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
-import type { IEllipsisProps } from '../model';
 import { Ellipsis } from './Ellipsis';
+import type { IEllipsisProps } from '../model';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 type IMeta = IEllipsisProps & { text?: string };
 

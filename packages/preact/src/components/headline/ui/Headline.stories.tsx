@@ -1,11 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/preact-vite';
 import { APPEARANCE, APPEARANCES, SIZE, SIZES, WCATTR } from '@otmozorok/wc/consts';
 import { IHeadlineProps } from '../model';
 import { Headline } from './Headline';
+import type { Meta, StoryObj } from '@storybook/preact-vite';
 
 type IMeta = IHeadlineProps & { text?: string };
 
-const meta = {
+export default {
   title: 'Typography/Headline',
   component: Headline,
   tags: ['autodocs'],
@@ -31,5 +31,3 @@ export const Primary: Story = {
     return <Headline {...props}>{text}</Headline>;
   },
 };
-
-export default meta;

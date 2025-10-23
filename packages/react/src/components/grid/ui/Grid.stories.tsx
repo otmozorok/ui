@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
 import { COLS, ROWS, WCATTR } from '@otmozorok/wc/consts';
-import type { IGridProps } from '../model';
 import { Grid } from './Grid';
+import type { IGridProps } from '../model';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 type IMeta = IGridProps;
 

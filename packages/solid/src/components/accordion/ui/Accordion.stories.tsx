@@ -1,7 +1,8 @@
-import type { Meta, StoryObj } from 'storybook-solidjs-vite';
+import { Headline } from '../../headline';
+import { Paragraph } from '../../paragraph';
 import { Accordion } from './Accordion';
 import type { IAccordionProps } from '../model';
-import { Headline } from '../../headline';
+import type { Meta, StoryObj } from 'storybook-solidjs-vite';
 
 type IMeta = IAccordionProps & { text?: string; title?: string };
 
@@ -26,7 +27,7 @@ export const DefaultAccordion: Story = {
     return (
       <Accordion {...props}>
         <Headline slot="header">{title}</Headline>
-        {text}
+        <Paragraph>{text}</Paragraph>
       </Accordion>
     );
   },

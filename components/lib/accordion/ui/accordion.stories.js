@@ -4,15 +4,17 @@ import { AccordionComponent } from './accordion.js';
 function renderDefault(args) {
   const el = document.createElement(WCTAG.Accordion);
 
-  if (args.children) {
-    el.innerHTML = args.children;
+  if (args.header) {
+    const headline = document.createElement(WCTAG.Headline);
+    headline.slot = 'header';
+    headline.innerHTML = args.header;
+    el.appendChild(headline);
   }
 
-  if (args.header) {
-    const header = document.createElement(WCTAG.Headline);
-    header.slot = 'header';
-    header.innerHTML = args.header;
-    el.appendChild(header);
+  if (args.children) {
+    const paragraph = document.createElement(WCTAG.Paragraph);
+    paragraph.innerHTML = args.children;
+    el.appendChild(paragraph);
   }
 
   return el;

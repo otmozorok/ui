@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/preact-vite';
 import { APPEARANCE, APPEARANCES, WCATTR } from '@otmozorok/wc/consts';
 import { fn } from 'storybook/test';
+import { Headline } from '../../headline';
 import { IBannerProps } from '../model';
 import { Banner } from './Banner';
-import { Headline } from '../../headline';
+import type { Meta, StoryObj } from '@storybook/preact-vite';
 
 const meta = {
   title: 'Components/Banner',

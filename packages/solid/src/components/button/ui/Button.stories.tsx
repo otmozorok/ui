@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from 'storybook-solidjs-vite';
-import { fn } from 'storybook/test';
 import { APPEARANCE, APPEARANCES, MODE, MODES, SIZE, SIZES, WCATTR } from '@otmozorok/wc/consts';
-import { Button } from './Button';
-import { ParentComponent } from 'solid-js';
+import { fn } from 'storybook/test';
 import { IButtonProps } from '../model';
+import { Button } from './Button';
+import type { ParentComponent } from 'solid-js';
+import type { Meta, StoryObj } from 'storybook-solidjs-vite';
 
 export default {
   title: 'Components/Button',

@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/preact-vite';
 import { APPEARANCE, APPEARANCES, WCATTR } from '@otmozorok/wc/consts';
 import { ICounterProps } from '../model';
 import { Counter } from './Counter';
+import type { Meta, StoryObj } from '@storybook/preact-vite';
 
 const meta = {
   title: 'Components/Counter',

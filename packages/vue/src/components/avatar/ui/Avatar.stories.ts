@@ -1,22 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/vue3-vite';
-import {
-  SIZE,
-  SIZES,
-  APPEARANCES,
-  MODES,
-  APPEARANCE,
-  MODE,
-  WCATTR,
-  COLORS,
-  COLOR,
-  SHAPES,
-  SHAPE,
-} from '@otmozorok/wc/consts';
+import { WCATTR, COLORS, COLOR, SHAPES, SHAPE } from '@otmozorok/wc/consts';
 import { fn } from 'storybook/test';
 import { Avatar } from '.';
-import { IAvatarProps } from '../model';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 
-const meta = {
+type IMeta = typeof Avatar;
+
+export default {
   title: 'Components/Avatar',
   component: Avatar,
   tags: ['autodocs'],
@@ -44,11 +33,9 @@ const meta = {
   args: {
     onClick: fn(),
   },
-} satisfies Meta<typeof Avatar>;
+} satisfies Meta<IMeta>;
 
-export default meta;
-
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<IMeta>;
 
 export const DefaultAvatar: Story = {
   args: {

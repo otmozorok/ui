@@ -1,8 +1,10 @@
-import type { Meta, StoryObj } from '@storybook/vue3-vite';
-import { Accordion } from '.';
 import { Headline } from '../../headline';
+import { Accordion } from '.';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 
-const meta = {
+type IMeta = typeof Accordion;
+
+export default {
   title: 'Components/Accordion',
   component: Accordion,
   tags: ['autodocs'],
@@ -18,11 +20,9 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Accordion>;
+} satisfies Meta<IMeta>;
 
-export default meta;
-
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<IMeta>;
 
 export const DefaultAccordion: Story = {
   args: {

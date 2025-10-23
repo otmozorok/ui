@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
-import type { IContainerProps } from '../model';
-import { Container } from './Container';
-import { Headline } from '../../headline';
 import { Ellipsis } from '../../ellipsis';
+import { Headline } from '../../headline';
+import { Container } from './Container';
+import type { IContainerProps } from '../model';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 type IMeta = IContainerProps & { header?: string };
 

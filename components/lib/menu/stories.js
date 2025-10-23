@@ -21,7 +21,7 @@ export default {
       el.appendChild(header);
     }
 
-    ['One action', 'Two action', 'Three action'].forEach((actionText, index) => {
+    ['One action', 'Two action', 'Three action'].forEach((actionText) => {
       const clone = action.cloneNode(true);
       clone.textContent = actionText;
       setAttr(true, WCATTR.Arrow, clone);

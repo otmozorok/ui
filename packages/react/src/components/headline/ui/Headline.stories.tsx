@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Headline } from './Headline';
 import { APPEARANCE, APPEARANCES, SIZE, SIZES } from '@otmozorok/wc/consts';
+import { Headline } from './Headline';
 import type { IHeadlineProps } from '../model';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 type IMeta = IHeadlineProps & { text?: string };
 

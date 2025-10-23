@@ -1,6 +1,6 @@
 import { AccordionComponent, IconComponent } from '@otmozorok/wc';
 import { WCTAG } from '@otmozorok/wc/consts';
-import { ParentProps, splitProps } from 'solid-js';
+import { type ParentProps, splitProps } from 'solid-js';
 import type { IAccordionProps } from '../model';
 
 customElements.get(WCTAG.Accordion) || customElements.define(WCTAG.Accordion, AccordionComponent);

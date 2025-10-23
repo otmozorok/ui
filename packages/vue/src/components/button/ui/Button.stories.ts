@@ -1,9 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { SIZE, SIZES, APPEARANCES, MODES, APPEARANCE, MODE, WCATTR } from '@otmozorok/wc/consts';
 import { fn } from 'storybook/test';
 import { Button } from '.';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 
-const meta = {
+type IMeta = typeof Button;
+
+export default {
   title: 'Components/Button',
   component: Button,
   tags: ['autodocs'],
@@ -34,11 +36,9 @@ const meta = {
   args: {
     onClick: fn(),
   },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<IMeta>;
 
-export default meta;
-
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<IMeta>;
 
 export const DefaultButton: Story = {
   args: {

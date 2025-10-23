@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from 'storybook-solidjs-vite';
-import { Avatar } from './Avatar';
 import { COLOR, COLORS, SHAPE, SHAPES, WCATTR } from '@otmozorok/wc/consts';
 import { IAvatarProps } from '../model';
+import { Avatar } from './Avatar';
+import type { Meta, StoryObj } from 'storybook-solidjs-vite';
 
 type IMetaWithText = IAvatarProps & { text?: string; src?: string };
 

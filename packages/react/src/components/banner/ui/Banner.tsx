@@ -1,7 +1,7 @@
 import { BannerComponent, IconComponent } from '@otmozorok/wc';
 import { WCTAG } from '@otmozorok/wc/consts';
-import type { IBannerProps } from '../model';
 import { useEffect, useRef } from 'react';
+import type { IBannerProps } from '../model';
 
 customElements.get(WCTAG.Banner) || customElements.define(WCTAG.Banner, BannerComponent);
 customElements.get(WCTAG.Icon) || customElements.define(WCTAG.Icon, IconComponent);

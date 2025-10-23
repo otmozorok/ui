@@ -1,5 +1,5 @@
 import { APPEARANCE, MODE, SIZE } from '@otmozorok/wc/consts';
-import { ComponentPropsWithoutRef } from 'preact/compat';
+import { type ComponentPropsWithoutRef } from 'preact/compat';
 
 export interface IButtonProps extends ComponentPropsWithoutRef<'button'> {
   mode?: (typeof MODE)[keyof typeof MODE];

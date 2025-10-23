@@ -1,11 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/preact-vite';
 import { APPEARANCE, APPEARANCES, WCATTR } from '@otmozorok/wc/consts';
 import { IParagraphProps } from '../model';
 import { Paragraph } from './Paragraph';
+import type { Meta, StoryObj } from '@storybook/preact-vite';
 
 type IMeta = IParagraphProps & { text?: string };
 
-const meta = {
+export default {
   title: 'Typography/Paragraph',
   component: Paragraph,
   tags: ['autodocs'],
@@ -30,5 +30,3 @@ export const Primary: Story = {
     return <Paragraph {...props}>{text}</Paragraph>;
   },
 };
-
-export default meta;

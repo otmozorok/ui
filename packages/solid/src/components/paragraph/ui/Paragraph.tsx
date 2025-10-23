@@ -1,7 +1,7 @@
 import { ParagraphComponent } from '@otmozorok/wc';
 import { APPEARANCE, WCTAG } from '@otmozorok/wc/consts';
+import { mergeProps, type ParentProps, splitProps } from 'solid-js';
 import type { IParagraphProps } from '../model';
-import { mergeProps, ParentProps, splitProps } from 'solid-js';
 
 customElements.get(WCTAG.Paragraph) || customElements.define(WCTAG.Paragraph, ParagraphComponent);
 

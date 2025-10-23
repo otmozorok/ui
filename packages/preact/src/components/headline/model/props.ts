@@ -1,5 +1,5 @@
 import { APPEARANCE, SIZE } from '@otmozorok/wc/consts';
-import { ComponentPropsWithoutRef } from 'preact/compat';
+import { type ComponentPropsWithoutRef } from 'preact/compat';
 
 export interface IHeadlineProps extends ComponentPropsWithoutRef<'h1'> {
   size?: (typeof SIZE)[keyof typeof SIZE];

@@ -1,4 +1,4 @@
-import { APPEARANCE, APPEARANCES, SIZE, SIZES, WCATTR, WCTAG } from '../../../consts/index.js';
+import { APPEARANCE, APPEARANCES, WCATTR, WCTAG } from '../../../consts/index.js';
 import { setAttr, toggleAttr } from '../../../utils/index.js';
 
 export default {

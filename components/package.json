@@ -1,6 +1,6 @@
 {
   "name": "@otmozorok/wc",
-  "version": "0.43.0",
+  "version": "0.44.0",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components",
   "license": "MIT",
@@ -29,7 +29,7 @@
   "scripts": {
     "docs": "storybook dev -p 6001 --no-open",
     "build-docs": "storybook build",
-    "lint": "eslint . --ext .js",
+    "lint": "eslint",
     "decl": "tsc",
     "test": "vitest run -c vitest.dev.config.js"
   },

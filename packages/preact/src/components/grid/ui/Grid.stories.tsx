@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/preact-vite';
 import { COLS, ROWS, WCATTR } from '@otmozorok/wc/consts';
-import { Grid } from './Grid';
 import { IGridProps } from '../model';
+import { Grid } from './Grid';
+import type { Meta, StoryObj } from '@storybook/preact-vite';
 
 type IMeta = IGridProps;
 

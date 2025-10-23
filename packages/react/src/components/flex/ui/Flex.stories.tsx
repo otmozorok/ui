@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ALIGNITEMS, DIRECTION, DIRECTIONS, WCATTR } from '@otmozorok/wc/consts';
-import type { IFlexProps } from '../model';
-import { Flex } from './Flex';
 import { Button } from '../../button';
+import { Flex } from './Flex';
+import type { IFlexProps } from '../model';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 type IMeta = IFlexProps;
 

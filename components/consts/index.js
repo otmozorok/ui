@@ -68,4 +68,4 @@ export const WCATTR = Object.freeze({
   Value: 'value',
 });
 
-export const IS_DEV = process.env.NODE_ENV === 'development';
+export const IS_DEV = import.meta.env.NODE_ENV === 'development';

@@ -1,8 +1,10 @@
-import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { APPEARANCE, SIZE, SIZES, APPEARANCES, WCATTR } from '@otmozorok/wc/consts';
 import { Headline } from '.';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 
-const meta = {
+type IMeta = typeof Headline;
+
+export default {
   title: 'Typography/Headline',
   component: Headline,
   tags: ['autodocs'],
@@ -22,16 +24,14 @@ const meta = {
     },
     default: { control: 'text' },
   },
-} satisfies Meta<typeof Headline>;
+} satisfies Meta<IMeta>;
 
-export default meta;
-
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<IMeta>;
 
 export const DefaultHeadline: Story = {
   args: {
     [WCATTR.Size]: SIZE.Medium,
     [WCATTR.Appearance]: APPEARANCE.Themed,
-    default: 'Заголовок',
+    default: 'Съешь ещё этих мягких французских булок, да выпей чаю',
   },
 };

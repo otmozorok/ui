@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/preact-vite';
 import { APPEARANCE, APPEARANCES, WCATTR } from '@otmozorok/wc/consts';
 import { IDotProps } from '../model';
 import { Dot } from './Dot';
+import type { Meta, StoryObj } from '@storybook/preact-vite';
 
 const meta = {
   title: 'Components/Dot',

@@ -1,5 +1,5 @@
 import type { APPEARANCE, SIZE } from '@otmozorok/wc/consts';
-import { HTMLAttributes } from 'vue';
+import type { HTMLAttributes } from 'vue';
 
 export interface IHeadlineProps extends /* @vue-ignore */ HTMLAttributes {
   size?: (typeof SIZE)[keyof typeof SIZE];

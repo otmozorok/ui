@@ -1,0 +1,32 @@
+name: Linting
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        package:
+          - 'components'
+          - 'packages/react'
+          - 'packages/preact'
+          - 'packages/solid'
+          - 'packages/svelte'
+          - 'packages/vue'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm i
+
+      - name: Lint ${{ matrix.package }}
+        run: npm run lint -w ${{ matrix.package }}

@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from 'storybook-solidjs-vite';
-import { Headline } from './Headline';
 import { APPEARANCE, APPEARANCES, SIZE, SIZES } from '@otmozorok/wc/consts';
+import { Headline } from './Headline';
 import type { IHeadlineProps } from '../model';
+import type { Meta, StoryObj } from 'storybook-solidjs-vite';
 
 type IMeta = IHeadlineProps & { text?: string };
 
