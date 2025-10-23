@@ -4,6 +4,6 @@ import type { IIconProps } from '../model';
 
 customElements.get(WCTAG.Icon) || customElements.define(WCTAG.Icon, IconComponent);
 
-export const Icon: React.FC<IIconProps> = ({ name, ...props }) => {
+export function Icon({ name, ...props }: IIconProps) {
   return <wc-icon name={name} {...props}></wc-icon>;
-};
+}

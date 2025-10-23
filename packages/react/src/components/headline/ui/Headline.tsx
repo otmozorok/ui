@@ -4,16 +4,16 @@ import type { IHeadlineProps } from '../model';
 
 customElements.get(WCTAG.Headline) || customElements.define(WCTAG.Headline, HeadlineComponent);
 
-export const Headline: React.FC<React.PropsWithChildren<IHeadlineProps>> = ({
+export function Headline({
   children,
   caps,
   size,
   appearance,
   ...props
-}) => {
+}: React.PropsWithChildren<IHeadlineProps>) {
   return (
     <wc-headline size={size} appearance={appearance} caps={caps || undefined} {...props}>
       {children}
     </wc-headline>
   );
-};
+}

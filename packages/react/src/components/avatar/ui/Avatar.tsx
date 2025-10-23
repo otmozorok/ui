@@ -5,16 +5,16 @@ import type { IAvatarProps } from '../model';
 customElements.get(WCTAG.Avatar) || customElements.define(WCTAG.Avatar, AvatarComponent);
 customElements.get(WCTAG.Icon) || customElements.define(WCTAG.Icon, IconComponent);
 
-export const Avatar: React.FC<React.PropsWithChildren<IAvatarProps>> = ({
+export function Avatar({
   children,
   color,
   shape,
   sizeNumber,
   ...props
-}) => {
+}: React.PropsWithChildren<IAvatarProps>) {
   return (
     <wc-avatar color={color} shape={shape} size-number={sizeNumber} {...props}>
       {children}
     </wc-avatar>
   );
-};
+}

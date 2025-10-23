@@ -5,9 +5,6 @@ import type { IAccordionProps } from '../model';
 customElements.get(WCTAG.Accordion) || customElements.define(WCTAG.Accordion, AccordionComponent);
 customElements.get(WCTAG.Icon) || customElements.define(WCTAG.Icon, IconComponent);
 
-export const Accordion: React.FC<React.PropsWithChildren<IAccordionProps>> = ({
-  children,
-  ...props
-}) => {
+export function Accordion({ children, ...props }: React.PropsWithChildren<IAccordionProps>) {
   return <wc-accordion {...props}>{children}</wc-accordion>;
-};
+}
