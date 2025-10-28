@@ -5,9 +5,9 @@
 
   customElements.get(WCTAG.Headline) || customElements.define(WCTAG.Headline, HeadlineComponent);
 
-  const { children, ...props }: IHeadlineProps = $props();
+  const { children, appearance, size, caps, ...props }: IHeadlineProps = $props();
 </script>
 
-<wc-headline {...props}>
+<wc-headline {appearance} {size} caps={caps || undefined} {...props}>
   {@render children?.()}
 </wc-headline>
