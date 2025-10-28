@@ -32,22 +32,24 @@ export class WebComponent extends HTMLElement {
    * Вызывается при добавлении компонента в DOM
    */
   connectedCallback() {
-    console.log(
-      '%c connected ',
-      'color: white; background-color: black; padding: 2px 4px; border-radius: 2px;',
-      this.tagName.toLowerCase()
-    );
+    import.meta.env.DEV &&
+      console.log(
+        '%c connected ',
+        'color: white; background-color: black; padding: 2px 4px; border-radius: 2px;',
+        this.tagName.toLowerCase()
+      );
   }
 
   /**
    * Вызывается при удалении компонента из DOM
    */
   disconnectedCallback() {
-    console.log(
-      '%c disconnected ',
-      'color: white; background-color: black; padding: 2px 4px; border-radius: 2px;',
-      this.tagName.toLowerCase()
-    );
+    import.meta.env.DEV &&
+      console.log(
+        '%c disconnected ',
+        'color: white; background-color: black; padding: 2px 4px; border-radius: 2px;',
+        this.tagName.toLowerCase()
+      );
   }
 
   /**
