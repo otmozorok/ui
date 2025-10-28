@@ -1,4 +1,4 @@
-import { WCATTR } from '../../../consts/index.js';
+import { APPEARANCE, WCATTR } from '../../../consts/index.js';
 import { WebComponent } from '../../../web-component/index.js';
 import { props } from '../model/index.js';
 import { template } from './paragraph.template.js';
@@ -12,5 +12,11 @@ export class ParagraphComponent extends WebComponent {
 
   constructor() {
     super(template, props);
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+
+    this.appearance = this.appearance || APPEARANCE.Themed;
   }
 }

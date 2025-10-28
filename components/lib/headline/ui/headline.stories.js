@@ -20,13 +20,16 @@ export default {
   argTypes: {
     children: {
       control: { type: 'text' },
-      type: { name: 'string' },
+      table: {
+        category: 'other',
+      },
     },
     [WCATTR.Appearance]: {
       control: { type: 'inline-radio' },
       options: APPEARANCES,
       table: {
         defaultValue: { summary: APPEARANCE.Themed },
+        category: 'props',
       },
     },
     [WCATTR.Size]: {
@@ -34,11 +37,15 @@ export default {
       options: SIZES,
       table: {
         defaultValue: { summary: SIZE.Medium },
+        category: 'props',
       },
     },
     [WCATTR.Caps]: {
       control: {
         type: 'boolean',
+      },
+      table: {
+        category: 'props',
       },
     },
   },
@@ -54,5 +61,6 @@ export const DefaultHeadline = {
   args: {
     children: 'Съешь ещё этих мягких французских булок, да выпей чаю',
     [WCATTR.Size]: SIZE.Medium,
+    [WCATTR.Appearance]: APPEARANCE.Themed,
   },
 };

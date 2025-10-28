@@ -17,6 +17,7 @@ export default {
       options: APPEARANCES,
       table: {
         defaultValue: { summary: APPEARANCE.Themed },
+        category: 'props',
       },
     },
   },

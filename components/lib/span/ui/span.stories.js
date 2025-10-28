@@ -22,21 +22,29 @@ export default {
       options: APPEARANCES,
       table: {
         defaultValue: { summary: APPEARANCE.Themed },
+        category: 'props',
       },
     },
     [WCATTR.Caps]: {
       control: {
         type: 'boolean',
       },
+      table: {
+        category: 'props',
+      },
     },
     children: {
       control: { type: 'text' },
+      table: {
+        category: 'other',
+      },
     },
   },
 };
 
 export const DefaultSpan = {
   args: {
+    [WCATTR.Appearance]: APPEARANCE.Themed,
     children: 'Съешь ещё этих мягких французских булок, да выпей чаю',
   },
 };

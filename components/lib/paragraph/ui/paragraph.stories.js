@@ -20,17 +20,24 @@ export default {
   argTypes: {
     children: {
       control: { type: 'text' },
+      table: {
+        category: 'other',
+      },
     },
     [WCATTR.Appearance]: {
       control: { type: 'inline-radio' },
       options: APPEARANCES,
       table: {
         defaultValue: { summary: APPEARANCE.Themed },
+        category: 'props',
       },
     },
     [WCATTR.Caps]: {
       control: {
         type: 'boolean',
+      },
+      table: {
+        category: 'props',
       },
     },
   },
@@ -38,6 +45,7 @@ export default {
 
 export const DefaultParagraph = {
   args: {
+    [WCATTR.Appearance]: APPEARANCE.Themed,
     children: 'Съешь ещё этих мягких французских булок, да выпей чаю',
   },
 };

@@ -32,14 +32,21 @@ export default {
         defaultValue: {
           summary: DIRECTION.Horizontal,
         },
+        category: 'props',
       },
     },
     [WCATTR.AlignItems]: {
       control: { type: 'inline-radio' },
       options: ALIGNITEMS,
+      table: {
+        category: 'props',
+      },
     },
     [WCATTR.Gap]: {
       control: { type: 'text' },
+      table: {
+        category: 'props',
+      },
     },
   },
 };

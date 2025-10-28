@@ -1,4 +1,4 @@
-import { SIZE, WCATTR } from '../../../consts/index.js';
+import { APPEARANCE, SIZE, WCATTR } from '../../../consts/index.js';
 import { WebComponent } from '../../../web-component/index.js';
 import { props } from '../model/index.js';
 import { template } from './headline.template.js';
@@ -15,6 +15,9 @@ export class HeadlineComponent extends WebComponent {
   }
 
   connectedCallback() {
+    super.connectedCallback();
+
     this.size = this.size || SIZE.Medium;
+    this.appearance = this.appearance || APPEARANCE.Themed;
   }
 }

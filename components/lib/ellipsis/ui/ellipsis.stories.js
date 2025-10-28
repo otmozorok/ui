@@ -18,13 +18,18 @@ export default {
   argTypes: {
     children: {
       control: { type: 'text' },
-      type: { name: 'string' },
+      table: {
+        category: 'other',
+      },
     },
     [WCATTR.MaxLines]: {
       control: {
         type: 'number',
         min: 1,
         max: 3,
+      },
+      table: {
+        category: 'props',
       },
     },
   },

@@ -20,11 +20,13 @@ export default {
   argTypes: {
     text: {
       control: { type: 'text' },
+      table: { category: 'other' },
     },
     [WCATTR.SizeNumber]: {
       control: { type: 'number' },
       table: {
         defaultValue: { summary: 3 },
+        category: 'props',
       },
     },
     [WCATTR.Color]: {
@@ -32,6 +34,7 @@ export default {
       options: COLORS,
       table: {
         defaultValue: { summary: COLOR.Green },
+        category: 'props',
       },
     },
     [WCATTR.Shape]: {
@@ -39,6 +42,7 @@ export default {
       options: SHAPES,
       table: {
         defaultValue: { summary: SHAPE.Circle },
+        category: 'props',
       },
     },
   },

@@ -26,14 +26,21 @@ export default {
       options: COLS,
       table: {
         defaultValue: { summary: 2 },
+        category: 'props',
       },
     },
     [WCATTR.Rows]: {
       control: { type: 'select' },
       options: ROWS,
+      table: {
+        category: 'props',
+      },
     },
     [WCATTR.Gap]: {
       control: { type: 'text' },
+      table: {
+        category: 'props',
+      },
     },
   },
 };

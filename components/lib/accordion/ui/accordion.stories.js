@@ -29,10 +29,16 @@ export default {
     children: {
       control: { type: 'text' },
       type: { name: 'string' },
+      table: {
+        category: 'other',
+      },
     },
     header: {
       control: { type: 'text' },
       type: { name: 'string' },
+      table: {
+        category: 'other',
+      },
     },
   },
   args: {

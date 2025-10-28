@@ -17,15 +17,24 @@ export default {
   argTypes: {
     [WCATTR.Value]: {
       control: { type: 'number' },
+      table: {
+        category: 'props',
+      },
     },
     [WCATTR.Rounded]: {
       control: {
         type: 'boolean',
       },
+      table: {
+        category: 'props',
+      },
     },
     [WCATTR.Inverse]: {
       control: {
         type: 'boolean',
+      },
+      table: {
+        category: 'props',
       },
     },
     [WCATTR.Appearance]: {
@@ -33,6 +42,7 @@ export default {
       options: APPEARANCES,
       table: {
         defaultValue: { summary: APPEARANCE.Themed },
+        category: 'props',
       },
     },
   },

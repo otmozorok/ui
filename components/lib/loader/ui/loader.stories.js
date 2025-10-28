@@ -14,12 +14,10 @@ export default {
   argTypes: {
     [WCATTR.Size]: {
       control: { type: 'inline-radio' },
-      type: {
-        name: 'enum',
-      },
       options: SIZES,
       table: {
         defaultValue: { summary: SIZE.Medium },
+        category: 'props',
       },
     },
   },

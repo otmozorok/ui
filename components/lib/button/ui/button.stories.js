@@ -17,15 +17,24 @@ export default {
     children: {
       control: { type: 'text' },
       description: 'Текст кнопки',
+      table: {
+        category: 'other',
+      },
     },
     [WCATTR.Loading]: {
       control: {
         type: 'boolean',
       },
+      table: {
+        category: 'props',
+      },
     },
     [WCATTR.FullWidth]: {
       control: {
         type: 'boolean',
+      },
+      table: {
+        category: 'props',
       },
     },
     [WCATTR.Appearance]: {
@@ -33,6 +42,7 @@ export default {
       options: APPEARANCES,
       table: {
         defaultValue: { summary: APPEARANCE.Themed },
+        category: 'props',
       },
     },
     [WCATTR.Size]: {
@@ -40,6 +50,7 @@ export default {
       options: SIZES,
       table: {
         defaultValue: { summary: SIZE.Medium },
+        category: 'props',
       },
     },
     [WCATTR.Mode]: {
@@ -47,6 +58,7 @@ export default {
       options: MODES,
       table: {
         defaultValue: { summary: MODE.Primary },
+        category: 'props',
       },
     },
   },

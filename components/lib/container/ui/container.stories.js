@@ -40,19 +40,31 @@ export default {
       control: {
         type: 'boolean',
       },
+      table: {
+        category: 'props',
+      },
     },
     [WCATTR.Filled]: {
       control: {
         type: 'boolean',
+      },
+      table: {
+        category: 'props',
       },
     },
     [WCATTR.FullWidth]: {
       control: {
         type: 'boolean',
       },
+      table: {
+        category: 'props',
+      },
     },
     header: {
       control: { type: 'text' },
+      table: {
+        category: 'other',
+      },
     },
   },
 };

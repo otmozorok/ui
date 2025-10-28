@@ -1,4 +1,4 @@
-import { APPEARANCE, APPEARANCES, SIZE, WCATTR, WCTAG } from '../../../consts/index.js';
+import { APPEARANCE, APPEARANCES, WCATTR, WCTAG } from '../../../consts/index.js';
 import { setAttr, toggleAttr } from '../../../utils/index.js';
 
 export default {
@@ -10,7 +10,6 @@ export default {
     const p = document.createElement(WCTAG.Paragraph);
     const div = document.createElement('div');
 
-    h.size = SIZE.Large;
     div.style.width = '70%';
 
     setAttr(args[WCATTR.Appearance], WCATTR.Appearance, el);
@@ -28,18 +27,16 @@ export default {
   argTypes: {
     [WCATTR.Appearance]: {
       control: { type: 'inline-radio' },
-      type: {
-        name: 'enum',
-      },
       options: APPEARANCES,
       table: {
         defaultValue: { summary: APPEARANCE.Themed },
+        category: 'props',
       },
     },
     [WCATTR.Closable]: {
       control: { type: 'boolean' },
-      type: {
-        name: 'boolean',
+      table: {
+        category: 'props',
       },
     },
   },
@@ -52,13 +49,15 @@ export const DefaultBanner = {
 };
 
 export const BannerWithImage = {
+  args: {
+    [WCATTR.Appearance]: APPEARANCE.Themed,
+  },
   render: (args) => {
     const el = document.createElement(WCTAG.Banner);
     const h = document.createElement(WCTAG.Headline);
     const p = document.createElement(WCTAG.Paragraph);
     const div = document.createElement('div');
 
-    h.size = SIZE.Large;
     div.style.width = '40%';
 
     setAttr(
