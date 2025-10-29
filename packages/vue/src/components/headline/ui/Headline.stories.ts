@@ -9,17 +9,17 @@ export default {
   component: Headline,
   tags: ['autodocs'],
   argTypes: {
-    [WCATTR.Appearance]: {
+    appearance: {
       control: 'inline-radio',
       options: APPEARANCES,
       table: { defaultValue: { summary: APPEARANCE.Themed } },
     },
-    [WCATTR.Size]: {
+    size: {
       control: 'inline-radio',
       options: SIZES,
       table: { defaultValue: { summary: SIZE.Medium } },
     },
-    [WCATTR.Caps]: {
+    caps: {
       control: 'boolean',
     },
     default: { control: 'text' },
@@ -30,8 +30,8 @@ type Story = StoryObj<IMeta>;
 
 export const DefaultHeadline: Story = {
   args: {
-    [WCATTR.Size]: SIZE.Medium,
-    [WCATTR.Appearance]: APPEARANCE.Themed,
+    size: SIZE.Medium,
+    appearance: APPEARANCE.Themed,
     default: 'Съешь ещё этих мягких французских булок, да выпей чаю',
   },
 };
