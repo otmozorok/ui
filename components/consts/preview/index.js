@@ -6,12 +6,11 @@ export const previewMain = {
       document.documentElement.classList.remove(...items);
       document.documentElement.classList.add(globals.theme);
 
-      globals.backgrounds.value = globals.theme;
-
       return story();
     },
   ],
   parameters: {
+    backgrounds: false,
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -22,9 +21,6 @@ export const previewMain = {
   tags: ['autodocs'],
   initialGlobals: {
     theme: items[1],
-    backgrounds: {
-      value: items[1],
-    },
   },
   globalTypes: {
     theme: {

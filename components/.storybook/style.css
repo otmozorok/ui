@@ -39,3 +39,7 @@
 .dark {
   color-scheme: dark;
 }
+
+.docs-story {
+  background: var(--bg-color);
+}

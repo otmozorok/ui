@@ -10,7 +10,7 @@
 
   /* COLORS */
 
-  --bg-color: light-dark(hsl(0, 0%, 90%), lch(5% 5.01 286.37));
+  --bg-color: light-dark(hsl(0, 0%, 90%), lch(10% 5.01 286.37));
   --bg-secondary-color: light-dark(hsl(0, 0%, 100%), lch(13.88% 5.01 286.37));
 
   --text-color: light-dark(hsl(0, 0%, 0%), hsl(0, 0%, 100%));
@@ -42,6 +42,8 @@
   font-family: var(--font-family);
   font-size: var(--font-size);
   color-scheme: light dark;
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 
 :root {
