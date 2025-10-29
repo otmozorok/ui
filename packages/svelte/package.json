@@ -1,6 +1,6 @@
 {
   "name": "@otmozorok/svelte",
-  "version": "0.45.0",
+  "version": "0.46.0",
   "author": "Boris Hasikov",
   "description": "ui-kit из web components обернутый в svelte",
   "license": "MIT",

@@ -150,13 +150,13 @@
   - [x] solid
   - [x] svelte
   - [x] vue
-- [ ] Paragraph
+- [x] Paragraph
   - [x] wc
   - [x] react
   - [x] preact
   - [x] solid
-  - [ ] svelte
-  - [ ] vue
+  - [x] svelte
+  - [x] vue
 - [ ] Span
   - [x] wc
   - [x] react
