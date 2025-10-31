@@ -12,7 +12,7 @@
 
 
 Или просто нажмите на ссылку для быстрой оплаты через поддерживаемый кошелек (например, Tonkeeper, Ton Wallet): 
-[**Отправить TON**](https://app.tonkeeper.com/transfer/UQCD39d5Yc3M3CYYUgPUkvgRmVmv-M3BDrPC3PkhfYx8qISe)
+[**Отправить TON**](https://app.tonkeeper.com/transfer/UQBxamsX-IL1M6Tss3YyBuXuSwZJuRN83I0GJBUOSryumwpq)
 
 ---
 
