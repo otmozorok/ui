@@ -10,9 +10,6 @@
 
 **Адрес кошелька:** `otmozorok.ton` `UQBxamsX-IL1M6Tss3YyBuXuSwZJuRN83I0GJBUOSryumwpq`
 
-
-Или просто нажмите на ссылку для быстрой оплаты через поддерживаемый кошелек (например, Tonkeeper, Ton Wallet): <a href="ton://transfer/UQBxamsX-IL1M6Tss3YyBuXuSwZJuRN83I0GJBUOSryumwpq">Отправить TON</a>
-
 ---
 
 Спасибо, что вы с нами! Ваша поддержка невероятно важна.
