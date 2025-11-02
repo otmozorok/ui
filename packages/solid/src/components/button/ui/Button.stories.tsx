@@ -1,4 +1,4 @@
-import { APPEARANCE, APPEARANCES, MODE, MODES, SIZE, SIZES, WCATTR } from '@otmozorok/wc/consts';
+import { APPEARANCE, APPEARANCES, MODE, MODES, SIZE, SIZES } from '@otmozorok/wc/consts';
 import { fn } from 'storybook/test';
 import { IButtonProps } from '../model';
 import { Button } from './Button';
@@ -10,7 +10,7 @@ export default {
   component: Button,
   tags: ['autodocs'],
   argTypes: {
-    [WCATTR.Appearance]: {
+    appearance: {
       control: 'inline-radio',
       options: APPEARANCES,
       table: {
@@ -19,7 +19,7 @@ export default {
         },
       },
     },
-    [WCATTR.Mode]: {
+    mode: {
       control: 'inline-radio',
       options: MODES,
       table: {
@@ -28,7 +28,7 @@ export default {
         },
       },
     },
-    [WCATTR.Size]: {
+    size: {
       control: 'inline-radio',
       options: SIZES,
       table: {
@@ -37,7 +37,7 @@ export default {
         },
       },
     },
-    [WCATTR.Loading]: { control: 'boolean' },
+    loading: { control: 'boolean' },
     fullWidth: { control: 'boolean' },
   },
   args: { 'on:click': fn() },
@@ -47,9 +47,9 @@ type Story = StoryObj<ParentComponent<IButtonProps>>;
 
 export const DefaultButton: Story = {
   args: {
-    [WCATTR.Appearance]: APPEARANCE.Themed,
-    [WCATTR.Mode]: MODE.Primary,
-    [WCATTR.Size]: SIZE.Medium,
+    appearance: APPEARANCE.Themed,
+    mode: MODE.Primary,
+    size: SIZE.Medium,
     children: 'Нажимать на меня',
   },
   render: (args) => {

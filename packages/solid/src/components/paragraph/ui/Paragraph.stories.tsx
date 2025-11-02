@@ -1,22 +1,18 @@
-import { APPEARANCE, APPEARANCES, WCATTR } from '@otmozorok/wc/consts';
+import { APPEARANCE, APPEARANCES } from '@otmozorok/wc/consts';
 import { Paragraph } from './Paragraph';
 import type { IParagraphProps } from '../model';
+import type { ParentComponent } from 'solid-js';
 import type { Meta, StoryObj } from 'storybook-solidjs-vite';
 
-type IMeta = IParagraphProps & { text?: string };
+type IMeta = ParentComponent<IParagraphProps>;
 
 export default {
   title: 'Typography/Paragraph',
   component: Paragraph,
   tags: ['autodocs'],
   argTypes: {
-    [WCATTR.Caps]: { control: 'boolean' },
-    [WCATTR.Appearance]: { control: 'inline-radio', options: APPEARANCES },
-    text: {
-      control: {
-        type: 'text',
-      },
-    },
+    caps: { control: 'boolean' },
+    appearance: { control: 'inline-radio', options: APPEARANCES },
   },
 } satisfies Meta<IMeta>;
 
@@ -24,11 +20,10 @@ type Story = StoryObj<IMeta>;
 
 export const DefaultParagraph: Story = {
   args: {
-    [WCATTR.Appearance]: APPEARANCE.Themed,
-    text: 'Съешь ещё этих мягких французских булок, да выпей чаю',
+    appearance: APPEARANCE.Themed,
+    children: 'Съешь ещё этих мягких французских булок, да выпей чаю',
   },
   render: (props) => {
-    const { text } = props;
-    return <Paragraph {...props}>{text}</Paragraph>;
+    return <Paragraph {...props}>{props.children}</Paragraph>;
   },
 };

@@ -4,5 +4,5 @@ export interface IHeadlineProps {
   size?: (typeof SIZE)[keyof typeof SIZE];
   appearance?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
   caps?: boolean;
-  [key: string]: string | boolean | undefined;
+  slot?: 'header';
 }
