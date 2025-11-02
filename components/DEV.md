@@ -157,13 +157,13 @@
   - [x] solid
   - [x] svelte
   - [x] vue
-- [ ] Span
+- [x] Span
   - [x] wc
   - [x] react
   - [x] preact
-  - [ ] solid
-  - [ ] svelte
-  - [ ] vue
+  - [x] solid
+  - [x] svelte
+  - [x] vue
 
 ## Layouts
 - [ ] Article
