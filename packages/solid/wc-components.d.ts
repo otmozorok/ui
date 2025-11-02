@@ -70,6 +70,15 @@ declare module 'solid-js' {
         [WCATTR.Inverse]?: boolean;
         [WCATTR.Value]: string;
       } & JSX.HTMLAttributes<HTMLDivElement>;
+      [WCTAG.Ellipsis]: {
+        [WCATTR.MaxLines]: number;
+      } & JSX.HTMLAttributes<HTMLDivElement>;
+      [WCTAG.Span]: ParentProps<
+        {
+          [WCATTR.Appearance]?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
+          [WCATTR.Caps]?: boolean;
+        } & JSX.HTMLAttributes<HTMLSpanElement>
+      >;
     }
   }
 }
