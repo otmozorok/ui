@@ -5,6 +5,7 @@ import {
   AvatarComponent,
   BannerComponent,
   ButtonComponent,
+  CheckboxComponent,
   ContainerComponent,
   CounterComponent,
   DotComponent,
@@ -31,6 +32,7 @@ customElements.define(WCTAG.Article, ArticleComponent);
 customElements.define(WCTAG.Avatar, AvatarComponent);
 customElements.define(WCTAG.Banner, BannerComponent);
 customElements.define(WCTAG.Button, ButtonComponent);
+customElements.define(WCTAG.Checkbox, CheckboxComponent);
 customElements.define(WCTAG.Container, ContainerComponent);
 customElements.define(WCTAG.Counter, CounterComponent);
 customElements.define(WCTAG.Dot, DotComponent);

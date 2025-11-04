@@ -3,6 +3,7 @@ export * from './article/index.js';
 export * from './avatar/index.js';
 export * from './banner/index.js';
 export * from './button/index.js';
+export * from './checkbox/index.js';
 export * from './container/index.js';
 export * from './counter/index.js';
 export * from './dot/index.js';

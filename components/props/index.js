@@ -165,3 +165,39 @@ export const fullWidthProp = {
     attribute: WCATTR.FullWidth,
   },
 };
+
+/** @type {Prop} */
+export const checkedProp = {
+  checked: {
+    type: 'boolean',
+    reflect: true,
+    attribute: WCATTR.Checked,
+  },
+};
+
+/** @type {Prop} */
+export const disabledProp = {
+  disabled: {
+    type: 'boolean',
+    reflect: true,
+    attribute: WCATTR.Disabled,
+  },
+};
+
+/** @type {Prop} */
+export const nameProp = {
+  name: {
+    type: 'string',
+    reflect: true,
+    attribute: WCATTR.Name,
+  },
+};
+
+/** @type {Prop} */
+export const indeterminateProp = {
+  indeterminate: {
+    type: 'boolean',
+    reflect: true,
+    attribute: WCATTR.Indeterminate,
+  },
+};

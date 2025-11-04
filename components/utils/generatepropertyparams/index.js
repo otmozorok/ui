@@ -3,7 +3,7 @@
  * Определяет типы, отражение и атрибуты для каждого свойства компонента.
  *
  * @typedef {Object} Props
- * @property {'string' | 'number' | 'boolean' | 'number-px'| 'number-rem'} type - Тип данных свойства (например: 'String', 'Boolean', 'Number').
+ * @property {'string' | 'number' | 'boolean' | 'number-rem'} type - Тип данных свойства (например: 'String', 'Boolean', 'Number').
  * @property {boolean} reflect - Флаг, указывающий, должно ли свойство отражаться в DOM.
  * @property {string} [attribute] - Имя атрибута в DOM (по умолчанию совпадает с именем свойства).
  */

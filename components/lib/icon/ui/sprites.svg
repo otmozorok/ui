@@ -113,4 +113,24 @@
       d="M18 6L6 18M6 6l12 12"
     ></path>
   </symbol>
+  <symbol viewBox="0 0 24 24" id="check">
+    <path
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M20 6L9 17l-5-5"
+    ></path>
+  </symbol>
+  <symbol viewBox="0 0 24 24" id="minus">
+    <path
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M5 12h14"
+    ></path>
+  </symbol>
 </svg>

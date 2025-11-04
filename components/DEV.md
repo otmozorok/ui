@@ -194,3 +194,12 @@
   - [ ] solid
   - [ ] svelte
   - [ ] vue
+
+## Form
+- [ ] Checkbox
+  - [x] wc
+  - [ ] react
+  - [ ] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue
