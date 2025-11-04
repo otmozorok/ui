@@ -23,6 +23,7 @@ import {
   MenuItemComponent,
   ParagraphComponent,
   SpanComponent,
+  SwitcherComponent,
 } from '../index.js';
 import '../style.css';
 import './style.css';
@@ -50,6 +51,7 @@ customElements.define(WCTAG.MenuHeader, MenuHeaderComponent);
 customElements.define(WCTAG.MenuItem, MenuItemComponent);
 customElements.define(WCTAG.Paragraph, ParagraphComponent);
 customElements.define(WCTAG.Span, SpanComponent);
+customElements.define(WCTAG.Switcher, SwitcherComponent);
 
 /** @type { import('@storybook/html').Preview } */
 const preview = {

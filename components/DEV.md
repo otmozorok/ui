@@ -203,3 +203,10 @@
   - [ ] solid
   - [ ] svelte
   - [ ] vue
+- [ ] Switcher
+  - [x] wc
+  - [ ] react
+  - [ ] preact
+  - [ ] solid
+  - [ ] svelte
+  - [ ] vue

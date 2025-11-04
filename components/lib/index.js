@@ -22,4 +22,5 @@ export * from './menu-item/index.js';
 export * from './paragraph/index.js';
 export * from './popover/index.js';
 export * from './span/index.js';
+export * from './switcher/index.js';
 export * from './tooltip/index.js';
