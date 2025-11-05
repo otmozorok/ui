@@ -40,7 +40,7 @@ export default defineConfig({
           const minified = await htmlMinifier.minify(htmlContent, {
             collapseWhitespace: true,
             removeComments: true,
-            minifyCSS: true,
+            minifyCSS: false,
             minifyJS: true,
           });
           return `html\`${minified}\``;
