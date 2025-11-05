@@ -1,3 +1,4 @@
+import { fn } from 'storybook/test';
 import {
   APPEARANCE,
   APPEARANCES,
@@ -62,6 +63,9 @@ export default {
       },
     },
   },
+  args: {
+    onClick: fn(),
+  },
 };
 
 export const DefaultButton = {
@@ -75,6 +79,12 @@ export const DefaultButton = {
     toggleAttr(args[WCATTR.FullWidth], WCATTR.FullWidth, el);
 
     el.innerText = args.children;
+
+    if (args.onClick) {
+      el.addEventListener('click', () => {
+        args.onClick();
+      });
+    }
 
     return el;
   },
