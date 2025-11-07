@@ -22,6 +22,7 @@ import {
   MenuHeaderComponent,
   MenuItemComponent,
   ParagraphComponent,
+  RadioComponent,
   SpanComponent,
   SwitcherComponent,
 } from '../index.js';
@@ -50,6 +51,7 @@ customElements.define(WCTAG.MenuAction, MenuActionComponent);
 customElements.define(WCTAG.MenuHeader, MenuHeaderComponent);
 customElements.define(WCTAG.MenuItem, MenuItemComponent);
 customElements.define(WCTAG.Paragraph, ParagraphComponent);
+customElements.define(WCTAG.Radio, RadioComponent);
 customElements.define(WCTAG.Span, SpanComponent);
 customElements.define(WCTAG.Switcher, SwitcherComponent);
 

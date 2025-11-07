@@ -201,3 +201,12 @@ export const indeterminateProp = {
     attribute: WCATTR.Indeterminate,
   },
 };
+
+/** @type {Prop} */
+export const valueProp = {
+  value: {
+    type: 'string',
+    reflect: true,
+    attribute: WCATTR.Value,
+  },
+};

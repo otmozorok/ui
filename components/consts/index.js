@@ -34,6 +34,7 @@ export const WCTAG = Object.freeze({
   MenuHeader: 'wc-menu-header',
   MenuItem: 'wc-menu-item',
   Paragraph: 'wc-paragraph',
+  Radio: 'wc-radio',
   Span: 'wc-span',
   Switcher: 'wc-switcher',
   Tooltip: 'wc-tooltip',
