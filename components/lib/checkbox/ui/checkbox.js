@@ -45,6 +45,10 @@ export class CheckboxComponent extends WebComponent {
       );
       this.$input.checked = this.checked;
     }
+
+    if (name === WCATTR.Name) {
+      this.$input.name = this.name;
+    }
   }
 
   toggle() {

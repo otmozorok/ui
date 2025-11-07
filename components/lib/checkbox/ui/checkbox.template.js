@@ -5,7 +5,7 @@ export const template = html`
   <template>
     <style>
       :host {
-        line-height: 1.1;
+        line-height: 1.3;
       }
 
       :host div {
