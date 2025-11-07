@@ -21,8 +21,8 @@ export const template = html`
         display: none;
         place-items: center;
         background: var(--bg-radio-toggle-color);
-        width: 0.3rem;
-        height: 0.3rem;
+        width: 0.3125rem;
+        height: 0.3125rem;
         border-radius: 50%;
       }
 
