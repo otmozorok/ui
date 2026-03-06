@@ -29,30 +29,6 @@ export class WebComponent extends HTMLElement {
   }
 
   /**
-   * Вызывается при добавлении компонента в DOM
-   */
-  connectedCallback() {
-    import.meta.env.DEV &&
-      console.log(
-        '%c connected ',
-        'color: white; background-color: black; padding: 2px 4px; border-radius: 2px;',
-        this.tagName.toLowerCase()
-      );
-  }
-
-  /**
-   * Вызывается при удалении компонента из DOM
-   */
-  disconnectedCallback() {
-    import.meta.env.DEV &&
-      console.log(
-        '%c disconnected ',
-        'color: white; background-color: black; padding: 2px 4px; border-radius: 2px;',
-        this.tagName.toLowerCase()
-      );
-  }
-
-  /**
    * Обработчик изменений атрибутов компонента
    * @param {typeof WCATTR[keyof typeof WCATTR]} name - Название измененного атрибута
    * @param {unknown} oldValue - Старое значение атрибута
