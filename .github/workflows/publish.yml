@@ -32,9 +32,9 @@ jobs:
           - name: 'packages/vue'
             build: true
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6.0.2
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6.3.0
         env:
           NODE_AUTH_TOKEN: ${{ matrix.registry.token == 'npm' && secrets.NPM_TOKEN || secrets.GITHUB_TOKEN}}
         with:
