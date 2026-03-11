@@ -79,6 +79,13 @@ declare module 'solid-js' {
           [WCATTR.Caps]?: boolean;
         } & JSX.HTMLAttributes<HTMLSpanElement>
       >;
+      [WCTAG.Banner]: ParentProps<
+        {
+          [WCATTR.Appearance]?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
+          [WCATTR.Closable]?: boolean;
+          [WCATTR.Image]?: string;
+        } & JSX.HTMLAttributes<HTMLSpanElement>
+      >;
     }
   }
 }

@@ -73,7 +73,7 @@ declare module 'react' {
         {
           [WCATTR.Appearance]?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
           [WCATTR.Closable]?: boolean;
-          [WCATTR.Src]?: string;
+          [WCATTR.Image]?: string;
         } & React.ComponentPropsWithoutRef<'div'>,
         BannerComponent
       >;

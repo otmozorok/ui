@@ -16,6 +16,11 @@ import {
 import { WCTAG } from '@otmozorok/wc/consts';
 import { JSX } from 'preact';
 
+declare module '*.css' {
+  const content: void;
+  export default content;
+}
+
 declare module 'preact' {
   namespace JSX {
     interface IntrinsicElements {

@@ -13,7 +13,7 @@
     "declaration": true,
 
     /* Bundler mode */
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -27,6 +27,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "wc-components.d.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src", "wc-components.d.ts"]
 }
