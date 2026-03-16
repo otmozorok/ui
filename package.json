@@ -11,7 +11,7 @@
     "@storybook/addon-svelte-csf": "^5.0.11",
     "@storybook/addon-vitest": "^10.2.16",
     "@storybook/builder-vite": "^10.2.16",
-    "@storybook/html-vite": "^10.2.16",
+    "@storybook/html-vite": "^10.2.19",
     "@storybook/preact-vite": "^10.2.16",
     "@storybook/react-vite": "^10.2.16",
     "@storybook/svelte-vite": "^10.2.16",
