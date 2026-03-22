@@ -1,25 +1,284 @@
 {
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Debug CLI",
+        "cwd": "${workspaceFolder:cli}",
+        "runtimeExecutable": "npm",
+        "runtimeArgs": ["run", "start"],
+        "console": "integratedTerminal",
+        "skipFiles": ["<node_internals>/**"],
+      },
+      {
+        "type": "chrome",
+        "request": "launch",
+        "name": "Debug Components (Browser)",
+        "url": "http://localhost:6001",
+        "webRoot": "${workspaceFolder:components}",
+        "preLaunchTask": "Build All Projects",
+        "sourceMaps": true,
+        "trace": true,
+      },
+    ],
+    "compounds": [],
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build Dev Components",
+        "command": "npm",
+        "args": ["run", "docs"],
+        "options": {
+          "cwd": "${workspaceFolder:components}",
+        },
+        "group": {
+          "kind": "build",
+          "isDefault": true,
+        },
+        "problemMatcher": [
+          {
+            "owner": "storybook",
+            "pattern": {
+              "regexp": "^.*$",
+              "file": 1,
+              "location": 2,
+              "message": 3,
+            },
+            "background": {
+              "activeOnStart": true,
+              "beginsPattern": "^.*info.*=>.*Starting.*$",
+              "endsPattern": "^.*Local:*.*http://localhost:.*$|^.*Storybook.*started.*$",
+            },
+          },
+        ],
+        "isBackground": true,
+        "presentation": {
+          "reveal": "always",
+          "panel": "new",
+        },
+      },
+      {
+        "label": "Build Dev Preact",
+        "command": "npm",
+        "args": ["run", "docs"],
+        "options": {
+          "cwd": "${workspaceFolder:preact}",
+        },
+        "group": {
+          "kind": "build",
+          "isDefault": true,
+        },
+        "problemMatcher": [
+          {
+            "owner": "storybook",
+            "pattern": {
+              "regexp": "^.*$",
+              "file": 1,
+              "location": 2,
+              "message": 3,
+            },
+            "background": {
+              "activeOnStart": true,
+              "beginsPattern": "^.*info.*=>.*Starting.*$",
+              "endsPattern": "^.*Local:*.*http://localhost:.*$|^.*Storybook.*started.*$",
+            },
+          },
+        ],
+        "isBackground": true,
+        "presentation": {
+          "reveal": "always",
+          "panel": "new",
+        },
+      },
+      {
+        "label": "Build Dev React",
+        "command": "npm",
+        "args": ["run", "docs"],
+        "options": {
+          "cwd": "${workspaceFolder:react}",
+        },
+        "group": {
+          "kind": "build",
+          "isDefault": true,
+        },
+        "problemMatcher": [
+          {
+            "owner": "storybook",
+            "pattern": {
+              "regexp": "^.*$",
+              "file": 1,
+              "location": 2,
+              "message": 3,
+            },
+            "background": {
+              "activeOnStart": true,
+              "beginsPattern": "^.*info.*=>.*Starting.*$",
+              "endsPattern": "^.*Local:*.*http://localhost:.*$|^.*Storybook.*started.*$",
+            },
+          },
+        ],
+        "isBackground": true,
+        "presentation": {
+          "reveal": "always",
+          "panel": "new",
+        },
+      },
+      {
+        "label": "Build Dev Vue",
+        "command": "npm",
+        "args": ["run", "docs"],
+        "options": {
+          "cwd": "${workspaceFolder:vue}",
+        },
+        "group": {
+          "kind": "build",
+          "isDefault": true,
+        },
+        "problemMatcher": [
+          {
+            "owner": "storybook",
+            "pattern": {
+              "regexp": "^.*$",
+              "file": 1,
+              "location": 2,
+              "message": 3,
+            },
+            "background": {
+              "activeOnStart": true,
+              "beginsPattern": "^.*info.*=>.*Starting.*$",
+              "endsPattern": "^.*Local:*.*http://localhost:.*$|^.*Storybook.*started.*$",
+            },
+          },
+        ],
+        "isBackground": true,
+        "presentation": {
+          "reveal": "always",
+          "panel": "new",
+        },
+      },
+      {
+        "label": "Build Dev Svelte",
+        "command": "npm",
+        "args": ["run", "docs"],
+        "options": {
+          "cwd": "${workspaceFolder:svelte}",
+        },
+        "group": {
+          "kind": "build",
+          "isDefault": true,
+        },
+        "problemMatcher": [
+          {
+            "owner": "storybook",
+            "pattern": {
+              "regexp": "^.*$",
+              "file": 1,
+              "location": 2,
+              "message": 3,
+            },
+            "background": {
+              "activeOnStart": true,
+              "beginsPattern": "^.*info.*=>.*Starting.*$",
+              "endsPattern": "^.*Local:*.*http://localhost:.*$|^.*Storybook.*started.*$",
+            },
+          },
+        ],
+        "isBackground": true,
+        "presentation": {
+          "reveal": "always",
+          "panel": "new",
+        },
+      },
+      {
+        "label": "Build Dev Solid",
+        "command": "npm",
+        "args": ["run", "docs"],
+        "options": {
+          "cwd": "${workspaceFolder:solid}",
+        },
+        "group": {
+          "kind": "build",
+          "isDefault": true,
+        },
+        "problemMatcher": [
+          {
+            "owner": "storybook",
+            "pattern": {
+              "regexp": "^.*$",
+              "file": 1,
+              "location": 2,
+              "message": 3,
+            },
+            "background": {
+              "activeOnStart": true,
+              "beginsPattern": "^.*info.*=>.*Starting.*$",
+              "endsPattern": "^.*Local:*.*http://localhost:.*$|^.*Storybook.*started.*$",
+            },
+          },
+        ],
+        "isBackground": true,
+        "presentation": {
+          "reveal": "always",
+          "panel": "new",
+        },
+      },
+      {
+        "label": "Build All Projects",
+        "dependsOn": [
+          "Build Dev Preact",
+          "Build Dev React",
+          "Build Dev Svelte",
+          "Build Dev Vue",
+          "Build Dev Solid",
+          "Build Dev Components",
+        ],
+        "dependsOrder": "parallel", // или "sequence" для последовательного выполнения
+        "group": "build",
+        "problemMatcher": [],
+      },
+    ],
+  },
   "folders": [
     {
+      "name": "web-components",
       "path": ".",
     },
     {
+      "name": "cli",
+      "path": "packages/cli",
+    },
+    {
+      "name": "components",
       "path": "components",
     },
     {
+      "name": "preact",
       "path": "packages/preact",
     },
     {
+      "name": "react",
       "path": "packages/react",
     },
     {
+      "name": "solid",
       "path": "packages/solid",
     },
     {
+      "name": "svelte",
       "path": "packages/svelte",
     },
     {
+      "name": "vue",
       "path": "packages/vue",
     },
   ],
+  "settings": {
+    "files.associations": {
+      "**/**/snippets/**/*.js": "plaintext",
+    },
+  },
 }
