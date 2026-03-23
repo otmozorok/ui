@@ -15,18 +15,22 @@ export const WCTAG = Object.freeze({
   Accordion: 'wc-accordion',
   Article: 'wc-acticle',
   Avatar: 'wc-avatar',
+  Backdrop: 'wc-backdrop',
   Banner: 'wc-banner',
+  BottomSheet: 'wc-bottom-sheet',
   Button: 'wc-button',
   Checkbox: 'wc-checkbox',
   Container: 'wc-container',
   Counter: 'wc-counter',
   Dot: 'wc-dot',
+  DotNavigation: 'wc-dot-navigation',
   Dropdown: 'wc-dropdown',
   Ellipsis: 'wc-ellipsis',
   Flex: 'wc-flex',
   Grid: 'wc-grid',
   Headline: 'wc-headline',
   Icon: 'wc-icon',
+  Image: 'wc-image',
   Input: 'wc-input',
   Loader: 'wc-loader',
   Menu: 'wc-menu',
@@ -35,15 +39,23 @@ export const WCTAG = Object.freeze({
   MenuItem: 'wc-menu-item',
   Paragraph: 'wc-paragraph',
   Radio: 'wc-radio',
+  Skeleton: 'wc-skeleton',
   Span: 'wc-span',
   Switcher: 'wc-switcher',
+  Textarea: 'wc-textarea',
   Tooltip: 'wc-tooltip',
+});
+
+export const HTMLTAG = Object.freeze({
+  Button: 'button',
+  Image: 'img',
 });
 
 export const WCATTR = Object.freeze({
   AlignItems: 'align-items',
   Appearance: 'appearance',
   Arrow: 'arrow',
+  BorderRadius: 'border-radius',
   Caps: 'caps',
   Checked: 'checked',
   Closable: 'closable',
@@ -55,6 +67,8 @@ export const WCATTR = Object.freeze({
   Filled: 'filled',
   FullWidth: 'full-width',
   Gap: 'gap',
+  Height: 'height',
+  Image: 'image',
   Indeterminate: 'indeterminate',
   Inverse: 'inverse',
   Island: 'island',
@@ -72,4 +86,10 @@ export const WCATTR = Object.freeze({
   Src: 'src',
   TextAlign: 'text-align',
   Value: 'value',
+  Width: 'width',
+});
+
+export const Events = Object.freeze({
+  Click: 'click',
+  Close: 'close',
 });

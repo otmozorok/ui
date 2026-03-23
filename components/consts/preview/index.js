@@ -1,5 +1,8 @@
+import logo from '../../../assets/logo.png';
+
 const items = ['light', 'dark'];
 
+/** @type { import('@storybook/html').Preview } */
 export const previewMain = {
   decorators: [
     (story, { globals }) => {
@@ -10,6 +13,9 @@ export const previewMain = {
     },
   ],
   parameters: {
+    header: {
+      logo: logo,
+    },
     backgrounds: false,
     controls: {
       matchers: {

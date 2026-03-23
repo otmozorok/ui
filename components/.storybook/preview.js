@@ -3,6 +3,7 @@ import {
   AccordionComponent,
   ArticleComponent,
   AvatarComponent,
+  BackdropComponent,
   BannerComponent,
   ButtonComponent,
   CheckboxComponent,
@@ -15,6 +16,7 @@ import {
   GridComponent,
   HeadlineComponent,
   IconComponent,
+  ImageComponent,
   InputComponent,
   LoaderComponent,
   MenuActionComponent,
@@ -23,37 +25,45 @@ import {
   MenuItemComponent,
   ParagraphComponent,
   RadioComponent,
+  SkeletonComponent,
   SpanComponent,
   SwitcherComponent,
+  TextareaComponent,
 } from '../index.js';
+import { define } from '../utils/index.js';
 import '../style.css';
 import './style.css';
 
-customElements.define(WCTAG.Accordion, AccordionComponent);
-customElements.define(WCTAG.Article, ArticleComponent);
-customElements.define(WCTAG.Avatar, AvatarComponent);
-customElements.define(WCTAG.Banner, BannerComponent);
-customElements.define(WCTAG.Button, ButtonComponent);
-customElements.define(WCTAG.Checkbox, CheckboxComponent);
-customElements.define(WCTAG.Container, ContainerComponent);
-customElements.define(WCTAG.Counter, CounterComponent);
-customElements.define(WCTAG.Dot, DotComponent);
-customElements.define(WCTAG.Dropdown, DropdownComponent);
-customElements.define(WCTAG.Ellipsis, EllipsisComponent);
-customElements.define(WCTAG.Flex, FlexComponent);
-customElements.define(WCTAG.Grid, GridComponent);
-customElements.define(WCTAG.Headline, HeadlineComponent);
-customElements.define(WCTAG.Icon, IconComponent);
-customElements.define(WCTAG.Input, InputComponent);
-customElements.define(WCTAG.Loader, LoaderComponent);
-customElements.define(WCTAG.Menu, MenuComponent);
-customElements.define(WCTAG.MenuAction, MenuActionComponent);
-customElements.define(WCTAG.MenuHeader, MenuHeaderComponent);
-customElements.define(WCTAG.MenuItem, MenuItemComponent);
-customElements.define(WCTAG.Paragraph, ParagraphComponent);
-customElements.define(WCTAG.Radio, RadioComponent);
-customElements.define(WCTAG.Span, SpanComponent);
-customElements.define(WCTAG.Switcher, SwitcherComponent);
+define(WCTAG.Accordion, AccordionComponent);
+define(WCTAG.Article, ArticleComponent);
+define(WCTAG.Avatar, AvatarComponent);
+define(WCTAG.Backdrop, BackdropComponent);
+define(WCTAG.Banner, BannerComponent);
+define(WCTAG.Button, ButtonComponent);
+define(WCTAG.Checkbox, CheckboxComponent);
+define(WCTAG.Checkbox, CheckboxComponent);
+define(WCTAG.Container, ContainerComponent);
+define(WCTAG.Counter, CounterComponent);
+define(WCTAG.Dot, DotComponent);
+define(WCTAG.Dropdown, DropdownComponent);
+define(WCTAG.Ellipsis, EllipsisComponent);
+define(WCTAG.Flex, FlexComponent);
+define(WCTAG.Grid, GridComponent);
+define(WCTAG.Headline, HeadlineComponent);
+define(WCTAG.Icon, IconComponent);
+define(WCTAG.Image, ImageComponent);
+define(WCTAG.Input, InputComponent);
+define(WCTAG.Loader, LoaderComponent);
+define(WCTAG.Menu, MenuComponent);
+define(WCTAG.MenuAction, MenuActionComponent);
+define(WCTAG.MenuHeader, MenuHeaderComponent);
+define(WCTAG.MenuItem, MenuItemComponent);
+define(WCTAG.Paragraph, ParagraphComponent);
+define(WCTAG.Radio, RadioComponent);
+define(WCTAG.Skeleton, SkeletonComponent);
+define(WCTAG.Span, SpanComponent);
+define(WCTAG.Switcher, SwitcherComponent);
+define(WCTAG.Textarea, TextareaComponent);
 
 /** @type { import('@storybook/html').Preview } */
 const preview = {

@@ -1,64 +1,26 @@
-import { join, dirname } from 'path';
-
-function getAbsolutePath(value) {
-  return dirname(require.resolve(join(value, 'package.json')));
-}
+import { mergeConfig } from 'vite';
 
 /** @type {import('storybook/internal/types').StorybookConfig} */
 const config = {
-  stories: [
-    '../*.mdx',
-    '../**/stories.@(js|jsx|mjs|ts|tsx)',
-    '../**/*.stories.@(js|jsx|mjs|ts|tsx)',
-  ],
+  stories: ['../*.mdx', '../**/stories.@(js|jsx|mjs|ts|tsx)', '../**/*.stories.@(js|jsx|mjs|ts|tsx)'],
 
-  addons: [
-    getAbsolutePath('@storybook/addon-docs'),
-    getAbsolutePath('@storybook/addon-a11y'),
-    getAbsolutePath('@storybook/addon-vitest'),
-    getAbsolutePath('@storybook/addon-designs'),
-  ],
+  addons: ['@storybook/addon-docs', '@storybook/addon-a11y', '@storybook/addon-vitest', '@storybook/addon-designs'],
 
   framework: {
-    name: getAbsolutePath('@storybook/html'),
-    options: {},
+    name: '@storybook/html-vite',
+    options: { disableWhatsNewNotifications: false, disableTelemetry: true },
+  },
+
+  async viteFinal(config) {
+    return mergeConfig(config, {
+      server: {
+        cors: true,
+      },
+    });
   },
 
   docs: {
     defaultName: 'Описание',
-  },
-
-  core: {
-    builder: getAbsolutePath('@storybook/builder-vite'),
-    disableWhatsNewNotifications: false,
-    disableTelemetry: true,
-  },
-
-  refs: {
-    ...(process.env.NODE_ENV === 'development'
-      ? {
-          preact: {
-            title: 'Preact Components',
-            url: 'http://localhost:6002',
-          },
-          react: {
-            title: 'React Components',
-            url: 'http://localhost:6003',
-          },
-          svelte: {
-            title: 'Svelte Components',
-            url: 'http://localhost:6004',
-          },
-          vue: {
-            title: 'Vue Components',
-            url: 'http://localhost:6005',
-          },
-          solid: {
-            title: 'Solid Components',
-            url: 'http://localhost:6006',
-          },
-        }
-      : {}),
   },
 };
 
