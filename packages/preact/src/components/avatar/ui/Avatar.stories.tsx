@@ -3,7 +3,7 @@ import { IAvatarProps } from '../model';
 import { Avatar } from './Avatar';
 import type { Meta, StoryObj } from '@storybook/preact-vite';
 
-type IMeta = IAvatarProps & { text: string; src: string };
+type IMeta = IAvatarProps & { text: string; image: string };
 
 const meta = {
   title: 'Components/Avatar',
@@ -35,7 +35,7 @@ const meta = {
         type: 'text',
       },
     },
-    [WCATTR.Src]: {
+    [WCATTR.Image]: {
       control: {
         type: 'text',
       },
@@ -60,7 +60,7 @@ export const DefaultAvatar: Story = {
 export const WithImage: Story = {
   args: {
     sizeNumber: 3,
-    [WCATTR.Src]: 'https://avatars.githubusercontent.com/u/15306476?v=4',
+    [WCATTR.Image]: 'https://avatars.githubusercontent.com/u/15306476?v=4',
   },
   render: ({ src, ...props }) => {
     return (

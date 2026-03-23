@@ -1,15 +1,19 @@
-import { COLOR, SHAPE, WCATTR } from '../../../consts/index.js';
+import { COLOR, SHAPE, WCATTR, WCTAG } from '../../../consts/index.js';
 import { html } from '../../../utils/index.js';
 
 export const template = html`
   <template>
     <style>
       :host {
+        --wc-avatar-font-size: 0.45em;
+        --wc-avatar-icon-size: 1.5em;
+
         display: contents;
       }
 
       ::slotted(img),
-      ::slotted(picture) {
+      ::slotted(picture),
+      ::slotted(${WCTAG.Image}) {
         width: var(--${WCATTR.SizeNumber});
         height: var(--${WCATTR.SizeNumber});
         object-fit: cover;
@@ -25,10 +29,15 @@ export const template = html`
         font-size: var(--${WCATTR.SizeNumber});
 
         .text {
-          font-size: 0.35em;
+          font-size: var(--wc-avatar-font-size);
           line-height: 1;
           user-select: none;
-          color: var(--text-avatar-color);
+          color: var(--wc-avatar-color);
+        }
+
+        ${WCTAG.Icon} {
+          width: var(--wc-avatar-icon-size);
+          height: var(--wc-avatar-icon-size);
         }
       }
 
@@ -39,23 +48,23 @@ export const template = html`
       }
 
       :host([${WCATTR.Color}='${COLOR.Red}']) .bg {
-        background-image: var(--gradient-red);
+        background-image: var(--wc-avatar-gradient-red);
       }
 
       :host([${WCATTR.Color}='${COLOR.Green}']) .bg {
-        background-image: var(--gradient-green);
+        background-image: var(--wc-avatar-gradient-green);
       }
 
       :host([${WCATTR.Color}='${COLOR.Orange}']) .bg {
-        background-image: var(--gradient-orange);
+        background-image: var(--wc-avatar-gradient-orange);
       }
 
       :host([${WCATTR.Color}='${COLOR.Blue}']) .bg {
-        background-image: var(--gradient-blue);
+        background-image: var(--wc-avatar-gradient-blue);
       }
 
       :host([${WCATTR.Color}='${COLOR.Purple}']) .bg {
-        background-image: var(--gradient-purple);
+        background-image: var(--wc-avatar-gradient-purple);
       }
 
       :host([${WCATTR.Shape}='${SHAPE.Squircle}']) .bg {

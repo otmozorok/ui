@@ -3,7 +3,7 @@ import { Avatar } from './Avatar';
 import type { IAvatarProps } from '../model';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-type IMeta = IAvatarProps & { src?: string; text?: string };
+type IMeta = IAvatarProps & { image?: string; text?: string };
 
 const meta = {
   title: 'Components/Avatar',
@@ -21,7 +21,7 @@ const meta = {
       options: SHAPES,
       table: { defaultValue: { summary: SHAPE.Circle } },
     },
-    src: { control: 'text' },
+    image: { control: 'text' },
     text: { control: 'text' },
   },
 } satisfies Meta<IMeta>;
@@ -35,7 +35,7 @@ export const DefaultAvatar: Story = {
     [WCATTR.Color]: COLOR.Blue,
     [WCATTR.Shape]: SHAPE.Circle,
   },
-  render: ({ text, src, ...props }) => {
+  render: ({ text, image: src, ...props }) => {
     const children = src ? <img src={src} /> : text ? text : undefined;
     return <Avatar {...props}>{children}</Avatar>;
   },
@@ -44,9 +44,9 @@ export const DefaultAvatar: Story = {
 export const WithImage: Story = {
   args: {
     sizeNumber: 3,
-    [WCATTR.Src]: 'https://avatars.githubusercontent.com/u/15306476?v=4',
+    [WCATTR.Image]: 'https://avatars.githubusercontent.com/u/15306476?v=4',
   },
-  render: ({ src, ...props }) => {
+  render: ({ image: src, ...props }) => {
     return (
       <Avatar {...props}>
         <img src={src} />

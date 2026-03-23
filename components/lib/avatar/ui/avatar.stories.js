@@ -1,3 +1,4 @@
+import avatarImage from '../../../../assets/avatar.jfif';
 import { COLOR, COLORS, SHAPE, SHAPES, WCATTR, WCTAG } from '../../../consts/index.js';
 import { setAttr } from '../../../utils/index.js';
 
@@ -74,9 +75,9 @@ export const WithImage = {
   },
   render: (args) => {
     const el = document.createElement(WCTAG.Avatar);
-    const img = document.createElement('img');
+    const img = document.createElement(WCTAG.Image);
 
-    img.src = 'https://avatars.githubusercontent.com/u/15306476?v=4';
+    img.src = avatarImage;
 
     setAttr(args[WCATTR.SizeNumber], WCATTR.SizeNumber, el);
     setAttr(args[WCATTR.Color], WCATTR.Color, el);

@@ -4,7 +4,7 @@ import { Avatar } from './Avatar';
 import type { ParentComponent } from 'solid-js';
 import type { Meta, StoryObj } from 'storybook-solidjs-vite';
 
-type IMetaWithText = ParentComponent<IAvatarProps & { src?: string }>;
+type IMeta = ParentComponent<IAvatarProps & { src?: string }>;
 
 export default {
   title: 'Components/Avatar',
@@ -38,9 +38,9 @@ export default {
       },
     },
   },
-} satisfies Meta<IMetaWithText>;
+} satisfies Meta<IMeta>;
 
-type Story = StoryObj<IMetaWithText>;
+type Story = StoryObj<IMeta>;
 
 export const DefaultAvatar: Story = {
   args: {
