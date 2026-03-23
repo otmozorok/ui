@@ -1,8 +1,7 @@
 import { APPEARANCE } from '@otmozorok/wc/consts';
 
-export interface IBannerProps extends React.ComponentPropsWithoutRef<'div'> {
+export interface IBannerProps {
   appearance?: (typeof APPEARANCE)[keyof typeof APPEARANCE];
   closable?: boolean;
   image?: string;
-  onClose?(): () => void;
 }

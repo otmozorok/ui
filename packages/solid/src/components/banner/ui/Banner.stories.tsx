@@ -1,47 +1,27 @@
-import { APPEARANCE, APPEARANCES, WCATTR } from '@otmozorok/wc/consts';
-import { fn } from 'storybook/test';
+import { APPEARANCE, APPEARANCES } from '@otmozorok/wc/consts';
 import { Headline } from '../../headline';
 import { IBannerProps } from '../model';
 import { Banner } from './Banner';
-import type { Meta, StoryObj } from '@storybook/preact-vite';
+import type { ParentComponent } from 'solid-js';
+import type { Meta, StoryObj } from 'storybook-solidjs-vite';
 
-type IMeta = IBannerProps & { text: string; image: string };
+type IMeta = ParentComponent<IBannerProps & { title?: string; text?: string; image?: string }>;
 
-const meta = {
+export default {
   title: 'Components/Banner',
   component: Banner,
   tags: ['autodocs'],
   argTypes: {
-    [WCATTR.Appearance]: {
-      control: { type: 'inline-radio' },
+    appearance: {
+      control: 'inline-radio',
       options: APPEARANCES,
       table: {
-        defaultValue: { summary: APPEARANCE.Themed },
+        defaultValue: {
+          summary: APPEARANCE.Themed,
+        },
       },
     },
-    [WCATTR.Closable]: {
-      control: {
-        type: 'boolean',
-      },
-    },
-    [WCATTR.Image]: {
-      control: {
-        type: 'text',
-      },
-    },
-    title: {
-      control: {
-        type: 'text',
-      },
-    },
-    text: {
-      control: {
-        type: 'text',
-      },
-    },
-  },
-  args: {
-    onClose: fn(),
+    closable: { control: 'boolean' },
   },
 } satisfies Meta<IMeta>;
 
@@ -49,15 +29,15 @@ type Story = StoryObj<IMeta>;
 
 export const DefaultBanner: Story = {
   args: {
-    [WCATTR.Appearance]: APPEARANCE.Themed,
+    appearance: APPEARANCE.Themed,
     title: 'Заголовок банера',
     text: 'Съешь ещё этих мягких французских булок, да выпей чаю',
   },
-  render: ({ text, title, ...props }) => {
+  render: (props) => {
     return (
       <Banner {...props}>
-        <Headline>{title}</Headline>
-        <p>{text}</p>
+        <Headline>{props.title}</Headline>
+        <p>{props.text}</p>
       </Banner>
     );
   },
@@ -65,22 +45,20 @@ export const DefaultBanner: Story = {
 
 export const BannerWithImage: Story = {
   args: {
-    [WCATTR.Appearance]: APPEARANCE.Themed,
-    [WCATTR.Image]:
+    appearance: APPEARANCE.Themed,
+    image:
       'https://camo.githubusercontent.com/4992218eeafd48c9e44185faf5f92c68eb7acc5de1069f9c9d78075412108d04/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f32367842414d7964554c396c41397a4b552f67697068792e676966',
     title: 'Заголовок банера',
     text: 'Съешь ещё этих мягких французских булок, да выпей чаю',
   },
-  render: ({ text, title, ...props }) => {
+  render: (props) => {
     return (
       <Banner {...props}>
         <div style={{ width: '60%' }}>
-          <Headline>{title}</Headline>
-          <p>{text}</p>
+          <Headline>{props.title}</Headline>
+          <p>{props.text}</p>
         </div>
       </Banner>
     );
   },
 };
-
-export default meta;

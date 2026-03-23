@@ -13,6 +13,7 @@ export const template = html`
           center center;
         padding: 1rem;
         border-radius: 1.25rem;
+        background-image: var(--image);
       }
 
       button {
@@ -31,48 +32,57 @@ export const template = html`
       }
 
       :host([${WCATTR.Appearance}='${APPEARANCE.Themed}']) {
+        --wc-bg-themed: var(--bg-secondary-color);
+        --wc-button-bg-themed-hover: light-dark(
+          hsl(from var(--bg-secondary-color) h s calc(l - 15)),
+          hsl(from var(--bg-secondary-color) h s calc(l + 15))
+        );
+
         div {
-          background-color: var(--bg-secondary-color);
+          background-color: var(--wc-bg-themed);
         }
 
         button {
           &:hover {
-            background: light-dark(
-              hsl(from var(--bg-secondary-color) h s calc(l - 15)),
-              hsl(from var(--bg-secondary-color) h s calc(l + 15))
-            );
+            background-color: var(--wc-button-bg-themed-hover);
           }
         }
       }
 
       :host([${WCATTR.Appearance}='${APPEARANCE.Negative}']) {
+        --wc-bg-negative: var(--negative);
+        --wc-button-bg-negative-hover: light-dark(
+          hsl(from var(--negative) h s calc(l - 15)),
+          hsl(from var(--negative) h s calc(l + 15))
+        );
+
         div {
-          background-color: var(--negative);
+          background-color: var(--wc-bg-negative);
         }
 
         button {
           &:hover {
-            background: light-dark(
-              hsl(from var(--negative) h s calc(l - 15)),
-              hsl(from var(--negative) h s calc(l + 15))
-            );
+            background-color: var(--wc-button-bg-negative-hover);
           }
         }
       }
 
       :host([${WCATTR.Appearance}='${APPEARANCE.Neutral}']) {
+        --wc-bg-neutral: var(--neutral);
+        --wc-button-bg-neutral-hover: light-dark(
+          hsl(from var(--neutral) h s calc(l + 15)),
+          hsl(from var(--neutral) h s calc(l - 15))
+        );
+
         div {
-          background-color: var(--neutral);
+          background-color: var(--wc-bg-neutral);
           color: var(--text-button-inverse-color);
         }
 
         button {
           color: var(--text-button-inverse-color);
           &:hover {
-            background: light-dark(
-              hsl(from var(--neutral) h s calc(l + 15)),
-              hsl(from var(--neutral) h s calc(l - 15))
-            );
+            background-color: var(--wc-button-bg-neutral-hover);
           }
         }
       }
@@ -86,7 +96,7 @@ export const template = html`
 
     <div>
       <slot></slot>
-      <button><wc-icon name="x"></wc-icon></button>
+      <button><wc-icon name="x" size-number="1.5"></wc-icon></button>
     </div>
   </template>
 `;

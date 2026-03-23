@@ -5,8 +5,13 @@ import { IBannerProps } from '../model';
 customElements.get(WCTAG.Banner) || customElements.define(WCTAG.Banner, BannerComponent);
 customElements.get(WCTAG.Icon) || customElements.define(WCTAG.Icon, IconComponent);
 
-export function Banner({ appearance, closable, ...props }: IBannerProps) {
+export function Banner({ appearance, image, closable, ...props }: IBannerProps) {
   return (
-    <wc-banner appearance={appearance} closable={closable || undefined} {...props}></wc-banner>
+    <wc-banner
+      appearance={appearance}
+      image={image}
+      closable={closable || undefined}
+      {...props}
+    ></wc-banner>
   );
 }

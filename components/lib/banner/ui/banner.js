@@ -1,4 +1,4 @@
-import { WCATTR } from '../../../consts/index.js';
+import { Events, HTMLTAG, WCATTR } from '../../../consts/index.js';
 import { WebComponent } from '../../../web-component/index.js';
 import { props } from '../model/index.js';
 import { template } from './banner.template.js';
@@ -8,42 +8,30 @@ import { template } from './banner.template.js';
  * @link https://otmozorok.github.io/ui/?path=/docs/components-banner--docs
  */
 export class BannerComponent extends WebComponent {
-  static observedAttributes = [WCATTR.Src, WCATTR.Appearance, WCATTR.Closable];
+  static observedAttributes = [WCATTR.Image, WCATTR.Appearance, WCATTR.Closable];
 
   constructor() {
     super(template, props);
 
     /**
-     * @type {HTMLDivElement}
-     */
-    this.$wrapper = this.$('div');
-    /**
      * @type {HTMLButtonElement}
      */
-    this.$button = this.$('button');
+    this.$button = this.$(HTMLTAG.Button);
   }
 
   connectedCallback() {
-    super.connectedCallback();
+    super.connectedCallback?.();
 
-    this.$button.addEventListener('click', (e) => {
+    this.$button.addEventListener(Events.Click, (e) => {
       e.stopPropagation();
       e.preventDefault();
 
       this.dispatchEvent(
-        new CustomEvent('close', {
+        new CustomEvent(Events.Close, {
           bubbles: false,
           composed: true,
         })
       );
     });
-  }
-
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (name === WCATTR.Src && newValue) {
-      this.$wrapper.style.backgroundImage = `url(${newValue})`;
-    }
-
-    super.attributeChangedCallback(name, oldValue, newValue);
   }
 }

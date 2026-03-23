@@ -6,7 +6,7 @@ import type { IBannerProps } from '../model';
 customElements.get(WCTAG.Banner) || customElements.define(WCTAG.Banner, BannerComponent);
 customElements.get(WCTAG.Icon) || customElements.define(WCTAG.Icon, IconComponent);
 
-export function Banner({ children, appearance, closable, onClose, ...props }: IBannerProps) {
+export function Banner({ children, appearance, image, closable, onClose, ...props }: IBannerProps) {
   const banner = useRef<BannerComponent | null>(null);
 
   useEffect(() => {
@@ -25,7 +25,13 @@ export function Banner({ children, appearance, closable, onClose, ...props }: IB
   }, [onClose]);
 
   return (
-    <wc-banner ref={banner} appearance={appearance} closable={closable || undefined} {...props}>
+    <wc-banner
+      ref={banner}
+      appearance={appearance}
+      image={image}
+      closable={closable || undefined}
+      {...props}
+    >
       {children}
     </wc-banner>
   );

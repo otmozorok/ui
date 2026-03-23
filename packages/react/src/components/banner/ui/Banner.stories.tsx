@@ -7,7 +7,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 
 type IMetaWithText = IBannerProps & {
   text: string;
-  src: string;
+  image: string;
 };
 
 const meta = {
@@ -27,7 +27,7 @@ const meta = {
         type: 'boolean',
       },
     },
-    [WCATTR.Src]: {
+    [WCATTR.Image]: {
       control: {
         type: 'text',
       },
@@ -69,8 +69,8 @@ export const DefaultBanner: Story = {
 export const BannerWithImage: Story = {
   args: {
     [WCATTR.Appearance]: APPEARANCE.Themed,
-    [WCATTR.Src]:
-      'https://camo.githubusercontent.com/5089aade831f565b6414567519fed5e50b3187753e3b95a1c0e521704768ccb5/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f32367842414d7964554c396c41397a4b552f67697068792e676966',
+    [WCATTR.Image]:
+      'https://camo.githubusercontent.com/4992218eeafd48c9e44185faf5f92c68eb7acc5de1069f9c9d78075412108d04/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f32367842414d7964554c396c41397a4b552f67697068792e676966',
     title: 'Заголовок банера',
     text: 'Съешь ещё этих мягких французских булок, да выпей чаю',
   },
