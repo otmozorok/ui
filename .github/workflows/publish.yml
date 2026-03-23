@@ -50,4 +50,4 @@ jobs:
         run: npm run build -w ${{ matrix.package.name }}
 
       - name: Publish ${{ matrix.package.name }}
-        run: npm publish -w ${{ matrix.package.name }}
+        run: npm publish -w ${{ matrix.package.name }} --access-public
