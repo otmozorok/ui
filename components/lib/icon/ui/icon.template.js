@@ -9,10 +9,8 @@ export const template = html`
       :host {
         display: inline-grid;
 
-        svg {
-          width: var(--${WCATTR.SizeNumber});
-          height: var(--${WCATTR.SizeNumber});
-        }
+        width: var(--${WCATTR.SizeNumber});
+        height: var(--${WCATTR.SizeNumber});
       }
     </style>
 

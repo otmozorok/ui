@@ -15,7 +15,7 @@ export const template = html`
         position: relative;
         text-decoration: none;
         gap: 0.375rem;
-        font-family: var(--font-family);
+        font-family: var(--wc-font-family);
         line-height: 1;
 
         & > wc-loader {

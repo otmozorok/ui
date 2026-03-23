@@ -11,7 +11,7 @@ export const template = html`
       :host div {
         display: grid;
         place-items: center;
-        background: var(--bg-checkbox-color);
+        background: var(--bg-field-color);
         color: var(--text-checkbox-color);
         width: 1.25rem;
         height: 1.25rem;
@@ -63,7 +63,7 @@ export const template = html`
 
       :host([${WCATTR.Indeterminate}][${WCATTR.Appearance}='${APPEARANCE.Neutral}']) div {
         background: var(--neutral);
-        color: var(--text-checkbox-inverse-color);
+        color: var(--text-field-inverse-color);
 
         & ${WCTAG.Icon}[${WCATTR.Name}='${ICON.Minus}'] {
           display: inline-grid;
@@ -84,7 +84,7 @@ export const template = html`
 
       :host([${WCATTR.Checked}][${WCATTR.Appearance}='${APPEARANCE.Neutral}']) div {
         background: var(--neutral);
-        color: var(--text-checkbox-inverse-color);
+        color: var(--text-field-inverse-color);
       }
 
       :host([${WCATTR.Checked}]) ${WCTAG.Icon}[${WCATTR.Name}='${ICON.Check}'] {

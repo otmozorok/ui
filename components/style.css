@@ -1,16 +1,37 @@
+@layer reset, tokens, semantic, components;
+
+@layer tokens {
+  :root {
+    --wc-font-family: -apple-system, system-ui, 'Helvetica Neue', Roboto, sans-serif;
+    --wc-font-size: 16px;
+
+    --wc-z-tooltip: 10;
+
+    --wc-shadow: 0 0 10px light-dark(lch(0% 0 0 / 0.2), lch(100% 0.01 296.81 / 0.2));
+
+    --wc-transition: 0.2s ease-in-out;
+  }
+}
+
+@layer components {
+  :root {
+    --wc-avatar-color: hsl(0, 0%, 100%);
+    --wc-avatar-gradient-red: linear-gradient(153deg, #ff48b6 0.77%, #ff8a35 93.03%);
+    --wc-avatar-gradient-orange: linear-gradient(155deg, #ffc93d 6.6%, #ff832a 84.12%);
+    --wc-avatar-gradient-green: linear-gradient(158deg, #14e1d5 6.15%, #03c722 85.68%);
+    --wc-avatar-gradient-blue: linear-gradient(157deg, #08d7f3 6.38%, #5398ff 85%);
+    --wc-avatar-gradient-purple: linear-gradient(155deg, #bf97ff 6.6%, #526eff 84.12%);
+  }
+}
+
 :root {
-  /* MAIN */
-  --font-family: -apple-system, system-ui, 'Helvetica Neue', Roboto, sans-serif;
-  --font-size: 16px;
-
-  --z-tooltip: 10;
-
-  /* SHADOWS */
-  --shadow: 0 0 10px light-dark(hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 100%, 0.2));
-
   /* COLORS */
-  --bg-color: light-dark(hsl(0, 0%, 90%), lch(10% 5.01 286.37));
-  --bg-secondary-color: light-dark(hsl(0, 0%, 100%), lch(13.88% 5.01 286.37));
+  --bg-color: light-dark(lch(91.29% 0.01 296.81), lch(10% 5.01 286.37));
+  --bg-secondary-color: light-dark(lch(100% 0.01 296.81), lch(13.88% 5.01 286.37));
+  --bg-field-color: light-dark(
+    lch(from var(--bg-secondary-color) calc(l - 15) c h),
+    lch(from var(--bg-secondary-color) calc(l + 15) c h)
+  );
 
   --text-color: light-dark(hsl(0, 0%, 0%), hsl(0, 0%, 100%));
   --text-color-inverse: light-dark(hsl(0, 0%, 100%), hsl(0, 0%, 0%));
@@ -61,15 +82,8 @@
   --bg-switcher-toggle-color: lch(from var(--bg-switcher-toggle-checked-color) calc(l + 30) c h);
   --bg-switcher-toggle-inverse-color: light-dark(hsl(0, 0%, 100%), hsl(0, 0%, 0%));
 
-  /* GRADIENTS */
-  --gradient-red: linear-gradient(153deg, #ff48b6 0.77%, #ff8a35 93.03%);
-  --gradient-orange: linear-gradient(155deg, #ffc93d 6.6%, #ff832a 84.12%);
-  --gradient-green: linear-gradient(158deg, #14e1d5 6.15%, #03c722 85.68%);
-  --gradient-blue: linear-gradient(157deg, #08d7f3 6.38%, #5398ff 85%);
-  --gradient-purple: linear-gradient(155deg, #bf97ff 6.6%, #526eff 84.12%);
-
-  font-family: var(--font-family);
-  font-size: var(--font-size);
+  font-family: var(--wc-font-family);
+  font-size: var(--wc-font-size);
   color-scheme: light dark;
   background: var(--bg-color);
   color: var(--text-color);

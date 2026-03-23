@@ -8,6 +8,7 @@ export const template = html`
         margin: 0;
         padding: 0;
         font-weight: 600;
+        line-height: 1.1;
       }
 
       :host([${WCATTR.Size}='${SIZE.Large}']) h1 {

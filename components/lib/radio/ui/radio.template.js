@@ -11,7 +11,7 @@ export const template = html`
       :host div {
         display: grid;
         place-items: center;
-        background: var(--bg-radio-color);
+        background: var(--bg-field-color);
         width: 1.25rem;
         height: 1.25rem;
         border-radius: 50%;

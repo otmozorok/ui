@@ -19,7 +19,7 @@ export class CheckboxComponent extends WebComponent {
   }
 
   connectedCallback() {
-    super.connectedCallback();
+    super.connectedCallback?.();
 
     this.appearance = this.appearance || APPEARANCE.Themed;
 
@@ -31,7 +31,7 @@ export class CheckboxComponent extends WebComponent {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    super.attributeChangedCallback(name, oldValue, newValue);
+    super.attributeChangedCallback?.(name, oldValue, newValue);
 
     if (name === WCATTR.Checked) {
       this.dispatchEvent(

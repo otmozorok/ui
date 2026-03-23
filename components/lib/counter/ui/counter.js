@@ -17,20 +17,20 @@ export class CounterComponent extends WebComponent {
     this.$span = this.$('span');
   }
 
-  #updateText() {
-    this.rounded
-      ? (this.$span.innerText = rounded(this.value))
-      : (this.$span.innerText = this.value);
-  }
-
   connectedCallback() {
-    super.connectedCallback();
+    super.connectedCallback?.();
+
     this.value = this.value || 0;
     this.appearance = this.appearance || APPEARANCE.Themed;
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    super.attributeChangedCallback(name, oldValue, newValue);
+    super.attributeChangedCallback?.(name, oldValue, newValue);
+
     this.#updateText(this.value);
+  }
+
+  #updateText() {
+    this.rounded ? (this.$span.innerText = rounded(this.value)) : (this.$span.innerText = this.value);
   }
 }

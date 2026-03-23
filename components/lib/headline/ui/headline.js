@@ -15,7 +15,7 @@ export class HeadlineComponent extends WebComponent {
   }
 
   connectedCallback() {
-    super.connectedCallback();
+    super.connectedCallback?.();
 
     this.size = this.size || SIZE.Medium;
     this.appearance = this.appearance || APPEARANCE.Themed;

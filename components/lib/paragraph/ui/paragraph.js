@@ -15,7 +15,7 @@ export class ParagraphComponent extends WebComponent {
   }
 
   connectedCallback() {
-    super.connectedCallback();
+    super.connectedCallback?.();
 
     this.appearance = this.appearance || APPEARANCE.Themed;
   }

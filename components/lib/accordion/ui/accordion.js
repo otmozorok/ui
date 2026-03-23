@@ -1,4 +1,5 @@
 import { WebComponent } from '../../../web-component/index.js';
+import { props } from '../model/index.js';
 import { template } from './accordion.template.js';
 
 /**
@@ -7,6 +8,6 @@ import { template } from './accordion.template.js';
  */
 export class AccordionComponent extends WebComponent {
   constructor() {
-    super(template);
+    super(template, props);
   }
 }

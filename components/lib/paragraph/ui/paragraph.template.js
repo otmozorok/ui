@@ -7,6 +7,7 @@ export const template = html`
       p {
         margin: 0;
         padding: 0;
+        font-size: 1rem;
       }
 
       :host([${WCATTR.Caps}]) p {

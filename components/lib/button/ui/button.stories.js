@@ -1,16 +1,10 @@
 import { fn } from 'storybook/test';
-import {
-  APPEARANCE,
-  APPEARANCES,
-  MODE,
-  MODES,
-  SIZE,
-  SIZES,
-  WCATTR,
-  WCTAG,
-} from '../../../consts/index.js';
+import { APPEARANCE, APPEARANCES, MODE, MODES, SIZE, SIZES, WCATTR, WCTAG } from '../../../consts/index.js';
 import { setAttr, toggleAttr } from '../../../utils/index.js';
 
+/**
+ * @type {import('@storybook/html').Meta}
+ */
 export default {
   title: 'Components/Button',
   tags: ['autodocs'],
@@ -68,6 +62,9 @@ export default {
   },
 };
 
+/**
+ * @type {import('@storybook/html').Meta}
+ */
 export const DefaultButton = {
   render: (args) => {
     const el = document.createElement(WCTAG.Button);

@@ -22,7 +22,7 @@ export class ButtonComponent extends WebComponent {
   }
 
   connectedCallback() {
-    super.connectedCallback();
+    super.connectedCallback?.();
 
     this.mode = this.mode || MODE.Primary;
     this.appearance = this.appearance || APPEARANCE.Themed;
