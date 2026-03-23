@@ -210,3 +210,48 @@ export const valueProp = {
     attribute: WCATTR.Value,
   },
 };
+
+/** @type {Prop} */
+export const imageProp = {
+  image: {
+    type: 'image',
+    reflect: true,
+    attribute: WCATTR.Image,
+  },
+};
+
+/** @type {Prop} */
+export const borderRadiusProp = {
+  borderRadius: {
+    type: 'number-rem',
+    reflect: true,
+    attribute: WCATTR.BorderRadius,
+  },
+};
+
+/** @type {Prop} */
+export const widthProp = {
+  width: {
+    type: 'number-rem',
+    reflect: true,
+    attribute: WCATTR.Width,
+  },
+};
+
+/** @type {Prop} */
+export const heightProp = {
+  height: {
+    type: 'number-rem',
+    reflect: true,
+    attribute: WCATTR.Height,
+  },
+};
+
+/** @type {Prop} */
+export const srcProp = {
+  src: {
+    type: 'string',
+    reflect: true,
+    attribute: WCATTR.Src,
+  },
+};

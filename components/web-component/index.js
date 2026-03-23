@@ -1,15 +1,5 @@
-import {
-  COLORS,
-  SHAPES,
-  MODES,
-  APPEARANCES,
-  WCATTR,
-  SIZES,
-  ICONS,
-  COLS,
-  ROWS,
-} from '../consts/index.js';
-import { generatePropertyParams } from '../utils/index.js';
+import { COLORS, SHAPES, MODES, APPEARANCES, WCATTR, SIZES, ICONS, COLS, ROWS } from '../consts/index.js';
+import { generatePropertyParams, kebabToCamel } from '../utils/index.js';
 
 /**
  * Базовый класс для создания пользовательских веб-компонентов с использованием Shadow DOM.
@@ -26,6 +16,28 @@ export class WebComponent extends HTMLElement {
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.cloneNode(true));
     props && Object.defineProperties(this, generatePropertyParams(props));
+  }
+
+  /**
+   * Вызывается при добавлении компонента в DOM
+   */
+  connectedCallback() {
+    console.debug(
+      '%c connected ',
+      'color: white; background-color: black; padding: 2px 4px; border-radius: 2px;',
+      this.tagName.toLowerCase()
+    );
+  }
+
+  /**
+   * Вызывается при удалении компонента из DOM
+   */
+  disconnectedCallback() {
+    console.debug(
+      '%c disconnected ',
+      'color: white; background-color: black; padding: 2px 4px; border-radius: 2px;',
+      this.tagName.toLowerCase()
+    );
   }
 
   /**
@@ -48,36 +60,32 @@ export class WebComponent extends HTMLElement {
       [WCATTR.Size]: { prop: WCATTR.Size, values: SIZES },
     };
 
-    // Обработка атрибутов с валидацией значений
     if (attributeMap[name]) {
       const { prop, values } = attributeMap[name];
       if (values.includes(newValue)) {
-        this[prop] = newValue;
+        this[kebabToCamel(prop)] = newValue;
       }
       return;
     }
 
-    // Обработка булевых атрибутов
-    if ([WCATTR.Loading, WCATTR.Rounded, WCATTR.Closable, WCATTR.Caps].includes(name)) {
-      this[name] = newValue === '';
+    if (
+      [
+        WCATTR.Loading,
+        WCATTR.Rounded,
+        WCATTR.Closable,
+        WCATTR.Caps,
+        WCATTR.FullWidth,
+        WCATTR.Disabled,
+        WCATTR.Inverse,
+        WCATTR.Island,
+        WCATTR.Filled,
+      ].includes(name)
+    ) {
+      this[kebabToCamel(name)] = newValue === '';
       return;
     }
 
-    // Прямое присвоение без валидации
-    switch (name) {
-      case WCATTR.Gap:
-        this.gap = newValue;
-        break;
-      case WCATTR.SizeNumber:
-        this.sizeNumber = newValue;
-        break;
-      case WCATTR.Value:
-        this.value = newValue;
-        break;
-      case WCATTR.Src:
-        this.src = newValue;
-        break;
-    }
+    this[kebabToCamel(name)] = newValue;
   }
 
   /**

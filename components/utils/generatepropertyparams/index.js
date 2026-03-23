@@ -3,10 +3,12 @@
  * Определяет типы, отражение и атрибуты для каждого свойства компонента.
  *
  * @typedef {Object} Props
- * @property {'string' | 'number' | 'boolean' | 'number-rem'} type - Тип данных свойства (например: 'String', 'Boolean', 'Number').
+ * @property {'string' | 'number' | 'boolean' | 'number-rem' | 'image'} type - Тип данных свойства.
  * @property {boolean} reflect - Флаг, указывающий, должно ли свойство отражаться в DOM.
  * @property {string} [attribute] - Имя атрибута в DOM (по умолчанию совпадает с именем свойства).
  */
+
+import { camelToKebab } from '../attr/index';
 
 /**
  * Генерирует дескрипторы свойств на основе конфигурации `props`.
@@ -36,6 +38,9 @@ export function generatePropertyParams(props) {
           case 'number-rem':
             return parseFloat(this.style?.getPropertyValue(`--${attrName}`));
 
+          case 'image':
+            return this.style?.getPropertyValue(`--${attrName}`).match(/url\((.*?)\)/)[1] || undefined;
+
           default:
             return value;
         }
@@ -45,15 +50,19 @@ export function generatePropertyParams(props) {
         if (reflect) {
           switch (type) {
             case 'boolean':
-              value ? this.setAttribute(attrName, '') : this.removeAttribute(attrName);
+              value ? this.setAttribute(camelToKebab(attrName), '') : this.removeAttribute(camelToKebab(attrName));
               break;
 
             case 'number-rem':
               this.style?.setProperty(`--${attrName}`, value + 'rem');
               break;
 
+            case 'image':
+              this.style?.setProperty(`--${attrName}`, `url(${value})`);
+              break;
+
             default:
-              this.setAttribute(attrName, String(value));
+              this.setAttribute(camelToKebab(attrName), String(value));
               break;
           }
         }
