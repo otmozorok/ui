@@ -13,7 +13,7 @@
     "@storybook/builder-vite": "^10.3.3",
     "@storybook/html-vite": "^10.2.19",
     "@storybook/preact-vite": "^10.2.16",
-    "@storybook/react-vite": "^10.2.16",
+    "@storybook/react-vite": "^10.3.3",
     "@storybook/svelte-vite": "^10.2.16",
     "@storybook/vue3-vite": "^10.2.19",
     "@types/html-minifier-next": "^4.1.0",
