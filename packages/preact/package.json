@@ -30,7 +30,7 @@
     "preact": ">=10"
   },
   "devDependencies": {
-    "@preact/preset-vite": "^2.8.2"
+    "@preact/preset-vite": "^2.10.5"
   },
   "files": [
     "dist"
