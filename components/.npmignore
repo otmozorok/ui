@@ -6,3 +6,4 @@ eslint.config.js
 vitest.config.js
 configure.mdx
 DEV.md
+consts/preview/index.js

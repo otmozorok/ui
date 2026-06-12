@@ -18,5 +18,8 @@ describe('AccordionComponent', () => {
     summary.click();
 
     expect(details.hasAttribute('open')).toBe(true);
+    console.log(accordion);
+    
+    expect(accordion.hasAttribute('open')).toBe(true);
   });
 });

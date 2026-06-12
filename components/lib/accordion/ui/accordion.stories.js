@@ -1,3 +1,4 @@
+import { fn } from "storybook/test";
 import { WCTAG } from '../../../consts/index.js';
 import { AccordionComponent } from './accordion.js';
 
@@ -15,6 +16,14 @@ function renderDefault(args) {
     const paragraph = document.createElement(WCTAG.Paragraph);
     paragraph.innerHTML = args.children;
     el.appendChild(paragraph);
+  }
+
+  if(args.show) {
+    el.addEventListener("show", () => args.show())
+  }
+
+  if(args.hide) {
+    el.addEventListener("hide", () => args.hide())
   }
 
   return el;
@@ -40,10 +49,20 @@ export default {
         category: 'other',
       },
     },
+    show: {
+      table: {
+        category: 'events',
+      },
+    },
+    hide: {
+      table: {
+        category: 'events',
+      },
+    },
   },
   args: {
-    children: 'Съешь ещё этих мягких французских булок, да выпей чаю',
-    header: 'Заголовок',
+    show: fn(),
+    hide: fn(),
   },
   parameters: {
     design: {

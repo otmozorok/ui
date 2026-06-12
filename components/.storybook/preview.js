@@ -1,10 +1,12 @@
-import { previewMain, WCTAG } from '../consts/index.js';
+import {  WCTAG } from '../consts/index.js';
+import { previewMain } from '../consts/preview/index.js';
 import {
   AccordionComponent,
   ArticleComponent,
   AvatarComponent,
   BackdropComponent,
   BannerComponent,
+  BottomSheetComponent,
   ButtonComponent,
   CheckboxComponent,
   ContainerComponent,
@@ -24,6 +26,7 @@ import {
   MenuHeaderComponent,
   MenuItemComponent,
   ParagraphComponent,
+  PopupComponent,
   RadioComponent,
   SkeletonComponent,
   SpanComponent,
@@ -39,6 +42,7 @@ define(WCTAG.Article, ArticleComponent);
 define(WCTAG.Avatar, AvatarComponent);
 define(WCTAG.Backdrop, BackdropComponent);
 define(WCTAG.Banner, BannerComponent);
+define(WCTAG.BottomSheet, BottomSheetComponent);
 define(WCTAG.Button, ButtonComponent);
 define(WCTAG.Checkbox, CheckboxComponent);
 define(WCTAG.Checkbox, CheckboxComponent);
@@ -59,6 +63,7 @@ define(WCTAG.MenuAction, MenuActionComponent);
 define(WCTAG.MenuHeader, MenuHeaderComponent);
 define(WCTAG.MenuItem, MenuItemComponent);
 define(WCTAG.Paragraph, ParagraphComponent);
+define(WCTAG.Popup, PopupComponent);
 define(WCTAG.Radio, RadioComponent);
 define(WCTAG.Skeleton, SkeletonComponent);
 define(WCTAG.Span, SpanComponent);

@@ -23,5 +23,6 @@ export class IconComponent extends WebComponent {
 
   connectedCallback() {
     super.connectedCallback?.();
+    this.sizeNumber = this.sizeNumber || 1.5;
   }
 }

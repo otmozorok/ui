@@ -1,3 +1,5 @@
+import { camelToKebab } from '../attr/index.js';
+
 /**
  * Конфигурация свойств.
  * Определяет типы, отражение и атрибуты для каждого свойства компонента.
@@ -6,9 +8,8 @@
  * @property {'string' | 'number' | 'boolean' | 'number-rem' | 'image'} type - Тип данных свойства.
  * @property {boolean} reflect - Флаг, указывающий, должно ли свойство отражаться в DOM.
  * @property {string} [attribute] - Имя атрибута в DOM (по умолчанию совпадает с именем свойства).
- */
-
-import { camelToKebab } from '../attr/index';
+ * @property {(value: unknow) => void} [onReflect] - Функция для кастомной логики, если стандартные не подходят.
+ */ 
 
 /**
  * Генерирует дескрипторы свойств на основе конфигурации `props`.
@@ -20,7 +21,7 @@ export function generatePropertyParams(props) {
   const descriptors = {};
 
   for (const [propName, config] of Object.entries(props)) {
-    const { type, attribute, reflect } = config;
+    const { type, attribute, reflect, onReflect } = config;
     const attrName = attribute || propName;
 
     descriptors[propName] = {
@@ -48,6 +49,11 @@ export function generatePropertyParams(props) {
       set(value) {
         // Отражение в DOM атрибут, если `reflect: true`
         if (reflect) {
+          if (onReflect) {
+            onReflect.call(this, value);
+            return;
+          }
+
           switch (type) {
             case 'boolean':
               value ? this.setAttribute(camelToKebab(attrName), '') : this.removeAttribute(camelToKebab(attrName));

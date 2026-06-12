@@ -6,7 +6,6 @@ export * from './direction/index.js';
 export * from './icon/index.js';
 export * from './mode/index.js';
 export * from './position/index.js';
-export * from './preview/index.js';
 export * from './rows/index.js';
 export * from './shape/index.js';
 export * from './size/index.js';
@@ -38,6 +37,7 @@ export const WCTAG = Object.freeze({
   MenuHeader: 'wc-menu-header',
   MenuItem: 'wc-menu-item',
   Paragraph: 'wc-paragraph',
+  Popup: 'wc-popup',
   Radio: 'wc-radio',
   Skeleton: 'wc-skeleton',
   Span: 'wc-span',
@@ -48,6 +48,8 @@ export const WCTAG = Object.freeze({
 
 export const HTMLTAG = Object.freeze({
   Button: 'button',
+  Details: 'details',
+  Dialog: 'dialog',
   Image: 'img',
 });
 

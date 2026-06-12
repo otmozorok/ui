@@ -30,8 +30,8 @@ export class PopoverComponent extends WebComponent {
                 view-transition-name: --popover;
                 position-anchor: --popover;
                 backdrop-filter: blur(10px);
-                box-shadow: var(--shadow);
-                z-index: var(--z-tooltip);
+                box-shadow: var(--wc-shadow);
+                z-index: var(--wc-z-tooltip);
             }
         
             .bottom {

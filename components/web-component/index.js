@@ -1,4 +1,15 @@
-import { COLORS, SHAPES, MODES, APPEARANCES, WCATTR, SIZES, ICONS, COLS, ROWS } from '../consts/index.js';
+import {
+  COLORS,
+  SHAPES,
+  MODES,
+  APPEARANCES,
+  WCATTR,
+  SIZES,
+  ICONS,
+  COLS,
+  ROWS,
+  SIZES_BOTTOM_SHEET,
+} from '../consts/index.js';
 import { generatePropertyParams, kebabToCamel } from '../utils/index.js';
 
 /**
@@ -14,7 +25,8 @@ export class WebComponent extends HTMLElement {
   constructor(template, props) {
     super();
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(template.cloneNode(true));
+    this.template = template;
+    this.shadowRoot.appendChild(this.template.cloneNode(true));
     props && Object.defineProperties(this, generatePropertyParams(props));
   }
 
@@ -57,7 +69,7 @@ export class WebComponent extends HTMLElement {
       [WCATTR.Name]: { prop: WCATTR.Name, values: ICONS },
       [WCATTR.Rows]: { prop: WCATTR.Rows, values: ROWS },
       [WCATTR.Shape]: { prop: WCATTR.Shape, values: SHAPES },
-      [WCATTR.Size]: { prop: WCATTR.Size, values: SIZES },
+      [WCATTR.Size]: { prop: WCATTR.Size, values: [...SIZES, ...SIZES_BOTTOM_SHEET] },
     };
 
     if (attributeMap[name]) {
@@ -70,15 +82,16 @@ export class WebComponent extends HTMLElement {
 
     if (
       [
-        WCATTR.Loading,
-        WCATTR.Rounded,
-        WCATTR.Closable,
         WCATTR.Caps,
-        WCATTR.FullWidth,
+        WCATTR.Closable,
         WCATTR.Disabled,
+        WCATTR.Filled,
+        WCATTR.FullWidth,
         WCATTR.Inverse,
         WCATTR.Island,
-        WCATTR.Filled,
+        WCATTR.Loading,
+        WCATTR.Open,
+        WCATTR.Rounded,
       ].includes(name)
     ) {
       this[kebabToCamel(name)] = newValue === '';
@@ -95,5 +108,9 @@ export class WebComponent extends HTMLElement {
    */
   $(name) {
     return this.shadowRoot.querySelector(name);
+  }
+
+  render() {
+    this.shadowRoot.appendChild(this.template.cloneNode(true));
   }
 }

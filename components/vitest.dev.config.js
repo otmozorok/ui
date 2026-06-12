@@ -2,7 +2,8 @@ import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   test: {
-    include: ['**/{test,spec}.?(c|m)[jt]s?(x)'],
+    silent: true,
+    include: ['**/*.?(spec|test).?(c|m)[jt]s?(x)'],
     environment: 'jsdom',
   },
 });

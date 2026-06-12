@@ -34,8 +34,8 @@ export class TooltipComponent extends WebComponent {
                 view-transition-name: --tooltip;
                 position-anchor: --tooltip;
                 backdrop-filter: blur(10px);
-                box-shadow: var(--shadow);
-                z-index: var(--z-tooltip);
+                box-shadow: var(--wc-shadow);
+                z-index: var(--wc-z-tooltip);
         
                 &.bottom {
                     position-area: block-end;

@@ -1,9 +1,8 @@
-import { previewMain } from '@otmozorok/wc/consts';
-import type { Preview } from '@storybook/svelte-vite';
+import { previewMain } from '../../../components/consts/preview';
 import '@otmozorok/wc/style.css';
 import '@otmozorok/wc/.storybook/style.css';
 
-const preview: Preview = {
+const preview = {
   ...previewMain,
 };
 

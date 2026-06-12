@@ -2,7 +2,7 @@ import logo from '../../../assets/logo.png';
 
 const items = ['light', 'dark'];
 
-/** @type { import('@storybook/html').Preview } */
+/** @type { import('@storybook/html-vite').Preview } */
 export const previewMain = {
   decorators: [
     (story, { globals }) => {

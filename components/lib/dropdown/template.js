@@ -17,8 +17,8 @@ export default html`
         font-weight: 500;
         view-transition-name: --dropdown;
         position-anchor: --dropdown;
-        box-shadow: var(--shadow);
-        z-index: var(--z-tooltip);
+        box-shadow: var(--wc-shadow);
+        z-index: var(--wc-z-tooltip);
         width: 250px;
         overflow: hidden;
       }

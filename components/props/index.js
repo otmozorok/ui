@@ -255,3 +255,12 @@ export const srcProp = {
     attribute: WCATTR.Src,
   },
 };
+
+/** @type {Prop} */
+export const openProp = {
+  open: {
+    type: 'boolean',
+    reflect: true,
+    attribute: WCATTR.Open,
+  },
+};
