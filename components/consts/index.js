@@ -39,6 +39,7 @@ export const WCTAG = Object.freeze({
   Paragraph: 'wc-paragraph',
   Popup: 'wc-popup',
   Radio: 'wc-radio',
+  Ripple: 'wc-ripple',
   Skeleton: 'wc-skeleton',
   Span: 'wc-span',
   Switcher: 'wc-switcher',

@@ -26,6 +26,7 @@ export * from './paragraph/index.js';
 export * from './popup/index.js';
 export * from './popover/index.js';
 export * from './radio/index.js';
+export * from './ripple/index.js';
 export * from './skeleton/index.js';
 export * from './span/index.js';
 export * from './switcher/index.js';

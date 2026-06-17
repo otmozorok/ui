@@ -167,10 +167,6 @@ export const template = html`
       :host([${WCATTR.FullWidth}]) button {
         width: 100%;
       }
-
-      :host {
-        display: contents;
-      }
     </style>
 
     <button>

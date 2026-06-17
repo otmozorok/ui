@@ -28,6 +28,7 @@ import {
   ParagraphComponent,
   PopupComponent,
   RadioComponent,
+  RippleComponent,
   SkeletonComponent,
   SpanComponent,
   SwitcherComponent,
@@ -65,6 +66,7 @@ define(WCTAG.MenuItem, MenuItemComponent);
 define(WCTAG.Paragraph, ParagraphComponent);
 define(WCTAG.Popup, PopupComponent);
 define(WCTAG.Radio, RadioComponent);
+define(WCTAG.Ripple, RippleComponent);
 define(WCTAG.Skeleton, SkeletonComponent);
 define(WCTAG.Span, SpanComponent);
 define(WCTAG.Switcher, SwitcherComponent);

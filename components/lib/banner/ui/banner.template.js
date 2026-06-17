@@ -14,6 +14,7 @@ export const template = html`
         padding: 1rem;
         border-radius: 1.25rem;
         background-image: var(--image);
+        overflow: hidden;
       }
 
       button {
