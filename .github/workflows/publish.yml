@@ -41,7 +41,7 @@ jobs:
           node-version: 24
           registry-url: ${{ matrix.registry.url }}
 
-      - run: npm i
+      - run: npm i --legacy-peer-deps
       - run: npm run decl -w components
         continue-on-error: true
 
