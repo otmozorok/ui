@@ -1,7 +1,7 @@
 import { WCTAG } from '../../../consts/index.js';
 
 function render() {
-  return (args) => {
+  return () => {
     const el = document.createElement(WCTAG.Backdrop);
 
     return el;
