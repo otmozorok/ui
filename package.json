@@ -4,6 +4,7 @@
   "type": "module",
   "devDependencies": {
     "@chromatic-com/storybook": "^5.0.1",
+    "@eslint/js": "^10.0.1",
     "@rollup/plugin-typescript": "^12.3.0",
     "@storybook/addon-a11y": "^10.3.3",
     "@storybook/addon-designs": "^11.1.2",
