@@ -31,6 +31,7 @@ import {
   RippleComponent,
   SkeletonComponent,
   SpanComponent,
+  SparklesComponent,
   SwitcherComponent,
   TextareaComponent,
 } from '../index.js';
@@ -69,6 +70,7 @@ define(WCTAG.Radio, RadioComponent);
 define(WCTAG.Ripple, RippleComponent);
 define(WCTAG.Skeleton, SkeletonComponent);
 define(WCTAG.Span, SpanComponent);
+define(WCTAG.Sparkles, SparklesComponent);
 define(WCTAG.Switcher, SwitcherComponent);
 define(WCTAG.Textarea, TextareaComponent);
 

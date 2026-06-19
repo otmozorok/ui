@@ -14,7 +14,6 @@ export const template = html`
         padding: 1rem;
         border-radius: 1.25rem;
         background-image: var(--image);
-        overflow: hidden;
       }
 
       button {
@@ -30,6 +29,7 @@ export const template = html`
         border-radius: 50%;
         background: transparent;
         cursor: pointer;
+        z-index: 1;
       }
 
       :host([${WCATTR.Appearance}='${APPEARANCE.Themed}']) {
@@ -88,10 +88,8 @@ export const template = html`
         }
       }
 
-      :host(:not([${WCATTR.Closable}])) {
-        button {
-          display: none;
-        }
+      div {
+        overflow: var(--banner-overflow, visible);
       }
     </style>
 

@@ -264,3 +264,21 @@ export const openProp = {
     attribute: WCATTR.Open,
   },
 };
+
+/** @type {Prop} */
+export const symbolProp = {
+  symbol: {
+    type: 'string',
+    reflect: true,
+    attribute: WCATTR.Symbol,
+  },
+};
+
+/** @type {Prop} */
+export const symbolSizeProp = {
+  symbolSize: {
+    type: 'number-rem',
+    reflect: true,
+    attribute: WCATTR.SymbolSize,
+  },
+};

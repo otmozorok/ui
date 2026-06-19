@@ -29,6 +29,7 @@ export * from './radio/index.js';
 export * from './ripple/index.js';
 export * from './skeleton/index.js';
 export * from './span/index.js';
+export * from './sparkles/index.js';
 export * from './switcher/index.js';
 export * from './textarea/index.js';
 export * from './tooltip/index.js';

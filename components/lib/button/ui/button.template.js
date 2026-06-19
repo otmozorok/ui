@@ -11,7 +11,6 @@ export const template = html`
         cursor: pointer;
         display: flex;
         justify-content: center;
-        overflow: hidden;
         position: relative;
         text-decoration: none;
         gap: 0.375rem;
@@ -65,8 +64,7 @@ export const template = html`
         font-weight: 600;
       }
 
-      :host([${WCATTR.Appearance}='${APPEARANCE.Themed}'][${WCATTR.Mode}='${MODE.Primary}'])
-        button {
+      :host([${WCATTR.Appearance}='${APPEARANCE.Themed}'][${WCATTR.Mode}='${MODE.Primary}']) button {
         background-color: var(--primary);
         color: var(--text-button-color);
 
@@ -75,8 +73,7 @@ export const template = html`
         }
       }
 
-      :host([${WCATTR.Appearance}='${APPEARANCE.Negative}'][${WCATTR.Mode}='${MODE.Primary}'])
-        button {
+      :host([${WCATTR.Appearance}='${APPEARANCE.Negative}'][${WCATTR.Mode}='${MODE.Primary}']) button {
         background-color: var(--negative);
         color: var(--text-button-color);
 
@@ -88,8 +85,7 @@ export const template = html`
         }
       }
 
-      :host([${WCATTR.Appearance}='${APPEARANCE.Neutral}'][${WCATTR.Mode}='${MODE.Primary}'])
-        button {
+      :host([${WCATTR.Appearance}='${APPEARANCE.Neutral}'][${WCATTR.Mode}='${MODE.Primary}']) button {
         background-color: var(--neutral);
         color: var(--text-button-inverse-color);
 
@@ -127,15 +123,11 @@ export const template = html`
         padding: 0;
 
         &:hover {
-          color: light-dark(
-            hsl(from var(--neutral) h s calc(l + 27)),
-            hsl(from var(--neutral) h s calc(l - 27))
-          );
+          color: light-dark(hsl(from var(--neutral) h s calc(l + 27)), hsl(from var(--neutral) h s calc(l - 27)));
         }
       }
 
-      :host([${WCATTR.Appearance}='${APPEARANCE.Themed}'][${WCATTR.Mode}='${MODE.Secondary}'])
-        button {
+      :host([${WCATTR.Appearance}='${APPEARANCE.Themed}'][${WCATTR.Mode}='${MODE.Secondary}']) button {
         background-color: var(--secondary);
         color: var(--primary);
 
@@ -144,8 +136,7 @@ export const template = html`
         }
       }
 
-      :host([${WCATTR.Appearance}='${APPEARANCE.Negative}'][${WCATTR.Mode}='${MODE.Secondary}'])
-        button {
+      :host([${WCATTR.Appearance}='${APPEARANCE.Negative}'][${WCATTR.Mode}='${MODE.Secondary}']) button {
         background-color: var(--secondary);
         color: var(--negative);
 
@@ -154,8 +145,7 @@ export const template = html`
         }
       }
 
-      :host([${WCATTR.Appearance}='${APPEARANCE.Neutral}'][${WCATTR.Mode}='${MODE.Secondary}'])
-        button {
+      :host([${WCATTR.Appearance}='${APPEARANCE.Neutral}'][${WCATTR.Mode}='${MODE.Secondary}']) button {
         background-color: var(--secondary);
         color: var(--neutral);
 
@@ -166,6 +156,10 @@ export const template = html`
 
       :host([${WCATTR.FullWidth}]) button {
         width: 100%;
+      }
+
+      button {
+        overflow: var(--button-overflow, visible);
       }
     </style>
 
