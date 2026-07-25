@@ -9,6 +9,7 @@ export const template = html`
         padding: 0;
         font-weight: 600;
         line-height: 1.1;
+        text-box: trim-both cap alphabetic;
       }
 
       :host([${WCATTR.Size}='${SIZE.Large}']) h1 {
