@@ -92,6 +92,7 @@ export class WebComponent extends HTMLElement {
         WCATTR.Loading,
         WCATTR.Open,
         WCATTR.Rounded,
+        WCATTR.Indeterminate,
       ].includes(name)
     ) {
       this[kebabToCamel(name)] = newValue === '';

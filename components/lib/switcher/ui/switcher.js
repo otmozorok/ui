@@ -24,9 +24,7 @@ export class SwitcherComponent extends WebComponent {
     });
   }
 
-  attributeChangedCallback(name, oldValue, newValue) {
-    super.attributeChangedCallback?.(name, oldValue, newValue);
-
+  attributeChangedCallback(name) {
     if (name === WCATTR.Checked) {
       this.dispatchEvent(
         new CustomEvent('change', {

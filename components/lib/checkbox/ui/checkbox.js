@@ -4,13 +4,7 @@ import { props } from '../model/index.js';
 import { template } from './checkbox.template.js';
 
 export class CheckboxComponent extends WebComponent {
-  static observedAttributes = [
-    WCATTR.Appearance,
-    WCATTR.Checked,
-    WCATTR.Disabled,
-    WCATTR.Name,
-    WCATTR.Indeterminate,
-  ];
+  static observedAttributes = [WCATTR.Appearance, WCATTR.Checked, WCATTR.Disabled, WCATTR.Name, WCATTR.Indeterminate];
 
   constructor() {
     super(template, props);
@@ -30,9 +24,7 @@ export class CheckboxComponent extends WebComponent {
     });
   }
 
-  attributeChangedCallback(name, oldValue, newValue) {
-    super.attributeChangedCallback?.(name, oldValue, newValue);
-
+  attributeChangedCallback(name) {
     if (name === WCATTR.Checked) {
       this.dispatchEvent(
         new CustomEvent('change', {
