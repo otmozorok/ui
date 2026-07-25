@@ -1,11 +1,11 @@
-import { APPEARANCE, SIZE, WCATTR, WCTAG } from '../../../consts/index.js';
+import { APPEARANCE, WCATTR, WCTAG } from '../../../consts/index.js';
 import { setAttr } from '../../../utils/index.js';
 
 const TITLE = 'Заголовок банера';
 const DESCRIPTION = 'Съешь ещё этих мягких французских булок, да выпей чаю';
 
 function render() {
-  return (args) => {
+  return () => {
     const flex = document.createElement(WCTAG.Flex);
     const button = document.createElement(WCTAG.Button);
     const buttonWithRipple = document.createElement(WCTAG.Button);
@@ -28,7 +28,7 @@ function render() {
 }
 
 function renderWithBanner() {
-  return (args) => {
+  return () => {
     const banner = document.createElement(WCTAG.Banner);
     const el = document.createElement(WCTAG.Ripple);
     const h = document.createElement(WCTAG.Headline);

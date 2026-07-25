@@ -1,5 +1,3 @@
-import logo from '../../../assets/logo.png';
-
 const items = ['light', 'dark'];
 
 /** @type { import('@storybook/html-vite').Preview } */
@@ -14,7 +12,7 @@ export const previewMain = {
   ],
   parameters: {
     header: {
-      logo: logo,
+      logo: '../../../assets/logo.png',
     },
     backgrounds: false,
     controls: {

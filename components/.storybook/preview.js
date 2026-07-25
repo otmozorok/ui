@@ -1,5 +1,5 @@
-import {  WCTAG } from '../consts/index.js';
-import { previewMain } from '../consts/preview/index.js';
+import { WCTAG } from '../consts/index.js';
+import { previewMain } from './lib/preview/index.js';
 import {
   AccordionComponent,
   ArticleComponent,
