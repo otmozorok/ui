@@ -20,7 +20,7 @@ export class GlitchComponent extends WebComponent {
     super.connectedCallback();
     this.$slot.addEventListener('slotchange', () => {
       const [node] = this.$slot.assignedNodes();
-      node && (this.$span.dataset.text = node.data);
+      node && (this.$span.dataset.text = node.textContent);
     });
   }
 }
