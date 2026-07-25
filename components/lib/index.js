@@ -12,6 +12,7 @@ export * from './dot/index.js';
 export * from './dropdown/index.js';
 export * from './ellipsis/index.js';
 export * from './flex/index.js';
+export * from './glitch/index.js';
 export * from './grid/index.js';
 export * from './headline/index.js';
 export * from './icon/index.js';

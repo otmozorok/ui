@@ -26,6 +26,7 @@ export const WCTAG = Object.freeze({
   Dropdown: 'wc-dropdown',
   Ellipsis: 'wc-ellipsis',
   Flex: 'wc-flex',
+  Glitch: 'wc-glitch',
   Grid: 'wc-grid',
   Headline: 'wc-headline',
   Icon: 'wc-icon',
@@ -53,6 +54,8 @@ export const HTMLTAG = Object.freeze({
   Details: 'details',
   Dialog: 'dialog',
   Image: 'img',
+  Span: 'span',
+  Slot: 'slot',
 });
 
 export const WCATTR = Object.freeze({

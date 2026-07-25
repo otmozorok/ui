@@ -15,6 +15,7 @@ import {
   DropdownComponent,
   EllipsisComponent,
   FlexComponent,
+  GlitchComponent,
   GridComponent,
   HeadlineComponent,
   IconComponent,
@@ -54,6 +55,7 @@ define(WCTAG.Dot, DotComponent);
 define(WCTAG.Dropdown, DropdownComponent);
 define(WCTAG.Ellipsis, EllipsisComponent);
 define(WCTAG.Flex, FlexComponent);
+define(WCTAG.Glitch, GlitchComponent);
 define(WCTAG.Grid, GridComponent);
 define(WCTAG.Headline, HeadlineComponent);
 define(WCTAG.Icon, IconComponent);
